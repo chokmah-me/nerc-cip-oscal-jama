@@ -1,0 +1,212 @@
+{
+  "component-definition": {
+    "uuid": "12345678-1234-1234-1234-123456789012",
+    "metadata": {
+      "title": "NERC-CIP-005 Control Implementation",
+      "published": "2026-01-20T00:00:00Z",
+      "last-modified": "2026-01-20T00:00:00Z",
+      "version": "1.0.0",
+      "document-ids": [
+        {
+          "scheme": "https://example.com",
+          "identifier": "NERC-CIP-005-6"
+        }
+      ]
+    },
+    "components": [
+      {
+        "uuid": "87654321-4321-4321-4321-210987654321",
+        "type": "software",
+        "title": "NERC CIP-005-6 Systems Security Management",
+        "description": "Implements documented cyber security planning processes including role definition, effectiveness assessment, review scheduling, and recovery assurance. Establishes the foundational security management framework required for CIP-005 R1, covering systems security plan development, approval, implementation, and maintenance with documented processes for generating, storing, protecting, and managing the plan.",
+        "properties": [
+          {
+            "name": "NERC-Requirement-ID",
+            "value": "CIP-005-6 R1"
+          },
+          {
+            "name": "NIST-800-53-Primary-Control",
+            "value": "SC-7"
+          },
+          {
+            "name": "NIST-800-53-Secondary-Controls",
+            "value": "CA-3, PL-2, CM-2"
+          },
+          {
+            "name": "JAMA-Requirement-ID",
+            "value": "CIP-005-R1-a"
+          },
+          {
+            "name": "Implementation-Status",
+            "value": "Draft"
+          }
+        ],
+        "control-implementations": [
+          {
+            "description": "Systems Security Plan documentation and management with role definition and approval processes",
+            "implemented-requirements": [
+              {
+                "uuid": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee",
+                "control-id": "sc-7",
+                "responsibility": "Implemented",
+                "properties": [
+                  {
+                    "name": "JAMA-Requirement-ID",
+                    "value": "CIP-005-R1-a"
+                  }
+                ]
+              },
+              {
+                "uuid": "bbbbbbbb-cccc-dddd-eeee-ffffffffffff",
+                "control-id": "ca-3",
+                "responsibility": "Implemented",
+                "properties": [
+                  {
+                    "name": "JAMA-Requirement-ID",
+                    "value": "CIP-005-R1-b"
+                  }
+                ]
+              },
+              {
+                "uuid": "cccccccc-dddd-eeee-ffff-000000000000",
+                "control-id": "pl-2",
+                "responsibility": "Implemented",
+                "properties": [
+                  {
+                    "name": "JAMA-Requirement-ID",
+                    "value": "CIP-005-R1-c"
+                  }
+                ]
+              },
+              {
+                "uuid": "dddddddd-eeee-ffff-0000-111111111111",
+                "control-id": "cm-2",
+                "responsibility": "Implemented",
+                "properties": [
+                  {
+                    "name": "JAMA-Requirement-ID",
+                    "value": "CIP-005-R1-d"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "11111111-2222-3333-4444-555555555555",
+        "type": "software",
+        "title": "NERC CIP-005-6 Cyber Security Plan Effectiveness",
+        "description": "Establishes methodology for assessing the effectiveness of the Cyber Security Plan through regular review cycles and measurement criteria. Implements periodic assessment processes to ensure the plan remains current and effective in addressing security threats and compliance requirements.",
+        "properties": [
+          {
+            "name": "NERC-Requirement-ID",
+            "value": "CIP-005-6 R2"
+          },
+          {
+            "name": "NIST-800-53-Primary-Control",
+            "value": "CA-2"
+          },
+          {
+            "name": "NIST-800-53-Secondary-Controls",
+            "value": "CA-7, PM-11"
+          },
+          {
+            "name": "JAMA-Requirement-ID",
+            "value": "CIP-005-R2-a"
+          },
+          {
+            "name": "Implementation-Status",
+            "value": "Draft"
+          }
+        ],
+        "control-implementations": [
+          {
+            "description": "Periodic assessment and effectiveness evaluation of security controls",
+            "implemented-requirements": [
+              {
+                "uuid": "eeeeeeee-ffff-0000-1111-222222222222",
+                "control-id": "ca-2",
+                "responsibility": "Implemented",
+                "properties": [
+                  {
+                    "name": "JAMA-Requirement-ID",
+                    "value": "CIP-005-R2-a"
+                  }
+                ]
+              },
+              {
+                "uuid": "ffffffff-0000-1111-2222-333333333333",
+                "control-id": "ca-7",
+                "responsibility": "Implemented",
+                "properties": [
+                  {
+                    "name": "JAMA-Requirement-ID",
+                    "value": "CIP-005-R2-b"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "22222222-3333-4444-5555-666666666666",
+        "type": "software",
+        "title": "NERC CIP-005-6 System Recovery and Plan Recoverability",
+        "description": "Ensures the Cyber Security Plan and its implementation are recoverable in case of system failures or disaster events. Implements documented backup and recovery procedures to maintain business continuity and plan availability during operational disruptions.",
+        "properties": [
+          {
+            "name": "NERC-Requirement-ID",
+            "value": "CIP-005-6 R3"
+          },
+          {
+            "name": "NIST-800-53-Primary-Control",
+            "value": "CP-9"
+          },
+          {
+            "name": "NIST-800-53-Secondary-Controls",
+            "value": "CP-10, SC-5"
+          },
+          {
+            "name": "JAMA-Requirement-ID",
+            "value": "CIP-005-R3-a"
+          },
+          {
+            "name": "Implementation-Status",
+            "value": "Draft"
+          }
+        ],
+        "control-implementations": [
+          {
+            "description": "Information system backup and recovery procedures for plan recoverability",
+            "implemented-requirements": [
+              {
+                "uuid": "33333333-4444-5555-6666-777777777777",
+                "control-id": "cp-9",
+                "responsibility": "Implemented",
+                "properties": [
+                  {
+                    "name": "JAMA-Requirement-ID",
+                    "value": "CIP-005-R3-a"
+                  }
+                ]
+              },
+              {
+                "uuid": "44444444-5555-6666-7777-888888888888",
+                "control-id": "cp-10",
+                "responsibility": "Implemented",
+                "properties": [
+                  {
+                    "name": "JAMA-Requirement-ID",
+                    "value": "CIP-005-R3-b"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+# NERC-CIP to OSCAL Conversion Toolkit - Dependencies
+
+# Core testing framework
+pytest>=8.0.0
+pytest-cov>=4.1.0
+
+# JSON Schema validation
+jsonschema>=4.20.0
+
+# Data processing
+pandas>=2.0.0
+
+# For potential future enhancements
+pdfplumber>=0.10.0  # PDF extraction (optional)
+pyyaml>=6.0  # YAML support (optional)
+
+# Code quality (optional)
+black>=23.0.0
+flake8>=6.0.0
+mypy>=1.0.0

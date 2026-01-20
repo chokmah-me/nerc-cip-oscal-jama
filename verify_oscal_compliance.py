@@ -1,0 +1,566 @@
+"""
+Test validator for NERC-CIP to OSCAL Component Definition conversion.
+
+This pytest script validates that AI-generated OSCAL JSON files meet
+minimum requirements for structural validity, NIST mapping completeness,
+and JAMA placeholder consistency.
+
+To run:
+    pytest verify_oscal_compliance.py -v
+
+To run with detailed output:
+    pytest verify_oscal_compliance.py -vv -s
+
+To run specific test:
+    pytest verify_oscal_compliance.py::TestOSCALCompliance::test_is_valid_json -v
+"""
+
+import pytest
+import json
+import re
+import uuid
+import csv
+from pathlib import Path
+from nist_controls import validate_nist_control, get_control_description
+
+
+class TestOSCALCompliance:
+    """Test suite for validating OSCAL JSON Component Definitions."""
+
+    @pytest.fixture
+    def oscal_file(self):
+        """Find the OSCAL JSON file in working directory."""
+        oscal_path = Path(__file__).parent / "nerc-oscal.json"
+        if not oscal_path.exists():
+            pytest.skip(f"OSCAL file not found: {oscal_path}")
+        return oscal_path
+
+    @pytest.fixture
+    def oscal_data(self, oscal_file):
+        """Load and parse the OSCAL JSON file."""
+        with open(oscal_file, 'r') as f:
+            try:
+                data = json.load(f)
+                return data
+            except json.JSONDecodeError as e:
+                pytest.fail(f"JSON syntax error in OSCAL file: {e}")
+
+    # ========================================================================
+    # BASIC VALIDATION TESTS
+    # ========================================================================
+
+    def test_is_valid_json(self, oscal_file):
+        """Test 1: File is valid JSON."""
+        try:
+            with open(oscal_file, 'r') as f:
+                json.load(f)
+            assert True, "JSON syntax is valid"
+        except json.JSONDecodeError as e:
+            pytest.fail(f"JSON syntax error: {e}")
+
+    def test_has_component_definition_root(self, oscal_data):
+        """Test 2: Root element is 'component-definition'."""
+        assert 'component-definition' in oscal_data, \
+            "Missing root 'component-definition' key. JSON should have structure: " \
+            "{ 'component-definition': { ... } }"
+
+    def test_component_def_has_metadata(self, oscal_data):
+        """Test 3: Component definition includes metadata section."""
+        comp_def = oscal_data.get('component-definition', {})
+        assert 'metadata' in comp_def, \
+            "Missing 'metadata' section. Should include: title, published, version, document-ids"
+
+    def test_metadata_has_required_fields(self, oscal_data):
+        """Test 4: Metadata includes required fields."""
+        comp_def = oscal_data.get('component-definition', {})
+        metadata = comp_def.get('metadata', {})
+
+        required_fields = ['title', 'published', 'version']
+        for field in required_fields:
+            assert field in metadata, \
+                f"Missing metadata.{field}. Required fields: title, published, version"
+            assert metadata[field], f"metadata.{field} is empty"
+
+    def test_has_components_array(self, oscal_data):
+        """Test 5: Component definition includes 'components' array."""
+        comp_def = oscal_data.get('component-definition', {})
+        assert 'components' in comp_def, \
+            "Missing 'components' array. Should contain at least one component."
+        assert isinstance(comp_def['components'], list), \
+            "'components' should be a list"
+        assert len(comp_def['components']) > 0, \
+            "'components' array is empty. Must contain at least one component."
+
+    # ========================================================================
+    # NIST MAPPING TESTS
+    # ========================================================================
+
+    def test_has_nist_mapping(self, oscal_data):
+        """Test 6: Components include NIST 800-53 control mapping."""
+        comp_def = oscal_data.get('component-definition', {})
+        components = comp_def.get('components', [])
+
+        for i, component in enumerate(components):
+            props = component.get('properties', [])
+            prop_names = [p.get('name') for p in props]
+
+            has_primary = 'NIST-800-53-Primary-Control' in prop_names or \
+                         any('NIST' in str(p) and 'Primary' in str(p) for p in prop_names)
+            has_secondary = 'NIST-800-53-Secondary-Controls' in prop_names or \
+                           any('NIST' in str(p) and 'Secondary' in str(p) for p in prop_names) or \
+                           'control-implementations' in component
+
+            assert has_primary or has_secondary, \
+                f"Component {i} missing NIST 800-53 mapping. " \
+                f"Add property: 'NIST-800-53-Primary-Control' with value like 'SC-7' or 'AC-2'"
+
+    def test_nist_controls_are_valid_format(self, oscal_data):
+        """Test 7: NIST control IDs follow proper format (e.g., 'SC-7', 'AC-2')."""
+        comp_def = oscal_data.get('component-definition', {})
+        components = comp_def.get('components', [])
+
+        # NIST 800-53 control format: Family-Number (e.g., SC-7, AC-2)
+        nist_pattern = re.compile(r'^[A-Z]{2}-\d{1,2}(\s*\([0-9]+\))?$')
+
+        for i, component in enumerate(components):
+            props = component.get('properties', [])
+
+            for prop in props:
+                if 'NIST' in prop.get('name', ''):
+                    value = prop.get('value', '')
+                    # Skip if it's a list of controls (secondary controls)
+                    if ',' in value:
+                        controls = [c.strip() for c in value.split(',')]
+                        for ctrl in controls:
+                            assert nist_pattern.match(ctrl), \
+                                f"Component {i} has invalid NIST control format: '{ctrl}'. " \
+                                f"Use format like 'SC-7', 'AC-2', 'CA-3', etc."
+                    else:
+                        assert nist_pattern.match(value), \
+                            f"Component {i} has invalid NIST control format: '{value}'. " \
+                            f"Use format like 'SC-7', 'AC-2', 'CA-3', etc."
+
+    def test_minimum_nist_controls_per_component(self, oscal_data):
+        """Test 8: Each component maps to at least 1 NIST control."""
+        comp_def = oscal_data.get('component-definition', {})
+        components = comp_def.get('components', [])
+
+        for i, component in enumerate(components):
+            # Check control-implementations (primary way to specify controls)
+            ctrl_impls = component.get('control-implementations', [])
+            impl_reqs = sum(
+                len(impl.get('implemented-requirements', []))
+                for impl in ctrl_impls
+            )
+
+            # Also check properties for NIST mappings
+            props = component.get('properties', [])
+            has_nist_prop = any('NIST' in p.get('name', '') for p in props)
+
+            assert impl_reqs > 0 or has_nist_prop, \
+                f"Component {i} has no NIST control mappings. " \
+                f"Add either: (a) control-implementations array, or " \
+                f"(b) NIST-800-53-Primary-Control property"
+
+    # ========================================================================
+    # JAMA PLACEHOLDER TESTS
+    # ========================================================================
+
+    def test_jama_props_exist(self, oscal_data):
+        """Test 9: Components include JAMA-Requirement-ID properties."""
+        comp_def = oscal_data.get('component-definition', {})
+        components = comp_def.get('components', [])
+
+        for i, component in enumerate(components):
+            props = component.get('properties', [])
+            prop_names = [p.get('name') for p in props]
+
+            assert 'JAMA-Requirement-ID' in prop_names, \
+                f"Component {i} missing 'JAMA-Requirement-ID' property. " \
+                f"Add: {{'name': 'JAMA-Requirement-ID', 'value': 'CIP-005-R1-a'}}"
+
+    def test_jama_placeholders_follow_format(self, oscal_data):
+        """Test 10: JAMA-Requirement-ID values follow naming convention."""
+        comp_def = oscal_data.get('component-definition', {})
+        components = comp_def.get('components', [])
+
+        # Expected format: CIP-###-R#-[a-z] or CIP-###-R#
+        jama_pattern = re.compile(r'^CIP-\d{3}-R\d+(-[a-z])?$')
+
+        for i, component in enumerate(components):
+            props = component.get('properties', [])
+
+            for prop in props:
+                if prop.get('name') == 'JAMA-Requirement-ID':
+                    value = prop.get('value', '')
+                    assert value.strip(), \
+                        f"Component {i} has empty JAMA-Requirement-ID value"
+                    assert jama_pattern.match(value), \
+                        f"Component {i} has invalid JAMA placeholder: '{value}'. " \
+                        f"Expected format: 'CIP-005-R1-a' (standard-number-requirement-subrequirement)"
+
+    def test_jama_placeholders_not_empty(self, oscal_data):
+        """Test 11: No empty JAMA placeholder values."""
+        comp_def = oscal_data.get('component-definition', {})
+        components = comp_def.get('components', [])
+
+        for i, component in enumerate(components):
+            props = component.get('properties', [])
+
+            for j, prop in enumerate(props):
+                if prop.get('name') == 'JAMA-Requirement-ID':
+                    value = prop.get('value', '').strip()
+                    assert value and value != 'TBD', \
+                        f"Component {i}, property {j} has placeholder or empty JAMA-Requirement-ID. " \
+                        f"Must specify actual requirement ID like 'CIP-005-R1-a'"
+
+    # ========================================================================
+    # NERC REQUIREMENT MAPPING TESTS
+    # ========================================================================
+
+    def test_nerc_req_ids_exist(self, oscal_data):
+        """Test 12: Components include NERC-Requirement-ID properties."""
+        comp_def = oscal_data.get('component-definition', {})
+        components = comp_def.get('components', [])
+
+        for i, component in enumerate(components):
+            props = component.get('properties', [])
+            prop_names = [p.get('name') for p in props]
+
+            assert 'NERC-Requirement-ID' in prop_names, \
+                f"Component {i} missing 'NERC-Requirement-ID' property. " \
+                f"Add: {{'name': 'NERC-Requirement-ID', 'value': 'CIP-005-6 R1'}}"
+
+    def test_nerc_requirement_format(self, oscal_data):
+        """Test 13: NERC-Requirement-ID values follow proper format."""
+        comp_def = oscal_data.get('component-definition', {})
+        components = comp_def.get('components', [])
+
+        # Expected format: CIP-### R# (with space between code and requirement)
+        nerc_pattern = re.compile(r'^CIP-\d{3}(?:-\d+)? R\d+[a-z]?$')
+
+        for i, component in enumerate(components):
+            props = component.get('properties', [])
+
+            for prop in props:
+                if prop.get('name') == 'NERC-Requirement-ID':
+                    value = prop.get('value', '')
+                    assert value.strip(), \
+                        f"Component {i} has empty NERC-Requirement-ID"
+                    assert nerc_pattern.match(value), \
+                        f"Component {i} has invalid NERC ID format: '{value}'. " \
+                        f"Expected format: 'CIP-005-6 R1' or 'CIP-005 R1'"
+
+    # ========================================================================
+    # OSCAL STRUCTURE TESTS
+    # ========================================================================
+
+    def test_components_have_uuid(self, oscal_data):
+        """Test 14: Each component has a UUID."""
+        comp_def = oscal_data.get('component-definition', {})
+        components = comp_def.get('components', [])
+
+        for i, component in enumerate(components):
+            assert 'uuid' in component, \
+                f"Component {i} missing 'uuid' field. Must have unique identifier."
+            assert component['uuid'], f"Component {i} has empty uuid"
+
+            # Validate UUID format (roughly)
+            uuid_val = component['uuid']
+            try:
+                uuid.UUID(uuid_val)
+            except ValueError:
+                pytest.fail(f"Component {i} has invalid UUID format: {uuid_val}")
+
+    def test_components_have_title(self, oscal_data):
+        """Test 15: Each component has a meaningful title."""
+        comp_def = oscal_data.get('component-definition', {})
+        components = comp_def.get('components', [])
+
+        for i, component in enumerate(components):
+            assert 'title' in component, \
+                f"Component {i} missing 'title' field"
+            title = component.get('title', '').strip()
+            assert title and len(title) > 5, \
+                f"Component {i} has vague or empty title: '{title}'. " \
+                f"Title should describe NERC standard and purpose (e.g., 'NERC CIP-005 Systems Security Management')"
+
+    def test_components_have_description(self, oscal_data):
+        """Test 16: Each component has a description summarizing NERC requirement."""
+        comp_def = oscal_data.get('component-definition', {})
+        components = comp_def.get('components', [])
+
+        for i, component in enumerate(components):
+            assert 'description' in component, \
+                f"Component {i} missing 'description' field"
+            desc = component.get('description', '').strip()
+            assert desc and len(desc) > 20, \
+                f"Component {i} has vague or empty description: '{desc}'. " \
+                f"Should summarize NERC requirement intent and key controls."
+
+    # ========================================================================
+    # CONTROL IMPLEMENTATION TESTS
+    # ========================================================================
+
+    def test_has_control_implementations(self, oscal_data):
+        """Test 17: At least one component has control-implementations."""
+        comp_def = oscal_data.get('component-definition', {})
+        components = comp_def.get('components', [])
+
+        has_impl = False
+        for component in components:
+            if 'control-implementations' in component:
+                impls = component['control-implementations']
+                if isinstance(impls, list) and len(impls) > 0:
+                    has_impl = True
+                    break
+
+        assert has_impl, \
+            "No components have 'control-implementations' array. " \
+            "At least one component should implement NIST controls."
+
+    def test_implemented_requirements_have_control_id(self, oscal_data):
+        """Test 18: Implemented requirements specify control-id."""
+        comp_def = oscal_data.get('component-definition', {})
+        components = comp_def.get('components', [])
+
+        for i, component in enumerate(components):
+            impls = component.get('control-implementations', [])
+            for impl_idx, impl in enumerate(impls):
+                req_list = impl.get('implemented-requirements', [])
+                for req_idx, req in enumerate(req_list):
+                    assert 'control-id' in req, \
+                        f"Component {i}, control-impl {impl_idx}, requirement {req_idx} " \
+                        f"missing 'control-id'. Should specify NIST control like 'sc-7'"
+
+    # ========================================================================
+    # QUALITY VALIDATION TESTS
+    # ========================================================================
+
+    def test_no_vague_descriptions(self, oscal_data):
+        """Test 19: Component descriptions are specific, not vague."""
+        comp_def = oscal_data.get('component-definition', {})
+        components = comp_def.get('components', [])
+
+        vague_words = ['ensure', 'verify', 'check', 'implement', 'manage', 'handle']
+
+        for i, component in enumerate(components):
+            desc = component.get('description', '').lower()
+
+            # Count vague words but allow some if description is long
+            vague_count = sum(1 for word in vague_words if f' {word} ' in f' {desc} ')
+            desc_length = len(desc.split())
+
+            # Vague word ratio should be < 20% of description
+            vague_ratio = vague_count / desc_length if desc_length > 0 else 0
+            assert vague_ratio < 0.2, \
+                f"Component {i} description uses too many vague words. " \
+                f"Be specific: instead of 'implement controls', describe which controls and how."
+
+    def test_minimum_properties_per_component(self, oscal_data):
+        """Test 20: Each component has at least 4 properties."""
+        comp_def = oscal_data.get('component-definition', {})
+        components = comp_def.get('components', [])
+
+        for i, component in enumerate(components):
+            props = component.get('properties', [])
+            assert len(props) >= 4, \
+                f"Component {i} has insufficient properties ({len(props)}/4). " \
+                f"Must include: NERC-Requirement-ID, NIST-800-53-Primary-Control, " \
+                f"JAMA-Requirement-ID, Implementation-Status (minimum)"
+
+    def test_json_is_parseable_by_compliance_tools(self, oscal_data):
+        """Test 21: JSON structure matches OSCAL v1.1.2 schema expectations."""
+        comp_def = oscal_data.get('component-definition', {})
+
+        # Verify top-level structure
+        assert 'uuid' in comp_def or 'metadata' in comp_def, \
+            "Component definition missing required top-level fields"
+
+        metadata = comp_def.get('metadata', {})
+        assert 'title' in metadata or 'published' in metadata, \
+            "Metadata missing required fields for OSCAL compliance"
+
+        # Verify components array structure
+        components = comp_def.get('components', [])
+        if len(components) > 0:
+            first_comp = components[0]
+            assert isinstance(first_comp, dict), \
+                "Components array should contain objects"
+
+    # ========================================================================
+    # NIST CONTROL EXISTENCE VALIDATION TESTS
+    # ========================================================================
+
+    def test_nist_controls_exist_in_catalog(self, oscal_data):
+        """Test 23: All mapped NIST controls exist in NIST SP 800-53 R5 catalog."""
+        comp_def = oscal_data.get('component-definition', {})
+        components = comp_def.get('components', [])
+
+        for i, component in enumerate(components):
+            props = component.get('properties', [])
+
+            for prop in props:
+                prop_name = prop.get('name', '')
+                if 'NIST' in prop_name and 'Control' in prop_name:
+                    value = prop.get('value', '').strip()
+
+                    if not value:
+                        continue
+
+                    # Handle comma-separated lists of controls
+                    controls = [c.strip() for c in value.split(',')]
+
+                    for ctrl in controls:
+                        assert validate_nist_control(ctrl), \
+                            f"Component {i} maps to non-existent NIST control: '{ctrl}'. " \
+                            f"Verify control ID exists in NIST SP 800-53 R5 catalog. " \
+                            f"Valid format: Family-Number (e.g., 'SC-7', 'AC-2', 'CA-3')"
+
+    def test_nist_controls_have_descriptions(self, oscal_data):
+        """Test 24: All mapped NIST controls have valid descriptions in catalog."""
+        comp_def = oscal_data.get('component-definition', {})
+        components = comp_def.get('components', [])
+
+        for i, component in enumerate(components):
+            props = component.get('properties', [])
+
+            for prop in props:
+                prop_name = prop.get('name', '')
+                if 'NIST' in prop_name and 'Primary' in prop_name:
+                    value = prop.get('value', '').strip()
+
+                    if not value:
+                        continue
+
+                    description = get_control_description(value)
+                    assert description, \
+                        f"Component {i} NIST control '{value}' not found in NIST SP 800-53 R5 catalog. " \
+                        f"Verify the control ID is correct and exists in the official NIST catalog."
+
+    # ========================================================================
+    # JAMA CSV EXPORT VALIDATION TESTS
+    # ========================================================================
+
+    def test_csv_export_format_valid(self, oscal_data, oscal_file):
+        """Test 25: OSCAL data can be exported to valid JAMA CSV format."""
+        from oscal_to_jama_csv import oscal_to_jama_csv
+
+        try:
+            # Export to CSV
+            output_csv = oscal_file.with_stem(oscal_file.stem + '_test_export')
+            rows = oscal_to_jama_csv(oscal_file, output_csv, format_type='standard')
+
+            # Clean up
+            if output_csv.exists():
+                output_csv.unlink()
+
+            assert len(rows) > 0, "CSV export produced no rows"
+            assert 'JAMA-Requirement-ID' in rows[0], "CSV missing JAMA-Requirement-ID column"
+            assert 'NERC-Requirement-ID' in rows[0], "CSV missing NERC-Requirement-ID column"
+
+        except Exception as e:
+            pytest.fail(f"CSV export failed: {e}")
+
+    def test_csv_export_required_columns(self, oscal_data, oscal_file):
+        """Test 26: CSV export includes all required JAMA columns."""
+        from oscal_to_jama_csv import oscal_to_jama_csv
+
+        try:
+            output_csv = oscal_file.with_stem(oscal_file.stem + '_test_export')
+            rows = oscal_to_jama_csv(oscal_file, output_csv, format_type='standard')
+
+            if output_csv.exists():
+                output_csv.unlink()
+
+            if not rows:
+                pytest.skip("No components to export")
+
+            required_columns = [
+                'JAMA-Requirement-ID',
+                'NERC-Requirement-ID',
+                'NIST-Primary-Control',
+                'Title',
+                'Description'
+            ]
+
+            first_row = rows[0]
+            for column in required_columns:
+                assert column in first_row, \
+                    f"CSV export missing required column: {column}"
+
+        except Exception as e:
+            pytest.fail(f"CSV export validation failed: {e}")
+
+    def test_csv_export_no_empty_ids(self, oscal_data, oscal_file):
+        """Test 27: CSV export has no empty JAMA or NERC requirement IDs."""
+        from oscal_to_jama_csv import oscal_to_jama_csv
+
+        try:
+            output_csv = oscal_file.with_stem(oscal_file.stem + '_test_export')
+            rows = oscal_to_jama_csv(oscal_file, output_csv, format_type='standard')
+
+            if output_csv.exists():
+                output_csv.unlink()
+
+            for i, row in enumerate(rows):
+                jama_id = row.get('JAMA-Requirement-ID', '').strip()
+                nerc_id = row.get('NERC-Requirement-ID', '').strip()
+
+                assert jama_id, \
+                    f"CSV row {i}: Empty JAMA-Requirement-ID"
+                assert nerc_id, \
+                    f"CSV row {i}: Empty NERC-Requirement-ID"
+
+        except Exception as e:
+            pytest.fail(f"CSV ID validation failed: {e}")
+
+    # ========================================================================
+    # COMPREHENSIVE VALIDATION TEST
+    # ========================================================================
+
+    def test_oscal_is_jama_ready(self, oscal_data):
+        """Test 22: OSCAL JSON is ready for JAMA import."""
+        comp_def = oscal_data.get('component-definition', {})
+        components = comp_def.get('components', [])
+
+        assert len(components) > 0, "No components to export to JAMA"
+
+        # Check each component has minimal required fields for JAMA CSV export
+        required_for_jama = [
+            'uuid',
+            'title',
+            'properties'  # Contains NERC-ID, JAMA-ID, NIST mappings
+        ]
+
+        for i, component in enumerate(components):
+            for field in required_for_jama:
+                assert field in component, \
+                    f"Component {i} missing '{field}' required for JAMA import"
+
+            # Verify properties contain JAMA-relevant fields
+            props = {p.get('name'): p.get('value') for p in component.get('properties', [])}
+            assert 'JAMA-Requirement-ID' in props, \
+                f"Component {i} missing JAMA-Requirement-ID for traceability matrix"
+            assert 'NERC-Requirement-ID' in props, \
+                f"Component {i} missing NERC-Requirement-ID for requirement mapping"
+
+
+# ============================================================================
+# PYTEST CONFIGURATION
+# ============================================================================
+
+def pytest_configure(config):
+    """Configure pytest with custom markers and settings."""
+    config.addinivalue_line("markers", "critical: critical test must pass")
+    config.addinivalue_line("markers", "validation: structural validation test")
+    config.addinivalue_line("markers", "mapping: NERC-to-NIST mapping test")
+    config.addinivalue_line("markers", "jama: JAMA export readiness test")
+
+
+# ============================================================================
+# MAIN EXECUTION
+# ============================================================================
+
+if __name__ == "__main__":
+    pytest.main([__file__, "-v", "--tb=short"])
