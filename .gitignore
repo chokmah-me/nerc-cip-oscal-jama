@@ -68,3 +68,6 @@ Thumbs.db
 # Project specific
 *.csv.tmp
 test-output/
+
+# Internal reports and analysis (not for client release)
+TRAVIS_HASSLOCH_EXTENSIVE_REPORT.md
