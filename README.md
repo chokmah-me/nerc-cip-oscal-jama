@@ -83,7 +83,7 @@ Follow these 5 steps to convert NERC-CIP text to OSCAL JSON:
 **What you need:** Regulatory text from a NERC-CIP standard (CIP-005, CIP-007, etc.)
 
 **Where to get it:**
-- NERC official docs: https://www.nerc.net/pa/Stand/Pages/default.aspx
+- NERC official docs: https://www.nerc.com/standards
 - Look for "CIP-00X-Y Requirements"
 - Copy the full requirement text (including subrequirements a, b, c, etc.)
 
