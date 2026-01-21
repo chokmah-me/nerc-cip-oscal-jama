@@ -49,6 +49,31 @@ pytest --version
 
 ---
 
+## For Developers & Contributors
+
+**New to the codebase?** Start with **CLAUDE.md** for a comprehensive overview:
+- Architecture & three-layer compliance mapping (NERC → OSCAL → JAMA)
+- Core components explanation (nist_controls.py, verify_oscal_compliance.py, oscal_to_jama_csv.py)
+- Format specifications for NIST controls, NERC requirements, and JAMA placeholders
+- Common development tasks (adding controls, writing tests, debugging)
+- Troubleshooting guide with real error examples
+
+**Quick reference for common development commands:**
+```bash
+# Run all 27 validation tests
+pytest verify_oscal_compliance.py -v
+
+# Run specific test
+pytest verify_oscal_compliance.py::TestOSCALCompliance::test_nist_controls_exist_in_catalog -v
+
+# Export to JAMA CSV
+python oscal_to_jama_csv.py nerc-oscal.json --validate
+```
+
+See **CLAUDE.md** for detailed explanations of the architecture, command reference, and development workflows.
+
+---
+
 ## Quick Start Workflow
 
 Follow these 5 steps to convert NERC-CIP text to OSCAL JSON:
@@ -491,6 +516,8 @@ JAMA-ID: CIP-005-R1-a
 | File | Purpose | When to Use |
 |---|---|---|
 | `README.md` | This file. Usage instructions and troubleshooting | First! Read this before starting |
+| `CLAUDE.md` | Developer guide for architecture, commands, and development | Reference during development; consult for architecture questions |
+| `CLAUDE_README.md` | Meta-guide explaining how to use CLAUDE.md | Understand what CLAUDE.md provides and how to leverage it |
 | `TRAVIS-NERC-PROMPT.md` | Claude Code prompt for OSCAL generation | Step 2: Copy the PROMPT section into Claude Code |
 | `verify_oscal_compliance.py` | Pytest validator for OSCAL JSON quality | Step 4: Run with `pytest verify_oscal_compliance.py -v` |
 | `nerc-oscal.json` | Your generated OSCAL output (you create this) | Step 3: Save Claude's output here |
