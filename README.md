@@ -5,6 +5,55 @@ This toolkit transforms unstructured NERC-CIP regulatory text into structured OS
 
 ---
 
+## Release Notes
+
+### v1.1.0 (January 25, 2026) 🚀
+
+**Production-Grade OSCAL Dataset Released**
+
+This release delivers a complete, validated OSCAL v1.1.0 compliance dataset covering **49 active NERC-CIP Requirements** across **14 standards** (CIP-002 through CIP-015).
+
+**Major Features:**
+- **PDF Extraction Toolchain**: Automated parsing of 30 NERC-CIP regulatory documents with OCR cleanup
+  - `nerc_pdf_parser.py` - PDF text extraction with pagination filtering
+  - `extract_nerc_text.py` - State machine-based requirement parsing
+  - `nerc_raw_text/` - Complete extracted text corpus for all standards
+
+- **OSCAL Generation**: Production script for converting parsed NERC text to OSCAL v1.1.0 JSON
+  - `generate_oscal.py` - Reproducible OSCAL generation with deduplication
+  - Auto-prioritizes latest standard versions (e.g., CIP-003-11 over CIP-003-9)
+
+- **Complete Standards Library**: 30 PDF documents across CIP-002 through CIP-015
+  - `NERC-CIP/` directory - Full NERC standards library with multiple versions
+
+- **Parser Test Suite**: Validation and unit tests
+  - `test_nerc_parser.py` - Comprehensive test coverage for extraction and parsing
+
+**Quality Assurance:**
+- ✅ **Schema Compliance**: Valid OSCAL v1.1.0 with unique UUIDs and ISO-8601 timestamps
+- ✅ **Data Hygiene**: Zero OCR artifacts, pagination markers, or violation tables detected
+- ✅ **Logic Integrity**: Smart deduplication verified; only latest versions included
+- ✅ **Scope Coverage**: Delivered CIP-002 through CIP-015 (exceeded original CIP-014 scope)
+
+**Breakdown by Standard:**
+- CIP-002 (-8): 2 requirements | CIP-003 (-11): 4 | CIP-004 (-8): 6 | CIP-005 (-8): 3
+- CIP-006 (-7): 3 | CIP-007 (-7): 5 | CIP-008 (-7): 4 | CIP-009 (-7): 3
+- CIP-010 (-5): 4 | CIP-011 (-4): 2 | CIP-012 (-2): 1 | CIP-013 (-3): 3
+- CIP-014 (-3): 6 | CIP-015 (-1): 3
+- **Total: 49 requirements across 14 standards**
+
+**Changes:**
+- Updated `nerc-oscal.json` with latest standard mappings and complete data
+- Removed deprecated `nerc-oscal.csv` (use `oscal_to_jama_csv.py` to regenerate)
+
+**Commit:** `3549905` | **Tag:** `v1.1.0` | **Files:** 65 changed, 44,718 insertions
+
+**Ready for:** JAMA import, GRC tool ingestion, compliance audit evidence
+
+See [CLAUDE.md](CLAUDE.md) for technical architecture and development details.
+
+---
+
 ## Overview
 
 **Problem:** NERC-CIP standards are written as regulatory text. Converting them to compliance frameworks requires manual effort, semantic mapping, and careful traceability.
@@ -513,6 +562,7 @@ JAMA-ID: CIP-005-R1-a
 
 ## Reference: Files in This Toolkit
 
+### Core Toolkit
 | File | Purpose | When to Use |
 |---|---|---|
 | `README.md` | This file. Usage instructions and troubleshooting | First! Read this before starting |
@@ -520,7 +570,24 @@ JAMA-ID: CIP-005-R1-a
 | `CLAUDE_README.md` | Meta-guide explaining how to use CLAUDE.md | Understand what CLAUDE.md provides and how to leverage it |
 | `TRAVIS-NERC-PROMPT.md` | Claude Code prompt for OSCAL generation | Step 2: Copy the PROMPT section into Claude Code |
 | `verify_oscal_compliance.py` | Pytest validator for OSCAL JSON quality | Step 4: Run with `pytest verify_oscal_compliance.py -v` |
-| `nerc-oscal.json` | Your generated OSCAL output (you create this) | Step 3: Save Claude's output here |
+| `nist_controls.py` | NIST SP 800-53 R5 control catalog and validation | Used internally by validator; reference for control lookups |
+| `oscal_to_jama_csv.py` | CSV export utility for JAMA traceability matrix | Step 6: Export validated OSCAL to CSV format |
+
+### Generated Outputs (v1.1.0)
+| File/Directory | Purpose | Contents |
+|---|---|---|
+| `nerc-oscal.json` | Complete OSCAL v1.1.0 dataset | 49 requirements across 14 standards (CIP-002 through CIP-015) |
+| `nerc_all_combined.txt` | Full NERC text corpus | Combined extracted text from all 30 PDF standards |
+
+### Parsing Toolchain (v1.1.0)
+| File/Directory | Purpose | Usage |
+|---|---|---|
+| `nerc_pdf_parser.py` | PDF text extraction with OCR cleanup | Core PDF parsing engine; handles pagination filtering |
+| `extract_nerc_text.py` | State machine-based requirement parsing | Converts raw PDF text to structured NERC requirement format |
+| `generate_oscal.py` | OSCAL generation from parsed text | Reproducible script for generating OSCAL from NERC text |
+| `test_nerc_parser.py` | Parser validation test suite | Unit tests for extraction and parsing logic |
+| `NERC-CIP/` | NERC-CIP standards library | 30 PDF documents (CIP-002 through CIP-015 with versions) |
+| `nerc_raw_text/` | Extracted text outputs | 30 .txt files corresponding to each PDF standard |
 
 ---
 
@@ -570,8 +637,8 @@ JAMA-ID: CIP-005-R1-a
 - Validator pattern adapted from Module 1: test-spec-validator.py
 - Traceability format from Module 2: Lab-2.2-Traceability-Matrix
 
-**Created:** January 2026
-**Version:** 1.0.0
+**Latest Version:** 1.1.0 (January 25, 2026)
+**Initial Release:** 1.0.0 (January 2026)
 
 ---
 
