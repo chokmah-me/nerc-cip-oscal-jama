@@ -568,6 +568,7 @@ JAMA-ID: CIP-005-R1-a
 | `README.md` | This file. Usage instructions and troubleshooting | First! Read this before starting |
 | `CLAUDE.md` | Developer guide for architecture, commands, and development | Reference during development; consult for architecture questions |
 | `CLAUDE_README.md` | Meta-guide explaining how to use CLAUDE.md | Understand what CLAUDE.md provides and how to leverage it |
+| `OSCAL-DATASET-GUIDE.md` | Comprehensive guide to `nerc-oscal.json` structure and usage | Reference for understanding dataset, querying requirements, GRC integration |
 | `TRAVIS-NERC-PROMPT.md` | Claude Code prompt for OSCAL generation | Step 2: Copy the PROMPT section into Claude Code |
 | `verify_oscal_compliance.py` | Pytest validator for OSCAL JSON quality | Step 4: Run with `pytest verify_oscal_compliance.py -v` |
 | `nist_controls.py` | NIST SP 800-53 R5 control catalog and validation | Used internally by validator; reference for control lookups |
