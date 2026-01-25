@@ -51,6 +51,53 @@ def load_oscal_json(oscal_file: Path) -> dict:
             raise json.JSONDecodeError(f"Invalid JSON in {oscal_file}: {e.msg}", e.doc, e.pos)
 
 
+def _extract_components_from_oscal(oscal_data: dict) -> List[dict]:
+    """
+    Extract components from OSCAL data (handles both catalog and component-definition schemas).
+
+    Catalog format: groups[].controls[] where class='requirement' becomes components
+    Component-definition format: components[]
+
+    Args:
+        oscal_data: Parsed OSCAL JSON data
+
+    Returns:
+        List of component-like objects
+    """
+    # Try component-definition first
+    comp_def = oscal_data.get('component-definition', {})
+    if comp_def and 'components' in comp_def:
+        return comp_def.get('components', [])
+
+    # Fall back to catalog format
+    catalog = oscal_data.get('catalog', {})
+    if catalog and 'groups' in catalog:
+        components = []
+        for group in catalog.get('groups', []):
+            # Each requirement control becomes a component
+            for control in group.get('controls', []):
+                if control.get('class') == 'requirement':
+                    # Extract prose/description from parts
+                    description = ''
+                    parts = control.get('parts', [])
+                    if parts and isinstance(parts[0], dict):
+                        description = parts[0].get('prose', '')
+
+                    # Convert control to component-like structure
+                    component = {
+                        'id': control.get('id', ''),
+                        'title': control.get('title', ''),
+                        'uuid': str(__import__('uuid').uuid4()),  # Generate since catalog doesn't have it
+                        'description': description,
+                        'properties': control.get('props', []) or [],
+                        'group_id': group.get('id', '')
+                    }
+                    components.append(component)
+        return components
+
+    return []
+
+
 def extract_component_properties(component: dict) -> Dict[str, str]:
     """
     Extract named properties from OSCAL component as dict.
@@ -63,9 +110,10 @@ def extract_component_properties(component: dict) -> Dict[str, str]:
     """
     props = {}
     for prop in component.get('properties', []):
-        name = prop.get('name', '')
-        value = prop.get('value', '')
-        props[name] = value
+        if isinstance(prop, dict):
+            name = prop.get('name', '')
+            value = prop.get('value', '')
+            props[name] = value
 
     return props
 
@@ -89,7 +137,7 @@ def normalize_control_id(control_id: str) -> str:
 def oscal_to_jama_csv(oscal_file: Path, output_csv: Optional[Path] = None,
                        format_type: str = 'standard') -> List[Dict[str, str]]:
     """
-    Convert OSCAL Component Definition to JAMA CSV format.
+    Convert OSCAL (Catalog or Component Definition) to JAMA CSV format.
 
     Args:
         oscal_file: Path to input OSCAL JSON file
@@ -102,12 +150,11 @@ def oscal_to_jama_csv(oscal_file: Path, output_csv: Optional[Path] = None,
     # Load OSCAL JSON
     oscal_data = load_oscal_json(oscal_file)
 
-    # Extract components
-    comp_def = oscal_data.get('component-definition', {})
-    components = comp_def.get('components', [])
+    # Extract components from either schema
+    components = _extract_components_from_oscal(oscal_data)
 
     if not components:
-        raise ValueError("OSCAL JSON has no components to export")
+        raise ValueError("OSCAL JSON has no requirements/components to export")
 
     # Build CSV rows
     rows = []
