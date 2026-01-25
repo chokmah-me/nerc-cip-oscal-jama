@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Repository Overview
 
-**NERC-CIP OSCAL Toolkit** - Transforms unstructured NERC-CIP regulatory text into structured OSCAL v1.1.2 Component Definitions with automatic mapping to NIST SP 800-53 controls.
+**NERC-CIP OSCAL Toolkit** - Transforms unstructured NERC-CIP regulatory text into structured OSCAL v1.0.0 Catalogs with automatic mapping to NIST SP 800-53 controls.
 
 **Key Purpose:** Generate machine-readable compliance JSON that bridges regulatory requirements (NERC), security controls (NIST), and requirements management systems (JAMA) for traceability matrices.
 
@@ -342,7 +342,7 @@ pytest verify_oscal_compliance.py::TestOSCALCompliance::test_nist_controls_exist
 
 ## Key Concepts & Constraints
 
-### OSCAL v1.1.2 Requirements
+### OSCAL v1.0.0 Requirements
 - Root element MUST be `component-definition`
 - Each component requires: uuid, title, description, properties
 - Properties use name-value pairs for semantic meaning
@@ -462,7 +462,7 @@ python -m pytest verify_oscal_compliance.py -v
 
 ## References & Documentation
 
-- **OSCAL v1.1.2 Specification:** https://pages.nist.gov/OSCAL/
+- **OSCAL v1.0.0 Specification:** https://pages.nist.gov/OSCAL/
 - **NIST SP 800-53 R5:** https://csrc.nist.gov/publications/detail/sp/800-53/rev-5/final
 - **NERC Standards:** https://www.nerc.net/pa/Stand/Pages/default.aspx
 - **JAMA Documentation:** See JAMA vendor documentation for CSV import schema

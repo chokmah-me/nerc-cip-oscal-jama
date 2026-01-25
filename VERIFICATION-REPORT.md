@@ -112,7 +112,7 @@ All verification checks have passed successfully. The NERC-CIP to OSCAL conversi
 
 | File | Size | Status | Purpose |
 |------|------|--------|---------|
-| **nerc-oscal.json** | 7.4 KB | ✅ Valid | OSCAL v1.1.2 component definition |
+| **nerc-oscal.json** | 7.4 KB | ✅ Valid | OSCAL v1.0.0 catalog |
 | **nerc-oscal.csv** | 1.4 KB | ✅ Valid | JAMA-compatible traceability matrix |
 | **nist_controls.py** | 63 KB | ✅ Valid | Embedded NIST catalog (852 controls) |
 

@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This toolkit transforms unstructured NERC-CIP regulatory text into structured OSCAL v1.1.2 Component Definitions with automatic mapping to NIST SP 800-53 controls. The project enables compliance teams to convert regulatory requirements into machine-readable JSON that can be imported into JAMA for requirements management and traced through cloud infrastructure tests.
+This toolkit transforms unstructured NERC-CIP regulatory text into structured OSCAL v1.0.0 Catalogs with automatic mapping to NIST SP 800-53 controls. The project enables compliance teams to convert regulatory requirements into machine-readable JSON that can be imported into JAMA for requirements management and traced through cloud infrastructure tests.
 
 **Core Problem Solved:** Manual conversion of NERC-CIP regulatory text to compliance frameworks requires significant effort, semantic mapping, and careful traceability. This toolkit automates the process using AI-powered conversion with comprehensive validation.
 
@@ -12,7 +12,7 @@ This toolkit transforms unstructured NERC-CIP regulatory text into structured OS
 - **Testing Framework:** pytest (27 comprehensive tests)
 - **Dependencies:** jsonschema, pandas, pytest-cov
 - **AI Integration:** Claude Code for regulatory text conversion
-- **Standards:** OSCAL v1.1.2, NIST SP 800-53 R5, NERC-CIP Standards
+- **Standards:** OSCAL v1.0.0, NIST SP 800-53 R5, NERC-CIP Standards
 - **Output Formats:** JSON (OSCAL), CSV (JAMA import)
 
 ## Architecture & Components
