@@ -100,7 +100,11 @@ pytest --version
 
 ## For Developers & Contributors
 
-**New to the codebase?** Start with **CLAUDE.md** for a comprehensive overview:
+**New to the project?** Start here based on your role:
+
+- **Project Overview**: See **GITHUB-RELEASES-SUMMARY.md** for a master index of all v1.1.0 releases (4 coordinated releases)
+- **Dataset Details**: See **OSCAL-DATASET-GUIDE.md** for complete dataset structure and query examples
+- **Architecture**: See **CLAUDE.md** for comprehensive overview:
 - Architecture & three-layer compliance mapping (NERC → OSCAL → JAMA)
 - Core components explanation (nist_controls.py, verify_oscal_compliance.py, oscal_to_jama_csv.py)
 - Format specifications for NIST controls, NERC requirements, and JAMA placeholders
@@ -566,9 +570,11 @@ JAMA-ID: CIP-005-R1-a
 | File | Purpose | When to Use |
 |---|---|---|
 | `README.md` | This file. Usage instructions and troubleshooting | First! Read this before starting |
+| `GITHUB-RELEASES-SUMMARY.md` | Master index of all 4 v1.1.0 releases | Navigate releases by role/use case |
+| `OSCAL-DATASET-GUIDE.md` | Comprehensive guide to `nerc-oscal.json` structure and usage | Reference for understanding dataset, querying requirements, GRC integration |
 | `CLAUDE.md` | Developer guide for architecture, commands, and development | Reference during development; consult for architecture questions |
 | `CLAUDE_README.md` | Meta-guide explaining how to use CLAUDE.md | Understand what CLAUDE.md provides and how to leverage it |
-| `OSCAL-DATASET-GUIDE.md` | Comprehensive guide to `nerc-oscal.json` structure and usage | Reference for understanding dataset, querying requirements, GRC integration |
+| `RELEASE-v1.1.0-SUMMARY.md` | Complete v1.1.0 release wrap-up and statistics | Reference for project scope and metrics |
 | `TRAVIS-NERC-PROMPT.md` | Claude Code prompt for OSCAL generation | Step 2: Copy the PROMPT section into Claude Code |
 | `verify_oscal_compliance.py` | Pytest validator for OSCAL JSON quality | Step 4: Run with `pytest verify_oscal_compliance.py -v` |
 | `nist_controls.py` | NIST SP 800-53 R5 control catalog and validation | Used internally by validator; reference for control lookups |
