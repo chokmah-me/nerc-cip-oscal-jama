@@ -1,0 +1,554 @@
+--- START DOCUMENT: cip-005-8.pdf ---
+CIP-005-8 — Cyber Security – Electronic Security Perimeter(s)
+A. Introduction
+1. Title: Cyber Security — Electronic Security Perimeter(s)
+2. Number: CIP-005-8
+3. Purpose: To protect BES Cyber Systems (BCS) against compromise by permitting
+only known and controlled communication to reduce the likelihood of
+misoperation or instability in the Bulk Electric System (BES).
+4. Applicability:
+4.1. Functional Entities: For the purpose of the requirements contained herein, the
+following list of functional entities will be collectively referred to as “Responsible
+Entities.” For requirements in this standard where a specific functional entity or
+subset of functional entities are the applicable entity or entities, the functional
+entity or entities are specified explicitly.
+4.1.1. Balancing Authority
+4.1.2. Distribution Provider that owns one or more of the following Facilities,
+systems, and equipment for the protection or restoration of the BES:
+4.1.2.1. Each underfrequency Load shedding (UFLS) or undervoltage
+Load shedding (UVLS) system that:
+4.1.2.1.1. is part of a Load shedding program that is subject to
+one or more requirements in a NERC or Regional
+Reliability Standard; and
+4.1.2.1.2. performs automatic Load shedding under a common
+control system owned by the Responsible Entity,
+without human operator initiation, of 300 MW or
+more.
+4.1.2.2. Each Remedial Action Scheme (RAS) where the RAS is subject to
+one or more requirements in a NERC or Regional Reliability
+Standard.
+4.1.2.3. Each Protection System (excluding UFLS and UVLS) that applies
+to Transmission where the Protection System is subject to one
+or more requirements in a NERC or Regional Reliability
+Standard.
+4.1.2.4. Each Cranking Path and group of Elements meeting the initial
+switching requirements from a Blackstart Resource up to and
+including the first interconnection point of the starting station
+service of the next generation unit(s) to be started.
+4.1.3. Generator Operator
+4.1.4. Generator Owner
+Page 1 of 16
+CIP-005-8 — Cyber Security – Electronic Security Perimeter(s)
+4.1.5. Reliability Coordinator
+4.1.6. Transmission Operator
+4.1.7. Transmission Owner
+4.2. Facilities: For the purpose of the requirements contained herein, the following
+Facilities, systems, and equipment owned by each Responsible Entity in Section
+4.1 above are those to which these requirements are applicable. For
+requirements in this standard where a specific type of Facilities, system, or
+equipment or subset of Facilities, systems, and equipment are applicable, these
+are specified explicitly.
+4.2.1. Distribution Provider: One or more of the following Facilities, systems
+and equipment owned by the Distribution Provider for the protection or
+restoration of the BES:
+4.2.1.1. Each UFLS or UVLS System that:
+4.2.1.1.1. is part of a Load shedding program that is subject to
+one or more requirements in a NERC or Regional
+Reliability Standard; and
+4.2.1.1.2. performs automatic Load shedding under a common
+control system owned by the Responsible Entity,
+without human operator initiation, of 300 MW or
+more.
+4.2.1.2. Each RAS where the RAS is subject to one or more requirements
+in a NERC or Regional Reliability Standard.
+4.2.1.3. Each Protection System (excluding UFLS and UVLS) that applies
+to Transmission where the Protection System is subject to one
+or more requirements in a NERC or Regional Reliability
+Standard.
+4.2.1.4. Each Cranking Path and group of Elements meeting the initial
+switching requirements from a Blackstart Resource up to and
+including the first interconnection point of the starting station
+service of the next generation unit(s) to be started.
+4.2.2. Responsible Entities listed in 4.1 other than Distribution Providers:
+All BES Facilities.
+4.2.3. Exemptions: The following are exempt from Standard CIP-005-8:
+4.2.3.1. Cyber Systems at Facilities regulated by the Canadian Nuclear
+Safety Commission.
+4.2.3.2. Cyber Systems associated with communication networks and
+data communication links between discrete Electronic Security
+Perimeters (ESP).
+Page 2 of 16
+CIP-005-8 — Cyber Security – Electronic Security Perimeter(s)
+4.2.3.3. Cyber Systems, associated with communication networks and
+data communication links, between the Cyber Systems
+providing confidentiality and integrity of an ESP that extends to
+one or more geographic locations.
+4.2.3.4. The systems, structures, and components that are regulated by
+the Nuclear Regulatory Commission under a cyber security plan
+pursuant to 10 C.F.R. Section 73.54.
+4.2.3.5. For Distribution Providers, the systems and equipment that are
+not included in section 4.2.1 above.
+4.2.3.6. Responsible Entities that identify that they have no BCS
+categorized as high impact or medium impact according to the
+CIP-002 identification and categorization processes.
+4.3. “Applicable Systems”: Each table has an “Applicable Systems” column to define
+the scope of systems to which a specific requirement part applies.
+5. Effective Date: See “Project 2016-02 Modifications to CIP Standards Implementation
+Plan.”
+Page 3 of 16
+CIP-005-8 — Cyber Security – Electronic Security Perimeter(s)
+B. Requirements and Measures
+R1. Each Responsible Entity shall implement one or more documented processes that collectively include each of the
+applicable requirement parts in CIP-005-8 Table R1 – Electronic Security Perimeter. [Violation Risk Factor: Medium] [Time
+Horizon: Operations Planning and Same Day Operations].
+M1. Evidence must include each of the applicable documented processes that collectively include each of the applicable
+requirement parts in CIP-005-8 Table R1 – Electronic Security Perimeter and additional evidence to demonstrate
+implementation as described in the Measures column of the table.
+CIP-005-8 Table R1 – Electronic Security Perimeter
+Part Applicable Systems Requirements Measures
+1.1 High impact BCS and their associated PCA Applicable Systems connected to a Examples of evidence may include, but is
+network via a routable protocol must be not limited to, a list of all ESPs with all
+Medium impact BCS and their associated
+protected by an ESP. uniquely identifiable applicable Cyber
+PCA
+Systems connected via a routable protocol
+within each ESP.
+1.2 High impact BCS with ERC and their Permit only needed routable protocol Examples of evidence may include, but are
+associated PCA communications, documenting the not limited to, documentation that
+reason, and deny all other routable includes the configuration of system and
+Medium impact BCS with ERC and their
+protocol communications, through the documented reason, such as:
+associated PCA
+ESP; excluding time sensitive
+• Electronic Access Point (EAP)
+communications of Protection Systems.
+configuration;
+• Network infrastructure
+configuration (e.g., technical
+policies, ACL, VLAN, VXLAN, MPLS,
+VRF, multi-context, or multi-
+tenant environment); or
+• SCI configuration or settings (e.g.,
+technical policies, hypervisor,
+fabric, back-plane, or SAN
+configuration).
+Page 4 of 16
+CIP-005-8 — Cyber Security – Electronic Security Perimeter(s)
+CIP-005-8 Table R1 – Electronic Security Perimeter
+Part Applicable Systems Requirements Measures
+1.3 SCI supporting an Applicable System from Protect ESP and SCI configurations by Examples of evidence may include, but are
+Part 1.1. implementing methods to permit only not limited to, documentation of the
+needed network accessibility to methods implemented to permit only
+EACMS, and their supporting SCI, that
+Management Interfaces of Applicable needed network accessibility to
+control an ESP for an Applicable System in
+Systems, per system capability. Management Interfaces, including
+Part 1.1
+documented reasons such as:
+• Logical configuration or settings
+(e.g., technical Policies, ACL, VLAN,
+VXLAN, MPLS, VRF, multi-context,
+or multi-tenant environment);
+• Physically isolated or out-of-band
+network for dedicated
+Management Interfaces; or
+• SCI configuration or settings
+showing the isolation of the
+Management Interfaces (e.g.,
+technical policies, hypervisor, fabric
+back-plane, or SAN configuration).
+1.4 High impact BCS and their associated PCA Perform authentication when establishing Examples of evidence may include, but are
+Dial-up Connectivity with Applicable not limited to, configuration, settings, or
+Medium impact BCS and their associated
+Systems, if any, and per system capability. documented process that describes how
+PCA
+the Responsible Entity is providing
+SCI supporting an Applicable System in this authenticated access through each dial-up
+Part connection.
+1.5 High impact BCS Have one or more methods for detecting An example of evidence may include, but
+known or suspected malicious routable is not limited to, documentation that
+Medium impact BCS at Control Centers
+protocol communications entering or malicious routable protocol
+leaving an ESP. communications detection methods (e.g.,
+intrusion detection system, application
+layer firewall, etc.) are implemented.
+Page 5 of 16
+CIP-005-8 — Cyber Security – Electronic Security Perimeter(s)
+CIP-005-8 Table R1 – Electronic Security Perimeter
+Part Applicable Systems Requirements Measures
+1.6 High impact BCS and their associated PCA Protect the data traversing Examples of evidence may include, but are
+communication links used to span a single not limited to, documentation of methods
+Medium impact BCS at Control Centers
+ESP between PSPs through the use of: used to protect the confidentiality and
+and their associated PCA
+integrity of the data, such as:
+• Confidentiality and integrity
+controls, or • Configurations or settings used to
+enforce encryption; or
+• Physical controls that restrict
+access to the cabling and other • The physical access restrictions
+non-programmable (e.g., cabling and components
+communication components in secured through conduit or
+those instances when such cabling secured cable trays).
+and components are located
+outside of a PSP,
+Excluding:
+i. Real-time Assessment and
+Real-time monitoring data
+while being transmitted
+between Control Centers
+subject to CIP-012; and
+ii. Time-sensitive communication
+of Protection Systems.
+Page 6 of 16
+CIP-005-8 — Cyber Security – Electronic Security Perimeter(s)
+R2. Each Responsible Entity shall implement one or more documented processes that collectively include the applicable
+requirement parts, per system capability, in CIP-005-8 Table R2 – Remote Access Management. [Violation Risk Factor:
+Medium] [Time Horizon: Operations Planning and Same Day Operations].
+M2. Evidence must include the documented processes that collectively address each of the applicable requirement parts in CIP-
+005-8 Table R2 – Remote Access Management and additional evidence to demonstrate implementation as described in the
+Measures column of the table.
+CIP-005-8 Table R2 – Remote Access Management
+Part Applicable Systems Requirements Measures
+2.1 High impact BCS and their associated PCA Permit Interactive Remote Access (IRA), if Examples of evidence may include, but
+any, only through an Intermediate are not limited to, network diagrams,
+Medium impact BCS and their associated
+System. architecture documents, configuration,
+PCA
+or settings that show all IRA is through an
+SCI supporting an Applicable System in Intermediate System.
+this Part
+2.2 Intermediate System(s) used to access an Protect the confidentiality and integrity Examples of evidence may include, but
+Applicable System in Part 2.1 of IRA communications between the are not limited to, architecture
+initiating Cyber Asset or Virtual Cyber documents, configuration or settings
+Asset and the Intermediate System. detailing where confidentiality and
+integrity controls (e.g., encryption)
+initiate and terminate.
+2.3 Intermediate System(s) used to access an Require multi-factor authentication to Example of evidence may include, but are
+Applicable System in Part 2.1 the Intermediate System for IRA not limited to, architecture documents,
+communications between the initiating configuration or settings detailing the
+Cyber Asset or Virtual Cyber Asset and authentication factors used.
+the Intermediate System.
+Examples of authenticators may include,
+but are not limited to,
+• Something the individual knows
+such as passwords or PINs. This
+does not include User ID;
+Page 7 of 16
+CIP-005-8 — Cyber Security – Electronic Security Perimeter(s)
+CIP-005-8 Table R2 – Remote Access Management
+Part Applicable Systems Requirements Measures
+• Something the individual has
+such as tokens, digital
+certificates, or smart cards; or
+• Something the individual is such
+as fingerprints, iris scans, or
+other biometric characteristics.
+2.4 High impact BCS and their associated Have one or more methods for Examples of evidence may include,
+PCA determining active vendor remote access but are not limited to, documentation
+sessions (including IRA and system-to- of the methods used to determine
+Medium impact BCS and their associated
+system remote access). active vendor remote access,
+PCA
+including IRA and system-to-system
+SCI supporting an Applicable System in remote access, such as:
+this Part
+• Methods for accessing logged or
+monitoring information to
+determine active vendor remote
+access sessions;
+• Methods for monitoring activity
+(e.g., connection tables or rule hit
+counters in a firewall, or user
+activity monitoring) or open ports
+(e.g., netstat or related commands
+to display currently active ports)
+to determine active system to
+system remote access sessions; or
+• Methods that control vendor
+initiation of remote access such as
+vendors calling and requesting a
+second factor in order to initiate
+remote access.
+2.5 High impact BCS and their associated PCA Have one or more method(s) to Examples of evidence may include,
+Page 8 of 16
+CIP-005-8 — Cyber Security – Electronic Security Perimeter(s)
+CIP-005-8 Table R2 – Remote Access Management
+Part Applicable Systems Requirements Measures
+disable active vendor remote access but are not limited to, documentation
+Medium impact BCS and their associated
+(including IRA and system-to-system of the methods(s) used to disable
+PCA
+remote access). active vendor remote access
+SCI supporting an Applicable System in
+• (including IRA and system-to-
+this Part
+system remote access).
+2.6 Intermediate System(s) used to access an Prevent Intermediate System(s) from Examples of evidence may include, but
+Applicable System in Part 2.1 sharing CPU resources and memory are not limited to, documentation that
+resources with any part of a high or includes the following:
+medium impact BCS or associated PCAs.
+• Intermediate System architecture;
+or
+• Configuration or settings of each
+Intermediate System and
+supporting Cyber Systems.
+2.7 Intermediate System(s) used to access an Routable protocol communications from Examples of evidence may include, but
+Applicable System in Part 2.1 an Intermediate System to a high or are not limited to, documentation that
+medium impact BCS or associated PCAs includes the following:
+must be through an ESP.
+• Network diagrams of Intermediate
+Systems architecture;
+or
+• Configuration, settings, or policy
+of the EAP which controls routable
+protocol communications of IRA
+through the ESP.
+Page 9 of 16
+CIP-005-8 — Cyber Security – Electronic Security Perimeter(s)
+R3. Each Responsible Entity shall implement one or more documented processes that collectively include the applicable
+requirement parts in CIP-005-8 Table R3 –Vendor Remote Access Management for EACMS, PACS, and SCI. [Violation Risk
+Factor: Medium] [Time Horizon: Operations Planning and Same Day Operations].
+M3. Evidence must include the documented processes that collectively address each of the applicable requirement parts in CIP-
+005-8 Table R3 – Vendor Remote Access Management for EACMS, PACS, and SCI and additional evidence to demonstrate
+implementation as described in the Measures column of the table.
+CIP-005-8 Table R3 – Vendor Remote Access Management for EACMS, PACS, and SCI
+Part Applicable Systems Requirements Measures
+3.1 EACMS and PACS associated with high Have one or more method(s) to Examples of evidence may include, but
+impact BCS. determine authenticated vendor- are not limited to, documentation of the
+initiated remote connections. methods used to determine
+EACMS and PACS associated with
+authenticated vendor-initiated remote
+medium impact BCS with ERC.
+connections, such as:
+SCI supporting an Applicable System in
+• Methods for accessing logged or
+this Part .
+monitoring information to
+determine authenticated vendor-
+initiated remote connections.
+3.2 EACMS and PACS associated with high Have one or more method(s) to Examples of evidence may include, but
+impact BCS. terminate authenticated vendor-initiated are not limited to, documentation of the
+remote connections and control the methods(s) used to terminate
+EACMS and PACS associated with
+ability to reconnect. authenticated vendor-initiated remote
+medium impact BCS with ERC.
+connections to applicable
+SCI supporting an Applicable System in systems. Examples include terminating
+this Part. an active vendor-initiated
+shell/process/session or dropping an
+active vendor-initiated connection in a
+firewall. Methods to control the ability to
+reconnect, if necessary, could
+be: disabling an Active Directory account;
+disabling a security token; restricting IP
+addresses from vendor sources in a
+firewall; or physically disconnecting a
+network cable to prevent a reconnection.
+Page 10 of 16
+CIP-005-8 — Cyber Security – Electronic Security Perimeter(s)
+C. Compliance
+1. Compliance Monitoring Process
+1.1. Compliance Enforcement Authority: “Compliance Enforcement Authority”
+(CEA) means NERC or the Regional Entity, or any entity as otherwise designated
+by an Applicable Governmental Authority, in their respective roles of
+monitoring and/or enforcing compliance with mandatory and enforceable
+Reliability Standards in their respective jurisdictions.
+1.2. Evidence Retention: The following evidence retention period(s) identify the
+period of time an entity is required to retain specific evidence to demonstrate
+compliance. For instances where the evidence retention period specified below
+is shorter than the time since the last audit, the CEA may ask an entity to
+provide other evidence to show that it was compliant for the full-time period
+since the last audit.
+The applicable entity shall keep data or evidence to show compliance as
+identified below unless directed by its CEA to retain specific evidence for a
+longer period of time as part of an investigation.
+• Each applicable entity shall retain evidence of each requirement in this
+standard for three calendar years.
+• If an applicable entity is found non-compliant, it shall keep information
+related to the non-compliance until mitigation is complete and approved or
+for the time specified above, whichever is longer.
+• The CEA shall keep the last audit records and all requested and submitted
+subsequent audit records.
+1.3. Compliance Monitoring and Enforcement Program: As defined in the NERC
+Rules of Procedure, “Compliance Monitoring and Enforcement Program” refers
+to the identification of the processes that will be used to evaluate data or
+information for the purpose of assessing performance or outcomes with the
+associated Reliability Standard.
+Page 11 of 16
+CIP-005-8 — Cyber Security – Electronic Security Perimeter(s)
+Violation Severity Levels
+Violation Severity Levels
+R #
+Lower VSL Moderate VSL High VSL Severe VSL
+R1. The Responsible Entity did not The Responsible Entity did not
+have a method for detecting document one or more
+known or suspected malicious processes for CIP-005-8 Table
+routable protocol R1 – Electronic Security
+communications entering or Perimeter. (R1)
+leaving the ESP required by
+OR
+Part 1.5.
+The Responsible Entity did not
+OR
+protect the Applicable Systems
+The Responsible Entity did not connected to the network with
+document the reason for routable protocol with an ESP.
+permitting communications. (Part 1.1)
+(Part 1.2)
+OR
+The Responsible Entity did not
+permit only needed
+communications and deny all
+other communications,
+through the ESP; excluding
+time sensitive communications
+of Protection Systems. (Part
+1.2)
+OR
+The Responsible Entity did not
+protect ESP and SCI
+configurations by
+implementing methods to
+permit only needed network
+accessibility to Management
+Interfaces for Applicable
+Page 12 of 16
+CIP-005-8 — Cyber Security – Electronic Security Perimeter(s)
+Violation Severity Levels
+R #
+Lower VSL Moderate VSL High VSL Severe VSL
+Systems per system capability.
+(Part 1.3)
+OR
+The Responsible Entity did not
+perform authentication when
+establishing Dial-up
+Connectivity with the
+Applicable Systems. (Part 1.4)
+OR
+The Responsible Entity did not
+implement a method to
+protect the data traversing
+communication links, used to
+span a single ESP between
+PSPs, as required by Part 1.6.
+R2. The Responsible Entity does The Responsible Entity did not The Responsible Entity did not The Responsible Entity did not
+not have documented implement processes for one implement processes for two implement processes for three
+processes for one or more of of the applicable Requirement of the applicable Requirement of the applicable Requirement
+the applicable Requirement Parts 2.1 through 2.3. Parts 2.1 through 2.3. Parts 2.1 through 2.3.
+Parts 2.1 through 2.3.
+OR OR
+The Responsible Entity did The Responsible Entity did
+not have either: one or more not have one or more
+method(s) for determining method(s) for determining
+active vendor remote access active vendor remote access
+sessions (including IRA and sessions (including IRA and
+system-to-system remote system-to-system remote
+access) (Part 2.4); or one or access) (Part 2.4) and one or
+more methods to disable more methods to disable
+active vendor remote access active vendor remote access
+Page 13 of 16
+CIP-005-8 — Cyber Security – Electronic Security Perimeter(s)
+Violation Severity Levels
+R #
+Lower VSL Moderate VSL High VSL Severe VSL
+(including IRA and system-to- (including IRA and system-to-
+system remote access) (Part system remote access) (Part
+2.5). 2.5).
+OR
+The Responsible Entity did
+not prevent Intermediate
+System(s) from sharing CPU
+resources or memory
+resources with any part of
+a high or medium impact
+BCS or associated PCAs.
+(Part 2.6).
+OR
+The Responsible Entity did not
+ensure routable protocol
+communications from an
+Intermediate System to high or
+medium impact BCS or
+associated PCAs went through
+an ESP (Part 2.7).
+R3. The Responsible Entity did not The Responsible Entity did not The Responsible Entity did not The Responsible Entity did not
+document one or more have a method to determine implement processes for implement any processes for
+processes for CIP-005-8 Table authenticated vendor-initiated either Part 3.1 or Part 3.2. CIP-005-8 Table R3 – Vendor
+R3 – Vendor Remote Access remote connections for PACS (Requirement R3) Remote Access Management
+Management for EACMS, or SCI supporting PACS (Part for EACMS, PACS, and SCI.
+OR
+PACS, and SCI. (Requirement 3.1). (Requirement R3)
+R3) The Responsible Entity did not
+OR OR
+have a method to determine
+authenticated vendor-initiated
+Page 14 of 16
+CIP-005-8 — Cyber Security – Electronic Security Perimeter(s)
+Violation Severity Levels
+R #
+Lower VSL Moderate VSL High VSL Severe VSL
+The Responsible Entity did not remote connections for The Responsible Entity did not
+have a method to terminate EACMS or SCI supporting have any methods as required
+authenticated vendor-initiated EACMS (Part 3.1). by Parts 3.1 and 3.2
+remote connections for PACS (Requirement R3).
+OR
+or SCI supporting PACS (Part
+3.2). The Responsible Entity did not
+have a method to terminate
+authenticated vendor-initiated
+remote connections or control
+the ability to reconnect for
+EACMS or SCI supporting
+EACMS (Part 3.2).
+D. Regional Variances
+None.
+E. Associated Documents
+• Implementation Plan for Project 2016-02
+• CIP-005-8 Technical Rationale
+Page 15 of 16
+CIP-005-8 — Cyber Security – Electronic Security Perimeter(s)
+Version History
+Version Date Action Change Tracking
+1 1/16/06 R3.2 — Change “Control Center” to “control 3/24/06
+center.”
+2 9/30/09 Modifications to clarify the requirements and to
+bring the compliance elements into
+conformance with the latest guidelines for
+developing compliance elements of standards.
+Removal of reasonable business judgment.
+Replaced the RRO with the RE as a responsible
+entity.
+Rewording of Effective Date.
+Changed compliance monitor to Compliance
+Enforcement Authority.
+3 12/16/09 Updated version number from -2 to -3
+Approved by the NERC Board of Trustees.
+3 3/31/10 Approved by FERC.
+4 12/30/10 Modified to add specific criteria for Critical Update
+Asset identification.
+4 1/24/11 Approved by the NERC Board of Trustees. Update
+5 11/26/12 Adopted by the NERC Board of Trustees. Modified to
+coordinate with other
+CIP standards and to
+revise format to use
+RBS Template.
+5 11/22/13 FERC Order issued approving CIP-005-5.
+6 08/10/17 Adopted by the NERC Board of Trustees. Modified to address
+certain directives in
+FERC Order No. 829.
+6 10/18/2018 FERC Order approving CIP-005-6. Docket No.
+RM17-13-000.
+7 11/05/2020 Adopted by the NERC Board of Trustees. Modified to address
+directives in FERC
+Order No. 850.
+7 03/18/2021 FERC Order approving CIP-005-7. Docket No.
+RD21-2-000
+8 5/9/2024 Approved by the NERC Board of Virtualization
+Modifications by
+Trustees.
+Project 2016-02
+Page 16 of 16
+--- END DOCUMENT: cip-005-8.pdf ---
+

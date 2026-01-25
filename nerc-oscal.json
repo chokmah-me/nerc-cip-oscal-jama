@@ -1,207 +1,1353 @@
 {
-  "component-definition": {
-    "uuid": "12345678-1234-1234-1234-123456789012",
+  "catalog": {
+    "uuid": "f574f403-5457-4460-8f57-825b609b6f90",
     "metadata": {
-      "title": "NERC-CIP-005 Control Implementation",
-      "published": "2026-01-20T00:00:00Z",
-      "last-modified": "2026-01-20T00:00:00Z",
-      "version": "1.0.0",
-      "document-ids": [
-        {
-          "scheme": "https://example.com",
-          "identifier": "NERC-CIP-005-6"
-        }
-      ]
+      "title": "NERC CIP OSCAL Catalog",
+      "last-modified": "2026-01-25T12:48:14.003398",
+      "version": "1.1.0",
+      "oscal-version": "1.0.0",
+      "notes": "Generated with NovaKit v3 State Machine Logic."
     },
-    "components": [
+    "groups": [
       {
-        "uuid": "87654321-4321-4321-4321-210987654321",
-        "type": "software",
-        "title": "NERC CIP-005-6 Systems Security Management",
-        "description": "Implements documented cyber security planning processes including role definition, effectiveness assessment, review scheduling, and recovery assurance. Establishes the foundational security management framework required for CIP-005 R1, covering systems security plan development, approval, implementation, and maintenance with documented processes for generating, storing, protecting, and managing the plan.",
-        "properties": [
+        "id": "cip-002-8",
+        "class": "standard",
+        "title": "CIP-002-8 - Cyber Security \u2014 BES Cyber System Categorization",
+        "controls": [
           {
-            "name": "NERC-Requirement-ID",
-            "value": "CIP-005-6 R1"
-          },
-          {
-            "name": "NIST-800-53-Primary-Control",
-            "value": "SC-7"
-          },
-          {
-            "name": "NIST-800-53-Secondary-Controls",
-            "value": "CA-3, PL-2, CM-2"
-          },
-          {
-            "name": "JAMA-Requirement-ID",
-            "value": "CIP-005-R1-a"
-          },
-          {
-            "name": "Implementation-Status",
-            "value": "Draft"
-          }
-        ],
-        "control-implementations": [
-          {
-            "description": "Systems Security Plan documentation and management with role definition and approval processes",
-            "implemented-requirements": [
+            "id": "cip-002-8-purpose",
+            "class": "purpose",
+            "title": "Purpose",
+            "parts": [
               {
-                "uuid": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee",
-                "control-id": "sc-7",
-                "responsibility": "Implemented",
-                "properties": [
-                  {
-                    "name": "JAMA-Requirement-ID",
-                    "value": "CIP-005-R1-a"
-                  }
-                ]
+                "id": "cip-002-8-purpose-smt",
+                "name": "statement",
+                "prose": "To identify and categorize BES Cyber Systems (BCS) and their associated BES Cyber Assets (BCA) for the application of cyber security requirements commensurate with the adverse impact that loss, compromise, or misuse of those BCS could have on the reliable operation of the Bulk Electric System (BES). Identification and categorization of BCS support appropriate protection against compromises that could lead to misoperation or instability in the BES."
+              }
+            ]
+          },
+          {
+            "id": "cip-002-8-r1",
+            "class": "requirement",
+            "title": "CIP-002-8 R1",
+            "parts": [
+              {
+                "id": "cip-002-8-r1-smt",
+                "name": "statement",
+                "prose": "Each Responsible Entity shall implement a process that considers each of the following assets for purposes of Parts 1.1 through 1.3: [Violation Risk Factor: High] [Time Horizon: Operations Planning] i. Control Centers and backup Control Centers; ii. Transmission stations and substations; iii. Generation resources; iv. Systems and facilities critical to system restoration, including Blackstart Resources and Cranking Paths and initial switching requirements; v. RAS that support the reliable operation of the BES; and vi. For Distribution Providers, Protection Systems specified in Applicability section 4.2.1 above. 1.1. Identify each of the high impact BCS according to Attachment 1, Section 1, if any, at each asset; 1.2. Identify each of the medium impact BCS according to Attachment 1, Section 2, if any, at each asset; and 1.3. Identify each asset that contains a low impact BCS according to Attachment 1, Section 3, if any (a discrete list of low impact BCS is not required)."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "R1"
               },
               {
-                "uuid": "bbbbbbbb-cccc-dddd-eeee-ffffffffffff",
-                "control-id": "ca-3",
-                "responsibility": "Implemented",
-                "properties": [
-                  {
-                    "name": "JAMA-Requirement-ID",
-                    "value": "CIP-005-R1-b"
-                  }
-                ]
+                "name": "status",
+                "value": "active"
+              }
+            ]
+          },
+          {
+            "id": "cip-002-8-r2",
+            "class": "requirement",
+            "title": "CIP-002-8 R2",
+            "parts": [
+              {
+                "id": "cip-002-8-r2-smt",
+                "name": "statement",
+                "prose": "Each Responsible Entity shall: [Violation Risk Factor: Lower] [Time Horizon: Operations Planning] 2.1 Review the identifications in Requirement R1 and its parts (and update them if there are changes identified) at least once every 15 calendar months, even if it has no identified items in Requirement R1, and 2.2 Have its CIP Senior Manager or delegate approve the identifications required by Requirement R1 at least once every 15 calendar months, even if it has no identified items in Requirement R1."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "R2"
               },
               {
-                "uuid": "cccccccc-dddd-eeee-ffff-000000000000",
-                "control-id": "pl-2",
-                "responsibility": "Implemented",
-                "properties": [
-                  {
-                    "name": "JAMA-Requirement-ID",
-                    "value": "CIP-005-R1-c"
-                  }
-                ]
-              },
-              {
-                "uuid": "dddddddd-eeee-ffff-0000-111111111111",
-                "control-id": "cm-2",
-                "responsibility": "Implemented",
-                "properties": [
-                  {
-                    "name": "JAMA-Requirement-ID",
-                    "value": "CIP-005-R1-d"
-                  }
-                ]
+                "name": "status",
+                "value": "active"
               }
             ]
           }
         ]
       },
       {
-        "uuid": "11111111-2222-3333-4444-555555555555",
-        "type": "software",
-        "title": "NERC CIP-005-6 Cyber Security Plan Effectiveness",
-        "description": "Establishes methodology for assessing the effectiveness of the Cyber Security Plan through regular review cycles and measurement criteria. Implements periodic assessment processes to ensure the plan remains current and effective in addressing security threats and compliance requirements.",
-        "properties": [
+        "id": "cip-003-11",
+        "class": "standard",
+        "title": "CIP-003-11 - Cyber Security \u2014 Security Management Controls",
+        "controls": [
           {
-            "name": "NERC-Requirement-ID",
-            "value": "CIP-005-6 R2"
-          },
-          {
-            "name": "NIST-800-53-Primary-Control",
-            "value": "CA-2"
-          },
-          {
-            "name": "NIST-800-53-Secondary-Controls",
-            "value": "CA-7, PM-11"
-          },
-          {
-            "name": "JAMA-Requirement-ID",
-            "value": "CIP-005-R2-a"
-          },
-          {
-            "name": "Implementation-Status",
-            "value": "Draft"
-          }
-        ],
-        "control-implementations": [
-          {
-            "description": "Periodic assessment and effectiveness evaluation of security controls",
-            "implemented-requirements": [
+            "id": "cip-003-11-purpose",
+            "class": "purpose",
+            "title": "Purpose",
+            "parts": [
               {
-                "uuid": "eeeeeeee-ffff-0000-1111-222222222222",
-                "control-id": "ca-2",
-                "responsibility": "Implemented",
-                "properties": [
-                  {
-                    "name": "JAMA-Requirement-ID",
-                    "value": "CIP-005-R2-a"
-                  }
-                ]
+                "id": "cip-003-11-purpose-smt",
+                "name": "statement",
+                "prose": "To specify consistent and sustainable security management controls that establish responsibility and accountability to protect BES Cyber Systems (BCS) against compromise that could lead to misoperation or instability in the Bulk Electric System (BES)."
+              }
+            ]
+          },
+          {
+            "id": "cip-003-11-r1",
+            "class": "requirement",
+            "title": "CIP-003-11 R1",
+            "parts": [
+              {
+                "id": "cip-003-11-r1-smt",
+                "name": "statement",
+                "prose": "Each Responsible Entity shall review and obtain CIP Senior Manager approval at least once every 15 calendar months for one or more documented cyber security policies that collectively address the following topics: [Violation Risk Factor: Medium] [Time Horizon: Operations Planning] 1.1. For its high impact and medium impact BCS, if any: 1.1.1. Personnel and training (CIP-004); 1.1.2. Electronic Security Perimeters (CIP-005) including Interactive Remote Access; 1.1.3. Physical security of BCS (CIP-006); 1.1.4. System security management (CIP-007); 1.1.5. Incident reporting and response planning (CIP-008); 1.1.6. Recovery plans for BCS (CIP-009); 1.1.7. Configuration change management and vulnerability assessments (CIP- 010); 1.1.8. Information protection (CIP-011); and 1.1.9. Declaring and responding to CIP Exceptional Circumstances. 1.2. For its assets identified in CIP-002 containing low impact BCS, if any: 1.2.1. Cyber security awareness; 1.2.2. Physical security controls; 1.2.3. Electronic access controls; 1.2.4. Cyber Security Incident response; 1.2.5. Transient Cyber Assets (TCA) and Removable Media malicious code risk mitigation; and 1.2.6. Declaring and responding to CIP Exceptional Circumstances."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "R1"
               },
               {
-                "uuid": "ffffffff-0000-1111-2222-333333333333",
-                "control-id": "ca-7",
-                "responsibility": "Implemented",
-                "properties": [
-                  {
-                    "name": "JAMA-Requirement-ID",
-                    "value": "CIP-005-R2-b"
-                  }
-                ]
+                "name": "status",
+                "value": "active"
+              }
+            ]
+          },
+          {
+            "id": "cip-003-11-r2",
+            "class": "requirement",
+            "title": "CIP-003-11 R2",
+            "parts": [
+              {
+                "id": "cip-003-11-r2-smt",
+                "name": "statement",
+                "prose": "Each Responsible Entity with at least one asset identified in CIP-002 containing low impact BCS shall implement one or more documented cyber security plan(s) for its low impact BCS, and Shared Cyber Infrastructure (SCI) that supports a low impact BCS, that include the sections in Attachment 1. [Violation Risk Factor: Lower] [Time Horizon: Operations Planning] CIP-003-11 - Cyber Security \u2014 Security Management Controls Note: An inventory, list, or discrete identification of low impact BCS or their BES Cyber Assets (BCA) is not required. Lists of authorized users are not required."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "R2"
+              },
+              {
+                "name": "status",
+                "value": "active"
+              }
+            ]
+          },
+          {
+            "id": "cip-003-11-r3",
+            "class": "requirement",
+            "title": "CIP-003-11 R3",
+            "parts": [
+              {
+                "id": "cip-003-11-r3-smt",
+                "name": "statement",
+                "prose": "Each Responsible Entity shall identify a CIP Senior Manager by name and document any change within 30 calendar days of the change. [Violation Risk Factor: Medium] [Time Horizon: Operations Planning]"
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "R3"
+              },
+              {
+                "name": "status",
+                "value": "active"
+              }
+            ]
+          },
+          {
+            "id": "cip-003-11-r4",
+            "class": "requirement",
+            "title": "CIP-003-11 R4",
+            "parts": [
+              {
+                "id": "cip-003-11-r4-smt",
+                "name": "statement",
+                "prose": "The Responsible Entity shall implement a documented process to delegate authority, unless no delegations are used. Where allowed by the CIP Standards, the CIP Senior Manager may delegate authority for specific actions to a delegate or delegates. These delegations shall be documented, including the name or title of the delegate, the specific actions delegated, and the date of the delegation; approved by the CIP Senior Manager; and updated within 30 days of any change to the delegation. Delegation changes do not need to be reinstated with a change to the delegator. [Violation Risk Factor: Lower] [Time Horizon: Operations Planning]"
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "R4"
+              },
+              {
+                "name": "status",
+                "value": "active"
               }
             ]
           }
         ]
       },
       {
-        "uuid": "22222222-3333-4444-5555-666666666666",
-        "type": "software",
-        "title": "NERC CIP-005-6 System Recovery and Plan Recoverability",
-        "description": "Ensures the Cyber Security Plan and its implementation are recoverable in case of system failures or disaster events. Implements documented backup and recovery procedures to maintain business continuity and plan availability during operational disruptions.",
-        "properties": [
+        "id": "cip-004-8",
+        "class": "standard",
+        "title": "CIP-004-8 - Cyber Security \u2014 Personnel & Training",
+        "controls": [
           {
-            "name": "NERC-Requirement-ID",
-            "value": "CIP-005-6 R3"
-          },
-          {
-            "name": "NIST-800-53-Primary-Control",
-            "value": "CP-9"
-          },
-          {
-            "name": "NIST-800-53-Secondary-Controls",
-            "value": "CP-10, SC-5"
-          },
-          {
-            "name": "JAMA-Requirement-ID",
-            "value": "CIP-005-R3-a"
-          },
-          {
-            "name": "Implementation-Status",
-            "value": "Draft"
-          }
-        ],
-        "control-implementations": [
-          {
-            "description": "Information system backup and recovery procedures for plan recoverability",
-            "implemented-requirements": [
+            "id": "cip-004-8-purpose",
+            "class": "purpose",
+            "title": "Purpose",
+            "parts": [
               {
-                "uuid": "33333333-4444-5555-6666-777777777777",
-                "control-id": "cp-9",
-                "responsibility": "Implemented",
-                "properties": [
-                  {
-                    "name": "JAMA-Requirement-ID",
-                    "value": "CIP-005-R3-a"
-                  }
-                ]
+                "id": "cip-004-8-purpose-smt",
+                "name": "statement",
+                "prose": "To minimize the risk against compromise that could lead to misoperation or instability in the Bulk Electric System (BES) from individuals accessing BES Cyber Systems (BCS) by requiring an appropriate level of personnel risk assessment, training, security awareness, and access management in support of protecting BCS."
+              }
+            ]
+          },
+          {
+            "id": "cip-004-8-r1",
+            "class": "requirement",
+            "title": "CIP-004-8 R1",
+            "parts": [
+              {
+                "id": "cip-004-8-r1-smt",
+                "name": "statement",
+                "prose": "Each Responsible Entity shall implement one or more documented processes that collectively include each of the applicable requirement parts in CIP-004-8 Table R1 \u2013 Security Awareness Program. [Violation Risk Factor: Lower] [Time Horizon: Operations Planning]"
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "R1"
               },
               {
-                "uuid": "44444444-5555-6666-7777-888888888888",
-                "control-id": "cp-10",
-                "responsibility": "Implemented",
-                "properties": [
-                  {
-                    "name": "JAMA-Requirement-ID",
-                    "value": "CIP-005-R3-b"
-                  }
-                ]
+                "name": "status",
+                "value": "active"
+              }
+            ]
+          },
+          {
+            "id": "cip-004-8-r2",
+            "class": "requirement",
+            "title": "CIP-004-8 R2",
+            "parts": [
+              {
+                "id": "cip-004-8-r2-smt",
+                "name": "statement",
+                "prose": "Each Responsible Entity shall implement one or more cyber security training program(s) appropriate to individual roles, functions, or responsibilities that collectively includes each of the applicable requirement parts in CIP-004-8 Table R2 \u2013 Cyber Security Training Program. [Violation Risk Factor: Lower] [Time Horizon: Operations Planning]"
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "R2"
+              },
+              {
+                "name": "status",
+                "value": "active"
+              }
+            ]
+          },
+          {
+            "id": "cip-004-8-r3",
+            "class": "requirement",
+            "title": "CIP-004-8 R3",
+            "parts": [
+              {
+                "id": "cip-004-8-r3-smt",
+                "name": "statement",
+                "prose": "Each Responsible Entity shall implement one or more documented personnel risk assessment program(s) to attain and retain authorized electronic or authorized unescorted physical access to Applicable Systems that collectively include each of the applicable requirement parts in CIP-004-8 Table R3 \u2013 Personnel Risk Assessment Program. [Violation Risk Factor: Medium] [Time Horizon: Operations Planning]."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "R3"
+              },
+              {
+                "name": "status",
+                "value": "active"
+              }
+            ]
+          },
+          {
+            "id": "cip-004-8-r4",
+            "class": "requirement",
+            "title": "CIP-004-8 R4",
+            "parts": [
+              {
+                "id": "cip-004-8-r4-smt",
+                "name": "statement",
+                "prose": "Each Responsible Entity shall implement one or more documented access management program(s) that collectively include each of the applicable requirement parts in CIP-004-8 Table R4 \u2013 Access Management Program. [Violation Risk Factor: Medium] [Time Horizon: Operations Planning and Same Day Operations]."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "R4"
+              },
+              {
+                "name": "status",
+                "value": "active"
+              }
+            ]
+          },
+          {
+            "id": "cip-004-8-r5",
+            "class": "requirement",
+            "title": "CIP-004-8 R5",
+            "parts": [
+              {
+                "id": "cip-004-8-r5-smt",
+                "name": "statement",
+                "prose": "Each Responsible Entity shall implement one or more documented access revocation program(s) that collectively include each of the applicable requirement parts in CIP-004-8 Table R5 \u2013 Access Revocation. [Violation Risk Factor: Medium] [Time Horizon: Same Day Operations and Operations Planning]."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "R5"
+              },
+              {
+                "name": "status",
+                "value": "active"
+              }
+            ]
+          },
+          {
+            "id": "cip-004-8-r6",
+            "class": "requirement",
+            "title": "CIP-004-8 R6",
+            "parts": [
+              {
+                "id": "cip-004-8-r6-smt",
+                "name": "statement",
+                "prose": "Each Responsible Entity shall implement one or more documented access management program(s) to authorize, verify, and revoke provisioned access to BCSI pertaining to the Applicable Systems identified in CIP-004-8 Table R6 \u2013 Access Management for BES Cyber System Information that collectively include each of the applicable requirement parts in CIP- 004-8 Table R6 \u2013 Access Management for BES Cyber System Information. To be considered access to BCSI in the context of this requirement, an individual has both the ability to obtain and use BCSI. Provisioned access is to be considered the result of the specific actions taken to provide an individual(s) the means to access BCSI (e.g., may include physical keys or access cards, user accounts and associated rights and privileges, encryption keys). [Violation Risk Factor: Medium] [Time Horizon: Same Day Operations and Operations Planning]."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "R6"
+              },
+              {
+                "name": "status",
+                "value": "active"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "cip-005-8",
+        "class": "standard",
+        "title": "CIP-005-8 - Cyber Security \u2014 Electronic Security Perimeter(s)",
+        "controls": [
+          {
+            "id": "cip-005-8-purpose",
+            "class": "purpose",
+            "title": "Purpose",
+            "parts": [
+              {
+                "id": "cip-005-8-purpose-smt",
+                "name": "statement",
+                "prose": "To protect BES Cyber Systems (BCS) against compromise by permitting only known and controlled communication to reduce the likelihood of misoperation or instability in the Bulk Electric System (BES)."
+              }
+            ]
+          },
+          {
+            "id": "cip-005-8-r1",
+            "class": "requirement",
+            "title": "CIP-005-8 R1",
+            "parts": [
+              {
+                "id": "cip-005-8-r1-smt",
+                "name": "statement",
+                "prose": "Each Responsible Entity shall implement one or more documented processes that collectively include each of the applicable requirement parts in CIP-005-8 Table R1 \u2013 Electronic Security Perimeter. [Violation Risk Factor: Medium] [Time Horizon: Operations Planning and Same Day Operations]."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "R1"
+              },
+              {
+                "name": "status",
+                "value": "active"
+              }
+            ]
+          },
+          {
+            "id": "cip-005-8-r2",
+            "class": "requirement",
+            "title": "CIP-005-8 R2",
+            "parts": [
+              {
+                "id": "cip-005-8-r2-smt",
+                "name": "statement",
+                "prose": "Each Responsible Entity shall implement one or more documented processes that collectively include the applicable requirement parts, per system capability, in CIP-005-8 Table R2 \u2013 Remote Access Management. [Violation Risk Factor: Medium] [Time Horizon: Operations Planning and Same Day Operations]."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "R2"
+              },
+              {
+                "name": "status",
+                "value": "active"
+              }
+            ]
+          },
+          {
+            "id": "cip-005-8-r3",
+            "class": "requirement",
+            "title": "CIP-005-8 R3",
+            "parts": [
+              {
+                "id": "cip-005-8-r3-smt",
+                "name": "statement",
+                "prose": "Each Responsible Entity shall implement one or more documented processes that collectively include the applicable requirement parts in CIP-005-8 Table R3 \u2013Vendor Remote Access Management for EACMS, PACS, and SCI. [Violation Risk Factor: Medium] [Time Horizon: Operations Planning and Same Day Operations]."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "R3"
+              },
+              {
+                "name": "status",
+                "value": "active"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "cip-006-7",
+        "class": "standard",
+        "title": "CIP-006-7 - Cyber Security \u2014 Physical Security of BES Cyber Systems",
+        "controls": [
+          {
+            "id": "cip-006-7-purpose",
+            "class": "purpose",
+            "title": "Purpose",
+            "parts": [
+              {
+                "id": "cip-006-7-purpose-smt",
+                "name": "statement",
+                "prose": "To manage physical access to Bulk Electric System (BES) Cyber Systems by specifying a physical security plan in support of protecting BES Cyber Systems (BCS) against compromise that could lead to misoperation or instability in the BES."
+              }
+            ]
+          },
+          {
+            "id": "cip-006-7-r1",
+            "class": "requirement",
+            "title": "CIP-006-7 R1",
+            "parts": [
+              {
+                "id": "cip-006-7-r1-smt",
+                "name": "statement",
+                "prose": "Each Responsible Entity shall implement one or more documented physical security plan(s) that collectively include all of the applicable requirement parts in CIP-006-7 Table R1 \u2013 Physical Security Plan. [Violation Risk Factor: Medium] [Time Horizon: Long Term Planning and Same Day Operations]."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "R1"
+              },
+              {
+                "name": "status",
+                "value": "active"
+              }
+            ]
+          },
+          {
+            "id": "cip-006-7-r2",
+            "class": "requirement",
+            "title": "CIP-006-7 R2",
+            "parts": [
+              {
+                "id": "cip-006-7-r2-smt",
+                "name": "statement",
+                "prose": "Each Responsible Entity shall implement, except during CIP Exceptional Circumstances, one or more documented visitor control program(s) that include each of the applicable requirement parts in CIP-006-7 Table R2 \u2013 Visitor Control Program. [Violation Risk Factor: Medium] [Time Horizon: Same Day Operations.]"
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "R2"
+              },
+              {
+                "name": "status",
+                "value": "active"
+              }
+            ]
+          },
+          {
+            "id": "cip-006-7-r3",
+            "class": "requirement",
+            "title": "CIP-006-7 R3",
+            "parts": [
+              {
+                "id": "cip-006-7-r3-smt",
+                "name": "statement",
+                "prose": "Each Responsible Entity shall implement one or more documented Physical Access Control System maintenance and testing program(s) that collectively include each of the applicable requirement parts in CIP-006-7 Table R3 \u2013 Maintenance and Testing Program. [Violation Risk Factor: Medium] [Time Horizon: Long Term Planning]."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "R3"
+              },
+              {
+                "name": "status",
+                "value": "active"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "cip-007-7",
+        "class": "standard",
+        "title": "CIP-007-7 - Cyber Security \u2014 System Security Management",
+        "controls": [
+          {
+            "id": "cip-007-7-purpose",
+            "class": "purpose",
+            "title": "Purpose",
+            "parts": [
+              {
+                "id": "cip-007-7-purpose-smt",
+                "name": "statement",
+                "prose": "To manage system security by specifying select technical, operational, and procedural requirements in support of protecting BES Cyber Systems (BCS) against compromise that could lead to misoperation or instability in the Bulk Electric System (BES)."
+              }
+            ]
+          },
+          {
+            "id": "cip-007-7-r1",
+            "class": "requirement",
+            "title": "CIP-007-7 R1",
+            "parts": [
+              {
+                "id": "cip-007-7-r1-smt",
+                "name": "statement",
+                "prose": "Each Responsible Entity shall implement one or more documented process(es) that collectively include each of the applicable requirement parts in CIP-007-7 Table R1 \u2013 System Hardening. [Violation Risk Factor: Medium] [Time Horizon: Same Day Operations.]"
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "R1"
+              },
+              {
+                "name": "status",
+                "value": "active"
+              }
+            ]
+          },
+          {
+            "id": "cip-007-7-r2",
+            "class": "requirement",
+            "title": "CIP-007-7 R2",
+            "parts": [
+              {
+                "id": "cip-007-7-r2-smt",
+                "name": "statement",
+                "prose": "Each Responsible Entity shall implement one or more documented process(es) that collectively include each of the applicable requirement parts in CIP-007-7 Table R2 \u2013 Cyber Security Patch Management. [Violation Risk Factor: Medium] [Time Horizon: Operations Planning]."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "R2"
+              },
+              {
+                "name": "status",
+                "value": "active"
+              }
+            ]
+          },
+          {
+            "id": "cip-007-7-r3",
+            "class": "requirement",
+            "title": "CIP-007-7 R3",
+            "parts": [
+              {
+                "id": "cip-007-7-r3-smt",
+                "name": "statement",
+                "prose": "Each Responsible Entity shall implement one or more documented process(es) that collectively include each of the applicable requirement parts in CIP-007-7 Table R3 \u2013 Malicious Code Prevention. [Violation Risk Factor: Medium] [Time Horizon: Same Day Operations]."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "R3"
+              },
+              {
+                "name": "status",
+                "value": "active"
+              }
+            ]
+          },
+          {
+            "id": "cip-007-7-r4",
+            "class": "requirement",
+            "title": "CIP-007-7 R4",
+            "parts": [
+              {
+                "id": "cip-007-7-r4-smt",
+                "name": "statement",
+                "prose": "Each Responsible Entity shall implement one or more documented process(es) that collectively include each of the applicable requirement parts in CIP-007-7 Table R4 \u2013 Security Event Monitoring. [Violation Risk Factor: Medium] [Time Horizon: Same Day Operations and Operations Assessment.]"
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "R4"
+              },
+              {
+                "name": "status",
+                "value": "active"
+              }
+            ]
+          },
+          {
+            "id": "cip-007-7-r5",
+            "class": "requirement",
+            "title": "CIP-007-7 R5",
+            "parts": [
+              {
+                "id": "cip-007-7-r5-smt",
+                "name": "statement",
+                "prose": "Each Responsible Entity shall implement one or more documented process(es) that collectively include each of the applicable requirement parts in CIP-007-7 Table R5 \u2013 System Access Controls. [Violation Risk Factor: Medium] [Time Horizon: Operations Planning]."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "R5"
+              },
+              {
+                "name": "status",
+                "value": "active"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "cip-008-7",
+        "class": "standard",
+        "title": "CIP-008-7 - Cyber Security \u2014 Incident Reporting and Response Planning",
+        "controls": [
+          {
+            "id": "cip-008-7-purpose",
+            "class": "purpose",
+            "title": "Purpose",
+            "parts": [
+              {
+                "id": "cip-008-7-purpose-smt",
+                "name": "statement",
+                "prose": "To mitigate the risk to the reliable operation of the BES as the result of a Cyber Security Incident by specifying incident response requirements."
+              }
+            ]
+          },
+          {
+            "id": "cip-008-7-r1",
+            "class": "requirement",
+            "title": "CIP-008-7 R1",
+            "parts": [
+              {
+                "id": "cip-008-7-r1-smt",
+                "name": "statement",
+                "prose": "Each Responsible Entity shall document one or more Cyber Security Incident response plan(s) that collectively include each of the applicable requirement parts in CIP-008-7 Table R1 \u2013 Cyber Security Incident Response Plan Specifications. [Violation Risk Factor: Lower] [Time Horizon: Long Term Planning]."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "R1"
+              },
+              {
+                "name": "status",
+                "value": "active"
+              }
+            ]
+          },
+          {
+            "id": "cip-008-7-r2",
+            "class": "requirement",
+            "title": "CIP-008-7 R2",
+            "parts": [
+              {
+                "id": "cip-008-7-r2-smt",
+                "name": "statement",
+                "prose": "Each Responsible Entity shall implement each of its documented Cyber Security Incident response plans to collectively include each of the applicable requirement parts in CIP-008-7 Table R2 \u2013 Cyber Security Incident Response Plan Implementation and Testing. [Violation Risk Factor: Lower] [Time Horizon: Operations Planning and Real-Time Operations]."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "R2"
+              },
+              {
+                "name": "status",
+                "value": "active"
+              }
+            ]
+          },
+          {
+            "id": "cip-008-7-r3",
+            "class": "requirement",
+            "title": "CIP-008-7 R3",
+            "parts": [
+              {
+                "id": "cip-008-7-r3-smt",
+                "name": "statement",
+                "prose": "Each Responsible Entity shall maintain each of its Cyber Security Incident response plans according to each of the applicable requirement parts in CIP-008-7 Table R3 \u2013 Cyber Security Incident Response Plan Review, Update, and Communication. [Violation Risk Factor: Lower] [Time Horizon: Operations Assessment]."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "R3"
+              },
+              {
+                "name": "status",
+                "value": "active"
+              }
+            ]
+          },
+          {
+            "id": "cip-008-7-r4",
+            "class": "requirement",
+            "title": "CIP-008-7 R4",
+            "parts": [
+              {
+                "id": "cip-008-7-r4-smt",
+                "name": "statement",
+                "prose": "Each Responsible Entity shall notify the Electricity Information Sharing and Analysis Center (E-ISAC) and, if subject to the jurisdiction of the United States, the United States Cybersecurity & Infrastructure Security Agency (CISA), or their successors, of a Reportable Cyber Security Incident and a Cyber Security Incident that was an attempt to compromise, as determined by applying the criteria from Requirement R1, Part 1.2.1, a system identified in the Applicable Systems column, unless prohibited by law, in accordance with each of the applicable requirement parts in CIP-008-7 Table R4 \u2013 Notifications and Reporting for Cyber Security Incidents. [Violation Risk Factor: Lower] [Time Horizon: Operations Assessment]."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "R4"
+              },
+              {
+                "name": "status",
+                "value": "active"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "cip-009-7",
+        "class": "standard",
+        "title": "CIP-009-7 - Cyber Security \u2014 Recovery Plans for BES Cyber Systems",
+        "controls": [
+          {
+            "id": "cip-009-7-purpose",
+            "class": "purpose",
+            "title": "Purpose",
+            "parts": [
+              {
+                "id": "cip-009-7-purpose-smt",
+                "name": "statement",
+                "prose": "To recover reliability functions performed by BES Cyber Systems (BCS) by specifying recovery plan requirements in support of the continued stability, operability, and reliability of the Bulk Electric System (BES)."
+              }
+            ]
+          },
+          {
+            "id": "cip-009-7-r1",
+            "class": "requirement",
+            "title": "CIP-009-7 R1",
+            "parts": [
+              {
+                "id": "cip-009-7-r1-smt",
+                "name": "statement",
+                "prose": "Each Responsible Entity shall have one or more documented recovery plan(s) that collectively include each of the applicable Requirement Parts in CIP-009-7 Table R1 \u2013 Recovery Plan Specifications. [Violation Risk Factor: Medium] [Time Horizon: Long Term Planning]."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "R1"
+              },
+              {
+                "name": "status",
+                "value": "active"
+              }
+            ]
+          },
+          {
+            "id": "cip-009-7-r2",
+            "class": "requirement",
+            "title": "CIP-009-7 R2",
+            "parts": [
+              {
+                "id": "cip-009-7-r2-smt",
+                "name": "statement",
+                "prose": "Each Responsible Entity shall implement its documented recovery plan(s) to collectively include each of the applicable Requirement Parts in CIP-009-7 Table R2 \u2013 Recovery Plan Implementation and Testing. [Violation Risk Factor: Lower] [Time Horizon: Operations Planning and Real-time Operations.]"
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "R2"
+              },
+              {
+                "name": "status",
+                "value": "active"
+              }
+            ]
+          },
+          {
+            "id": "cip-009-7-r3",
+            "class": "requirement",
+            "title": "CIP-009-7 R3",
+            "parts": [
+              {
+                "id": "cip-009-7-r3-smt",
+                "name": "statement",
+                "prose": "Each Responsible Entity shall maintain each of its recovery plan(s) in accordance with each of the applicable Requirement Parts in CIP-009-7 Table R3 \u2013 Recovery Plan Review, Update and Communication. [Violation Risk Factor: Lower] [Time Horizon: Operations Assessment]."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "R3"
+              },
+              {
+                "name": "status",
+                "value": "active"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "cip-010-5",
+        "class": "standard",
+        "title": "CIP-010-5 - Cyber Security \u2014 Configuration Change Management and Vulnerability",
+        "controls": [
+          {
+            "id": "cip-010-5-purpose",
+            "class": "purpose",
+            "title": "Purpose",
+            "parts": [
+              {
+                "id": "cip-010-5-purpose-smt",
+                "name": "statement",
+                "prose": "To prevent and detect unauthorized changes to BES Cyber Systems (BCS) by specifying configuration change management and vulnerability assessment requirements in support of protecting BCS from compromise that could lead to misoperation or instability in the Bulk Electric System (BES)."
+              }
+            ]
+          },
+          {
+            "id": "cip-010-5-r1",
+            "class": "requirement",
+            "title": "CIP-010-5 R1",
+            "parts": [
+              {
+                "id": "cip-010-5-r1-smt",
+                "name": "statement",
+                "prose": "Each Responsible Entity shall implement one or more documented process(es) to manage configuration changes, individually or by group, that collectively include each of the applicable requirement parts in CIP-010-5 Table R1 \u2013 Configuration Change Management. [Violation Risk Factor: Medium] [Time Horizon: Operations Planning]."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "R1"
+              },
+              {
+                "name": "status",
+                "value": "active"
+              }
+            ]
+          },
+          {
+            "id": "cip-010-5-r2",
+            "class": "requirement",
+            "title": "CIP-010-5 R2",
+            "parts": [
+              {
+                "id": "cip-010-5-r2-smt",
+                "name": "statement",
+                "prose": "Each Responsible Entity shall implement one or more documented process(es) to monitor configuration changes that collectively include each of the applicable requirement parts in CIP-010-5 Table R2 \u2013 Configuration Monitoring. [Violation Risk Factor: Medium] [Time Horizon: Operations Planning]."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "R2"
+              },
+              {
+                "name": "status",
+                "value": "active"
+              }
+            ]
+          },
+          {
+            "id": "cip-010-5-r3",
+            "class": "requirement",
+            "title": "CIP-010-5 R3",
+            "parts": [
+              {
+                "id": "cip-010-5-r3-smt",
+                "name": "statement",
+                "prose": "Each Responsible Entity shall implement one or more documented process(es) that collectively include each of the applicable requirement parts in CIP-010-5 Table R3\u2013 Vulnerability Assessments. [Violation Risk Factor: Medium] [Time Horizon: Long-term Planning and Operations Planning]"
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "R3"
+              },
+              {
+                "name": "status",
+                "value": "active"
+              }
+            ]
+          },
+          {
+            "id": "cip-010-5-r4",
+            "class": "requirement",
+            "title": "CIP-010-5 R4",
+            "parts": [
+              {
+                "id": "cip-010-5-r4-smt",
+                "name": "statement",
+                "prose": "Each Responsible Entity, for its high impact and medium impact BES Cyber Systems, associated PCA, and associated SCI, shall implement, except under CIP Exceptional Circumstances, one or more documented plan(s) for Transient Cyber Assets (TCA) and Removable Media that include the sections in Attachment 1. [Violation Risk Factor: Medium] [Time Horizon: Long-term Planning and Operations Planning]"
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "R4"
+              },
+              {
+                "name": "status",
+                "value": "active"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "cip-011-4",
+        "class": "standard",
+        "title": "CIP-011-4 - Cyber Security \u2014 Information Protection",
+        "controls": [
+          {
+            "id": "cip-011-4-purpose",
+            "class": "purpose",
+            "title": "Purpose",
+            "parts": [
+              {
+                "id": "cip-011-4-purpose-smt",
+                "name": "statement",
+                "prose": "To prevent unauthorized access to BES Cyber System Information (BCSI) by specifying information protection requirements in support of protecting BES Cyber Systems (BCS) against compromise that could lead to misoperation or instability in the Bulk Electric System (BES)."
+              }
+            ]
+          },
+          {
+            "id": "cip-011-4-r1",
+            "class": "requirement",
+            "title": "CIP-011-4 R1",
+            "parts": [
+              {
+                "id": "cip-011-4-r1-smt",
+                "name": "statement",
+                "prose": "Each Responsible Entity shall implement one or more documented information protection program(s) for BCSI pertaining to Applicable Systems identified in CIP-011-4 Table R1 \u2013 Information Protection Program that collectively includes each of the applicable requirement parts in CIP-011-4 Table R1 \u2013 Information Protection Program. [Violation Risk Factor: Medium] [Time Horizon: Operations Planning]."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "R1"
+              },
+              {
+                "name": "status",
+                "value": "active"
+              }
+            ]
+          },
+          {
+            "id": "cip-011-4-r2",
+            "class": "requirement",
+            "title": "CIP-011-4 R2",
+            "parts": [
+              {
+                "id": "cip-011-4-r2-smt",
+                "name": "statement",
+                "prose": "Each Responsible Entity shall implement one or more documented process(es) that collectively include the applicable requirement parts in CIP-011-4 Table R2 \u2013Reuse and Disposal. [Violation Risk Factor: Lower] [Time Horizon: Operations Planning]."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "R2"
+              },
+              {
+                "name": "status",
+                "value": "active"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "cip-012-2",
+        "class": "standard",
+        "title": "CIP-012-2 - Cyber Security \u2013 Communications between Control Centers",
+        "controls": [
+          {
+            "id": "cip-012-2-purpose",
+            "class": "purpose",
+            "title": "Purpose",
+            "parts": [
+              {
+                "id": "cip-012-2-purpose-smt",
+                "name": "statement",
+                "prose": "To protect the confidentiality, integrity, and availability of Real-time Assessment and Real-time monitoring data transmitted between Control Centers."
+              }
+            ]
+          },
+          {
+            "id": "cip-012-2-r1",
+            "class": "requirement",
+            "title": "CIP-012-2 R1",
+            "parts": [
+              {
+                "id": "cip-012-2-r1-smt",
+                "name": "statement",
+                "prose": "The Responsible Entity shall implement, except under CIP Exceptional Circumstances, one or more documented plan(s) to mitigate the risks posed by unauthorized disclosure, unauthorized modification, and loss of availability, of data used in Real-time Assessment and Real-time monitoring while such data is being transmitted between any applicable Control Centers. The Responsible Entity is not required to include oral communications in its plan. The plan shall include: [Violation Risk Factor: Medium] [Time Horizon: Operations Planning]Identification of method(s) used to mitigate the risk(s) posed by unauthorized disclosure and unauthorized modification of data used in Real-time Assessment and Real- time monitoring while such data is being transmitted between Control Centers; 1.1. Identification of method(s) used to mitigate the risk(s) posed by unauthorized disclosure and unauthorized modification of data used in Real-time Assessment and Real-time monitoring while such data is being transmitted between Control Centers; 1.2. Identification of method(s) used to mitigate the risk(s) posed by the loss of the ability to communicate Real-time Assessment and Real-time monitoring data between Control Centers; 1.3. Identification of method(s) used to initiate the recovery of communication links used to transmit Real-time Assessment and Real-time monitoring data between Control Centers; 1.4. Identification of where the Responsible Entity implemented method(s)as required in Parts 1.1 and 1.2; and 1.5. If the Control Centers are owned or operated by different Responsible Entities, identification of the responsibilities of each Responsible Entity for implementing method(s) as required in Parts 1.1, 1.2, and 1.3."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "R1"
+              },
+              {
+                "name": "status",
+                "value": "active"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "cip-013-3",
+        "class": "standard",
+        "title": "CIP-013-3 - Cyber Security - Supply Chain Risk Management",
+        "controls": [
+          {
+            "id": "cip-013-3-purpose",
+            "class": "purpose",
+            "title": "Purpose",
+            "parts": [
+              {
+                "id": "cip-013-3-purpose-smt",
+                "name": "statement",
+                "prose": "To mitigate cyber security risks to the reliable operation of the Bulk Electric System (BES) by implementing security controls for supply chain risk management of BES Cyber Systems (BCS)."
+              }
+            ]
+          },
+          {
+            "id": "cip-013-3-r1",
+            "class": "requirement",
+            "title": "CIP-013-3 R1",
+            "parts": [
+              {
+                "id": "cip-013-3-r1-smt",
+                "name": "statement",
+                "prose": "Each Responsible Entity shall develop one or more documented supply chain cyber security risk management plan(s) for high and medium impact BCS and their associated Electronic Access Control or Monitoring Systems (EACMS), Physical Access Control Systems (PACS), and Shared Cyber Infrastructure (SCI). The plan(s) shall include: [Violation Risk Factor: Medium] [Time Horizon: Operations Planning] 1.1. One or more process(es) used in planning for the procurement of applicable systems listed in Requirement R1 to identify and assess cyber security risk(s) to the BES from vendor products or services resulting from: (i) procuring and installing vendor equipment and software; and (ii) transitions from one vendor(s) to another vendor(s). 1.2. One or more process(es) used in procuring applicable systems listed in Requirement R1 that address the following, as applicable: 1.2.1. Notification by the vendor of vendor-identified incidents related to the products or services provided to the Responsible Entity that pose cyber security risk to the Responsible Entity; 1.2.2. Coordination of responses to vendor-identified incidents related to the products or services provided to the Responsible Entity that pose cyber security risk to the Responsible Entity; 1.2.3. Notification by vendors when remote or onsite access should no longer be granted to vendor representatives; 1.2.4. Disclosure by vendors of known vulnerabilities related to the products or services provided to the Responsible Entity; 1.2.5. Verification of software integrity and authenticity of all software and patches provided by the vendor; and 1.2.6. Coordination of controls for vendor-initiated remote access."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "R1"
+              },
+              {
+                "name": "status",
+                "value": "active"
+              }
+            ]
+          },
+          {
+            "id": "cip-013-3-r2",
+            "class": "requirement",
+            "title": "CIP-013-3 R2",
+            "parts": [
+              {
+                "id": "cip-013-3-r2-smt",
+                "name": "statement",
+                "prose": "Each Responsible Entity shall implement its supply chain cyber security risk management plan(s) specified in Requirement R1. [Violation Risk Factor: Medium] [Time Horizon: Operations Planning] Note: Implementation of the plan does not require the Responsible Entity to renegotiate or abrogate existing contracts (including amendments to master agreements and purchase orders). Additionally, the following issues are beyond the scope of Requirement R2: (1) the actual terms and conditions of a procurement contract; and (2) vendor performance and adherence to a contract."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "R2"
+              },
+              {
+                "name": "status",
+                "value": "active"
+              }
+            ]
+          },
+          {
+            "id": "cip-013-3-r3",
+            "class": "requirement",
+            "title": "CIP-013-3 R3",
+            "parts": [
+              {
+                "id": "cip-013-3-r3-smt",
+                "name": "statement",
+                "prose": "Each Responsible Entity shall review and obtain CIP Senior Manager or delegate approval of its supply chain cyber security risk management plan(s) specified in Requirement R1 at least once every 15 calendar months. [Violation Risk Factor: Medium] [Time Horizon: Operations Planning]"
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "R3"
+              },
+              {
+                "name": "status",
+                "value": "active"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "cip-014-3",
+        "class": "standard",
+        "title": "CIP-014-3 - Physical Security",
+        "controls": [
+          {
+            "id": "cip-014-3-purpose",
+            "class": "purpose",
+            "title": "Purpose",
+            "parts": [
+              {
+                "id": "cip-014-3-purpose-smt",
+                "name": "statement",
+                "prose": "To identify and protect Transmission stations and Transmission substations, and their associated primary control centers, that if rendered inoperable or damaged as a result of a physical attack could result in instability, uncontrolled separation, or Cascading within an Interconnection."
+              }
+            ]
+          },
+          {
+            "id": "cip-014-3-r1",
+            "class": "requirement",
+            "title": "CIP-014-3 R1",
+            "parts": [
+              {
+                "id": "cip-014-3-r1-smt",
+                "name": "statement",
+                "prose": "Each Transmission Owner shall perform an initial risk assessment and subsequent risk assessments of its Transmission stations and Transmission substations (existing and planned to be in service within 24 months) that meet the criteria specified in Applicability Section 4.1.1. The initial and subsequent risk assessments shall consist of a transmission analysis or transmission analyses designed to identify the Transmission station(s) and Transmission substation(s) that if rendered inoperable or damaged could result in instability, uncontrolled separation, or Cascading within an Interconnection. [VRF: High; Time-Horizon: Long-term Planning] 1.1. Subsequent risk assessments shall be performed: \u2022 At least once every 30 calendar months for a Transmission Owner that has identified in its previous risk assessment (as verified according to Requirement R2) one or more Transmission stations or Transmission substations that if rendered inoperable or damaged could result in instability, uncontrolled separation, or Cascading within an Interconnection; or \u2022 At least once every 60 calendar months for a Transmission Owner that has not identified in its previous risk assessment (as verified according to Requirement R2) any Transmission stations or Transmission substations that if rendered inoperable or damaged could result in instability, uncontrolled separation, or Cascading within an Interconnection. 1.2. The Transmission Owner shall identify the primary control center that operationally controls each Transmission station or Transmission substation identified in the Requirement R1 risk assessment."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "R1"
+              },
+              {
+                "name": "status",
+                "value": "active"
+              }
+            ]
+          },
+          {
+            "id": "cip-014-3-r2",
+            "class": "requirement",
+            "title": "CIP-014-3 R2",
+            "parts": [
+              {
+                "id": "cip-014-3-r2-smt",
+                "name": "statement",
+                "prose": "Each Transmission Owner shall have an unaffiliated third party verify the risk assessment performed under Requirement R1. The verification may occur concurrent with or after the risk assessment performed under Requirement R1. [VRF: Medium; Time-Horizon: Long-term Planning] 2.1. Each Transmission Owner shall select an unaffiliated verifying entity that is either: CIP-014-3 \u2014 Physical Security \u2022 A registered Planning Coordinator, Transmission Planner, or Reliability Coordinator; or \u2022 An entity that has transmission planning or analysis experience. 2.2. The unaffiliated third party verification shall verify the Transmission Owner\u2019s risk assessment performed under Requirement R1, which may include recommendations for the addition or deletion of a Transmission station(s) or Transmission substation(s). The Transmission Owner shall ensure the verification is completed within 90 calendar days following the completion of the Requirement R1 risk assessment. 2.3. If the unaffiliated verifying entity recommends that the Transmission Owner add a Transmission station(s) or Transmission substation(s) to, or remove a Transmission station(s) or Transmission substation(s) from, its identification under Requirement R1, the Transmission Owner shall either, within 60 calendar days of completion of the verification, for each recommended addition or removal of a Transmission station or Transmission substation: \u2022 Modify its identification under Requirement R1 consistent with the recommendation; or \u2022 Document the technical basis for not modifying the identification in accordance with the recommendation. 2.4. Each Transmission Owner shall implement procedures, such as the use of non- disclosure agreements, for protecting sensitive or confidential information made available to the unaffiliated third party verifier and to protect or exempt sensitive or confidential information developed pursuant to this Reliability Standard from public disclosure."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "R2"
+              },
+              {
+                "name": "status",
+                "value": "active"
+              }
+            ]
+          },
+          {
+            "id": "cip-014-3-r3",
+            "class": "requirement",
+            "title": "CIP-014-3 R3",
+            "parts": [
+              {
+                "id": "cip-014-3-r3-smt",
+                "name": "statement",
+                "prose": "For a primary control center(s) identified by the Transmission Owner according to Requirement R1, Part 1.2 that a) operationally controls an identified Transmission station or Transmission substation verified according to Requirement R2, and b) is not under the operational control of the Transmission Owner: the Transmission Owner shall, within seven calendar days following completion of Requirement R2, notify the Transmission Operator that has operational control of the primary control center of CIP-014-3 \u2014 Physical Security such identification and the date of completion of Requirement R2. [VRF: Lower; Time- Horizon: Long-term Planning] 3.1. If a Transmission station or Transmission substation previously identified under Requirement R1 and verified according to Requirement R2 is removed from the identification during a subsequent risk assessment performed according to Requirement R1 or a verification according to Requirement R2, then the Transmission Owner shall, within seven calendar days following the verification or the subsequent risk assessment, notify the Transmission Operator that has operational control of the primary control center of the removal."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "R3"
+              },
+              {
+                "name": "status",
+                "value": "active"
+              }
+            ]
+          },
+          {
+            "id": "cip-014-3-r4",
+            "class": "requirement",
+            "title": "CIP-014-3 R4",
+            "parts": [
+              {
+                "id": "cip-014-3-r4-smt",
+                "name": "statement",
+                "prose": "Each Transmission Owner that identified a Transmission station, Transmission substation, or a primary control center in Requirement R1 and verified according to Requirement R2, and each Transmission Operator notified by a Transmission Owner according to Requirement R3, shall conduct an evaluation of the potential threats and vulnerabilities of a physical attack to each of their respective Transmission station(s), Transmission substation(s), and primary control center(s) identified in Requirement R1 and verified according to Requirement R2. The evaluation shall consider the following: [VRF: Medium; Time-Horizon: Operations Planning, Long-term Planning] 4.1. Unique characteristics of the identified and verified Transmission station(s), Transmission substation(s), and primary control center(s); 4.2. Prior history of attack on similar facilities taking into account the frequency, geographic proximity, and severity of past physical security related events; and 4.3. Intelligence or threat warnings received from sources such as law enforcement, the Electric Reliability Organization (ERO), the Electricity Sector Information Sharing and Analysis Center (ES-ISAC), U.S. federal and/or Canadian governmental agencies, or their successors."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "R4"
+              },
+              {
+                "name": "status",
+                "value": "active"
+              }
+            ]
+          },
+          {
+            "id": "cip-014-3-r5",
+            "class": "requirement",
+            "title": "CIP-014-3 R5",
+            "parts": [
+              {
+                "id": "cip-014-3-r5-smt",
+                "name": "statement",
+                "prose": "Each Transmission Owner that identified a Transmission station, Transmission substation, or primary control center in Requirement R1 and verified according to Requirement R2, and each Transmission Operator notified by a Transmission Owner according to Requirement R3, shall develop and implement a documented physical security plan(s) that covers their respective Transmission station(s), Transmission substation(s), and primary control center(s). The physical security plan(s) shall be CIP-014-3 \u2014 Physical Security developed within 120 calendar days following the completion of Requirement R2 and executed according to the timeline specified in the physical security plan(s). The physical security plan(s) shall include the following attributes: [VRF: High; Time- Horizon: Long-term Planning] 5.1. Resiliency or security measures designed collectively to deter, detect, delay, assess, communicate, and respond to potential physical threats and vulnerabilities identified during the evaluation conducted in Requirement R4. 5.2. Law enforcement contact and coordination information. 5.3. A timeline for executing the physical security enhancements and modifications specified in the physical security plan. 5.4. Provisions to evaluate evolving physical threats, and their corresponding security measures, to the Transmission station(s), Transmission substation(s), or primary control center(s)."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "R5"
+              },
+              {
+                "name": "status",
+                "value": "active"
+              }
+            ]
+          },
+          {
+            "id": "cip-014-3-r6",
+            "class": "requirement",
+            "title": "CIP-014-3 R6",
+            "parts": [
+              {
+                "id": "cip-014-3-r6-smt",
+                "name": "statement",
+                "prose": "Each Transmission Owner that identified a Transmission station, Transmission substation, or primary control center in Requirement R1 and verified according to Requirement R2, and each Transmission Operator notified by a Transmission Owner according to Requirement R3, shall have an unaffiliated third party review the evaluation performed under Requirement R4 and the security plan(s) developed under Requirement R5. The review may occur concurrently with or after completion of the evaluation performed under Requirement R4 and the security plan development under Requirement R5. [VRF: Medium; Time-Horizon: Long-term Planning] 6.1. Each Transmission Owner and Transmission Operator shall select an unaffiliated third party reviewer from the following: \u2022 An entity or organization with electric industry physical security experience and whose review staff has at least one member who holds either a Certified Protection Professional (CPP) or Physical Security Professional (PSP) certification. \u2022 An entity or organization approved by the ERO. \u2022 A governmental agency with physical security expertise. CIP-014-3 \u2014 Physical Security \u2022 An entity or organization with demonstrated law enforcement, government, or military physical security expertise. 6.2. The Transmission Owner or Transmission Operator, respectively, shall ensure that the unaffiliated third party review is completed within 90 calendar days of completing the security plan(s) developed in Requirement R5. The unaffiliated third party review may, but is not required to, include recommended changes to the evaluation performed under Requirement R4 or the security plan(s) developed under Requirement R5. 6.3. If the unaffiliated third party reviewer recommends changes to the evaluation performed under Requirement R4 or security plan(s) developed under Requirement R5, the Transmission Owner or Transmission Operator shall, within 60 calendar days of the completion of the unaffiliated third party review, for each recommendation: \u2022 Modify its evaluation or security plan(s) consistent with the recommendation; or \u2022 Document the reason(s) for not modifying the evaluation or security plan(s) consistent with the recommendation. 6.4. Each Transmission Owner and Transmission Operator shall implement procedures, such as the use of non-disclosure agreements, for protecting sensitive or confidential information made available to the unaffiliated third party reviewer and to protect or exempt sensitive or confidential information developed pursuant to this Reliability Standard from public disclosure."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "R6"
+              },
+              {
+                "name": "status",
+                "value": "active"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "cip-015-1",
+        "class": "standard",
+        "title": "CIP-015-1 - Cyber Security \u2013 Internal Network Security Monitoring",
+        "controls": [
+          {
+            "id": "cip-015-1-purpose",
+            "class": "purpose",
+            "title": "Purpose",
+            "parts": [
+              {
+                "id": "cip-015-1-purpose-smt",
+                "name": "statement",
+                "prose": "To improve the probability of detecting anomalous or unauthorized network activity in order to facilitate improved response and recovery from an attack."
+              }
+            ]
+          },
+          {
+            "id": "cip-015-1-r1",
+            "class": "requirement",
+            "title": "CIP-015-1 R1",
+            "parts": [
+              {
+                "id": "cip-015-1-r1-smt",
+                "name": "statement",
+                "prose": "Each Responsible Entity shall implement one or more documented process(es) for internal network security monitoring of networks protected by the Responsible Entity\u2019s Electronic Security Perimeter(s) of high impact BES Cyber Systems and medium impact BES Cyber Systems with External Routable Connectivity to provide methods for detecting and evaluating anomalous network activity. The documented process(es) shall include each of the following requirement Parts: [Violation Risk Factor: Medium] [Time Horizon: Same Day Operations and Operations Assessment] 1.1. Implement, using a risk-based rationale, network data feed(s) to monitor network activity; including connections, devices, and network communications. 1.2. Implement one or more method(s) to detect anomalous network activity using the network data feed(s) from Part 1.1. 1.3. Implement one or more method(s) to evaluate anomalous network activity detected in Part 1.2. to determine further action(s)."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "R1"
+              },
+              {
+                "name": "status",
+                "value": "active"
+              }
+            ]
+          },
+          {
+            "id": "cip-015-1-r2",
+            "class": "requirement",
+            "title": "CIP-015-1 R2",
+            "parts": [
+              {
+                "id": "cip-015-1-r2-smt",
+                "name": "statement",
+                "prose": "Each Responsible Entity shall implement, except during CIP Exceptional Circumstances, one or more documented process(es) to retain internal network security monitoring data associated with network activity determined to be anomalous by the Responsible Entity at a minimum until the action is complete in support of Requirement R1, Part 1.3. [Violation Risk Factor: Lower] [Time Horizon: Same Day Operations and Operations Assessment] Note: The Responsible Entity is not required to retain internal network security monitoring data that is not relevant to anomalous network activity detected in Requirement R1, Part 1.2."
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "R2"
+              },
+              {
+                "name": "status",
+                "value": "active"
+              }
+            ]
+          },
+          {
+            "id": "cip-015-1-r3",
+            "class": "requirement",
+            "title": "CIP-015-1 R3",
+            "parts": [
+              {
+                "id": "cip-015-1-r3-smt",
+                "name": "statement",
+                "prose": "Each Responsible Entity shall implement, except during CIP Exceptional Circumstances, one or more documented process(es) to protect internal network security monitoring data collected in support of Requirement R1 and data retained in support of Requirement R2 to mitigate the risks of unauthorized deletion or modification. [Violation Risk Factor: Lower] [Time Horizon: Same Day Operations and Operations Assessment]"
+              }
+            ],
+            "props": [
+              {
+                "name": "label",
+                "value": "R3"
+              },
+              {
+                "name": "status",
+                "value": "active"
               }
             ]
           }

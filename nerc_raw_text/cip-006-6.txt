@@ -1,0 +1,880 @@
+--- START DOCUMENT: cip-006-6.pdf ---
+CIP‐006‐6 — Cyber Security — Physical Security of BES Cyber Systems
+A. Introduction
+1. Title: Cyber Security — Physical Security of BES Cyber Systems
+2. Number: CIP‐006‐6
+3. Purpose: To manage physical access to Bulk Electric System (BES) Cyber Systems by
+specifying a physical security plan in support of protecting BES Cyber
+Systems against compromise that could lead to misoperation or
+instability in the BES.
+4. Applicability:
+4.1. Functional Entities: For the purpose of the requirements contained
+herein, the following list of functional entities will be collectively referred to as
+“Responsible Entities.” For requirements in this standard where a specific functional
+entity or subset of functional entities are the applicable entity or entities, the
+functional entity or entities are specified explicitly.
+4.1.1 Balancing Authority
+4.1.2 Distribution Provider that owns one or more of the following Facilities, systems,
+and equipment for the protection or restoration of the BES:
+4.1.2.1 Each underfrequency Load shedding (UFLS) or undervoltage Load shedding
+(UVLS) system that:
+4.1.2.1.1 is part of a Load shedding program that is subject to one or more
+requirements in a NERC or Regional Reliability Standard; and
+4.1.2.1.2 performs automatic Load shedding under a common control system
+owned by the Responsible Entity, without human operator initiation,
+of 300 MW or more.
+4.1.2.2 Each Special Protection System (SPS) or Remedial Action Scheme (RAS)
+where the SPS or RAS is subject to one or more requirements in a NERC or
+Regional Reliability Standard.
+4.1.2.3 Each Protection System (excluding UFLS and UVLS) that applies to
+Transmission where the Protection System is subject to one or more
+requirements in a NERC or Regional Reliability Standard.
+4.1.2.4 Each Cranking Path and group of Elements meeting the initial switching
+requirements from a Blackstart Resource up to and including the first
+interconnection point of the starting station service of the next generation
+unit(s) to be started.
+4.1.3 Generator Operator
+4.1.4 Generator Owner
+4.1.5 Interchange Coordinator or Interchange Authority
+4.1.6 Reliability Coordinator
+Page 1 of 27
+CIP‐006‐6 — Cyber Security — Physical Security of BES Cyber Systems
+4.1.7 Transmission Operator
+4.1.8 Transmission Owner
+4.2. Facilities: For the purpose of the requirements contained herein, the following
+Facilities, systems, and equipment owned by each Responsible Entity in 4.1 above
+are those to which these requirements are applicable. For requirements in this
+standard where a specific type of Facilities, system, or equipment or subset of
+Facilities, systems, and equipment are applicable, these are specified explicitly.
+4.2.1 Distribution Provider: One or more of the following Facilities, systems
+and equipment owned by the Distribution Provider for the protection or
+restoration of the BES:
+4.2.1.1 Each UFLS or UVLS System that:
+4.2.1.1.1 is part of a Load shedding program that is subject to one or more
+requirements in a NERC or Regional Reliability Standard; and
+4.2.1.1.2 performs automatic Load shedding under a common control system
+owned by the Responsible Entity, without human operator initiation,
+of 300 MW or more.
+4.2.1.2 Each SPS or RAS where the SPS or RAS is subject to one or more
+requirements in a NERC or Regional Reliability Standard.
+4.2.1.3 Each Protection System (excluding UFLS and UVLS) that applies to
+Transmission where the Protection System is subject to one or more
+requirements in a NERC or Regional Reliability Standard.
+4.2.1.4 Each Cranking Path and group of Elements meeting the initial switching
+requirements from a Blackstart Resource up to and including the first
+interconnection point of the starting station service of the next generation
+unit(s) to be started.
+4.2.2 Responsible Entities listed in 4.1 other than Distribution Providers:
+All BES Facilities.
+4.2.3 Exemptions: The following are exempt from Standard CIP‐006‐6:
+4.2.3.1 Cyber Assets at Facilities regulated by the Canadian Nuclear Safety
+Commission.
+4.2.3.2 Cyber Assets associated with communication networks and data
+communication links between discrete Electronic Security Perimeters.
+4.2.3.3 The systems, structures, and components that are regulated by the
+Nuclear Regulatory Commission under a cyber security plan pursuant to 10
+C.F.R. Section 73.54.
+4.2.3.4 For Distribution Providers, the systems and equipment that are not included
+in section 4.2.1 above.
+Page 2 of 27
+CIP‐006‐6 — Cyber Security — Physical Security of BES Cyber Systems
+4.2.3.5 Responsible Entities that identify that they have no BES Cyber Systems
+categorized as high impact or medium impact according to the CIP‐002‐5.1
+identification and categorization processes.
+5. Effective Dates:
+See Implementation Plan for CIP‐006‐6.
+6. Background:
+Standard CIP‐006 exists as part of a suite of CIP Standards related to cyber security,
+which require the initial identification and categorization of BES Cyber Systems and
+require a minimum level of organizational, operational and procedural controls to
+mitigate risk to BES Cyber Systems.
+Most requirements open with, “Each Responsible Entity shall implement one or more
+documented [processes, plan, etc.] that include the applicable items in [Table
+Reference].” The referenced table requires the applicable items in the procedures for
+the requirement’s common subject matter.
+The term documented processes refers to a set of required instructions specific to the
+Responsible Entity and to achieve a specific outcome. This term does not imply any
+particular naming or approval structure beyond what is stated in the requirements.
+An entity should include as much as it believes necessary in its documented
+processes, but it must address the applicable requirements in the table.
+The terms program and plan are sometimes used in place of documented processes
+where it makes sense and is commonly understood. For example, documented
+processes describing a response are typically referred to as plans (i.e., incident
+response plans and recovery plans). Likewise, a security plan can describe an
+approach involving multiple procedures to address a broad subject matter.
+Similarly, the term program may refer to the organization’s overall implementation of
+its policies, plans and procedures involving a subject matter. Examples in the
+standards include the personnel risk assessment program and the personnel training
+program. The full implementation of the CIP Cyber Security Standards could also be
+referred to as a program. However, the terms program and plan do not imply any
+additional requirements beyond what is stated in the standards.
+Responsible Entities can implement common controls that meet requirements for
+multiple high and medium impact BES Cyber Systems. For example, a single training
+program could meet the requirements for training personnel across multiple BES
+Cyber Systems.
+Measures for the initial requirement are simply the documented processes
+themselves. Measures in the table rows provide examples of evidence to show
+documentation and implementation of applicable items in the documented
+processes. These measures serve to provide guidance to entities in acceptable records
+of compliance and should not be viewed as an all‐inclusive list.
+Page 3 of 27
+CIP‐006‐6 — Cyber Security — Physical Security of BES Cyber Systems
+Throughout the standards, unless otherwise stated, bulleted items in the
+requirements and measures are items that are linked with an “or,” and numbered
+items are items that are linked with an “and.”
+Many references in the Applicability section use a threshold of 300 MW for UFLS and
+UVLS. This particular threshold of 300 MW for UVLS and UFLS was provided in Version
+1 of the CIP Cyber Security Standards. The threshold remains at 300 MW since it is
+specifically addressing UVLS and UFLS, which are last ditch efforts to save the Bulk
+Electric System. A review of UFLS tolerances defined within regional reliability
+standards for UFLS program requirements to date indicates that the historical value of
+300 MW represents an adequate and reasonable threshold value for allowable UFLS
+operational tolerances.
+“Applicable Systems” Columns in Tables:
+Each table has an “Applicable Systems” column to further define the scope of systems
+to which a specific requirement row applies. The CSO706 SDT adapted this concept
+from the National Institute of Standards and Technology (“NIST”) Risk Management
+Framework as a way of applying requirements more appropriately based on impact
+and connectivity characteristics. The following conventions are used in the
+“Applicable Systems” column as described.
+ High Impact BES Cyber Systems – Applies to BES Cyber Systems categorized as
+high impact according to the CIP‐002‐5.1 identification and categorization
+processes.
+ Medium Impact BES Cyber Systems – Applies to BES Cyber Systems categorized as
+medium impact according to the CIP‐002‐5.1 identification and categorization
+processes.
+ Medium Impact BES Cyber Systems without External Routable Connectivity –
+Only applies to medium impact BES Cyber Systems without External Routable
+Connectivity.
+ Medium Impact BES Cyber Systems with External Routable Connectivity – Only
+applies to medium impact BES Cyber Systems with External Routable Connectivity.
+This also excludes Cyber Assets in the BES Cyber System that cannot be directly
+accessed through External Routable Connectivity.
+ Electronic Access Control or Monitoring Systems (EACMS) – Applies to each
+Electronic Access Control or Monitoring System associated with a referenced high
+impact BES Cyber System or medium impact BES Cyber System. Examples may
+include, but are not limited to, firewalls, authentication servers, and log
+monitoring and alerting systems.
+ Physical Access Control Systems (PACS) – Applies to each Physical Access Control
+System associated with a referenced high impact BES Cyber System or medium
+impact BES Cyber System.
+Page 4 of 27
+CIP‐006‐6 — Cyber Security — Physical Security of BES Cyber Systems
+ Protected Cyber Assets (PCA) – Applies to each Protected Cyber Asset associated
+with a referenced high impact BES Cyber System or medium impact BES Cyber
+System.
+ Locally mounted hardware or devices at the Physical Security Perimeter –
+Applies to the locally mounted hardware or devices (e.g. such as motion sensors,
+electronic lock control mechanisms, and badge readers) at a Physical Security
+Perimeter associated with a referenced high impact BES Cyber System or medium
+impact BES Cyber System with External Routable Connectivity, and that does not
+contain or store access control information or independently perform access
+authentication. These hardware and devices are excluded in the definition of
+Physical Access Control Systems.
+Page 5 of 27
+CIP‐006‐6 — Cyber Security — Physical Security of BES Cyber Systems
+B. Requirements and Measures
+R1. Each Responsible Entity shall implement one or more documented physical security plan(s) that collectively include all of
+the applicable requirement parts in CIP‐006‐6 Table R1 – Physical Security Plan. [Violation Risk Factor: Medium] [Time
+Horizon: Long Term Planning and Same Day Operations].
+M1. Evidence must include each of the documented physical security plans that collectively include all of the applicable
+requirement parts in CIP‐006‐6 Table R1 – Physical Security Plan and additional evidence to demonstrate implementation
+of the plan or plans as described in the Measures column of the table.
+CIP‐006‐6 Table R1 – Physical Security Plan
+Part Applicable Systems Requirements Measures
+1.1 Medium Impact BES Cyber Systems Define operational or procedural controls An example of evidence may include, but
+without External Routable Connectivity to restrict physical access. is not limited to, documentation that
+operational or procedural controls exist.
+Physical Access Control Systems (PACS)
+associated with:
+ High Impact BES Cyber Systems, or
+ Medium Impact BES Cyber
+Systems with External Routable
+Connectivity
+1.2 Medium Impact BES Cyber Systems with Utilize at least one physical access control An example of evidence may include, but
+External Routable Connectivity and their to allow unescorted physical access into is not limited to, language in the physical
+associated: each applicable Physical Security security plan that describes each Physical
+1. EACMS; and Perimeter to only those individuals who Security Perimeter and how unescorted
+have authorized unescorted physical physical access is controlled by one or
+2. PCA
+access. more different methods and proof that
+unescorted physical access is restricted to
+only authorized individuals, such as a list
+of authorized individuals accompanied by
+access logs.
+Page 6 of 27
+CIP‐006‐6 — Cyber Security — Physical Security of BES Cyber Systems
+CIP‐006‐6 Table R1 – Physical Security Plan
+Part Applicable Systems Requirements Measures
+1.3 High Impact BES Cyber Systems and their Where technically feasible, utilize two or An example of evidence may include, but
+associated: more different physical access controls is not limited to, language in the physical
+1. EACMS; and
+(this does not require two completely security plan that describes the Physical
+independent physical access control Security Perimeters and how unescorted
+2. PCA
+systems) to collectively allow unescorted physical access is controlled by two or
+physical access into Physical Security more different methods and proof that
+Perimeters to only those individuals who unescorted physical access is restricted to
+have authorized unescorted physical only authorized individuals, such as a list
+access. of authorized individuals accompanied by
+access logs.
+1.4 High Impact BES Cyber Systems and their Monitor for unauthorized access through An example of evidence may include, but
+associated: a physical access point into a Physical is not limited to, documentation of
+1. EACMS; and
+Security Perimeter. controls that monitor for unauthorized
+access through a physical access point into
+2. PCA
+a Physical Security Perimeter.
+Medium Impact BES Cyber Systems with
+External Routable Connectivity and their
+associated:
+1. EACMS; and
+2. PCA
+Page 7 of 27
+CIP‐006‐6 — Cyber Security — Physical Security of BES Cyber Systems
+CIP‐006‐6 Table R1 – Physical Security Plan
+Part Applicable Systems Requirements Measures
+1.5 High Impact BES Cyber Systems and their Issue an alarm or alert in response to An example of evidence may include, but
+associated: detected unauthorized access through a is not limited to, language in the physical
+1. EACMS; and
+physical access point into a Physical security plan that describes the issuance
+Security Perimeter to the personnel of an alarm or alert in response to
+2. PCA
+identified in the BES Cyber Security unauthorized access through a physical
+Medium Impact BES Cyber Systems with
+Incident response plan within 15 minutes access control into a Physical Security
+External Routable Connectivity and their
+of detection. Perimeter and additional evidence that
+associated:
+the alarm or alert was issued and
+1. EACMS; and communicated as identified in the BES
+Cyber Security Incident Response Plan,
+2. PCA
+such as manual or electronic alarm or
+alert logs, cell phone or pager logs, or
+other evidence that documents that the
+alarm or alert was generated and
+communicated.
+1.6 Physical Access Control Systems (PACS) Monitor each Physical Access Control An example of evidence may include, but
+associated with: System for unauthorized physical access is not limited to, documentation of
+to a Physical Access Control System. controls that monitor for unauthorized
+ High Impact BES Cyber Systems,
+or
+physical access to a PACS.
+ Medium Impact BES Cyber
+Systems with External Routable
+Connectivity
+Page 8 of 27
+CIP‐006‐6 — Cyber Security — Physical Security of BES Cyber Systems
+CIP‐006‐6 Table R1 – Physical Security Plan
+Part Applicable Systems Requirements Measures
+1.7 Physical Access Control Systems (PACS) Issue an alarm or alert in response to An example of evidence may include, but
+associated with: detected unauthorized physical access to is not limited to, language in the physical
+a Physical Access Control System to the security plan that describes the issuance
+ High Impact BES Cyber Systems,
+personnel identified in the BES Cyber of an alarm or alert in response to
+or
+Security Incident response plan within 15 unauthorized physical access to Physical
+ Medium Impact BES Cyber
+minutes of the detection. Access Control Systems and additional
+Systems with External Routable
+evidence that the alarm or alerts was
+Connectivity
+issued and communicated as identified in
+the BES Cyber Security Incident Response
+Plan, such as alarm or alert logs, cell
+phone or pager logs, or other evidence
+that the alarm or alert was generated and
+communicated.
+1.8 High Impact BES Cyber Systems and their Log (through automated means or by An example of evidence may include, but
+associated: personnel who control entry) entry of is not limited to, language in the physical
+1. EACMS; and
+each individual with authorized security plan that describes logging and
+unescorted physical access into each recording of physical entry into each
+2. PCA
+Physical Security Perimeter, with Physical Security Perimeter and additional
+Medium Impact BES Cyber Systems with
+information to identify the individual and evidence to demonstrate that this logging
+External Routable Connectivity and their
+date and time of entry. has been implemented, such as logs of
+associated:
+physical access into Physical Security
+1. EACMS; and Perimeters that show the individual and
+the date and time of entry into Physical
+2. PCA
+Security Perimeter.
+1.9 High Impact BES Cyber Systems and their Retain physical access logs of entry of An example of evidence may include, but
+associated: individuals with authorized unescorted is not limited to, dated documentation
+1. EACMS; and physical access into each Physical Security such as logs of physical access into
+Perimeter for at least ninety calendar Physical Security Perimeters that show the
+2. PCA
+days. date and time of entry into Physical
+Medium Impact BES Cyber Systems with
+Security Perimeter.
+External Routable Connectivity and their
+associated:
+1. EACMS; and
+2. PCA
+Page 9 of 27
+CIP‐006‐6 — Cyber Security — Physical Security of BES Cyber Systems
+CIP‐006‐6 Table R1 – Physical Security Plan
+Part Applicable Systems Requirements Measures
+1.10 High Impact BES Cyber Systems and Restrict physical access to cabling and other An example of evidence may include, but
+their associated: nonprogrammable communication is not limited to, records of the
+components used for connection between Responsible Entity’s implementation of
+ PCA
+applicable Cyber Assets within the same the physical access restrictions (e.g.,
+Electronic Security Perimeter in those cabling and components secured through
+Medium Impact BES Cyber Systems at
+instances when such cabling and components conduit or secured cable trays)
+Control Centers and their associated:
+are located outside of a Physical Security encryption, monitoring, or equally
+ PCA
+Perimeter. effective logical protections.
+Where physical access restrictions to such
+cabling and components are not
+implemented, the Responsible Entity shall
+document and implement one or more of the
+following:
+ encryption of data that transits such
+cabling and components; or
+ monitoring the status of the
+communication link composed of
+such cabling and components and
+issuing an alarm or alert in response
+to detected communication failures
+to the personnel identified in the BES
+Cyber Security Incident response plan
+within 15 minutes of detection; or
+ an equally effective logical
+protection.
+Page 10 of 27
+CIP‐006‐6 — Cyber Security — Physical Security of BES Cyber Systems
+R2. Each Responsible Entity shall implement one or more documented visitor control program(s) that include each of the
+applicable requirement parts in CIP‐006‐6 Table R2 – Visitor Control Program. [Violation Risk Factor: Medium] [Time Horizon:
+Same Day Operations.]
+M2. Evidence must include one or more documented visitor control programs that collectively include each of the applicable
+requirement parts in CIP‐006‐6 Table R2 – Visitor Control Program and additional evidence to demonstrate implementation as
+described in the Measures column of the table.
+CIP‐006‐6 Table R2 – Visitor Control Program
+Part Applicable Systems Requirements Measures
+2.1 High Impact BES Cyber Systems and their Require continuous escorted access of An example of evidence may include, but is
+associated: visitors (individuals who are provided not limited to, language in a visitor control
+1. EACMS; and access but are not authorized for program that requires continuous escorted
+2. PCA
+unescorted physical access) within each access of visitors within Physical Security
+Physical Security Perimeter, except during Perimeters and additional evidence to
+Medium Impact BES Cyber Systems with
+CIP Exceptional Circumstances. demonstrate that the process was
+External Routable Connectivity and their
+implemented, such as visitor logs.
+associated:
+1. EACMS; and
+2. PCA
+2.2 High Impact BES Cyber Systems and their Require manual or automated logging of An example of evidence may include, but is
+associated: visitor entry into and exit from the Physical not limited to, language in a visitor control
+1. EACMS; and Security Perimeter that includes date and program that requires continuous escorted
+2. PCA
+time of the initial entry and last exit, the access of visitors within Physical Security
+visitor’s name, and the name of an Perimeters and additional evidence to
+Medium Impact BES Cyber Systems with
+individual point of contact responsible for demonstrate that the process was
+External Routable Connectivity and their
+the visitor, except during CIP Exceptional implemented, such as dated visitor logs
+associated:
+Circumstances. that include the required information.
+1. EACMS; and
+2. PCA
+Page 11 of 27
+CIP‐006‐6 — Cyber Security — Physical Security of BES Cyber Systems
+CIP‐006‐6 Table R2 – Visitor Control Program
+Part Applicable Systems Requirements Measures
+2.3 High Impact BES Cyber Systems and their Retain visitor logs for at least ninety An example of evidence may include, but
+associated: calendar days. is not limited to, documentation showing
+1. EACMS; and logs have been retained for at least ninety
+2. PCA
+calendar days.
+Medium Impact BES Cyber Systems with
+External Routable Connectivity and their
+associated:
+1. EACMS; and
+2. PCA
+Page 12 of 27
+CIP‐006‐6 — Cyber Security — Physical Security of BES Cyber Systems
+R3. Each Responsible Entity shall implement one or more documented Physical Access Control System maintenance and testing
+program(s) that collectively include each of the applicable requirement parts in CIP‐006‐6 Table R3 – Maintenance and Testing
+Program. [Violation Risk Factor: Medium] [Time Horizon: Long Term Planning].
+M3. Evidence must include each of the documented Physical Access Control System maintenance and testing programs that
+collectively include each of the applicable requirement parts in CIP‐006‐6 Table R3 – Maintenance and Testing Program and
+additional evidence to demonstrate implementation as described in the Measures column of the table.
+CIP‐006‐6 Table R3 – Physical Access Control System Maintenance and Testing Program
+Part Applicable Systems Requirement Measures
+3.1 Physical Access Control Systems (PACS) Maintenance and testing of each Physical An example of evidence may include, but
+associated with: Access Control System and locally mounted is not limited to, a maintenance and testing
+hardware or devices at the Physical program that provides for testing each
+ High Impact BES Cyber Systems, or
+Security Perimeter at least once every 24 Physical Access Control System and locally
+ Medium Impact BES Cyber Systems calendar months to ensure they function mounted hardware or devices associated
+with External Routable Connectivity properly. with each applicable Physical Security
+Perimeter at least once every 24 calendar
+Locally mounted hardware or devices at
+months and additional evidence to
+the Physical Security Perimeter associated
+demonstrate that this testing was done,
+with:
+such as dated maintenance records, or
+ High Impact BES Cyber Systems, or other documentation showing testing and
+maintenance has been performed on each
+ Medium Impact BES Cyber Systems
+applicable device or system at least once
+with External Routable Connectivity
+every 24 calendar months.
+Page 13 of 27
+CIP‐006‐6 — Cyber Security — Physical Security of BES Cyber Systems
+C. Compliance
+1. Compliance Monitoring Process:
+1.1. Compliance Enforcement Authority:
+As defined in the NERC Rules of Procedure, “Compliance Enforcement Authority” (CEA)
+means NERC or the Regional Entity in their respective roles of monitoring and enforcing
+compliance with the NERC Reliability Standards.
+1.2. Evidence Retention:
+The following evidence retention periods identify the period of time an entity is
+required to retain specific evidence to demonstrate compliance. For instances where
+the evidence retention period specified below is shorter than the time since the last
+audit, the CEA may ask an entity to provide other evidence to show that it was
+compliant for the full time period since the last audit.
+The Responsible Entity shall keep data or evidence to show compliance as identified
+below unless directed by its CEA to retain specific evidence for a longer period of time
+as part of an investigation:
+ Each Responsible Entity shall retain evidence of each requirement in this standard
+for three calendar years.
+ If a Responsible Entity is found non‐compliant, it shall keep information related to
+the non‐compliance until mitigation is complete and approved or for the time
+specified above, whichever is longer.
+ The CEA shall keep the last audit records and all requested and submitted
+subsequent audit records.
+1.3. Compliance Monitoring and Assessment Processes:
+Compliance Audits
+Self‐Certifications
+Spot Checking
+Compliance Investigations
+Self‐Reporting
+Complaints
+1.4. Additional Compliance Information:
+None
+Page 14 of 27
+CIP‐006‐6 — Cyber Security — Physical Security of BES Cyber Systems
+2. Table of Compliance Elements
+Violation Severity Levels (CIP‐006‐6)
+R # Time Horizon VRF
+Lower VSL Moderate VSL High VSL Severe VSL
+R1 Long Term Medium N/A N/A N/A The Responsible Entity did
+Planning not document or
+implement physical
+Same‐Day
+security plans. (R1)
+Operations
+OR
+The Responsible Entity did
+not document or
+implement operational or
+procedural controls to
+restrict physical access.
+(1.1)
+OR
+The Responsible Entity has
+documented and
+implemented physical
+access controls, but at
+least one control does not
+exist to restrict access to
+Applicable Systems. (1.2)
+OR
+The Responsible Entity has
+documented and
+implemented physical
+access controls, but at
+least two different
+controls do not exist to
+Page 15 of 27
+CIP‐006‐6 — Cyber Security — Physical Security of BES Cyber Systems
+Violation Severity Levels (CIP‐006‐6)
+R # Time Horizon VRF
+Lower VSL Moderate VSL High VSL Severe VSL
+restrict access to
+Applicable Systems. (1.3)
+OR
+The Responsible Entity
+does not have a process to
+monitor for unauthorized
+access through a physical
+access point into a
+Physical Security
+Perimeter. (1.4)
+OR
+The Responsible Entity
+does not have a process to
+alert for detected
+unauthorized access
+through a physical access
+point into a Physical
+Security Perimeter or to
+communicate such alerts
+within 15 minutes to
+identified personnel. (1.5)
+OR
+The Responsible Entity
+does not have a process to
+monitor each Physical
+Access Control System for
+unauthorized physical
+access to a Physical Access
+Page 16 of 27
+CIP‐006‐6 — Cyber Security — Physical Security of BES Cyber Systems
+Violation Severity Levels (CIP‐006‐6)
+R # Time Horizon VRF
+Lower VSL Moderate VSL High VSL Severe VSL
+Control Systems. (1.6)
+OR
+The Responsible Entity
+does not have a process to
+alert for unauthorized
+physical access to Physical
+Access Control Systems or
+to communicate such
+alerts within 15 minutes to
+identified personnel. (1.7)
+OR
+The Responsible Entity
+does not have a process to
+log authorized physical
+entry into each Physical
+Security Perimeter with
+sufficient information to
+identify the individual and
+date and time of entry.
+(1.8)
+OR
+The Responsible Entity
+does not have a process to
+retain physical access logs
+for 90 calendar days. (1.9)
+OR
+The Responsible Entity did
+not document or
+Page 17 of 27
+CIP‐006‐6 — Cyber Security — Physical Security of BES Cyber Systems
+Violation Severity Levels (CIP‐006‐6)
+R # Time Horizon VRF
+Lower VSL Moderate VSL High VSL Severe VSL
+implement physical access
+restrictions, encryption,
+monitoring or equally
+effective logical
+protections for cabling
+and other
+nonprogrammable
+communication
+components used for
+connection between
+applicable Cyber Assets
+within the same Electronic
+Security Perimeter in
+those instances when such
+cabling and components
+are located outside of a
+Physical Security
+Perimeter. (1.10)
+R2 Same‐Day Medium N/A N/A N/A The Responsible Entity has
+Operations failed to include or
+implement a visitor
+control program that
+requires continuous
+escorted access of visitors
+within any Physical
+Security Perimeter. (2.1)
+OR
+The Responsible Entity has
+failed to include or
+Page 18 of 27
+CIP‐006‐6 — Cyber Security — Physical Security of BES Cyber Systems
+Violation Severity Levels (CIP‐006‐6)
+R # Time Horizon VRF
+Lower VSL Moderate VSL High VSL Severe VSL
+implement a visitor
+control program that
+requires logging of the
+initial entry and last exit
+dates and times of the
+visitor, the visitor’s name,
+and the point of contact.
+(2.2)
+OR
+The Responsible Entity
+failed to include or
+implement a visitor
+control program to retain
+visitor logs for at least
+ninety days. (2.3)
+R3 Long Term Medium The The Responsible Entity The Responsible Entity The Responsible Entity
+Planning Responsible has documented and has documented and did not document or
+Entity has implemented a implemented a implement a
+documented maintenance and maintenance and maintenance and
+and testing program for testing program for testing program for
+implemented a Physical Access Control Physical Access Control Physical Access Control
+maintenance Systems and locally Systems and locally Systems and locally
+and testing mounted hardware or mounted hardware or mounted hardware or
+program for devices at the Physical devices at the Physical devices at the Physical
+Physical Access Security Perimeter, but Security Perimeter, but Security Perimeter. (3.1)
+Control did not complete did not complete
+OR
+Systems and required testing within required testing within
+The Responsible Entity
+locally 25 calendar months but 26 calendar months but
+Page 19 of 27
+CIP‐006‐6 — Cyber Security — Physical Security of BES Cyber Systems
+Violation Severity Levels (CIP‐006‐6)
+R # Time Horizon VRF
+Lower VSL Moderate VSL High VSL Severe VSL
+mounted did complete required did complete required has documented and
+hardware or testing within 26 testing within 27 implemented a
+devices at the calendar months. (3.1) calendar months. (3.1) maintenance and
+Physical testing program for
+Security Physical Access Control
+Perimeter, but Systems and locally
+did not mounted hardware or
+complete devices at the Physical
+required Security Perimeter, but
+testing within did not complete
+24 calendar required testing within
+months but did 27 calendar months.
+complete (3.1)
+required
+testing within
+25 calendar
+months. (3.1)
+Page 20 of 27
+CIP‐006‐6 — Cyber Security — Physical Security of BES Cyber Systems
+D. Regional Variances
+None.
+E. Interpretations
+None.
+F. Associated Documents
+None.
+Version History
+Version Date Action Change Tracking
+1 1/16/06 3/24/06
+R3.2 — Change “Control Center” to
+“control center.”
+2 9/30/09 Modifications to clarify the requirements
+and to bring the compliance elements into
+conformance with the latest guidelines for
+developing compliance elements of
+standards.
+Removal of reasonable business judgment.
+Replaced the RRO with the RE as a
+responsible entity.
+Rewording of Effective Date.
+Changed compliance monitor to
+Compliance Enforcement Authority.
+3 12/16/09 Updated Version Number from ‐2 to ‐3
+In Requirement 1.6, deleted the sentence
+pertaining to removing component or
+system from service in order to perform
+testing, in response to FERC order issued
+September 30, 2009.
+3 12/16/09 Approved by the NERC Board of Trustees.
+3 3/31/10 Approved by FERC.
+4 1/24/11 Approved by the NERC Board of Trustees.
+5 11/26/12 Adopted by the NERC Board of Trustees. Modified to
+coordinate with
+other CIP standards
+and to revise
+Page 21 of 27
+CIP‐006‐6 — Cyber Security — Physical Security of BES Cyber Systems
+Version Date Action Change Tracking
+format to use RBS
+Template.
+5 11/22/13 FERC Order issued approving CIP‐006‐5.
+6 11/13/14 Adopted by the NERC Board of Trustees. Addressed FERC
+directives from
+Order No. 791.
+6 1/21/16 FERC order issued approving CIP‐006‐6.
+Docket No. RM15‐14‐000
+Page 22 of 27
+Guidelines and Technical Basis
+Guidelines and Technical Basis
+Section 4 – Scope of Applicability of the CIP Cyber Security Standards
+Section “4. Applicability” of the standards provides important information for Responsible
+Entities to determine the scope of the applicability of the CIP Cyber Security Requirements.
+Section “4.1. Functional Entities” is a list of NERC functional entities to which the standard
+applies. If the entity is registered as one or more of the functional entities listed in Section 4.1,
+then the NERC CIP Cyber Security Standards apply. Note that there is a qualification in Section
+4.1 that restricts the applicability in the case of Distribution Providers to only those that own
+certain types of systems and equipment listed in 4.2.
+Section “4.2. Facilities” defines the scope of the Facilities, systems, and equipment owned by
+the Responsible Entity, as qualified in Section 4.1, that is subject to the requirements of the
+standard. As specified in the exemption section 4.2.3.5, this standard does not apply to
+Responsible Entities that do not have High Impact or Medium Impact BES Cyber Systems under
+CIP‐002‐5.1’s categorization. In addition to the set of BES Facilities, Control Centers, and other
+systems and equipment, the list includes the set of systems and equipment owned by
+Distribution Providers. While the NERC Glossary term “Facilities” already includes the BES
+characteristic, the additional use of the term BES here is meant to reinforce the scope of
+applicability of these Facilities where it is used, especially in this applicability scoping section.
+This in effect sets the scope of Facilities, systems, and equipment that is subject to the
+standards.
+General:
+While the focus of this Reliability Standard has shifted away from the definition and
+management of a completely enclosed “six‐wall” boundary, it is expected that in many
+instances a six‐wall boundary will remain a primary mechanism for controlling, alerting, and
+logging access to BES Cyber Systems. Taken together, these controls outlined below will
+effectively constitute the physical security plan to manage physical access to BES Cyber
+Systems.
+Requirement R1:
+Methods of physical access control include:
+ Card Key: A means of electronic access where the access rights of the card holder are
+predefined in a computer database. Access rights may differ from one perimeter to
+another.
+ Special Locks: These include, but are not limited to, locks with “restricted key” systems,
+magnetic locks that can be operated remotely, and “man‐trap” systems.
+ Security Personnel: Personnel responsible for controlling physical access who may reside
+on‐site or at a monitoring station.
+Page 23 of 27
+Guidelines and Technical Basis
+ Other Authentication Devices: Biometric, keypad, token, or other equivalent devices that
+control physical access into the Physical Security Perimeter.
+Methods to monitor physical access include:
+ Alarm Systems: Systems that alarm to indicate interior motion or when a door, gate, or
+window has been opened without authorization. These alarms must provide for
+notification within 15 minutes to individuals responsible for response.
+ Human Observation of Access Points: Monitoring of physical access points by security
+personnel who are also controlling physical access.
+Methods to log physical access include:
+ Computerized Logging: Electronic logs produced by the Responsible Entity’s selected access
+control and alerting method.
+ Video Recording: Electronic capture of video images of sufficient quality to determine
+identity.
+ Manual Logging: A log book or sign‐in sheet, or other record of physical access maintained
+by security or other personnel authorized to control and monitor physical access.
+The FERC Order No. 706, Paragraph 572, directive discussed utilizing two or more different and
+complementary physical access controls to provide defense in depth. It does not require two or
+more Physical Security Perimeters, nor does it exclude the use of layered perimeters. Use of
+two‐factor authentication would be acceptable at the same entry points for a non‐layered
+single perimeter. For example, controls for a sole perimeter could include either a combination
+of card key and pin code (something you know and something you have), or a card key and
+biometric scanner (something you have and something you are), or a physical key in
+combination with a guard‐monitored remote camera and door release, where the “guard” has
+adequate information to authenticate the person the guard is observing or talking to prior to
+permitting access (something you have and something you are). The two‐factor authentication
+could be implemented using a single Physical Access Control System but more than one
+authentication method must be utilized. For physically layered protection, a locked gate in
+combination with a locked control‐building could be acceptable, provided no single
+authenticator (e.g., key or card key) would provide access through both.
+Entities may choose for certain PACS to reside in a PSP controlling access to applicable BES
+Cyber Systems. For these PACS, there is no additional obligation to comply with Requirement
+Parts 1.1, 1.6 and 1.7 beyond what is already required for the PSP.
+The new requirement part CIP‐006‐6, Requirement R1, Part 1.10 responds to the directive
+found in FERC Order No. 791, Paragraph 150. The requirement intends to protect cabling and
+nonprogrammable communication components that are within an ESP, but extend outside of a
+PSP. This protection, similar to the FERC Approved NERC Petition on the interpretation on CIP‐
+006‐2 from PacifiCorp, must be accomplished either by physically protecting the cabling and
+components that leave a PSP (such as by conduit or secured cable trays) or through data
+encryption, circuit monitoring, or equally effective logical protections. It is intended that the
+Page 24 of 27
+Guidelines and Technical Basis
+physical protections reduce the possibility of tampering or allowing direct access to the
+nonprogrammable devices. Conduit, secured cable trays, and secured communication closets
+are examples of these types of protections. These physical security measures should be
+implemented in such a way that they would provide some mechanism to detect or recognize
+that someone could have tampered with the cabling and non‐programmable components. This
+could be something as simple as a padlock on a communications closet where the entity would
+recognize if the padlock had been cut off. Alternatively, this protection may also be
+accomplished through the use of armored cabling or via the stainless steel or aluminum tube
+protecting the fiber inside an optical ground wire (OPGW) cable. In using any of these methods,
+care should be taken to protect the entire length of the cabling including any termination points
+that may be outside of a defined PSP.
+This requirement part only covers those portions of cabling and nonprogrammable
+communications components that are located outside of the PSP, but inside the ESP. Where
+this cabling and non‐programmable communications components exist inside the PSP, this
+requirement part no longer applies.
+The requirement focuses on physical protection of the communications cabling and
+components as this is a requirement in a physical security standard and the gap in protection
+identified by FERC in Order 791 is one of physical protections. However, the requirement part
+recognizes that there is more than one way to provide protection to communication cabling
+and nonprogrammable components. In particular, the requirement provides a mechanism for
+entities to select an alternative to physical security protection that may be chosen in a situation
+where an entity cannot implement physical security or simply chooses not to implement
+physical security. The entity is under no obligation to justify or explain why it chose logical
+protections over physical protections identified in the requirement.
+The alternative protective measures identified in the CIP‐006‐6 R1, Part 1.10 (encryption and
+circuit monitoring) were identified as acceptable alternatives in NERC petition of the PacifiCorp
+Interpretation of CIP‐006‐2 which was approved by FERC (RD10‐13‐000). If an entity chooses to
+implement an “an equally effective logical protection” in lieu of one of the protection
+mechanisms identified in the standard, the entity would be expected to document how the
+protection is equally effective. NERC explained in its petition of the PacifiCorp Interpretation of
+CIP‐006‐2 that the measures are relevant to access or physical tampering. Therefore, the entity
+may choose to discuss how its protection may provide detection of tampering. The entity may
+also choose to explain how its protection is equivalent to the other logical options identified in
+the standard in terms of the CIA triad (confidentiality, integrity, and availability). The entity
+may find value in reviewing their plans prior to implementation with the regional entity, but
+there is no obligation to do so.
+The intent of the requirement is not to require physical protection of third party components,
+consistent with FERC Order 791‐A. The requirement allows flexibility in that the entity has
+control of how to design its ESP and also has the ability to extend its ESP outside its PSP via the
+logical mechanisms specified in CIP‐006‐6 Requirement 1, Part 1.10 such as encryption (which is
+an option specifically identified in FERC Order 791‐A). These mechanisms should provide
+sufficient protections to an entity’s BES Cyber Systems while not requiring controls to be
+Page 25 of 27
+Guidelines and Technical Basis
+implemented on third‐party components when entities rely on leased third‐party
+communications.
+In addition to the cabling, the components in scope of this requirement part are those
+components outside of a PSP that could otherwise be considered a BES Cyber Asset or
+Protected Cyber Asset except that they do not meet the definition of Cyber Asset because they
+are nonprogrammable. Examples of these nonprogrammable components include, but are not
+limited to, unmanaged switches, hubs, patch panels, media converters, port savers, and
+couplers.
+Requirement R2:
+The logging of visitors should capture each visit of the individual and does not need to capture
+each entry or exit during that visit. This is meant to allow a visitor to temporarily exit the
+Physical Security Perimeter to obtain something they left in their vehicle or outside the area
+without requiring a new log entry for each and every entry during the visit.
+The SDT also determined that a point of contact should be documented who can provide
+additional details about the visit if questions arise in the future. The point of contact could be
+the escort, but there is no need to document everyone that acted as an escort for the visitor.
+Requirement R3:
+This includes the testing of locally mounted hardware or devices used in controlling, alerting or
+logging access to the Physical Security Perimeter. This includes motion sensors, electronic lock
+control mechanisms, and badge readers which are not deemed to be part of the Physical Access
+Control System but are required for the protection of the BES Cyber Systems.
+Rationale:
+During development of this standard, text boxes were embedded within the standard to explain
+the rationale for various parts of the standard. Upon BOT approval, the text from the rationale
+text boxes was moved to this section.
+Rationale for Requirement R1:
+Each Responsible Entity shall ensure that physical access to all BES Cyber Systems is restricted
+and appropriately managed. Entities may choose for certain Physical Access Control Systems
+(PACS) to reside in a Physical Security Perimeter (PSP) controlling access to applicable BES Cyber
+Systems. For these PACS, there is no additional obligation to comply with Requirement R1,
+Parts 1.1, 1.6 and 1.7 beyond what is already required for the PSP.
+Regarding Requirement R1, Part 1.10, when cabling and other nonprogrammable components
+of a Control Center’s communication network cannot be secured in a PSP, steps must be taken
+to ensure the integrity of the BES Cyber Systems. Exposed communication pathways outside of
+a PSP necessitate that physical or logical protections be installed to reduce the likelihood that
+man‐in‐the‐middle attacks could compromise the integrity of their connected BES Cyber Assets
+or PCAs that are required to reside within PSPs. While it is anticipated that priority
+consideration will be given to physically securing the cabling and nonprogrammable
+Page 26 of 27
+Guidelines and Technical Basis
+communications components, the SDT understands that configurations arise when physical
+access restrictions are not ideal and Responsible Entities are able to reasonably defend their
+physically exposed communications components through specific additional logical protections.
+Rationale for Requirement R2:
+To control when personnel without authorized unescorted physical access can be in any
+Physical Security Perimeters protecting BES Cyber Systems or Electronic Access Control or
+Monitoring Systems, as applicable in Table R2.
+Rationale for Requirement R3:
+To ensure all Physical Access Control Systems and devices continue to function properly.
+Page 27 of 27
+--- END DOCUMENT: cip-006-6.pdf ---
+

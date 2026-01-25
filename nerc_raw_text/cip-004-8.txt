@@ -1,0 +1,906 @@
+--- START DOCUMENT: cip-004-8.pdf ---
+CIP-004-8 — Cyber Security – Personnel & Training
+A. Introduction
+1. Title: Cyber Security — Personnel & Training
+2. Number: CIP-004-8
+3. Purpose: To minimize the risk against compromise that could lead to misoperation
+or instability in the Bulk Electric System (BES) from individuals accessing BES Cyber
+Systems (BCS) by requiring an appropriate level of personnel risk assessment,
+training, security awareness, and access management in support of protecting BCS.
+4. Applicability:
+4.1. Functional Entities: For the purpose of the requirements contained herein, the
+following list of functional entities will be collectively referred to as
+“Responsible Entities.” For requirements in this standard where a specific
+functional entity or subset of functional entities are the applicable entity or
+entities, the functional entity or entities are specified explicitly.
+4.1.1. Balancing Authority
+4.1.2. Distribution Provider that owns one or more of the following Facilities,
+systems, and equipment for the protection or restoration of the BES:
+4.1.2.1. Each underfrequency Load shedding (UFLS) or undervoltage
+Load shedding (UVLS) system that:
+4.1.2.1.1. is part of a Load shedding program that is subject
+to one or more requirements in a NERC or Regional
+Reliability Standard; and
+4.1.2.1.2. performs automatic Load shedding under a
+common control system owned by the Responsible
+Entity, without human operator initiation, of 300
+MW or more.
+4.1.2.2. Each Remedial Action Scheme (RAS) where the RAS is subject
+to one or more requirements in a NERC or Regional Reliability
+Standard.
+4.1.2.3. Each Protection System (excluding UFLS and UVLS) that
+applies to Transmission where the Protection System is
+subject to one or more requirements in a NERC or Regional
+Reliability Standard.
+4.1.2.4. Each Cranking Path and group of Elements meeting the initial
+switching requirements from a Blackstart Resource up to and
+including the first interconnection point of the starting station
+service of the next generation unit(s) to be started.
+4.1.3. Generator Operator
+Page 1 of 24
+CIP-004-8 — Cyber Security – Personnel & Training
+4.1.4. Generator Owner
+4.1.5. Reliability Coordinator
+4.1.6. Transmission Operator
+4.1.7. Transmission Owner
+4.2. Facilities: For the purpose of the requirements contained herein, the following
+Facilities, systems, and equipment owned by each Responsible Entity in 4.1
+above are those to which these requirements are applicable. For requirements
+in this standard where a specific type of Facilities, system, or equipment or
+subset of Facilities, systems, and equipment are applicable, these are specified
+explicitly.
+4.2.1. Distribution Provider: One or more of the following Facilities, systems
+and equipment owned by the Distribution Provider for the protection
+or restoration of the BES:
+4.2.1.1. Each UFLS or UVLS System that:
+4.2.1.1.1. is part of a Load shedding program that is subject
+to one or more requirements in a NERC or Regional
+Reliability Standard; and
+4.2.1.1.2. performs automatic Load shedding under a
+common control system owned by the Responsible
+Entity, without human operator initiation, of 300
+MW or more.
+4.2.1.2. Each RAS where the RAS is subject to one or more
+requirements in a NERC or Regional Reliability Standard.
+4.2.1.3. Each Protection System (excluding UFLS and UVLS) that
+applies to Transmission where the Protection System is
+subject to one or more requirements in a NERC or Regional
+Reliability Standard.
+4.2.1.4. Each Cranking Path and group of Elements meeting the initial
+switching requirements from a Blackstart Resource up to and
+including the first interconnection point of the starting station
+service of the next generation unit(s) to be started.
+4.2.2. Responsible Entities listed in 4.1 other than Distribution Providers: All BES
+Facilities.
+4.2.3. Exemptions: The following are exempt from Standard CIP-004-8:
+4.2.3.1. Cyber Systems at Facilities regulated by the Canadian Nuclear
+Safety Commission.
+Page 2 of 24
+CIP-004-8 — Cyber Security – Personnel & Training
+4.2.3.2. Cyber Systems associated with communication networks and
+data communication links between discrete Electronic Security
+Perimeters (ESP).
+4.2.3.3. Cyber Systems, associated with communication networks and
+data communication links, between the Cyber Systems
+providing confidentiality and integrity of an ESP that extends
+to one or more geographic locations.
+4.2.3.4. The systems, structures, and components that are regulated
+by the Nuclear Regulatory Commission under a cyber security
+plan pursuant to 10 C.F.R. Section 73.54.
+4.2.3.5. For Distribution Providers, the systems and equipment that
+are not included in section 4.2.1 above.
+4.2.3.6. Responsible Entities that identify that they have no BCS
+categorized as high impact or medium impact according to the
+CIP-002 identification and categorization processes.
+4.3. “Applicable Systems”: Each table has an “Applicable Systems” column to
+define the scope of systems to which a specific requirement part applies.
+5. Effective Dates: See “Project 2016-02 Modifications to CIP Standards
+Implementation Plan.”
+Page 3 of 24
+CIP-004-8 — Cyber Security – Personnel & Training
+B. Requirements and Measures
+R1. Each Responsible Entity shall implement one or more documented processes that collectively include each of the
+applicable requirement parts in CIP-004-8 Table R1 – Security Awareness Program. [Violation Risk Factor: Lower] [Time
+Horizon: Operations Planning]
+M1. Evidence must include each of the applicable documented processes that collectively include each of the applicable
+requirement parts in CIP-004-8 Table R1 – Security Awareness Program and additional evidence to demonstrate
+implementation as described in the Measures column of the table.
+CIP-004-8 Table R1 – Security Awareness Program
+Part Applicable Systems Requirements Measures
+1.1 High impact BCS Security awareness that, at least once each An example of evidence may include, but is
+calendar quarter, reinforces cyber security not limited to, documentation that the
+Medium impact BCS
+practices (which may include associated quarterly reinforcement has been
+Shared Cyber Infrastructure (SCI) physical security practices) for the provided. Examples of evidence of
+supporting an Applicable System in this Responsible Entity’s personnel who have reinforcement may include, but are not
+Part. authorized electronic or authorized limited to, dated copies of information
+unescorted physical access to Applicable used to reinforce security awareness, as
+Systems. well as evidence of distribution, such as:
+• direct communications (for
+example, e-mails, memos,
+computer-based training); or
+• indirect communications (for
+example, posters, intranet, or
+brochures); or
+• management support and
+reinforcement (for example,
+presentations or meetings).
+Page 4 of 24
+CIP-004-8 — Cyber Security – Personnel & Training
+R2. Each Responsible Entity shall implement one or more cyber security training program(s) appropriate to individual roles,
+functions, or responsibilities that collectively includes each of the applicable requirement parts in CIP-004-8 Table R2 –
+Cyber Security Training Program. [Violation Risk Factor: Lower] [Time Horizon: Operations Planning]
+M2. Evidence must include the training program that includes each of the applicable requirement parts in CIP-004-8 Table R2
+– Cyber Security Training Program and additional evidence to demonstrate implementation of the program(s).
+CIP-004-8 Table R2 – Cyber Security Training Program
+Part Applicable Systems Requirements Measures
+2.1 High impact BCS and their associated: Training content on: Examples of evidence may include, but are
+not limited to, training material such as
+1. Electronic Access Control or 2.1.1. Cyber security policies;
+power point presentations, instructor notes,
+Monitoring Systems (EACMS); and
+2.1.2. Physical access controls; student notes, handouts, or other training
+2. Physical Access Control Systems materials.
+2.1.3. Electronic access controls;
+(PACS)
+2.1.4. The visitor control program;
+Medium impact BCS with External
+Routable Connectivity (ERC) and their 2.1.5. Handling of BES Cyber System
+associated: Information (BCSI) and its storage;
+1. EACMS; and 2.1.6. Identification of a Cyber Security
+Incident and initial notifications in
+2. PACS
+accordance with the entity’s
+Medium impact BCS with Interactive incident response plan;
+Remote Access (IRA)
+2.1.7. Recovery plans for BCS;
+SCI supporting an Applicable System in this
+2.1.8. Response to Cyber Security
+Part
+Incidents; and
+2.1.9. Cyber security risks associated
+with a BCS electronic
+interconnectivity and
+interoperability with other Cyber
+Systems, including Transient Cyber
+Assets (TCA), and with Removable
+Media.
+2.2 High impact BCS and their associated: Require completion of the training Examples of evidence may include, but are
+Page 5 of 24
+CIP-004-8 — Cyber Security – Personnel & Training
+CIP-004-8 Table R2 – Cyber Security Training Program
+Part Applicable Systems Requirements Measures
+specified in Part 2.1 prior to granting not limited to, training records and
+1. EACMS; and
+authorized electronic access and documentation of when CIP Exceptional
+2. PACS authorized unescorted physical access to Circumstances were invoked.
+Applicable Systems, except during CIP
+Medium impact BCS with ERC and their
+Exceptional Circumstances.
+associated:
+1. EACMS; and
+2. PACS
+Medium impact BCS with IRA
+SCI supporting an Applicable System in this
+Part
+2.3 High impact BCS and their associated: Require completion of the training Examples of evidence may include, but are
+specified in Part 2.1 at least once every 15 not limited to, dated individual training
+1. EACMS; and
+calendar months. records.
+2. PACS
+Medium impact BCS with ERC and their
+associated:
+1. EACMS; and
+2. PACS
+Medium impact BCS with IRA
+SCI supporting an Applicable System in this
+Part
+Page 6 of 24
+CIP-004-8 — Cyber Security – Personnel & Training
+R3. Each Responsible Entity shall implement one or more documented personnel risk assessment program(s) to attain and
+retain authorized electronic or authorized unescorted physical access to Applicable Systems that collectively include each
+of the applicable requirement parts in CIP-004-8 Table R3 – Personnel Risk Assessment Program. [Violation Risk Factor:
+Medium] [Time Horizon: Operations Planning].
+M3. Evidence must include the documented personnel risk assessment programs that collectively include each of the
+applicable requirement parts in CIP-004-8 Table R3 – Personnel Risk Assessment Program and additional evidence to
+demonstrate implementation of the program(s).
+CIP-004-8 Table R3 – Personnel Risk Assessment Program
+Part Applicable Systems Requirements Measures
+3.1 High impact BCS and their associated: Process to confirm identity. An example of evidence may include, but is
+not limited to, documentation of the
+1. EACMS; and
+Responsible Entity’s process to confirm
+2. PACS identity.
+Medium impact BCS with ERC and their
+associated:
+1. EACMS; and
+2. PACS
+Medium impact BCS with IRA
+SCI supporting an Applicable System in this
+Part
+3.2 High impact BCS and their associated: Process to perform a seven year criminal An example of evidence may include, but is
+history records check as part of each not limited to, documentation of the
+1. EACMS; and
+personnel risk assessment that includes: Responsible Entity’s process to perform a
+2. PACS seven year criminal history records check.
+3.2.1. current residence, regardless of
+Medium impact BCS with ERC and their duration; and
+associated:
+3.2.2. other locations where, during the
+1. EACMS; and seven years immediately prior to the date
+of the criminal history records check, the
+2. PACS
+subject has resided for six consecutive
+Medium impact BCS with IRA
+months or more.
+Page 7 of 24
+CIP-004-8 — Cyber Security – Personnel & Training
+CIP-004-8 Table R3 – Personnel Risk Assessment Program
+Part Applicable Systems Requirements Measures
+SCI supporting an Applicable System in this
+If it is not possible to perform a full seven
+Part
+year criminal history records check,
+conduct as much of the seven year criminal
+history records check as possible and
+document the reason the full seven year
+criminal history records check could not be
+performed.
+3.3 High impact BCS and their associated: Criteria or process to evaluate criminal An example of evidence may include, but is
+history records checks for authorizing not limited to, documentation of the
+1. EACMS; and
+access. Responsible Entity’s criteria or process to
+2. PACS evaluate criminal history records checks.
+Medium impact BCS with ERC and their
+associated:
+1. EACMS; and
+2. PACS
+Medium impact BCS with IRA
+SCI supporting an Applicable System in this
+Part
+3.4 High impact BCS and their associated: Criteria or process for verifying that Examples of evidence may include, but are
+personnel risk assessments performed for not limited to, documentation of the
+1. EACMS; and
+contractors or service vendors are Responsible Entity’s criteria or process for
+2. PACS conducted according to Parts 3.1 through verifying contractors or service vendors
+3.3. personnel risk assessments.
+Medium impact BCS with ERC and their
+associated:
+1. EACMS; and
+2. PACS
+Medium impact BCS with IRA
+Page 8 of 24
+CIP-004-8 — Cyber Security – Personnel & Training
+CIP-004-8 Table R3 – Personnel Risk Assessment Program
+Part Applicable Systems Requirements Measures
+SCI supporting an Applicable System in this
+Part
+3.5 High impact BCS and their associated: Process to ensure that individuals with Examples of evidence may include, but are
+authorized electronic or authorized not limited to, documentation of the
+1. EACMS; and
+unescorted physical access have had a Responsible Entity’s process for ensuring
+2. PACS personnel risk assessment completed, that individuals with authorized electronic
+except during CIP Exceptional or authorized unescorted physical access
+Medium impact BCS with ERC and their
+Circumstances, according to Parts 3.1 have had a personnel risk assessment
+associated:
+through 3.4 within the last seven years. completed within the last seven years.
+1. EACMS; and
+2. PACS
+Medium impact BCS with IRA
+SCI supporting an Applicable System in this
+Part
+Page 9 of 24
+CIP-004-8 — Cyber Security – Personnel & Training
+R4. Each Responsible Entity shall implement one or more documented access management program(s) that collectively
+include each of the applicable requirement parts in CIP-004-8 Table R4 – Access Management Program. [Violation Risk
+Factor: Medium] [Time Horizon: Operations Planning and Same Day Operations].
+M4. Evidence must include the documented processes that collectively include each of the applicable requirement parts in
+CIP-004-8 Table R4 – Access Management Program and additional evidence to demonstrate that the access management
+program was implemented as described in the Measures column of the table.
+CIP-004-8 Table R4 – Access Management Program
+Part Applicable Systems Requirements Measures
+4.1 High impact BCS and their associated: Process to authorize based on need, as Examples of evidence may include, but
+determined by the Responsible Entity, are not limited to, dated documentation
+1. EACMS; and
+except for CIP Exceptional Circumstances: of the process to authorize electronic
+2. PACS access, and unescorted physical access
+4.1.1. Electronic access; and
+in a PSP.
+Medium impact BCS with ERC and their
+4.1.2. Unescorted physical access into a
+associated:
+Physical Security Perimeter (PSP)
+1. EACMS; and
+(except for medium impact BCS
+without ERC).
+2. PACS
+Medium impact BCS with IRA
+SCI supporting an Applicable System in this Part
+4.2 High impact BCS and their associated: Verify at least once each calendar quarter Examples of evidence may include, but
+that individuals with active electronic are not limited to:
+1. EACMS; and
+access or unescorted physical access
+• Dated documentation of the
+2. PACS have authorization records.
+verification between the system
+Medium impact BCS with ERC and their
+generated list of individuals who
+associated:
+have been authorized for access
+(i.e., workflow database) and a
+1. EACMS; and
+system generated list of personnel
+2. PACS
+who have access (i.e., user account
+listing), or
+Medium impact BCS with IRA
+SCI supporting an Applicable System in this Part
+• Dated documentation of the
+verification between a list of
+Page 10 of 24
+CIP-004-8 — Cyber Security – Personnel & Training
+CIP-004-8 Table R4 – Access Management Program
+Part Applicable Systems Requirements Measures
+individuals who have been
+authorized for access (i.e.,
+authorization forms) and a list of
+individuals provisioned for access
+(i.e., provisioning forms or shared
+account listing).
+4.3 High impact BCS and their associated: For electronic access, verify at least once Examples of evidence may include, but
+every 15 calendar months that all user are not limited to, documentation of the
+1. EACMS; and
+accounts, user account groups, or user review that includes all of the following:
+2. PACS role categories, and their specific,
+1. A dated listing of all
+associated privileges are correct and are
+Medium impact BCS with ERC and their accounts/account groups or
+those that the Responsible Entity
+associated: roles within the system;
+determines are necessary.
+1. EACMS; and 2. A summary description of
+privileges associated with each
+2. PACS
+group or role;
+Medium impact BCS with IRA
+3. Accounts assigned to the group
+SCI supporting an Applicable System in this Part
+or role; and
+4. Dated evidence showing
+verification of the privileges for
+the group are authorized and
+appropriate to the work
+function performed by people
+assigned to each account.
+Page 11 of 24
+CIP-004-8 — Cyber Security – Personnel & Training
+R5. Each Responsible Entity shall implement one or more documented access revocation program(s) that collectively include
+each of the applicable requirement parts in CIP-004-8 Table R5 – Access Revocation. [Violation Risk Factor: Medium]
+[Time Horizon: Same Day Operations and Operations Planning].
+M5. Evidence must include each of the applicable documented programs that collectively include each of the applicable
+requirement parts in CIP-004-8 Table R5 – Access Revocation and additional evidence to demonstrate implementation as
+described in the Measures column of the table.
+CIP-004-8 Table R5 – Access Revocation
+Part Applicable Systems Requirements Measures
+5.1 High impact BCS and their associated: A process to initiate removal of an An example of evidence may include, but is
+individual’s ability for unescorted physical not limited to, documentation of all of the
+1. EACMS; and
+access (except for medium impact BCS following:
+2. PACS
+without ERC) and Interactive Remote
+1. Dated workflow or sign-off form
+Medium impact BCS with ERC and their Access (IRA) upon a termination action,
+verifying access removal associated
+associated: and complete the removals within 24
+with the termination action; and
+hours of the termination action (Removal
+1. EACMS; and
+2. Logs or other demonstration
+of the ability for access may be different
+2. PACS showing such persons no longer
+than deletion, disabling, revocation, or
+have access.
+Medium impact BCS with IRA
+removal of all access rights).
+SCI supporting an Applicable System in this
+Part
+5.2 High impact BCS and their associated: For reassignments or transfers, revoke the Examples of evidence may include, but are
+individual’s authorized electronic access to not limited to, documentation of all of the
+1. EACMS; and
+individual accounts; and authorized following:
+2. PACS
+unescorted physical access (except for
+1. Dated workflow or sign-off form
+Medium impact BCS with ERC and their medium impact BCS without ERC) that the
+showing a review of logical and
+associated: Responsible Entity determines are not
+physical access; and
+necessary by the end of the next calendar
+1. EACMS; and
+2. Logs or other demonstration
+day following the date that the Responsible
+2. PACS showing such persons no longer
+Entity determines that the individual no
+have access that the Responsible
+Medium impact BCS with IRA
+longer requires retention of that access.
+Entity determines is not necessary.
+SCI supporting an Applicable System in this
+Part
+5.3 High impact BCS and their associated For termination actions, revoke the Examples of evidence may include, but are
+Page 12 of 24
+CIP-004-8 — Cyber Security – Personnel & Training
+CIP-004-8 Table R5 – Access Revocation
+Part Applicable Systems Requirements Measures
+EACMS individual’s non-shared user accounts not limited to, workflow or sign-off form
+(unless already revoked according to Part showing access removal for any individual
+SCI supporting an Applicable System in this
+5.1) within 30 calendar days of the BES Cyber Assets and software applications
+Part
+effective date of the termination action. as determined necessary to completing the
+revocation of access and dated within
+thirty calendar days of the termination
+actions.
+5.4 High impact BCS and their associated For termination actions, change passwords Examples of evidence may include, but are
+EACMS for shared account(s) known to the user not limited to:
+within 30 calendar days of the termination
+SCI supporting an Applicable System in this • Workflow or sign-off form showing
+action. For reassignments or transfers,
+Part. password reset within 30 calendar
+change passwords for shared account(s)
+days of the termination action;
+known to the user within 30 calendar days
+• Workflow or sign-off form showing
+following the date that the Responsible
+password reset within 30 calendar
+Entity determines that the individual no
+days of the reassignments or
+longer requires retention of that access.
+transfers; or
+If the Responsible Entity determines and
+• Documentation of the extenuating
+documents that extenuating operating
+operating circumstance and
+circumstances require a longer time
+workflow or sign-off form showing
+period, change the password(s) within 10
+password reset within 10 calendar
+calendar days following the end of the
+days following the end of the
+operating circumstances.
+operating circumstance.
+Page 13 of 24
+CIP-004-8 — Cyber Security – Personnel & Training
+R6. Each Responsible Entity shall implement one or more documented access management program(s) to authorize, verify, and
+revoke provisioned access to BCSI pertaining to the Applicable Systems identified in CIP-004-8 Table R6 – Access
+Management for BES Cyber System Information that collectively include each of the applicable requirement parts in CIP-
+004-8 Table R6 – Access Management for BES Cyber System Information. To be considered access to BCSI in the context of
+this requirement, an individual has both the ability to obtain and use BCSI. Provisioned access is to be considered the result
+of the specific actions taken to provide an individual(s) the means to access BCSI (e.g., may include physical keys or access
+cards, user accounts and associated rights and privileges, encryption keys). [Violation Risk Factor: Medium] [Time Horizon:
+Same Day Operations and Operations Planning].
+M6. Evidence must include each of the applicable documented programs that collectively include the applicable requirement
+parts in CIP-004-8 Table R6 – Access Management for BES Cyber System Information and additional evidence to
+demonstrate implementation as described in the Measures column of the table.
+CIP-004-8 Table R6 – Access Management for BES Cyber System Information
+Part Applicable Systems Requirements Measures
+6.1 High impact BCS and their associated: Prior to provisioning, authorize (unless Examples of evidence may include, but are
+already authorized according to Part 4.1) not limited to, individual records or lists
+1. EACMS; and
+based on need, as determined by the that include who is authorized, the date of
+2. PACS Responsible Entity, except for CIP the authorization, and the justification of
+Exceptional Circumstances: business need for the provisioned access.
+Medium impact BCS with ERC and their
+associated: 6.1.1. Provisioned electronic access to
+electronic BCSI; and
+1. EACMS; and
+6.1.2. Provisioned physical access to
+2. PACS
+physical BCSI (except for BCSI at a
+Medium impact BCS with IRA
+medium impact BCS without ERC).
+SCI supporting an Applicable System in this
+Part
+Page 14 of 24
+CIP-004-8 — Cyber Security – Personnel & Training
+CIP-004-8 Table R6 – Access Management for BES Cyber System Information
+Part Applicable Systems Requirements Measures
+6.2 High impact BCS and their associated: Verify at least once every 15 calendar Examples of evidence may include, but are
+months that all individuals with not limited to, the documentation of the
+1. EACMS; and
+provisioned access to BCSI: review that includes all of the following:
+2. PACS
+6.2.1. have an authorization record; and • List of authorized individuals;
+Medium impact BCS with ERC and their
+6.2.2. still need the provisioned access to • List of individuals who have been
+associated:
+perform their current work provisioned access;
+1. EACMS; and functions, as determined by the
+• Verification that provisioned access
+Responsible Entity.
+2. PACS
+is appropriate based on need; and
+Medium impact BCS with IRA
+• Documented reconciliation actions,
+SCI supporting an Applicable System in this if any.
+Part
+6.3 High impact BCS and their associated: For termination actions, remove the Examples of dated evidence may include,
+individual’s ability to use provisioned but are not limited to, access revocation
+1. EACMS; and
+access to BCSI (unless already revoked records associated with the terminations
+2. PACS according to Part 5.1) (except for BCSI at a and dated within the next calendar day of
+medium impact BCS without ERC) by the the termination action.
+Medium impact BCS with ERC and their
+end of the next calendar day following the
+associated:
+effective date of the termination action.
+1. EACMS; and
+2. PACS
+Medium impact BCS with IRA
+SCI supporting an Applicable System in this
+Part
+Page 15 of 24
+CIP-004-8 — Cyber Security – Personnel & Training
+C. Compliance
+1. Compliance Monitoring Process:
+1.1. Compliance Enforcement Authority: “Compliance Enforcement Authority” (CEA)
+means NERC or the Regional Entity, or any entity as otherwise designated by an
+Applicable Governmental Authority, in their respective roles of monitoring
+and/or enforcing compliance with mandatory and enforceable Reliability
+Standards in their respective jurisdictions.
+1.2. Evidence Retention: The following evidence retention periods identify the
+period of time an entity is required to retain specific evidence to demonstrate
+compliance. For instances where the evidence retention period specified below
+is shorter than the time since the last audit, the CEA may ask an entity to provide
+other evidence to show that it was compliant for the full time period since the
+last audit.
+The applicable entity shall keep data or evidence to show compliance as
+identified below unless directed by its CEA to retain specific evidence for a
+longer period of time as part of an investigation:
+• The applicable entity shall retain evidence of each requirement in this
+standard for three calendar years.
+• The applicable entity is found non-compliant, it shall keep information
+related to the non-compliance until mitigation is complete and approved or
+for the time specified above, whichever is longer.
+• The CEA shall keep the last audit records and all requested and submitted
+subsequent audit records.
+1.3. Compliance Monitoring and Enforcement Program: As defined in the NERC
+Rules of Procedure, “Compliance Monitoring and Enforcement Program” refers
+to the identification of the processes that will be used to evaluate data or
+information for the purpose of assessing performance or outcomes with the
+associated Reliability Standard.
+Page 16 of 24
+CIP-004-8 — Cyber Security – Personnel & Training
+Violation Severity Levels
+Violation Severity Levels (CIP-004-8)
+R #
+Lower VSL Moderate VSL High VSL Severe VSL
+R1 The Responsible Entity did not The Responsible Entity did not The Responsible Entity did The Responsible Entity did not
+reinforce cyber security practices reinforce cyber security not reinforce cyber security document or implement any security
+during a calendar quarter but did practices during a calendar practices during a calendar awareness process(es) to reinforce
+so less than 10 calendar days quarter but did so between 10 quarter but did so within the cyber security practices. (Requirement
+after the start of a subsequent and 30 calendar days after the subsequent quarter but R1)
+calendar quarter. (Part 1.1) start of a subsequent calendar beyond 30 calendar days
+OR
+quarter. (Part 1.1) after the start of that
+calendar quarter. (Part 1.1) The Responsible Entity did not
+reinforce cyber security practices and
+associated physical security practices
+for at least two consecutive calendar
+quarters. (Part 1.1)
+R2 The Responsible Entity did not The Responsible Entity did not The Responsible Entity did The Responsible Entity did not
+include one of the training include two of the training not include three of the implement a cyber security training
+content topics in Requirement content topics in Requirement training content topics in program appropriate to individual
+Parts 2.1.1 through 2.1.9. (Part Parts 2.1.1 through 2.1.9. (Part Requirement Parts 2.1.1 roles, functions, or responsibilities.
+2.1) 2.1) through 2.1.9. (Part 2.1) (Requirement R2)
+OR OR OR OR
+The Responsible Entity did not The Responsible Entity did not The Responsible Entity did The Responsible Entity did not include
+train one individual (with the train two individuals (with the not train three individuals four or more of the training content
+exception of CIP Exceptional exception of CIP Exceptional (with the exception of CIP topics in Requirement Parts 2.1.1
+Circumstances) prior to their Circumstances) prior to their Exceptional Circumstances) through 2.1.9. (Part 2.1)
+being granted authorized being granted authorized prior to their being granted
+OR
+electronic and authorized electronic and authorized authorized electronic and
+unescorted physical access. (Part unescorted physical access. authorized unescorted The Responsible Entity did not train
+2.2) (Part 2.2) physical access. (Part 2.2) four or more individuals (with the
+exception of CIP Exceptional
+OR OR OR
+Circumstances) prior to their being
+granted authorized electronic and
+Page 17 of 24
+CIP-004-8 — Cyber Security – Personnel & Training
+Violation Severity Levels (CIP-004-8)
+R #
+Lower VSL Moderate VSL High VSL Severe VSL
+authorized unescorted physical access.
+The Responsible Entity did not The Responsible Entity did not The Responsible Entity did
+(Part 2.2)
+train one individual with train two individuals with not train three individuals
+authorized electronic or authorized electronic or with authorized electronic or OR
+authorized unescorted physical authorized unescorted physical authorized unescorted
+The Responsible Entity did not train
+access within 15 calendar access within 15 calendar physical access within 15
+four or more individuals with
+months of the previous training months of the previous training calendar months of the
+authorized electronic or authorized
+completion date. (Part 2.3) completion date. (Part 2.3) previous training completion
+unescorted physical access within 15
+date. (Part 2.3)
+calendar months of the previous
+training completion date. (Part 2.3)
+R3 The Responsible Entity did not The Responsible Entity did not The Responsible Entity did The Responsible Entity did not have all
+conduct the personnel risk conduct the personnel risk not conduct the personnel of the required elements as described
+assessments as a condition of assessments as a condition of risk assessments as a by 3.1 through 3.4 included within
+granting authorized electronic or granting authorized electronic condition of granting documented program(s) for
+authorized unescorted physical or authorized unescorted authorized electronic or implementing personnel risk
+access for one individual. physical access for two authorized unescorted assessments, for individuals, including
+(Requirement R3) individuals. (Requirement R3) physical access for three contractors and service vendors, for
+individuals. (Requirement R3) obtaining and retaining authorized
+OR OR
+cyber or authorized unescorted
+OR
+The Responsible Entity did not The Responsible Entity did not physical access. (Requirement R3)
+confirm identity for one confirm identity for two The Responsible Entity did
+OR
+individual. (Parts 3.1 & 3.4) individuals. (Parts 3.1 & 3.4) not confirm identity for three
+individuals. (Parts 3.1 & 3.4) The Responsible Entity did not
+OR OR
+conduct the personnel risk
+OR
+The Responsible Entity did not The Responsible Entity did not assessments as a condition of granting
+include the required checks include the required checks The Responsible Entity did authorized electronic or authorized
+described in 3.2.1 through 3.2.2 described in 3.2.1 through not include the required unescorted physical access for four or
+for one individual. (Parts 3.2 & 3.2.2 for two individuals. (Parts checks described in 3.2.1 more individuals. (Requirement R3)
+3.4) 3.2 & 3.4) through 3.2.2 for three
+OR
+individuals. (Parts 3.2 & 3.4)
+OR OR
+OR
+Page 18 of 24
+CIP-004-8 — Cyber Security – Personnel & Training
+Violation Severity Levels (CIP-004-8)
+R #
+Lower VSL Moderate VSL High VSL Severe VSL
+The Responsible Entity did not The Responsible Entity did not The Responsible Entity did The Responsible Entity did not confirm
+evaluate criminal history records evaluate criminal history not evaluate criminal history identity for four or more individuals.
+check for access authorization records check for access records check for access (Parts 3.1 & 3.4)
+for one individual. (Parts 3.3 & authorization for two authorization for three
+OR
+3.4) individuals. (Parts 3.3 & 3.4) individuals. (Parts 3.3
+through 3.4) The Responsible Entity did not include
+OR OR
+the required checks described in 3.2.1
+OR
+The Responsible Entity did not The Responsible Entity did not through 3.2.2 for four or more
+conduct personnel risk conduct personnel risk The Responsible Entity did individuals. (Parts 3.2 & 3.4)
+assessments for one individual assessments for two individuals not conduct personnel risk
+OR
+with authorized electronic or with authorized electronic or assessments for three
+authorized unescorted physical authorized unescorted physical individuals with authorized The Responsible Entity did not
+access within 7 calendar years of access within 7 calendar years electronic or authorized evaluate criminal history records
+the previous personnel risk of the previous personnel risk unescorted physical access check for access authorization for four
+assessments completion date. assessments completion date. within 7 calendar years of the or more individuals. (Parts 3.3 through
+(Part 3.5) (Part 3.5) previous personnel risk 3.4)
+assessments completion
+OR
+date. (Part 3.5)
+The Responsible Entity did not
+conduct personnel risk assessments
+for four or more individuals with
+authorized electronic or authorized
+unescorted physical access within 7
+calendar years of the previous
+personnel risk assessments
+completion date. (Part 3.5)
+R4 The Responsible Entity did not The Responsible Entity did not The Responsible Entity did The Responsible Entity did not
+verify that individuals with active authorize electronic access or not authorize electronic implement any documented
+electronic or active unescorted unescorted physical access access or unescorted physical program(s) for access management.
+physical access have based on need for one access based on need for two (Requirement R4)
+authorization records during a individual. (Part 4.1) individuals. (Part 4.1)
+OR
+Page 19 of 24
+CIP-004-8 — Cyber Security – Personnel & Training
+Violation Severity Levels (CIP-004-8)
+R #
+Lower VSL Moderate VSL High VSL Severe VSL
+calendar quarter but did so less OR OR
+The Responsible Entity did not
+than 10 calendar days after the
+The Responsible Entity did not The Responsible Entity did authorize electronic access or
+start of a subsequent calendar
+verify that individuals with not verify that individuals unescorted physical access based on
+quarter. (Part 4.2)
+active electronic or active with active electronic or need for three or more individuals.
+OR unescorted physical access active unescorted physical (Part 4.1)
+have authorization records access have authorization
+The Responsible Entity did not OR
+during a calendar quarter but records during a calendar
+verify that user accounts, user
+did so between 10 and 20 quarter but did so between The Responsible Entity did not verify
+account groups, or user role
+calendar days after the start of 20 and 30 calendar days after that individuals with active electronic
+categories, and their specific,
+a subsequent calendar quarter. the start of a subsequent or active unescorted physical access
+associated privileges are correct
+(Part 4.2) calendar quarter. (Part 4.2) have authorization records for at least
+and necessary within 15 calendar
+two consecutive calendar quarters.
+months of the previous OR OR
+(Part 4.2)
+verification for 5% or less of its
+The Responsible Entity did not The Responsible Entity did
+BCS or SCI, privileges were OR
+verify that user accounts, user not verify that user accounts,
+incorrect or unnecessary. (Part
+account groups, or user role user account groups, or user The Responsible Entity did not verify
+4.3)
+categories, and their specific, role categories, and their that user accounts, user account
+associated privileges are specific, associated privileges groups, or user role categories, and
+correct and necessary within 15 are correct and necessary their specific, associated privileges are
+calendar months of the within 15 calendar months of correct and necessary within 15
+previous verification for more the previous verification for calendar months of the previous
+than 5% but less than (or equal more than 10% but less than verification for more than 15% of its
+to) 10% of its BCS or SCI, (or equal to) 15% of its BCS BCS or SCI, privileges were incorrect or
+privileges were incorrect or or SCI, privileges were unnecessary. (Part 4.3)
+unnecessary. (Part 4.3) incorrect or unnecessary.
+(Part 4.3)
+R5 The Responsible Entity did not The Responsible Entity did not The Responsible Entity did The Responsible Entity has not
+revoke individual’s user accounts initiate removal of the ability not initiate removal of the implemented any documented
+upon termination action within for unescorted physical access ability for unescorted program(s) for access revocation for
+30 calendar days of the date of and IRA upon a termination physical access and IRA upon
+action or complete the removal a termination action or
+Page 20 of 24
+CIP-004-8 — Cyber Security – Personnel & Training
+Violation Severity Levels (CIP-004-8)
+R #
+Lower VSL Moderate VSL High VSL Severe VSL
+termination action for one or within 24 hours of the complete the removal within electronic access or unescorted
+more individuals. (Part 5.3) termination action for one 24 hours of the termination physical access. (Requirement R5)
+individual. (Part 5.1) action for two individuals.
+OR OR
+(Part 5.1)
+OR
+The Responsible Entity did not The Responsible Entity did not initiate
+OR
+change passwords for shared The Responsible Entity for one removal of the ability for unescorted
+accounts known to the user upon individual, did not revoke the The Responsible Entity for physical access and Interactive
+termination action, authorized electronic access to two individuals, did not Remote Access upon a termination
+reassignment, or transfer within individual accounts and revoke the authorized action or complete the removal within
+30 calendar days of the date of authorized unescorted physical electronic access to 24 hours of the termination action for
+termination action, access by the end of the next individual accounts and three or more individuals. (Part 5.1)
+reassignment, or transfer for one calendar day following the authorized unescorted
+OR
+or more individuals. (Part 5.4) predetermined date. (Part 5.2) physical access by the end of
+the next calendar day The Responsible Entity for three or
+OR
+following the predetermined more individuals, did not revoke the
+The Responsible Entity did not date. (Part 5.2) authorized electronic access to
+change one or more passwords individual accounts and authorized
+for shared accounts known to unescorted physical access by the end
+the user within 10 calendar days of the next calendar day following the
+following the end of the predetermined date. (Part 5.2)
+extenuating operating
+circumstances. (Part 5.4)
+R6 The Responsible Entity, for one The Responsible Entity, for two The Responsible Entity, for The Responsible Entity did not
+individual, did not authorize individuals, did not authorize three individuals, did not implement one or more documented
+provisioned electronic access to provisioned electronic access authorize provisioned access management program(s) for
+electronic BCSI or provisioned to electronic BCSI or electronic access to BCSI. (Requirement R6)
+physical access to physical BCSI. provisioned physical access to electronic BCSI or
+OR
+(Part 6.1) physical BCSI. (Part 6.1) provisioned physical access
+to physical BCSI. (Part 6.1) The Responsible Entity, for four or
+OR OR
+more individuals, did not authorize
+OR
+provisioned electronic access to
+Page 21 of 24
+CIP-004-8 — Cyber Security – Personnel & Training
+Violation Severity Levels (CIP-004-8)
+R #
+Lower VSL Moderate VSL High VSL Severe VSL
+electronic BCSI or provisioned physical
+The Responsible Entity did not The Responsible Entity did not The Responsible Entity did
+access to physical BCSI. (Part 6.1)
+perform the verification required perform the verification not perform the verification
+by Part 6.2 within 15 calendar required by Part 6.2 within 16 required by Part 6.2 within OR
+months but did in less than or calendar months but did in less 17 calendar months but less
+The Responsible Entity did not
+equal to 16 calendar months of than or equal to 17 calendar than or equal to 18 calendar
+perform the verification required by
+the previous verification. (Part months of the previous months of the previous
+Part 6.2 more than 18 calendar
+6.2) verification. (Part 6.2) verification. (Part 6.2)
+months of the previous verification.
+OR OR OR (Part 6.2)
+The Responsible Entity, for
+The Responsible Entity, for one The Responsible Entity, for two OR
+three individuals, did not
+individual, did not remove the individuals, did remove each
+The Responsible Entity, for four or
+remove each individual’s
+individual’s ability to use individual’s ability to use
+more individuals, did not remove each
+ability to use provisioned
+provisioned access to BCSI by the provisioned access to BCSI by
+individual’s ability to use provisioned
+timeframe required in Part 6.3. the timeframe required in Part access to BCSI by the
+access to BCSI by the timeframe
+6.3. timeframe required in Part
+required in Part 6.3.
+6.3.
+D. Regional Variances
+None.
+E. Interpretations
+None.
+F. Associated Documents
+• Implementation Plan for Project 2016-02
+• CIP-004-8 Technical Rationale
+Page 22 of 24
+CIP-004-8 — Cyber Security – Personnel & Training
+Version History
+Version Date Action Change Tracking
+R3.2 — Change “Control Center” to
+1 1/16/06 3/24/06
+“control center.”
+Modifications to clarify the requirements
+and to bring the compliance elements
+into conformance with the latest
+guidelines for developing compliance
+elements of standards.
+Removal of reasonable business
+2 9/30/09
+judgment.
+Replaced the RRO with the RE as a
+responsible entity.
+Rewording of Effective Date.
+Changed compliance monitor to
+Compliance Enforcement Authority.
+Updated Version Number from -2 to -3
+In Requirement 1.6, deleted the sentence
+3 12/16/09 pertaining to removing component or
+system from service in order to perform
+testing, in response to FERC order issued
+September 30, 2009.
+3 12/16/09 Approved by the NERC Board of Trustees.
+3 3/31/10 Approved by FERC.
+4 1/24/11 Approved by the NERC Board of Trustees.
+Modified to coordinate with
+other CIP standards and to
+5 11/26/12 Adopted by the NERC Board of Trustees.
+revise format to use RBS
+Template.
+5 11/22/13 FERC Order issued approving CIP-004-5.
+5.1 9/30/13 Modified two VSLs in R4 Errata
+Addressed two FERC
+6 11/13/14 directives from Order No.
+Adopted by the NERC Board of Trustees.
+791 related to identify,
+assess, and correct language
+Page 23 of 24
+CIP-004-8 — Cyber Security – Personnel & Training
+Version Date Action Change Tracking
+and communication
+networks.
+Replaces the version adopted
+by the Board on 11/13/2014.
+Revised version addresses
+6 2/12/15
+Adopted by the NERC Board of Trustees. remaining directives from
+Order No. 791 related to
+transient devices and low
+impact BES Cyber Systems.
+FERC order issued approving CIP-004-6.
+6 1/21/16
+Docket No. RM15-14-000
+Revised to enhance BES
+7 8/12/21
+Adopted by the NERC Board of Trustees reliability for entities to
+manage their BCSI.
+Virtualization Modifications
+8 5/9/2024
+Adopted by the NERC Board of Trustees
+by Project 2016-02
+Page 24 of 24
+--- END DOCUMENT: cip-004-8.pdf ---
+

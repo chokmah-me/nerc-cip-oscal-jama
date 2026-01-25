@@ -1,0 +1,2085 @@
+--- START DOCUMENT: cip-003-8.pdf ---
+CIP-003-8 - Cyber Security — Security Management Controls
+A. Introduction
+1. Title: Cyber Security — Security Management Controls
+2. Number: CIP-003-8
+3. Purpose: To specify consistent and sustainable security management controls that
+establish responsibility and accountability to protect BES Cyber Systems
+against compromise that could lead to misoperation or instability in the Bulk
+Electric System (BES).
+4. Applicability:
+4.1. Functional Entities: For the purpose of the requirements contained herein, the
+following list of functional entities will be collectively referred to as “Responsible
+Entities.” For requirements in this standard where a specific functional entity or subset
+of functional entities are the applicable entity or entities, the functional entity or
+entities are specified explicitly.
+4.1.1. Balancing Authority
+4.1.2. Distribution Provider that owns one or more of the following Facilities,
+systems, and equipment for the protection or restoration of the BES:
+4.1.2.1. Each underfrequency Load shedding (UFLS) or undervoltage Load
+shedding (UVLS) system that:
+4.1.2.1.1. is part of a Load shedding program that is subject to one or
+more requirements in a NERC or Regional Reliability
+Standard; and
+4.1.2.1.2. performs automatic Load shedding under a common
+control system owned by the Responsible Entity, without
+human operator initiation, of 300 MW or more.
+4.1.2.2. Each Remedial Action Scheme (RAS) where the RAS is subject to one
+or more requirements in a NERC or Regional Reliability Standard.
+4.1.2.3. Each Protection System (excluding UFLS and UVLS) that applies to
+Transmission where the Protection System is subject to one or more
+requirements in a NERC or Regional Reliability Standard.
+4.1.2.4. Each Cranking Path and group of Elements meeting the initial
+switching requirements from a Blackstart Resource up to and
+including the first interconnection point of the starting station service
+of the next generation unit(s) to be started.
+4.1.3. Generator Operator
+4.1.4. Generator Owner
+4.1.5. Reliability Coordinator
+4.1.6. Transmission Operator
+Page 1 of 59
+CIP-003-8 - Cyber Security — Security Management Controls
+4.1.7. Transmission Owner
+4.2. Facilities: For the purpose of the requirements contained herein, the following
+Facilities, systems, and equipment owned by each Responsible Entity in Section 4.1
+above are those to which these requirements are applicable. For requirements in this
+standard where a specific type of Facilities, system, or equipment or subset of
+Facilities, systems, and equipment are applicable, these are specified explicitly.
+4.2.1. Distribution Provider: One or more of the following Facilities, systems and
+equipment owned by the Distribution Provider for the protection or
+restoration of the BES:
+4.2.1.1. Each UFLS or UVLS System that:
+4.2.1.1.1. is part of a Load shedding program that is subject to one or
+more requirements in a NERC or Regional Reliability
+Standard; and
+4.2.1.1.2. performs automatic Load shedding under a common
+control system owned by the Responsible Entity, without
+human operator initiation, of 300 MW or more.
+4.2.1.2. Each RAS where the RAS is subject to one or more requirements in a
+NERC or Regional Reliability Standard.
+4.2.1.3. Each Protection System (excluding UFLS and UVLS) that applies to
+Transmission where the Protection System is subject to one or more
+requirements in a NERC or Regional Reliability Standard.
+4.2.1.4. Each Cranking Path and group of Elements meeting the initial
+switching requirements from a Blackstart Resource up to and
+including the first interconnection point of the starting station service
+of the next generation unit(s) to be started.
+4.2.2. Responsible Entities listed in 4.1 other than Distribution Providers:
+All BES Facilities.
+4.2.3. Exemptions: The following are exempt from Standard CIP-003-8:
+4.2.3.1. Cyber Assets at Facilities regulated by the Canadian Nuclear Safety
+Commission.
+4.2.3.2. Cyber Assets associated with communication networks and data
+communication links between discrete Electronic Security Perimeters
+(ESPs).
+4.2.3.3. The systems, structures, and components that are regulated by the
+Nuclear Regulatory Commission under a cyber security plan pursuant
+to 10 C.F.R. Section 73.54.
+4.2.3.4. For Distribution Providers, the systems and equipment that are not
+included in section 4.2.1 above.
+Page 2 of 59
+CIP-003-8 - Cyber Security — Security Management Controls
+5. Effective Dates:
+See Implementation Plan for CIP-003-8.
+6. Background:
+Standard CIP-003 exists as part of a suite of CIP Standards related to cyber security, which
+require the initial identification and categorization of BES Cyber Systems and require
+organizational, operational, and procedural controls to mitigate risk to BES Cyber Systems.
+The term policy refers to one or a collection of written documents that are used to
+communicate the Responsible Entities’ management goals, objectives and expectations for
+how the Responsible Entity will protect its BES Cyber Systems. The use of policies also
+establishes an overall governance foundation for creating a culture of security and
+compliance with laws, regulations, and standards.
+The term documented processes refers to a set of required instructions specific to the
+Responsible Entity and to achieve a specific outcome. This term does not imply any naming
+or approval structure beyond what is stated in the requirements. An entity should include
+as much as it believes necessary in its documented processes, but it must address the
+applicable requirements.
+The terms program and plan are sometimes used in place of documented processes where
+it makes sense and is commonly understood. For example, documented processes
+describing a response are typically referred to as plans (i.e., incident response plans and
+recovery plans). Likewise, a security plan can describe an approach involving multiple
+procedures to address a broad subject matter.
+Similarly, the term program may refer to the organization’s overall implementation of its
+policies, plans, and procedures involving a subject matter. Examples in the standards
+include the personnel risk assessment program and the personnel training program. The full
+implementation of the CIP Cyber Security Reliability Standards could also be referred to as a
+program. However, the terms program and plan do not imply any additional requirements
+beyond what is stated in the standards.
+Responsible Entities can implement common controls that meet requirements for multiple
+high, medium, and low impact BES Cyber Systems. For example, a single cyber security
+awareness program could meet the requirements across multiple BES Cyber Systems.
+Measures provide examples of evidence to show documentation and implementation of the
+requirement. These measures serve to provide guidance to entities in acceptable records of
+compliance and should not be viewed as an all-inclusive list.
+Throughout the standards, unless otherwise stated, bulleted items in the requirements and
+measures are items that are linked with an “or,” and numbered items are items that are
+linked with an “and.”
+Many references in the Applicability section use a threshold of 300 MW for UFLS and UVLS.
+This particular threshold of 300 MW for UVLS and UFLS was provided in Version 1 of the CIP
+Cyber Security Standards. The threshold remains at 300 MW since it is specifically
+addressing UVLS and UFLS, which are last ditch efforts to save the BES. A review of UFLS
+Page 3 of 59
+CIP-003-8 - Cyber Security — Security Management Controls
+tolerances defined within Regional Reliability Standards for UFLS program requirements to
+date indicates that the historical value of 300 MW represents an adequate and reasonable
+threshold value for allowable UFLS operational tolerances.
+Page 4 of 59
+CIP-003-8 - Cyber Security — Security Management Controls
+B. Requirements and Measures
+R1. Each Responsible Entity shall review and obtain CIP Senior Manager approval at least
+once every 15 calendar months for one or more documented cyber security policies
+that collectively address the following topics: [Violation Risk Factor: Medium] [Time
+Horizon: Operations Planning]
+1.1. For its high impact and medium impact BES Cyber Systems, if any:
+1.1.1. Personnel and training (CIP-004);
+1.1.2. Electronic Security Perimeters (CIP-005) including Interactive Remote
+Access;
+1.1.3. Physical security of BES Cyber Systems (CIP-006);
+1.1.4. System security management (CIP-007);
+1.1.5. Incident reporting and response planning (CIP-008);
+1.1.6. Recovery plans for BES Cyber Systems (CIP-009);
+1.1.7. Configuration change management and vulnerability assessments (CIP-
+010);
+1.1.8. Information protection (CIP-011); and
+1.1.9. Declaring and responding to CIP Exceptional Circumstances.
+1.2. For its assets identified in CIP-002 containing low impact BES Cyber Systems, if
+any:
+1.2.1. Cyber security awareness;
+1.2.2. Physical security controls;
+1.2.3. Electronic access controls;
+1.2.4. Cyber Security Incident response;
+1.2.5. Transient Cyber Assets and Removable Media malicious code risk
+mitigation; and
+1.2.6. Declaring and responding to CIP Exceptional Circumstances.
+M1. Examples of evidence may include, but are not limited to, policy documents; revision
+history, records of review, or workflow evidence from a document management
+system that indicate review of each cyber security policy at least once every 15
+calendar months; and documented approval by the CIP Senior Manager for each cyber
+security policy.
+R2. Each Responsible Entity with at least one asset identified in CIP-002 containing low
+impact BES Cyber Systems shall implement one or more documented cyber security
+plan(s) for its low impact BES Cyber Systems that include the sections in Attachment 1.
+[Violation Risk Factor: Lower] [Time Horizon: Operations Planning]
+Page 5 of 59
+CIP-003-8 - Cyber Security — Security Management Controls
+Note: An inventory, list, or discrete identification of low impact BES Cyber Systems or
+their BES Cyber Assets is not required. Lists of authorized users are not required.
+M2. Evidence shall include each of the documented cyber security plan(s) that collectively
+include each of the sections in Attachment 1 and additional evidence to demonstrate
+implementation of the cyber security plan(s). Additional examples of evidence per
+section are located in Attachment 2.
+R3. Each Responsible Entity shall identify a CIP Senior Manager by name and document
+any change within 30 calendar days of the change. [Violation Risk Factor: Medium]
+[Time Horizon: Operations Planning]
+M3. An example of evidence may include, but is not limited to, a dated and approved
+document from a high level official designating the name of the individual identified
+as the CIP Senior Manager.
+R4. The Responsible Entity shall implement a documented process to delegate authority,
+unless no delegations are used. Where allowed by the CIP Standards, the CIP Senior
+Manager may delegate authority for specific actions to a delegate or delegates. These
+delegations shall be documented, including the name or title of the delegate, the
+specific actions delegated, and the date of the delegation; approved by the CIP Senior
+Manager; and updated within 30 days of any change to the delegation. Delegation
+changes do not need to be reinstated with a change to the delegator. [Violation Risk
+Factor: Lower] [Time Horizon: Operations Planning]
+M4. An example of evidence may include, but is not limited to, a dated document,
+approved by the CIP Senior Manager, listing individuals (by name or title) who are
+delegated the authority to approve or authorize specifically identified items.
+Page 6 of 59
+CIP-003-8 - Cyber Security — Security Management Controls
+C. Compliance
+1. Compliance Monitoring Process
+1.1. Compliance Enforcement Authority:
+As defined in the NERC Rules of Procedure, “Compliance Enforcement Authority”
+(CEA) means NERC or the Regional Entity in their respective roles of monitoring
+and enforcing compliance with the NERC Reliability Standards.
+1.2. Evidence Retention:
+The following evidence retention periods identify the period of time an entity is
+required to retain specific evidence to demonstrate compliance. For instances
+where the evidence retention period specified below is shorter than the time
+since the last audit, the CEA may ask an entity to provide other evidence to show
+that it was compliant for the full time period since the last audit.
+The Responsible Entity shall keep data or evidence to show compliance as
+identified below unless directed by its CEA to retain specific evidence for a
+longer period of time as part of an investigation:
+• Each Responsible Entity shall retain evidence of each requirement in this
+standard for three calendar years.
+• If a Responsible Entity is found non-compliant, it shall keep information
+related to the non-compliance until mitigation is complete and approved or
+for the time specified above, whichever is longer.
+• The CEA shall keep the last audit records and all requested and submitted
+subsequent audit records.
+1.3. Compliance Monitoring and Assessment Processes:
+• Compliance Audits
+• Self-Certifications
+• Spot Checking
+• Compliance Investigations
+• Self-Reporting
+• Complaints
+1.4. Additional Compliance Information:
+None.
+Page 7 of 59
+CIP-003-8 - Cyber Security — Security Management Controls
+Violation Severity Levels
+Violation Severity Levels (CIP-003-8)
+Time
+R # VRF
+Horizon
+Lower VSL Moderate VSL High VSL Severe VSL
+R1 Operations Medium The Responsible The Responsible The Responsible Entity The Responsible
+Planning Entity documented Entity documented documented and Entity documented
+and implemented and implemented implemented one or and implemented
+one or more cyber one or more cyber more cyber security one or more cyber
+security policies for security policies for policies for its high security policies for
+its high impact and its high impact and impact and medium its high impact and
+medium impact BES medium impact BES impact BES Cyber medium impact BES
+Cyber Systems, but Cyber Systems, but Systems, but did not Cyber Systems, but
+did not address one did not address two address three of the nine did not address four
+of the nine topics of the nine topics topics required by R1. or more of the nine
+required by R1. required by R1. (R1.1) topics required by
+(R1.1) (R1.1) R1. (R1.1)
+OR
+OR OR OR
+The Responsible Entity
+The Responsible The Responsible did not complete its The Responsible
+Entity did not Entity did not review of the one or Entity did not have
+complete its review complete its review more documented cyber any documented
+of the one or more of the one or more security policies for its cyber security
+documented cyber documented cyber high impact and medium policies for its high
+security policies for security policies for impact BES Cyber impact and medium
+its high impact and its high impact and Systems as required by impact BES Cyber
+medium impact BES medium impact BES R1 within 17 calendar Systems as required
+Cyber Systems as Cyber Systems as months but did by R1. (R1.1)
+required by R1 required by R1 complete this review in
+OR
+within 15 calendar within 16 calendar less than or equal to 18
+The Responsible
+months but did months but did
+Entity did not
+Page 8 of 59
+CIP-003-8 - Cyber Security — Security Management Controls
+Violation Severity Levels (CIP-003-8)
+Time
+R # VRF
+Horizon
+Lower VSL Moderate VSL High VSL Severe VSL
+complete this review complete this review calendar months of the complete its review
+in less than or equal in less than or equal previous review. (R1.1) of the one or more
+to 16 calendar to 17 calendar documented cyber
+OR
+months of the months of the security policies as
+The Responsible Entity
+previous review. previous review. required by R1
+did not complete its
+(R1.1) (R1.1) within 18 calendar
+approval of the one or
+months of the
+OR OR
+more documented cyber
+previous review. (R1)
+The Responsible The Responsible security policies for its
+OR
+Entity did not Entity did not high impact and medium
+complete its complete its impact BES Cyber The Responsible
+approval of the one approval of the one Systems as required by Entity did not
+or more documented or more R1 by the CIP Senior complete its
+cyber security documented cyber Manager within 17 approval of the one
+policies for its high security policies for calendar months but did or more
+impact and medium its high impact and complete this approval documented cyber
+impact BES Cyber medium impact BES in less than or equal to security policies for
+Systems as required Cyber Systems as 18 calendar months of its high impact and
+by R1 by the CIP required by R1 by the previous approval. medium impact BES
+Senior Manager the CIP Senior (R1) Cyber Systems as
+within 15 calendar Manager within 16 required by R1 by
+OR
+months but did calendar months but the CIP Senior
+The Responsible Entity
+complete this did complete this Manager within 18
+documented one or
+approval in less than approval in less than calendar months of
+more cyber security
+or equal to 16 or equal to 17 the previous
+policies for its assets
+calendar months of calendar months of approval. (R1.1)
+identified in CIP-002
+the previous the previous
+OR
+containing low impact
+approval. (R1.1) approval. (R1.1)
+Page 9 of 59
+CIP-003-8 - Cyber Security — Security Management Controls
+Violation Severity Levels (CIP-003-8)
+Time
+R # VRF
+Horizon
+Lower VSL Moderate VSL High VSL Severe VSL
+OR OR BES Cyber Systems, but The Responsible
+did not address three of Entity documented
+The Responsible The Responsible
+the six topics required by one or more cyber
+Entity documented Entity documented
+R1. (R1.2) security policies for
+one or more cyber one or more cyber
+its assets identified
+security policies for security policies for OR
+in CIP-002 containing
+its assets identified its assets identified
+The Responsible Entity
+low impact BES
+in CIP-002 containing in CIP-002 containing
+did not complete its
+Cyber Systems, but
+low impact BES low impact BES
+review of the one or
+did not address four
+Cyber Systems, but Cyber Systems, but
+more documented cyber
+or more of the six
+did not address one did not address two
+security policies for its
+topics required by
+of the six topics of the six topics
+assets identified in CIP-
+R1. (R1.2)
+required by R1. required by R1.
+002 containing low
+(R1.2) (R1.2) OR
+impact BES Cyber
+OR OR Systems as required by The Responsible
+R1 within 17 calendar Entity did not have
+The Responsible The Responsible
+months but did any documented
+Entity did not Entity did not
+complete this review in cyber security
+complete its review complete its review
+less than or equal to 18 policies for its assets
+of the one or more of the one or more
+calendar months of the identified in CIP-002
+documented cyber documented cyber
+previous review. (R1.2) containing low
+security policies for security policies for
+impact BES Cyber
+its assets identified its assets identified OR
+Systems as required
+in CIP-002 containing in CIP-002 containing
+The Responsible Entity
+by R1. (R1.2)
+low impact BES low impact BES
+did not complete its
+Cyber Systems as Cyber Systems as OR
+approval of the one or
+required by required by
+more documented cyber The Responsible
+Requirement R1 Requirement R1
+security policies for its Entity did not
+within 15 calendar within 16 calendar
+Page 10 of 59
+CIP-003-8 - Cyber Security — Security Management Controls
+Violation Severity Levels (CIP-003-8)
+Time
+R # VRF
+Horizon
+Lower VSL Moderate VSL High VSL Severe VSL
+months but did months but did assets identified in CIP- complete its
+complete this review complete this review 002 containing low approval of the one
+in less than or equal in less than or equal impact BES Cyber or more
+to 16 calendar to 17 calendar Systems as required by documented cyber
+months of the months of the Requirement R1 by the security policies for
+previous review. previous review. CIP Senior Manager its assets identified
+(R1.2) (R1.2) within 17 calendar in CIP-002 containing
+months but did low impact BES
+OR OR
+complete this approval Cyber Systems as
+The Responsible The Responsible
+in less than or equal to required by
+Entity did not Entity did not
+18 calendar months of Requirement R1 by
+complete its complete its
+the previous approval. the CIP Senior
+approval of the one approval of the one
+(R1.2) Manager within 18
+or more documented or more
+calendar months of
+cyber security documented cyber
+the previous
+policies for its assets security policies for
+approval. (R1.2)
+identified in CIP-002 its assets identified
+containing low in CIP-002 containing
+impact BES Cyber low impact BES
+Systems as required Cyber Systems as
+by Requirement R1 required by
+by the CIP Senior Requirement R1 by
+Manager within 15 the CIP Senior
+calendar months but Manager within 16
+did complete this calendar months but
+approval in less than did complete this
+or equal to 16 approval in less than
+calendar months of or equal to 17
+Page 11 of 59
+CIP-003-8 - Cyber Security — Security Management Controls
+Violation Severity Levels (CIP-003-8)
+Time
+R # VRF
+Horizon
+Lower VSL Moderate VSL High VSL Severe VSL
+the previous calendar months of
+approval. (R1.2) the previous
+approval. (R1.2)
+R2 Operations Lower The Responsible The Responsible The Responsible Entity The Responsible
+Planning Entity documented Entity documented documented the physical Entity failed to
+its cyber security its cyber security access controls for its document and
+plan(s) for its assets plan(s) for its assets assets containing low implement one or
+containing low containing low impact BES Cyber more cyber security
+impact BES Cyber impact BES Cyber Systems, but failed to plan(s) for its assets
+Systems, but failed Systems, but failed implement the physical containing low
+to document cyber to reinforce cyber security controls impact BES Cyber
+security awareness security practices at according to Systems according to
+according to least once every 15 Requirement R2, Requirement R2,
+Requirement R2, calendar months Attachment 1, Section 2. Attachment 1. (R2)
+Attachment 1, according to (R2)
+Section 1. (R2) Requirement R2,
+OR
+Attachment 1,
+OR
+The Responsible Entity
+Section 1. (R2)
+The Responsible documented its cyber
+OR
+Entity implemented security plan(s) for
+electronic access The Responsible electronic access
+controls but failed to Entity documented controls for its assets
+document its cyber its cyber security containing low impact
+security plan(s) for plan(s) for its assets BES Cyber Systems, but
+electronic access containing low failed to permit only
+controls according to impact BES Cyber necessary inbound and
+Requirement R2, Systems, but failed outbound electronic
+Page 12 of 59
+CIP-003-8 - Cyber Security — Security Management Controls
+Violation Severity Levels (CIP-003-8)
+Time
+R # VRF
+Horizon
+Lower VSL Moderate VSL High VSL Severe VSL
+Attachment 1, to document access controls
+Section 3. (R2) physical security according to
+controls according to Requirement R2,
+OR
+Requirement R2, Attachment 1, Section
+The Responsible
+Attachment 1, 3.1. (R2)
+Entity documented
+Section 2. (R2)
+OR
+its cyber security
+OR
+plan(s) for its assets The Responsible Entity
+containing low The Responsible documented one or
+impact BES Cyber Entity documented more Cyber Security
+Systems, but failed its cyber security Incident response plan(s)
+to document one or plan(s) for its assets within its cyber security
+more Cyber Security containing low plan(s) for its assets
+Incident response impact BES Cyber containing low impact
+plan(s) according to Systems, but failed BES Cyber Systems, but
+Requirement R2, to document failed to test each Cyber
+Attachment 1, electronic access Security Incident
+Section 4. (R2) controls according to response plan(s) at least
+Requirement R2, once every 36 calendar
+OR
+Attachment 1, months according to
+The Responsible
+Section 3. (R2) Requirement R2,
+Entity documented
+Attachment 1, Section 4.
+OR
+one or more Cyber
+(R2)
+Security Incident The Responsible
+OR
+response plan(s) Entity documented
+within its cyber its cyber security The Responsible Entity
+security plan(s) for plan(s) for electronic documented the
+its assets containing access controls but determination of
+Page 13 of 59
+CIP-003-8 - Cyber Security — Security Management Controls
+Violation Severity Levels (CIP-003-8)
+Time
+R # VRF
+Horizon
+Lower VSL Moderate VSL High VSL Severe VSL
+low impact BES failed to implement whether an identified
+Cyber Systems, but authentication for all Cyber Security Incident is
+failed to update each Dial-up Connectivity a Reportable Cyber
+Cyber Security that provides access Security Incident, but
+Incident response to low impact BES failed to notify the
+plan(s) within 180 Cyber System(s), per Electricity Information
+days according to Cyber Asset Sharing and Analysis
+Requirement R2, capability according Center (E-ISAC)
+Attachment 1, to Requirement R2, according to
+Section 4. (R2) Attachment 1, Requirement R2,
+Section 3.2 (R2) Attachment 1, Section 4.
+OR
+(R2)
+OR
+The Responsible
+OR
+Entity documented The Responsible
+its plan(s) for Entity documented The Responsible Entity
+Transient Cyber one or more incident documented its plan(s)
+Assets and response plan(s) for Transient Cyber
+Removable Media, within its cyber Assets and Removable
+but failed to manage security plan(s) for Media, but failed to
+its Transient Cyber its assets containing implement mitigation for
+Asset(s) according to low impact BES the introduction of
+Requirement R2, Cyber Systems, but malicious code for
+Attachment 1, failed to include the Transient Cyber Assets
+Section 5.1. (R2) process for managed by the
+identification, Responsible Entity
+OR
+classification, and according to
+The Responsible
+response to Cyber Requirement R2,
+Entity documented
+Security Incidents
+Page 14 of 59
+CIP-003-8 - Cyber Security — Security Management Controls
+Violation Severity Levels (CIP-003-8)
+Time
+R # VRF
+Horizon
+Lower VSL Moderate VSL High VSL Severe VSL
+its plan(s) for according to Attachment 1, Section
+Transient Cyber Requirement R2, 5.1. (R2)
+Assets, but failed to Attachment 1,
+OR
+document the Section 4. (R2)
+The Responsible Entity
+Removable Media
+OR
+documented its plan(s)
+section(s) according
+The Responsible for Transient Cyber
+to Requirement R2,
+Entity documented Assets and Removable
+Attachment 1,
+its cyber security Media, but failed to
+Section 5.3. (R2)
+plan(s) for its assets implement mitigation for
+containing low the introduction of
+impact BES Cyber malicious code for
+Systems, but failed Transient Cyber Assets
+to document the managed by a party
+determination of other than the
+whether an Responsible Entity
+identified Cyber according to
+Security Incident is a Requirement R2,
+Reportable Cyber Attachment 1, Section
+Security Incident and 5.2. (R2)
+subsequent
+OR
+notification to the
+The Responsible Entity
+Electricity
+documented its plan(s)
+Information Sharing
+for Transient Cyber
+and Analysis Center
+Assets and Removable
+(E-ISAC) according to
+Media, but failed to
+Requirement R2,
+implement mitigation for
+Page 15 of 59
+CIP-003-8 - Cyber Security — Security Management Controls
+Violation Severity Levels (CIP-003-8)
+Time
+R # VRF
+Horizon
+Lower VSL Moderate VSL High VSL Severe VSL
+Attachment 1, the threat of detected
+Section 4. (R2) malicious code on the
+Removable Media prior
+OR
+to connecting
+The Responsible
+Removable Media to a
+Entity documented
+low impact BES Cyber
+its plan(s) for
+System according to
+Transient Cyber
+Requirement R2,
+Assets and
+Attachment 1, Section
+Removable Media,
+5.3. (R2)
+but failed to
+document mitigation
+for the introduction
+of malicious code for
+Transient Cyber
+Assets managed by
+the Responsible
+Entity according to
+Requirement R2,
+Attachment 1,
+Sections 5.1 and 5.3.
+(R2)
+OR
+The Responsible
+Entity documented
+its plan(s) for
+Transient Cyber
+Page 16 of 59
+CIP-003-8 - Cyber Security — Security Management Controls
+Violation Severity Levels (CIP-003-8)
+Time
+R # VRF
+Horizon
+Lower VSL Moderate VSL High VSL Severe VSL
+Assets and
+Removable Media,
+but failed to
+document mitigation
+for the introduction
+of malicious code for
+Transient Cyber
+Assets managed by a
+party other than the
+Responsible Entity
+according to
+Requirement R2,
+Attachment 1,
+Section 5.2. (R2)
+OR
+The Responsible
+Entity documented
+its plan(s) for
+Transient Cyber
+Assets and
+Removable Media,
+but failed to
+implement the
+Removable Media
+section(s) according
+to Requirement R2,
+Page 17 of 59
+CIP-003-8 - Cyber Security — Security Management Controls
+Violation Severity Levels (CIP-003-8)
+Time
+R # VRF
+Horizon
+Lower VSL Moderate VSL High VSL Severe VSL
+Attachment 1,
+Section 5.3. (R2)
+R3 Operations Medium The Responsible The Responsible The Responsible Entity The Responsible
+Planning Entity has identified Entity has identified has identified by name a Entity has not
+by name a CIP Senior by name a CIP Senior CIP Senior Manager, but identified, by name,
+Manager, but did not Manager, but did did not document a CIP Senior
+document changes not document changes to the CIP Manager.
+to the CIP Senior changes to the CIP Senior Manager within
+OR
+Manager within 30 Senior Manager 50 calendar days but did
+The Responsible
+calendar days but did within 40 calendar document this change in
+Entity has identified
+document this days but did less than 60 calendar
+by name a CIP Senior
+change in less than document this days of the change. (R3)
+Manager, but did
+40 calendar days of change in less than
+not document
+the change. (R3) 50 calendar days of
+changes to the CIP
+the change. (R3)
+Senior Manager
+within 60 calendar
+days of the change.
+(R3)
+R4 Operations Lower The Responsible The Responsible The Responsible Entity The Responsible
+Planning Entity has identified Entity has identified has identified a delegate Entity has used
+a delegate by name, a delegate by name, by name, title, date of delegated authority
+title, date of title, date of delegation, and specific for actions where
+delegation, and delegation, and actions delegated, but allowed by the CIP
+specific actions specific actions did not document Standards, but does
+delegated, but did delegated, but did changes to the delegate not have a process
+Page 18 of 59
+CIP-003-8 - Cyber Security — Security Management Controls
+Violation Severity Levels (CIP-003-8)
+Time
+R # VRF
+Horizon
+Lower VSL Moderate VSL High VSL Severe VSL
+not document not document within 50 calendar days to delegate actions
+changes to the changes to the but did document this from the CIP Senior
+delegate within 30 delegate within 40 change in less than 60 Manager. (R4)
+calendar days but did calendar days but calendar days of the
+OR
+document this did document this change. (R4)
+The Responsible
+change in less than change in less than
+Entity has identified
+40 calendar days of 50 calendar days of
+a delegate by name,
+the change. (R4) the change. (R4)
+title, date of
+delegation, and
+specific actions
+delegated, but did
+not document
+changes to the
+delegate within 60
+calendar days of the
+change. (R4)
+D. Regional Variances
+None.
+E. Interpretations
+None.
+F. Associated Documents
+None.
+Page 19 of 59
+CIP-003-8 - Cyber Security — Security Management Controls
+Version History
+Change
+Version Date Action
+Tracking
+1 1/16/06 R3.2 — Change “Control Center” to 3/24/06
+“control center.”
+2 9/30/09 Modifications to clarify the
+requirements and to bring the
+compliance elements into conformance
+with the latest guidelines for developing
+compliance elements of standards.
+Removal of reasonable business
+judgment.
+Replaced the RRO with the RE as a
+responsible entity.
+Rewording of Effective Date.
+Changed compliance monitor to
+Compliance Enforcement Authority.
+3 12/16/09 Updated Version Number from -2 to -3
+In Requirement 1.6, deleted the
+sentence pertaining to removing
+component or system from service in
+order to perform testing, in response to
+FERC order issued September 30, 2009.
+3 12/16/09 Approved by the NERC Board of
+Trustees.
+3 3/31/10 Approved by FERC.
+4 1/24/11 Approved by the NERC Board of
+Trustees.
+5 11/26/12 Adopted by the NERC Board of Modified to
+Trustees. coordinate with
+other CIP
+standards and to
+revise format to
+use RBS Template.
+Page 20 of 59
+CIP-003-8 - Cyber Security — Security Management Controls
+Change
+Version Date Action
+Tracking
+5 11/22/13 FERC Order issued approving CIP-003-5.
+6 11/13/14 Adopted by the NERC Board of Addressed two
+Trustees. FERC directives
+from Order No.
+791 related to
+identify, assess,
+and correct
+language and
+communication
+networks.
+6 2/12/15 Adopted by the NERC Board of Replaces the
+Trustees. version adopted
+by the Board on
+11/13/2014.
+Revised version
+addresses
+remaining
+directives from
+Order No. 791
+related to
+transient devices
+and low impact
+BES Cyber
+Systems.
+6 1/21/16 FERC Order issued approving CIP-003-6.
+Docket No. RM15-14-000
+7 2/9/17 Adopted by the NERC Board of Revised to address
+Trustees. FERC Order No.
+822 directives
+regarding (1) the
+definition of LERC
+and (2) transient
+devices.
+7 4/19/18 FERC Order issued approving CIP-003-7.
+Docket No. RM17-11-000
+Page 21 of 59
+CIP-003-8 - Cyber Security — Security Management Controls
+Change
+Version Date Action
+Tracking
+8 5/9/19 Adopted by the NERC Board of Removed SPS
+Trustees. references.
+Revised to address
+FERC Order No.
+843 regarding
+mitigating the risk
+of malicious code.
+8 7/31/2019 FERC Order issued approving CIP-003-8.
+Docket No. RD19-5-000.
+Page 22 of 59
+CIP-003-8 - Cyber Security — Security Management Controls
+Attachment 1
+Required Sections for Cyber Security Plan(s) for Assets Containing Low Impact BES Cyber
+Systems
+Responsible Entities shall include each of the sections provided below in the cyber security
+plan(s) required under Requirement R2.
+Responsible Entities with multiple-impact BES Cyber Systems ratings can utilize policies,
+procedures, and processes for their high or medium impact BES Cyber Systems to fulfill the
+sections for the development of low impact cyber security plan(s). Each Responsible Entity can
+develop a cyber security plan(s) either by individual asset or groups of assets.
+Section 1. Cyber Security Awareness: Each Responsible Entity shall reinforce, at least once
+every 15 calendar months, cyber security practices (which may include associated
+physical security practices).
+Section 2. Physical Security Controls: Each Responsible Entity shall control physical access,
+based on need as determined by the Responsible Entity, to (1) the asset or the
+locations of the low impact BES Cyber Systems within the asset, and (2) the Cyber
+Asset(s), as specified by the Responsible Entity, that provide electronic access
+control(s) implemented for Section 3.1, if any.
+Section 3. Electronic Access Controls: For each asset containing low impact BES Cyber
+System(s) identified pursuant to CIP-002, the Responsible Entity shall implement
+electronic access controls to:
+3.1 Permit only necessary inbound and outbound electronic access as
+determined by the Responsible Entity for any communications that are:
+i. between a low impact BES Cyber System(s) and a Cyber Asset(s) outside
+the asset containing low impact BES Cyber System(s);
+ii. using a routable protocol when entering or leaving the asset containing
+the low impact BES Cyber System(s); and
+iii. not used for time-sensitive protection or control functions between
+intelligent electronic devices (e.g., communications using protocol IEC TR-
+61850-90-5 R-GOOSE).
+3.2 Authenticate all Dial-up Connectivity, if any, that provides access to low
+impact BES Cyber System(s), per Cyber Asset capability.
+Section 4. Cyber Security Incident Response: Each Responsible Entity shall have one or more
+Cyber Security Incident response plan(s), either by asset or group of assets, which
+shall include:
+4.1 Identification, classification, and response to Cyber Security Incidents;
+4.2 Determination of whether an identified Cyber Security Incident is a
+Reportable Cyber Security Incident and subsequent notification to the
+Page 23 of 59
+CIP-003-8 - Cyber Security — Security Management Controls
+Electricity Information Sharing and Analysis Center (E-ISAC), unless
+prohibited by law;
+4.3 Identification of the roles and responsibilities for Cyber Security Incident
+response by groups or individuals;
+4.4 Incident handling for Cyber Security Incidents;
+4.5 Testing the Cyber Security Incident response plan(s) at least once every 36
+calendar months by: (1) responding to an actual Reportable Cyber Security
+Incident; (2) using a drill or tabletop exercise of a Reportable Cyber Security
+Incident; or (3) using an operational exercise of a Reportable Cyber Security
+Incident; and
+4.6 Updating the Cyber Security Incident response plan(s), if needed, within 180
+calendar days after completion of a Cyber Security Incident response plan(s)
+test or actual Reportable Cyber Security Incident.
+Section 5. Transient Cyber Asset and Removable Media Malicious Code Risk Mitigation: Each
+Responsible Entity shall implement, except under CIP Exceptional Circumstances,
+one or more plan(s) to achieve the objective of mitigating the risk of the
+introduction of malicious code to low impact BES Cyber Systems through the use of
+Transient Cyber Assets or Removable Media. The plan(s) shall include:
+5.1 For Transient Cyber Asset(s) managed by the Responsible Entity, if any, the
+use of one or a combination of the following in an ongoing or on-demand
+manner (per Transient Cyber Asset capability):
+• Antivirus software, including manual or managed updates of signatures
+or patterns;
+• Application whitelisting; or
+• Other method(s) to mitigate the introduction of malicious code.
+5.2 For Transient Cyber Asset(s) managed by a party other than the Responsible
+Entity, if any:
+5.2.1 Use one or a combination of the following prior to connecting the
+Transient Cyber Asset to a low impact BES Cyber System (per
+Transient Cyber Asset capability):
+• Review of antivirus update level;
+• Review of antivirus update process used by the party;
+• Review of application whitelisting used by the party;
+• Review use of live operating system and software executable
+only from read-only media;
+• Review of system hardening used by the party; or
+Page 24 of 59
+CIP-003-8 - Cyber Security — Security Management Controls
+• Other method(s) to mitigate the introduction of malicious
+code.
+5.2.2 For any method used pursuant to 5.2.1, Responsible Entities shall
+determine whether any additional mitigation actions are necessary
+and implement such actions prior to connecting the Transient Cyber
+Asset.
+5.3 For Removable Media, the use of each of the following:
+5.3.1 Method(s) to detect malicious code on Removable Media using a
+Cyber Asset other than a BES Cyber System; and
+5.3.2 Mitigation of the threat of detected malicious code on the Removable
+Media prior to connecting Removable Media to a low impact BES
+Cyber System.
+Page 25 of 59
+CIP-003-8 - Cyber Security — Security Management Controls
+Attachment 2
+Examples of Evidence for Cyber Security Plan(s) for Assets Containing Low Impact BES Cyber
+Systems
+Section 1. Cyber Security Awareness: An example of evidence for Section 1 may include, but is
+not limited to, documentation that the reinforcement of cyber security practices
+occurred at least once every 15 calendar months. The evidence could be
+documentation through one or more of the following methods:
+• Direct communications (for example, e-mails, memos, or computer-based
+training);
+• Indirect communications (for example, posters, intranet, or brochures); or
+• Management support and reinforcement (for example, presentations or
+meetings).
+Section 2. Physical Security Controls: Examples of evidence for Section 2 may include, but are
+not limited to:
+• Documentation of the selected access control(s) (e.g., card key, locks, perimeter
+controls), monitoring controls (e.g., alarm systems, human observation), or other
+operational, procedural, or technical physical security controls that control
+physical access to both:
+a. The asset, if any, or the locations of the low impact BES Cyber Systems within
+the asset; and
+b. The Cyber Asset(s) specified by the Responsible Entity that provide(s)
+electronic access controls implemented for Attachment 1, Section 3.1, if any.
+Section 3. Electronic Access Controls: Examples of evidence for Section 3 may include, but are
+not limited to:
+1. Documentation showing that at each asset or group of assets containing low
+impact BES Cyber Systems, routable communication between a low impact BES
+Cyber System(s) and a Cyber Asset(s) outside the asset is restricted by electronic
+access controls to permit only inbound and outbound electronic access that the
+Responsible Entity deems necessary, except where an entity provides rationale
+that communication is used for time-sensitive protection or control functions
+between intelligent electronic devices. Examples of such documentation may
+include, but are not limited to representative diagrams that illustrate control of
+inbound and outbound communication(s) between the low impact BES Cyber
+System(s) and a Cyber Asset(s) outside the asset containing low impact BES
+Cyber System(s) or lists of implemented electronic access controls (e.g., access
+control lists restricting IP addresses, ports, or services; implementing
+unidirectional gateways).
+Page 26 of 59
+CIP-003-8 - Cyber Security — Security Management Controls
+2. Documentation of authentication for Dial-up Connectivity (e.g., dial out only to a
+preprogrammed number to deliver data, dial-back modems, modems that must
+be remotely controlled by the control center or control room, or access control
+on the BES Cyber System).
+Section 4. Cyber Security Incident Response: An example of evidence for Section 4 may include,
+but is not limited to, dated documentation, such as policies, procedures, or process
+documents of one or more Cyber Security Incident response plan(s) developed
+either by asset or group of assets that include the following processes:
+1. to identify, classify, and respond to Cyber Security Incidents; to determine
+whether an identified Cyber Security Incident is a Reportable Cyber Security
+Incident and for notifying the Electricity Information Sharing and Analysis Center
+(E-ISAC);
+2. to identify and document the roles and responsibilities for Cyber Security
+Incident response by groups or individuals (e.g., initiating, documenting,
+monitoring, reporting, etc.);
+3. for incident handling of a Cyber Security Incident (e.g., containment, eradication,
+or recovery/incident resolution);
+4. for testing the plan(s) along with the dated documentation that a test has been
+completed at least once every 36 calendar months; and
+5. to update, as needed, Cyber Security Incident response plan(s) within 180
+calendar days after completion of a test or actual Reportable Cyber Security
+Incident.
+Section 5. Transient Cyber Asset and Removable Media Malicious Code Risk Mitigation:
+1. Examples of evidence for Section 5.1 may include, but are not limited to,
+documentation of the method(s) used to mitigate the introduction of malicious
+code such as antivirus software and processes for managing signature or pattern
+updates, application whitelisting practices, processes to restrict communication,
+or other method(s) to mitigate the introduction of malicious code. If a Transient
+Cyber Asset does not have the capability to use method(s) that mitigate the
+introduction of malicious code, evidence may include documentation by the
+vendor or Responsible Entity that identifies that the Transient Cyber Asset does
+not have the capability.
+2. Examples of evidence for Section 5.2.1 may include, but are not limited to,
+documentation from change management systems, electronic mail or
+procedures that document a review of the installed antivirus update level;
+memoranda, electronic mail, system documentation, policies or contracts from
+the party other than the Responsible Entity that identify the antivirus update
+process, the use of application whitelisting, use of live operating systems or
+system hardening performed by the party other than the Responsible Entity;
+evidence from change management systems, electronic mail or contracts that
+Page 27 of 59
+CIP-003-8 - Cyber Security — Security Management Controls
+identifies the Responsible Entity’s acceptance that the practices of the party
+other than the Responsible Entity are acceptable; or documentation of other
+method(s) to mitigate malicious code for Transient Cyber Asset(s) managed by a
+party other than the Responsible Entity. If a Transient Cyber Asset does not have
+the capability to use method(s) that mitigate the introduction of malicious code,
+evidence may include documentation by the Responsible Entity or the party
+other than the Responsible Entity that identifies that the Transient Cyber Asset
+does not have the capability.
+Examples of evidence for Attachment 1, Section 5.2.2 may include, but are not
+limited to, documentation from change management systems, electronic mail, or
+contracts that identifies a review to determine whether additional mitigation is
+necessary and has been implemented prior to connecting the Transient Cyber
+Asset managed by a party other than the Responsible Entity.
+3. Examples of evidence for Section 5.3.1 may include, but are not limited to,
+documented process(es) of the method(s) used to detect malicious code such as
+results of scan settings for Removable Media, or implementation of on-demand
+scanning. Examples of evidence for Section 5.3.2 may include, but are not limited
+to, documented process(es) for the method(s) used for mitigating the threat of
+detected malicious code on Removable Media, such as logs from the method(s)
+used to detect malicious code that show the results of scanning and the
+mitigation of detected malicious code on Removable Media or documented
+confirmation by the entity that the Removable Media was deemed to be free of
+malicious code.
+Page 28 of 59
+CIP-003-8 Supplemental Material
+Guidelines and Technical Basis
+Section 4 – Scope of Applicability of the CIP Cyber Security Standards
+Section “4. Applicability” of the standards provides important information for Responsible
+Entities to determine the scope of the applicability of the CIP Cyber Security Requirements.
+Section “4.1. Functional Entities” is a list of NERC functional entities to which the standard
+applies. If the entity is registered as one or more of the functional entities listed in Section 4.1,
+then the NERC CIP Cyber Security Standards apply. Note that there is a qualification in Section
+4.1 that restricts the applicability in the case of Distribution Providers to only those that own
+certain types of systems and equipment listed in 4.2.
+Section “4.2. Facilities” defines the scope of the Facilities, systems, and equipment owned by
+the Responsible Entity, as qualified in Section 4.1, that is subject to the requirements of the
+standard. In addition to the set of BES Facilities, Control Centers, and other systems and
+equipment, the list includes the set of systems and equipment owned by Distribution Providers.
+While the NERC Glossary term “Facilities” already includes the BES characteristic, the additional
+use of the term BES here is meant to reinforce the scope of applicability of these Facilities
+where it is used, especially in this applicability scoping section. This in effect sets the scope of
+Facilities, systems, and equipment that is subject to the standards.
+Requirement R1:
+In developing policies in compliance with Requirement R1, the number of policies and their
+content should be guided by a Responsible Entity's management structure and operating
+conditions. Policies might be included as part of a general information security program for the
+entire organization, or as components of specific programs. The Responsible Entity has the
+flexibility to develop a single comprehensive cyber security policy covering the required topics,
+or it may choose to develop a single high-level umbrella policy and provide additional policy
+detail in lower level documents in its documentation hierarchy. In the case of a high-level
+umbrella policy, the Responsible Entity would be expected to provide the high-level policy as
+well as the additional documentation in order to demonstrate compliance with CIP-003-8,
+Requirement R1.
+If a Responsible Entity has any high or medium impact BES Cyber Systems, the one or more
+cyber security policies must cover the nine subject matter areas required by CIP-003-8,
+Requirement R1, Part 1.1. If a Responsible Entity has identified from CIP-002 any assets
+containing low impact BES Cyber Systems, the one or more cyber security policies must cover
+the six subject matter areas required by Requirement R1, Part 1.2.
+Responsible Entities that have multiple-impact rated BES Cyber Systems are not required to
+create separate cyber security policies for high, medium, or low impact BES Cyber Systems. The
+Responsible Entities have the flexibility to develop policies that cover all three impact ratings.
+Implementation of the cyber security policy is not specifically included in CIP-003-8,
+Requirement R1 as it is envisioned that the implementation of this policy is evidenced through
+successful implementation of CIP-003 through CIP-011. However, Responsible Entities are
+encouraged not to limit the scope of their cyber security policies to only those requirements in
+NERC cyber security Reliability Standards, but to develop a holistic cyber security policy
+Page 29 of 59
+CIP-003-8 Supplemental Material
+appropriate for its organization. Elements of a policy that extend beyond the scope of NERC’s
+cyber security Reliability Standards will not be considered candidates for potential violations
+although they will help demonstrate the organization’s internal culture of compliance and
+posture towards cyber security.
+For Part 1.1, the Responsible Entity may consider the following for each of the required topics
+in its one or more cyber security policies for medium and high impact BES Cyber Systems, if any:
+1.1.1 Personnel and training (CIP-004)
+• Organization position on acceptable background investigations
+• Identification of possible disciplinary action for violating this policy
+• Account management
+1.1.2 Electronic Security Perimeters (CIP-005) including Interactive Remote Access
+• Organization stance on use of wireless networks
+• Identification of acceptable authentication methods
+• Identification of trusted and untrusted resources
+• Monitoring and logging of ingress and egress at Electronic Access Points
+• Maintaining up-to-date anti-malware software before initiating Interactive Remote
+Access
+• Maintaining up-to-date patch levels for operating systems and applications used to
+initiate Interactive Remote Access
+• Disabling VPN “split-tunneling” or “dual-homed” workstations before initiating
+Interactive Remote Access
+• For vendors, contractors, or consultants: include language in contracts that requires
+adherence to the Responsible Entity’s Interactive Remote Access controls
+1.1.3 Physical security of BES Cyber Systems (CIP-006)
+• Strategy for protecting Cyber Assets from unauthorized physical access
+• Acceptable physical access control methods
+• Monitoring and logging of physical ingress
+1.1.4 System security management (CIP-007)
+• Strategies for system hardening
+• Acceptable methods of authentication and access control
+• Password policies including length, complexity, enforcement, prevention of brute
+force attempts
+• Monitoring and logging of BES Cyber Systems
+Page 30 of 59
+CIP-003-8 Supplemental Material
+1.1.5 Incident reporting and response planning (CIP-008)
+• Recognition of Cyber Security Incidents
+• Appropriate notifications upon discovery of an incident
+• Obligations to report Cyber Security Incidents
+1.1.6 Recovery plans for BES Cyber Systems (CIP-009)
+• Availability of spare components
+• Availability of system backups
+1.1.7 Configuration change management and vulnerability assessments (CIP-010)
+• Initiation of change requests
+• Approval of changes
+• Break-fix processes
+1.1.8 Information protection (CIP-011)
+• Information access control methods
+• Notification of unauthorized information disclosure
+• Information access on a need-to-know basis
+1.1.9 Declaring and responding to CIP Exceptional Circumstances
+• Processes to invoke special procedures in the event of a CIP Exceptional
+Circumstance
+• Processes to allow for exceptions to policy that do not violate CIP requirements
+For Part 1.2, the Responsible Entity may consider the following for each of the required topics
+in its one or more cyber security policies for assets containing low impact BES Cyber Systems, if
+any:
+1.2.1 Cyber security awareness
+• Method(s) for delivery of security awareness
+• Identification of groups to receive cyber security awareness
+1.2.2 Physical security controls
+• Acceptable approach(es) for selection of physical security control(s)
+1.2.3 Electronic access controls
+• Acceptable approach(es) for selection of electronic access control(s)
+1.2.4 Cyber Security Incident response
+• Recognition of Cyber Security Incidents
+Page 31 of 59
+CIP-003-8 Supplemental Material
+• Appropriate notifications upon discovery of an incident
+• Obligations to report Cyber Security Incidents
+1.2.5 Transient Cyber Assets and Removable Media Malicious Code Risk Mitigation
+• Acceptable use of Transient Cyber Asset(s) and Removable Media
+• Method(s) to mitigate the risk of the introduction of malicious code to low impact
+BES Cyber Systems from Transient Cyber Assets and Removable Media
+• Method(s) to request Transient Cyber Asset and Removable Media
+1.2.6 Declaring and responding to CIP Exceptional Circumstances
+• Process(es) to declare a CIP Exceptional Circumstance
+• Process(es) to respond to a declared CIP Exceptional Circumstance
+Requirements relating to exceptions to a Responsible Entity’s security policies were removed
+because it is a general management issue that is not within the scope of a reliability
+requirement. It is an internal policy requirement and not a reliability requirement. However,
+Responsible Entities are encouraged to continue this practice as a component of their cyber
+security policies.
+In this and all subsequent required approvals in the NERC CIP Reliability Standards, the
+Responsible Entity may elect to use hardcopy or electronic approvals to the extent that there is
+sufficient evidence to ensure the authenticity of the approving party.
+Requirement R2:
+The intent of Requirement R2 is for each Responsible Entity to create, document, and
+implement one or more cyber security plan(s) that address the security objective for the
+protection of low impact BES Cyber Systems. The required protections are designed to be part
+of a program that covers the low impact BES Cyber Systems collectively at an asset level (based
+on the list of assets containing low impact BES Cyber Systems identified in CIP-002), but not at
+an individual device or system level.
+Page 32 of 59
+CIP-003-8 Supplemental Material
+Requirement R2, Attachment 1
+As noted, Attachment 1 contains the sections that must be included in the cyber security
+plan(s). The intent is to allow entities that have a combination of high, medium, and low impact
+BES Cyber Systems the flexibility to choose, if desired, to cover their low impact BES Cyber
+Systems (or any subset) under their programs used for the high or medium impact BES Cyber
+Systems rather than maintain two separate programs. The purpose of the cyber security plan(s)
+in Requirement R2 is for Responsible Entities to use the cyber security plan(s) as a means of
+documenting their approaches to meeting the subject matter areas. The cyber security plan(s)
+can be used to reference other policies and procedures that demonstrate “how” the
+Responsible Entity is meeting each of the subject matter areas, or Responsible Entities can
+develop comprehensive cyber security plan(s) that contain all of the detailed implementation
+content solely within the cyber security plan itself. To meet the obligation for the cyber security
+plan, the expectation is that the cyber security plan contains or references sufficient details to
+address the implementation of each of the required subject matters areas.
+Guidance for each of the subject matter areas of Attachment 1 is provided below.
+Requirement R2, Attachment 1, Section 1 – Cyber Security Awareness
+The intent of the cyber security awareness program is for entities to reinforce good cyber
+security practices with their personnel at least once every 15 calendar months. The entity has
+the discretion to determine the topics to be addressed and the manner in which it will
+communicate these topics. As evidence of compliance, the Responsible Entity should be able to
+produce the awareness material that was delivered according to the delivery method(s) (e.g.,
+posters, emails, or topics at staff meetings, etc.). The standard drafting team does not intend
+for Responsible Entities to be required to maintain lists of recipients and track the reception of
+the awareness material by personnel.
+Although the focus of the awareness is cyber security, it does not mean that only technology-
+related topics can be included in the program. Appropriate physical security topics (e.g.,
+tailgating awareness and protection of badges for physical security, or “If you see something,
+say something” campaigns, etc.) are valid for cyber security awareness. The intent is to cover
+topics concerning any aspect of the protection of BES Cyber Systems.
+Requirement R2, Attachment 1, Section 2 – Physical Security Controls
+The Responsible Entity must document and implement methods to control physical access to
+(1) the asset or the locations of low impact BES Cyber Systems within the asset, and (2) Cyber
+Assets that implement the electronic access control(s) specified by the Responsible Entity in
+Attachment 1, Section 3.1, if any. If these Cyber Assets implementing the electronic access
+controls are located within the same asset as the low impact BES Cyber Asset(s) and inherit the
+same physical access controls and the same need as outlined in Section 2, this may be noted by
+the Responsible Entity in either its policies or cyber security plan(s) to avoid duplicate
+documentation of the same controls.
+The Responsible Entity has the flexibility to select the methods used to meet the objective of
+controlling physical access to (1) the asset(s) containing low impact BES Cyber System(s) or the
+low impact BES Cyber Systems themselves and (2) the electronic access control Cyber Assets
+specified by the Responsible Entity, if any. The Responsible Entity may use one or a
+Page 33 of 59
+CIP-003-8 Supplemental Material
+combination of physical access controls, monitoring controls, or other operational, procedural,
+or technical physical security controls. Entities may use perimeter controls (e.g., fences with
+locked gates, guards, or site access policies, etc.) or more granular areas of physical access
+control in areas where low impact BES Cyber Systems are located, such as control rooms or
+control houses.
+The security objective is to control the physical access based on need as determined by the
+Responsible Entity. The need for physical access can be documented at the policy level. The
+standard drafting team did not intend to obligate an entity to specify a need for each physical
+access or authorization of an individual for physical access.
+Monitoring as a physical security control can be used as a complement or an alternative to
+physical access control. Examples of monitoring controls include, but are not limited to: (1)
+alarm systems to detect motion or entry into a controlled area, or (2) human observation of a
+controlled area. Monitoring does not necessarily require logging and maintaining logs but could
+include monitoring that physical access has occurred or been attempted (e.g., door alarm, or
+human observation, etc.). The standard drafting team’s intent is that the monitoring does not
+need to be per low impact BES Cyber System but should be at the appropriate level to meet the
+security objective of controlling physical access.
+User authorization programs and lists of authorized users for physical access are not required
+although they are an option to meet the security objective.
+Requirement R2, Attachment 1, Section 3 – Electronic Access Controls
+Section 3 requires the establishment of electronic access controls for assets containing low
+impact BES Cyber Systems when there is routable protocol communication or Dial-up
+Connectivity between Cyber Asset(s) outside of the asset containing the low impact BES Cyber
+System(s) and the low impact BES Cyber System(s) within such asset. The establishment of
+electronic access controls is intended to reduce the risks associated with uncontrolled
+communication using routable protocols or Dial-up Connectivity.
+When implementing Attachment 1, Section 3.1, Responsible Entities should note that electronic
+access controls to permit only necessary inbound and outbound electronic access are required
+for communications when those communications meet all three of the criteria identified in
+Attachment 1, Section 3.1. The Responsible Entity should evaluate the communications and
+when all three criteria are met, the Responsible Entity must document and implement
+electronic access control(s).
+When identifying electronic access controls, Responsible Entities are provided flexibility in the
+selection of the electronic access controls that meet their operational needs while meeting the
+security objective of allowing only necessary inbound and outbound electronic access to low
+impact BES Cyber Systems that use routable protocols between a low impact BES Cyber
+System(s) and Cyber Asset(s) outside the asset.
+In essence, the intent is for Responsible Entities to determine whether there is communication
+between a low impact BES Cyber System(s) and a Cyber Asset(s) outside the asset containing
+low impact BES Cyber System(s) that uses a routable protocol when entering or leaving the
+asset or Dial-up Connectivity to the low impact BES Cyber System(s). Where such
+Page 34 of 59
+CIP-003-8 Supplemental Material
+communication is present, Responsible Entities should document and implement electronic
+access control(s). Where routable protocol communication for time-sensitive protection or
+control functions between intelligent electronic devices that meets the exclusion language is
+present, Responsible Entities should document that communication, but are not required to
+establish any specific electronic access controls.
+The inputs to this requirement are the assets identified in CIP-002 as containing low impact BES
+Cyber System(s); therefore, the determination of routable protocol communications or Dial-up
+Connectivity is an attribute of the asset. However, it is not intended for communication that
+provides no access to or from the low impact BES Cyber System(s), but happens to be located at
+the asset with the low impact BES Cyber System(s), to be evaluated for electronic access
+controls.
+Electronic Access Control Exclusion
+In order to avoid future technology issues, the obligations for electronic access controls exclude
+communications between intelligent electronic devices that use routable communication
+protocols for time-sensitive protection or control functions, such as IEC TR-61850-90-5 R-
+GOOSE messaging. Time-sensitive in this context generally means functions that would be
+negatively impacted by the latency introduced in the communications by the required
+electronic access controls. This time-sensitivity exclusion does not apply to SCADA
+communications which typically operate on scan rates of 2 seconds or greater. While
+technically time-sensitive, SCADA communications over routable protocols can withstand the
+delay introduced by electronic access controls. Examples of excluded time-sensitive
+communications are those communications which may necessitate the tripping of a breaker
+within a few cycles. A Responsible Entity using this technology is not expected to implement the
+electronic access controls noted herein. This exception was included so as not to inhibit the
+functionality of the time-sensitive characteristics related to this technology and not to preclude
+the use of such time-sensitive reliability enhancing functions if they use a routable protocol in
+the future.
+Considerations for Determining Routable Protocol Communications
+To determine whether electronic access controls need to be implemented, the Responsible
+Entity has to determine whether there is communication between a low impact BES Cyber
+System(s) and a Cyber Asset(s) outside the asset containing the low impact BES Cyber System(s)
+that uses a routable protocol when entering or leaving the asset.
+When determining whether a routable protocol is entering or leaving the asset containing the
+low impact BES Cyber System(s), Responsible Entities have flexibility in identifying an approach.
+One approach is for Responsible Entities to identify an “electronic boundary” associated with
+the asset containing low impact BES Cyber System(s). This is not an Electronic Security
+Perimeter per se, but a demarcation that demonstrates the routable protocol communication
+entering or leaving the asset between a low impact BES Cyber System and Cyber Asset(s)
+outside the asset to then have electronic access controls implemented. This electronic
+boundary may vary by asset type (Control Center, substation, generation resource) and the
+specific configuration of the asset. If this approach is used, the intent is for the Responsible
+Entity to define the electronic boundary such that the low impact BES Cyber System(s) located
+Page 35 of 59
+CIP-003-8 Supplemental Material
+at the asset are contained within the “electronic boundary.” This is strictly for determining
+which routable protocol communications and networks are internal or inside or local to the
+asset and which are external to or outside the asset.
+Alternatively, the Responsible Entity may find the concepts of what is inside and outside to be
+intuitively obvious for a Cyber Asset(s) outside the asset containing low impact BES Cyber
+System(s) communicating to a low impact BES Cyber System(s) inside the asset. This may be the
+case when a low impact BES Cyber System(s) is communicating with a Cyber Asset many miles
+away and a clear and unambiguous demarcation exists. In this case, a Responsible Entity may
+decide not to identify an “electronic boundary,” but rather to simply leverage the unambiguous
+asset demarcation to ensure that the electronic access controls are placed between the low
+impact BES Cyber System(s) and the Cyber Asset(s) outside the asset.
+Determining Electronic Access Controls
+Once a Responsible Entity has determined that there is routable communication between a low
+impact BES Cyber System(s) and a Cyber Asset(s) outside the asset containing the low impact
+BES Cyber System(s) that uses a routable protocol when entering or leaving the asset containing
+the low impact BES Cyber System(s), the intent is for the Responsible Entity to document and
+implement its chosen electronic access control(s). The control(s) are intended to allow only
+“necessary” inbound and outbound electronic access as determined by the Responsible Entity.
+However the Responsible Entity chooses to document the inbound and outbound access
+permissions and the need, the intent is that the Responsible Entity is able to explain the
+reasons for the electronic access permitted. The reasoning for “necessary” inbound and
+outbound electronic access controls may be documented within the Responsible Entity’s cyber
+security plan(s), within a comment on an access control list, a database, spreadsheet or other
+policies or procedures associated with the electronic access controls.
+Concept Diagrams
+The diagrams on the following pages are provided as examples to illustrate various electronic
+access controls at a conceptual level. Regardless of the concepts or configurations chosen by
+the Responsible Entity, the intent is to achieve the security objective of permitting only
+necessary inbound and outbound electronic access for communication between low impact BES
+Cyber Systems and Cyber Asset(s) outside the asset containing the low impact BES Cyber
+System(s) using a routable protocol when entering or leaving the asset.
+NOTE:
+• This is not an exhaustive list of applicable concepts.
+• The same legend is used in each diagram; however, the diagram may not contain all of the
+articles represented in the legend.
+Page 36 of 59
+CIP-003-8 Supplemental Material
+Reference Model 1 – Host-based Inbound & Outbound Access Permissions
+The Responsible Entity may choose to utilize a host-based firewall technology on the low
+impact BES Cyber System(s) itself that manages the inbound and outbound electronic access
+permissions so that only necessary inbound and outbound electronic access is allowed between
+the low impact BES Cyber System(s) and the Cyber Asset(s) outside the asset containing the low
+impact BES Cyber System(s). When permitting the inbound and outbound electronic access
+permissions using access control lists, the Responsible Entity could restrict communication(s)
+using source and destination addresses or ranges of addresses. Responsible Entities could also
+restrict communication(s) using ports or services based on the capability of the electronic
+access control, the low impact BES Cyber System(s), or the application(s).
+Routable Routable communications
+Protocol entering or leaving the asset
+containing low impact BES
+Cyber System(s)
+Low impact
+BES Cyber
+System
+Asset containing low impact BES Cyber System(s)
+Communication between a
+Non-routable Protocol Routable Protocol low impact BES Cyber System and
+a Cyber Asset outside the asset
+Reference Model 1
+Page 37 of 59
+CIP-003-8 Supplemental Material
+Reference Model 2 – Network-based Inbound & Outbound Access Permissions
+The Responsible Entity may choose to use a security device that permits only necessary
+inbound and outbound electronic access to the low impact BES Cyber System(s) within the
+asset containing the low impact BES Cyber System(s). In this example, two low impact BES
+Cyber Systems are accessed using the routable protocol that is entering or leaving the asset
+containing the low impact BES Cyber System(s). The IP/Serial converter is continuing the same
+communications session from the Cyber Asset(s) that are outside the asset to the low impact
+BES Cyber System(s). The security device provides the electronic access controls to permit only
+necessary inbound and outbound routable protocol access to the low impact BES Cyber
+System(s). When permitting the inbound and outbound electronic access permissions using
+access control lists, the Responsible Entity could restrict communication(s) using source and
+destination addresses or ranges of addresses. Responsible Entities could also restrict
+communication(s) using ports or services based on the capability of the electronic access
+control, the low impact BES Cyber System(s), or the application(s).
+Routable communications
+entering or leaving the asset
+containing low impact BES
+Routable
+Cyber System(s)
+Protocol
+Cyber Asset(s) providing electronic access controls
+Network
+Low impact
+BES Cyber
+System
+Serial
+Non-routable
+IP/Serial
+Protocol
+Converter
+Low impact
+BES Cyber
+System
+Asset containing low impact BES Cyber System(s)
+Communication between a
+Non-routable Protocol Routable Protocol low impact BES Cyber System and
+a Cyber Asset outside the asset
+Reference Model 2
+Page 38 of 59
+CIP-003-8 Supplemental Material
+Reference Model 3 – Centralized Network-based Inbound & Outbound Access
+Permissions
+The Responsible Entity may choose to utilize a security device at a centralized location that may
+or may not be at another asset containing low impact BES Cyber System(s). The electronic
+access control(s) do not necessarily have to reside inside the asset containing the low impact
+BES Cyber System(s). A security device is in place at “Location X” to act as the electronic access
+control and permit only necessary inbound and outbound routable protocol access between
+the low impact BES Cyber System(s) and the Cyber Asset(s) outside each asset containing low
+impact BES Cyber System(s). Care should be taken that electronic access to or between each
+asset is through the Cyber Asset(s) determined by the Responsible Entity to be performing
+electronic access controls at the centralized location. When permitting the inbound and
+outbound electronic access permissions using access control lists, the Responsible Entity could
+restrict communication(s) using source and destination addresses or ranges of addresses.
+Responsible Entities could also restrict communication(s) using ports or services based on the
+capability of the electronic access control, the low impact BES Cyber System(s), or the
+application(s).
+Firewall, Router Access Control List,
+Gateway or Other Security Device
+(Cyber Asset(s) performing electronic
+access controls)
+Location X
+Routable
+Protocol
+Routable communications Routable communications
+entering or leaving the asset entering or leaving the asset
+containing low impact BES containing low impact BES
+Cyber System(s) Cyber System(s)
+Routable
+Routable
+Protocol
+Protocol
+`
+Network Network
+Low impact Low impact
+BES Cyber BES Cyber
+Non BES Cyber Non BES Cyber
+System System
+Systsem System
+Asset containing low impact BES Cyber System(s) Asset containing low impact BES Cyber System(s)
+Communication between a
+Non-routable Protocol Routable Protocol low impact BES Cyber System and
+a Cyber Asset outside the asset
+Reference Model 3
+Page 39 of 59
+CIP-003-8 Supplemental Material
+Reference Model 4 – Uni-directional Gateway
+The Responsible Entity may choose to utilize a uni-directional gateway as the electronic access
+control. The low impact BES Cyber System(s) is not accessible (data cannot flow into the low
+impact BES Cyber System) using the routable protocol entering the asset due to the
+implementation of a “one-way” (uni-directional) path for data to flow. The uni-directional
+gateway is configured to permit only the necessary outbound communications using the
+routable protocol communication leaving the asset.
+Routable communications
+entering or leaving the asset
+Routable
+containing low impact BES
+Protocol
+Cyber System(s)
+Uni-directional
+Gateway
+(Cyber Asset(s) performing
+electronic access controls
+Low impact
+BES Cyber
+System
+Asset containing low impact BES Cyber System(s)
+Communication between a
+Non-routable Protocol Routable Protocol low impact BES Cyber System and
+a Cyber Asset outside the asset
+Reference Model 4
+Page 40 of 59
+CIP-003-8 Supplemental Material
+Reference Model 5 – User Authentication
+This reference model demonstrates that Responsible Entities have flexibility in choosing
+electronic access controls so long as the security objective of the requirement is met. The
+Responsible Entity may choose to utilize a non-BES Cyber Asset located at the asset containing
+the low impact BES Cyber System that requires authentication for communication from the
+Cyber Asset(s) outside the asset. This non-BES Cyber System performing the authentication
+permits only authenticated communication to connect to the low impact BES Cyber System(s),
+meeting the first half of the security objective to permit only necessary inbound electronic
+access. Additionally, the non-BES Cyber System performing authentication is configured such
+that it permits only necessary outbound communication meeting the second half of the security
+objective. Often, the outbound communications would be controlled in this network
+architecture by permitting no communication to be initiated from the low impact BES Cyber
+System. This configuration may be beneficial when the only communication to a device is for
+user-initiated interactive access.
+Routable
+Protocol Routable communications
+entering or leaving the asset
+containing low impact BES
+Cyber System(s)
+Non-BES Cyber System
+(Cyber Asset(s)
+performing electronic
+access controls)
+Serial
+Non-routable
+Protocol
+Low impact
+BES Cyber
+System
+Asset containing low impact BES Cyber System(s)
+Communication between a
+Non-routable Protocol Routable Protocol low impact BES Cyber System and
+a Cyber Asset outside the asset
+Reference Model 5
+Page 41 of 59
+CIP-003-8 Supplemental Material
+Reference Model 6 – Indirect Access
+In implementing its electronic access controls, the Responsible Entity may identify that it has
+indirect access between the low impact BES Cyber System and a Cyber Asset outside the asset
+containing the low impact BES Cyber System through a non-BES Cyber Asset located within the
+asset. This indirect access meets the criteria of having communication between the low impact
+BES Cyber System and a Cyber Asset outside the asset containing the low impact BES Cyber
+System. In this reference model, it is intended that the Responsible Entity implement electronic
+access controls that permit only necessary inbound and outbound electronic access to the low
+impact BES Cyber System. Consistent with the other reference models provided, the electronic
+access in this reference model is controlled using the security device that is restricting the
+communication that is entering or leaving the asset.
+Routable communications
+entering or leaving the asset
+containing low impact BES
+Cyber System(s)
+Routable
+Protocol
+DMZ
+Firewall, Router Access Control List,
+Gateway or Other Security Device
+(Cyber Asset(s) performing electronic
+access controls)
+Network
+Non-BES Cyber Asset
+Low impact
+BES Cyber
+System
+Asset containing low impact BES Cyber System(s)
+Communication between a
+Non-routable Protocol Routable Protocol low impact BES Cyber System and
+a Cyber Asset outside the asset
+Reference Model 6
+Page 42 of 59
+CIP-003-8 Supplemental Material
+Reference Model 7 – Electronic Access Controls at assets containing low impact BES
+Cyber Systems and ERC
+In this reference model, there is both a routable protocol entering and leaving the asset
+containing the low impact BES Cyber System(s) that is used by Cyber Asset(s) outside the asset
+and External Routable Connectivity because there is at least one medium impact BES Cyber
+System and one low impact BES Cyber System within the asset using the routable protocol
+communications. The Responsible Entity may choose to leverage an interface on the medium
+impact Electronic Access Control or Monitoring Systems (EACMS) to provide electronic access
+controls for purposes of CIP-003. The EACMS is therefore performing multiple functions – as a
+medium impact EACMS and as implementing electronic access controls for an asset containing
+low impact BES Cyber Systems.
+Routable communications
+Routable
+entering or leaving the asset
+Protocol
+containing low impact BES
+Cyber System(s)
+ERC
+ESP
+Network
+EAP
+Interface
+Firewall, Router Access Control List,
+Gateway or Other Security Device
+(Cyber Asset(s) performing electronic Medium impact
+access control) BES Cyber
+System with ERC
+Network
+Low impact
+Non-BES Cyber
+BES Cyber
+System
+System
+Asset containing low impact BES Cyber System(s) and medium impact BES Cyber System(s)
+Communication between a
+Non-routable Protocol Routable Protocol low impact BES Cyber System and
+a Cyber Asset outside the asset
+Reference Model 7
+Page 43 of 59
+CIP-003-8 Supplemental Material
+Reference Model 8 – Physical Isolation and Serial Non-routable Communications –
+No Electronic Access Controls Required
+In this reference model, the criteria from Attachment 1, Section 3.1 requiring the
+implementation of electronic access controls are not met. This reference model demonstrates
+three concepts:
+1) The physical isolation of the low impact BES Cyber System(s) from the routable protocol
+communication entering or leaving the asset containing the low impact BES Cyber
+System(s), commonly referred to as an ‘air gap’, mitigates the need to implement the
+required electronic access controls;
+2) The communication to the low impact BES Cyber System from a Cyber Asset outside the
+asset containing the low impact BES Cyber System(s) using only a serial non-routable
+protocol where such communication is entering or leaving the asset mitigates the need
+to implement the required electronic access controls.
+3) The routable protocol communication between the low impact BES Cyber System(s) and
+other Cyber Asset(s), such as the second low impact BES Cyber System depicted, may
+exist without needing to implement the required electronic access controls so long as
+the routable protocol communications never leaves the asset containing the low impact
+BES Cyber System(s).
+Page 44 of 59
+CIP-003-8 Supplemental Material
+Serial Routable
+Non-routable Protocol
+Protocol
+Non-BES Cyber Asset
+Asset containing low impact BES Cyber System(s) Non-BES Cyber Asset
+Page 45 of 59
+Air
+Gap
+No routable communication Routable communication
+entering or leaving the asset entering or leaving the asset
+containing low impact BES containing low impact BES
+Cyber System(s) Cyber System(s), but no
+communication between a
+low impact BES Cyber System
+and a Cyber Asset outside
+the asset
+Low impact
+BES Cyber
+System
+Non-BES Cyber Asset
+Low impact
+BES Cyber
+System
+Communication between a
+Non-routable Protocol Routable Protocol low impact BES Cyber System and
+a Cyber Asset outside the asset
+Reference Model 8
+CIP-003-8 Supplemental Material
+Reference Model 9 – Logical Isolation - No Electronic Access Controls Required
+In this reference model, the criteria from Attachment 1, Section 3.1 requiring the
+implementation of electronic access controls are not met. The Responsible Entity has logically
+isolated the low impact BES Cyber System(s) from the routable protocol communication
+entering or leaving the asset containing low impact BES Cyber System(s). The logical network
+segmentation in this reference model permits no communication between a low impact BES
+Cyber System and a Cyber Asset outside the asset. Additionally, no indirect access exists
+because those non-BES Cyber Assets that are able to communicate outside the asset are strictly
+prohibited from communicating to the low impact BES Cyber System(s). The low impact BES
+Cyber System(s) is on an isolated network segment with logical controls preventing routable
+protocol communication into or out of the network containing the low impact BES Cyber
+System(s) and these communications never leave the asset using a routable protocol.
+Page 46 of 59
+CIP-003-8 Supplemental Material
+Routable communication
+entering or leaving the asset
+No communication is containing low impact BES
+permitted between the Cyber System(s), but no
+control network segment Routable communication between a
+and the non-control network Protocol low impact BES Cyber System
+segment and a Cyber Asset outside
+the asset
+Network Device
+with logical network segmentation
+(Cyber Asset(s) providing electronic access controls)
+Low impact
+BES Cyber
+Non-BES Cyber Asset
+System
+Low impact
+BES Cyber
+System Non-BES Cyber Asset
+Control Network Segment Non-Control Network Segment
+Asset containing low impact BES Cyber System(s)
+Communication between a
+Non-routable Protocol Routable Protocol low impact BES Cyber System and
+a Cyber Asset outside the asset
+Reference Model 9
+Page 47 of 59
+CIP-003-8 Supplemental Material
+Reference Model 10 - Serial Non-routable Communications Traversing an Isolated
+Channel on a Non-routable Transport Network – No Electronic Access Controls
+Required
+In this reference model, the criteria from Attachment 1, Section 3.1 requiring the
+implementation of electronic access controls are not met. This reference model depicts
+communication between a low impact BES Cyber System and a Cyber Asset outside the asset
+containing the low impact BES Cyber System over a serial non-routable protocol which is
+transported across a wide-area network using a protocol independent transport that may carry
+routable and non-routable communication such as a Time-Division Multiplexing (TDM) network,
+a Synchronous Optical Network (SONET), or a Multiprotocol Label Switching (MPLS) network.
+While there is routable protocol communication entering or leaving the asset containing low
+impact BES Cyber Systems(s) and there is communication between a low impact BES Cyber
+System and a Cyber Asset outside the asset, the communication between the low impact BES
+Cyber System and the Cyber Asset outside the asset is not using the routable protocol
+communication. This model is related to Reference Model 9 in that it relies on logical isolation
+to prohibit the communication between a low impact BES Cyber System and a Cyber Asset
+outside the asset from using a routable protocol.
+Page 48 of 59
+CIP-003-8 Supplemental Material
+Serial
+Routable
+Non-routable
+Protocol
+Protocol
+Channel Routable communication
+Channel
+entering or leaving the asset
+containing low impact BES
+Protocol
+No communication is Cyber System(s)
+Independent
+permitted between the serial
+Transport
+non-routable protocol
+network and the routable
+protocol network
+ACFATIIVLE ACFATIIVLE ACFATIIVLE ACFATIIVLE
+CPU SERIAL DC-3 D(SCM-3)4
+ETHERNET 12 TXLOS LOS
+CONSOLE 34 TX
+KELOYAD 56 TXLOS
+Laser hazard
+Non-BES Cyber Asset
+Network
+Serial
+Non-routable
+Protocol
+Low impact
+BES Cyber
+System
+Non-BES Cyber Asset
+Asset containing low impact BES Cyber System(s)
+Communication between a
+Non-routable Protocol Routable Protocol low impact BES Cyber System and
+a Cyber Asset outside the asset
+Reference Model 10
+Page 49 of 59
+CIP-003-8 Supplemental Material
+Dial-up Connectivity
+Dial-up Connectivity to a low impact BES Cyber System is set to dial out only (no auto-answer)
+to a preprogrammed number to deliver data. Incoming Dial-up Connectivity is to a dialback
+modem, a modem that must be remotely controlled by the control center or control room, has
+some form of access control, or the low impact BES Cyber System has access control.
+Insufficient Access Controls
+Some examples of situations that would lack sufficient access controls to meet the intent of this
+requirement include:
+• An asset has Dial-up Connectivity and a low impact BES Cyber System is reachable via an
+auto-answer modem that connects any caller to the Cyber Asset that has a default
+password. There is no practical access control in this instance.
+• A low impact BES Cyber System has a wireless card on a public carrier that allows the
+BES Cyber System to be reachable via a public IP address. In essence, low impact BES
+Cyber Systems should not be accessible from the Internet and search engines such as
+Shodan.
+• Dual-homing or multiple-network interface cards without disabling IP forwarding in the
+non-BES Cyber Asset within the DMZ to provide separation between the low impact BES
+Cyber System(s) and the external network would not meet the intent of “controlling”
+inbound and outbound electronic access assuming there was no other host-based
+firewall or other security devices on the non-BES Cyber Asset.
+Requirement R2, Attachment 1, Section 4 – Cyber Security Incident Response
+The entity should have one or more documented Cyber Security Incident response plan(s) that
+include each of the topics listed in Section 4. If, in the normal course of business, suspicious
+activities are noted at an asset containing low impact BES Cyber System(s), the intent is for the
+entity to implement a Cyber Security Incident response plan that will guide the entity in
+responding to the incident and reporting the incident if it rises to the level of a Reportable
+Cyber Security Incident.
+Entities are provided the flexibility to develop their Attachment 1, Section 4 Cyber Security
+Incident response plan(s) by asset or group of assets. The plans do not need to be on a per
+asset site or per low impact BES Cyber System basis. Entities can choose to use a single
+enterprise-wide plan to fulfill the obligations for low impact BES Cyber Systems.
+The plan(s) must be tested once every 36 months. This is not an exercise per low impact BES
+Cyber Asset or per type of BES Cyber Asset but rather is an exercise of each incident response
+plan the entity created to meet this requirement. An actual Reportable Cyber Security Incident
+counts as an exercise as do other forms of tabletop exercises or drills. NERC-led exercises such
+as GridEx participation would also count as an exercise provided the entity’s response plan is
+followed. The intent of the requirement is for entities to keep the Cyber Security Incident
+response plan(s) current, which includes updating the plan(s), if needed, within 180 days
+following a test or an actual incident.
+For low impact BES Cyber Systems, the only portion of the definition of Cyber Security Incident
+that would apply is‚ “A malicious act or suspicious event that disrupts, or was an attempt to
+Page 50 of 59
+CIP-003-8 Supplemental Material
+disrupt, the operation of a BES Cyber System.” The other portion of that definition is not to be
+used to require ESPs and PSPs for low impact BES Cyber Systems.
+Requirement R2, Attachment 1, Section 5 – Transient Cyber Assets and Removable
+Media Malicious Code Risk Mitigation
+Most BES Cyber Assets and BES Cyber Systems are isolated from external public or untrusted
+networks, and therefore Transient Cyber Assets and Removable Media are needed to transport
+files to and from secure areas to maintain, monitor, or troubleshoot critical systems. Transient
+Cyber Assets and Removable Media are a potential means for cyber-attack. To protect the BES
+Cyber Assets and BES Cyber Systems, CIP-003 Requirement R2, Attachment 1, Section 5
+requires Responsible Entities to document and implement a plan for how they will mitigate the
+risk of malicious code introduction to low impact BES Cyber Systems from Transient Cyber
+Assets and Removable Media. The approach of defining a plan allows the Responsible Entity to
+document processes that are supportable within its organization and in alignment with its
+change management processes.
+Transient Cyber Assets can be one of many types of devices from a specially-designed device for
+maintaining equipment in support of the BES to a platform such as a laptop, desktop, or tablet
+that may interface with or run applications that support BES Cyber Systems and is capable of
+transmitting executable code to the BES Cyber Asset(s) or BES Cyber System(s). Note: Cyber
+Assets connected to a BES Cyber System for less than 30 days due to an unplanned removal,
+such as premature failure, are not intended to be identified as Transient Cyber Assets.
+Removable Media subject to this requirement include, among others, floppy disks, compact
+disks, USB flash drives, external hard drives, and other flash memory cards/drives that contain
+nonvolatile memory.
+Examples of these temporarily connected devices include, but are not limited to:
+• Diagnostic test equipment;
+• Equipment used for BES Cyber System maintenance; or
+• Equipment used for BES Cyber System configuration.
+To meet the objective of mitigating risks associated with the introduction of malicious code at
+low impact BES Cyber Systems, Section 5 specifies the capabilities and possible security
+methods available to Responsible Entities based upon asset type and ownership.
+With the list of options provided in Attachment 1, the entity has the discretion to use the
+option(s) that is most appropriate. This includes documenting its approach for how and when
+the entity reviews the Transient Cyber Asset under its control or under the control of parties
+other than the Responsible Entity. The entity should avoid implementing a security function
+that jeopardizes reliability by taking actions that would negatively impact the performance or
+support of the Transient Cyber Asset or BES Cyber Asset.
+Page 51 of 59
+CIP-003-8 Supplemental Material
+Malicious Code Risk Mitigation
+The terms “mitigate”, “mitigating”, and “mitigation” are used in Section 5 in Attachment 1 to
+address the risks posed by malicious code when connecting Transient Cyber Assets and
+Removable Media to BES Cyber Systems. Mitigation is intended to mean that entities reduce
+security risks presented by connecting the Transient Cyber Asset or Removable Media. When
+determining the method(s) to mitigate the introduction of malicious code, it is not intended for
+entities to perform and document a formal risk assessment associated with the introduction of
+malicious code.
+Per Transient Cyber Asset Capability
+As with other CIP standards, the requirements are intended for an entity to use the method(s)
+that the system is capable of performing. The use of “per Transient Cyber Asset capability” is to
+eliminate the need for a Technical Feasibility Exception when it is understood that the device
+cannot use a method(s). For example, for malicious code, many types of appliances are not
+capable of implementing antivirus software; therefore, because it is not a capability of those
+types of devices, implementation of the antivirus software would not be required for those
+devices.
+Requirement R2, Attachment 1, Section 5.1 - Transient Cyber Asset(s) Managed by
+the Responsible Entity
+For Transient Cyber Assets and Removable Media that are connected to both low impact and
+medium/high impact BES Cyber Systems, entities must be aware of the differing levels of
+requirements and manage these assets under the program that matches the highest impact
+level to which they will connect.
+Section 5.1: Entities are to document and implement their plan(s) to mitigate malicious code
+through the use of one or more of the protective measures listed, based on the capability of the
+Transient Cyber Asset.
+The Responsible Entity has the flexibility to apply the selected method(s) to meet the objective
+of mitigating the introductions of malicious code either in an on-going or in an on-demand
+manner. An example of managing a device in an on-going manner is having the antivirus
+solution for the device managed as part of an end-point security solution with current signature
+or pattern updates, regularly scheduled systems scans, etc. In contrast, for devices that are
+used infrequently and the signatures or patterns are not kept current, the entity may manage
+those devices in an on-demand manner by requiring an update to the signatures or patterns
+and a scan of the device before the device is connected to ensure that it is free of malicious
+code.
+Selecting management in an on-going or on-demand manner is not intended to imply that the
+control has to be verified at every single connection. For example, if the device is managed in
+an on-demand manner, but will be used to perform maintenance on several BES Cyber Asset(s),
+the Responsible Entity may choose to document that the Transient Cyber Asset has been
+updated before being connected as a Transient Cyber Asset for the first use of that
+maintenance work. The intent is not to require a log documenting each connection of a
+Transient Cyber Asset to a BES Cyber Asset.
+Page 52 of 59
+CIP-003-8 Supplemental Material
+The following is additional discussion of the methods to mitigate the introduction of malicious
+code.
+• Antivirus software, including manual or managed updates of signatures or patterns,
+provides flexibility to manage Transient Cyber Asset(s) by deploying antivirus or
+endpoint security tools that maintain a scheduled update of the signatures or patterns.
+Also, for devices that do not regularly connect to receive scheduled updates, entities
+may choose to update the signatures or patterns and scan the Transient Cyber Asset
+prior to connection to ensure no malicious software is present.
+• Application whitelisting is a method of authorizing only the applications and processes
+that are necessary on the Transient Cyber Asset. This reduces the risk that malicious
+software could execute on the Transient Cyber Asset and impact the BES Cyber Asset or
+BES Cyber System.
+• When using methods other than those listed, entities need to document how the other
+method(s) meet the objective of mitigating the risk of the introduction of malicious
+code.
+If malicious code is discovered on the Transient Cyber Asset, it must be mitigated prior to
+connection to a BES Cyber System to prevent the malicious code from being introduced into the
+BES Cyber System. An entity may choose to not connect the Transient Cyber Asset to a BES
+Cyber System to prevent the malicious code from being introduced into the BES Cyber System.
+Entities should also consider whether the detected malicious code is a Cyber Security Incident.
+Requirement R2, Attachment 1, Section 5.2 - Transient Cyber Asset(s) Managed by a
+Party Other than the Responsible Entity
+Section 5 also recognizes the lack of direct control over Transient Cyber Assets that are
+managed by parties other than the Responsible Entity. This lack of control, however, does not
+obviate the Responsible Entity’s responsibility to ensure that methods have been deployed to
+mitigate the introduction of malicious code to low impact BES Cyber System(s) from Transient
+Cyber Assets it does not manage. Section 5 requires entities to review the other party’s security
+practices with respect to Transient Cyber Assets to help meet the objective of the requirement.
+The use of “prior to connecting the Transient Cyber Assets” is intended to ensure that the
+Responsible Entity conducts the review before the first connection of the Transient Cyber Asset
+to help meet the objective to mitigate the introduction of malicious code. The SDT does not
+intend for the Responsible Entity to conduct a review for every single connection of that
+Transient Cyber Asset once the Responsible Entity has established the Transient Cyber Asset is
+meeting the security objective. The intent is to not require a log documenting each connection
+of a Transient Cyber Asset to a BES Cyber Asset.
+To facilitate these controls, Responsible Entities may execute agreements with other parties to
+provide support services to BES Cyber Systems and BES Cyber Assets that may involve the use
+of Transient Cyber Assets. Entities may consider using the Department of Energy Cybersecurity
+Procurement Language for Energy Delivery dated April 2014.1 Procurement language may unify
+1 http://www.energy.gov/oe/downloads/cybersecurity-procurement-language-energy-delivery-april-2014
+Page 53 of 59
+CIP-003-8 Supplemental Material
+the other party and entity actions supporting the BES Cyber Systems and BES Cyber Assets. CIP
+program attributes may be considered including roles and responsibilities, access controls,
+monitoring, logging, vulnerability, and patch management along with incident response and
+back up recovery may be part of the other party’s support. Entities may consider the “General
+Cybersecurity Procurement Language” and “The Supplier’s Life Cycle Security Program” when
+drafting Master Service Agreements, Contracts, and the CIP program processes and controls.
+Section 5.2.1: Entities are to document and implement their process(es) to mitigate the
+introduction of malicious code through the use of one or more of the protective measures
+listed.
+• Review the use of antivirus software and signature or pattern levels to ensure that the
+level is adequate to the Responsible Entity to mitigate the risk of malicious software
+being introduced to an applicable system.
+• Review the antivirus or endpoint security processes of the other party to ensure that
+their processes are adequate to the Responsible Entity to mitigate the risk of
+introducing malicious software to an applicable system.
+• Review the use of application whitelisting used by the other party to mitigate the risk of
+introducing malicious software to an applicable system.
+• Review the use of live operating systems or software executable only from read-only
+media to ensure that the media is free from malicious software itself. Entities should
+review the processes to build the read-only media as well as the media itself.
+• Review system hardening practices used by the other party to ensure that unnecessary
+ports, services, applications, etc. have been disabled or removed. This method intends
+to reduce the attack surface on the Transient Cyber Asset and reduce the avenues by
+which malicious software could be introduced.
+Section 5.2.2: The intent of this section is to ensure that after conducting the selected review
+from Section 5.2.1, if there are deficiencies identified, actions mitigating the risk of the
+introduction of malicious code to low impact BES Cyber Systems must be completed prior to
+connecting the device(s) to an applicable system.
+Requirement R2, Attachment 1, Section 5.3 - Removable Media
+Entities have a high level of control for Removable Media that are going to be connected to
+their BES Cyber Assets.
+Section 5.3: Entities are to document and implement their process(es) to mitigate the
+introduction of malicious code through the use of one or more method(s) to detect malicious
+code on the Removable Media before it is connected to a BES Cyber Asset. When using the
+method(s) to detect malicious code, it is expected to occur from a system that is not part of the
+BES Cyber System to reduce the risk of propagating malicious code into the BES Cyber System
+Page 54 of 59
+CIP-003-8 Supplemental Material
+network or onto one of the BES Cyber Assets. If malicious code is discovered, it must be
+removed or mitigated to prevent it from being introduced into the BES Cyber Asset or BES
+Cyber System. Entities should also consider whether the detected malicious code is a Cyber
+Security Incident. Frequency and timing of the methods used to detect malicious code were
+intentionally excluded from the requirement because there are multiple timing scenarios that
+can be incorporated into a plan to mitigate the risk of malicious code. The SDT does not intend
+to obligate a Responsible Entity to conduct a review for every single connection of Removable
+Media, but rather to implement its plan(s) in a manner that protects all BES Cyber Systems
+where Removable Media may be used. The intent is to not require a log documenting each
+connection of Removable Media to a BES Cyber Asset.
+As a method to detect malicious code, entities may choose to use Removable Media with on-
+board malicious code detection tools. For these tools, the Removable Media are still used in
+conjunction with a Cyber Asset to perform the detection. For Section 5.3.1, the Cyber Asset
+used to perform the malicious code detection must be outside of the BES Cyber System.
+Requirement R3:
+The intent of CIP-003-8, Requirement R3 is effectively unchanged since prior versions of the
+standard. The specific description of the CIP Senior Manager has now been included as a
+defined term rather than clarified in the Reliability Standard itself to prevent any unnecessary
+cross-reference to this standard. It is expected that the CIP Senior Manager will play a key role
+in ensuring proper strategic planning, executive/board-level awareness, and overall program
+governance.
+Requirement R4:
+As indicated in the rationale for CIP-003-8, Requirement R4, this requirement is intended to
+demonstrate a clear line of authority and ownership for security matters. The intent of the SDT
+was not to impose any particular organizational structure, but, rather, the intent is to afford the
+Responsible Entity significant flexibility to adapt this requirement to its existing organizational
+structure. A Responsible Entity may satisfy this requirement through a single delegation
+document or through multiple delegation documents. The Responsible Entity can make use of
+the delegation of the delegation authority itself to increase the flexibility in how this applies to
+its organization. In such a case, delegations may exist in numerous documentation records as
+long as the collection of these documentation records shows a clear line of authority back to
+the CIP Senior Manager. In addition, the CIP Senior Manager could also choose not to delegate
+any authority and meet this requirement without such delegation documentation.
+The Responsible Entity must keep its documentation of the CIP Senior Manager and any
+delegations up-to-date. This is to ensure that individuals do not assume any undocumented
+authority. However, delegations do not have to be re-instated if the individual who delegated
+the task changes roles or the individual is replaced. For instance, assume that John Doe is
+named the CIP Senior Manager and he delegates a specific task to the Substation Maintenance
+Manager. If John Doe is replaced as the CIP Senior Manager, the CIP Senior Manager
+documentation must be updated within the specified timeframe, but the existing delegation to
+Page 55 of 59
+CIP-003-8 Supplemental Material
+the Substation Maintenance Manager remains in effect as approved by the previous CIP Senior
+Manager, John Doe.
+Page 56 of 59
+CIP-003-8 Supplemental Material
+Rationale:
+During development of this standard, text boxes were embedded within the standard to explain
+the rationale for various parts of the standard. Upon BOT approval, the text from the rationale
+text boxes was moved to this section.
+Rationale for Requirement R1:
+One or more security policies enable effective implementation of the requirements of the cyber
+security Reliability Standards. The purpose of policies is to provide a management and
+governance foundation for all requirements that apply to a Responsible Entity’s BES Cyber
+Systems. The Responsible Entity can demonstrate through its policies that its management
+supports the accountability and responsibility necessary for effective implementation of the
+requirements.
+Annual review and approval of the cyber security policies ensures that the policies are kept-up-
+to-date and periodically reaffirms management’s commitment to the protection of its BES
+Cyber Systems.
+Rationale for Requirement R2:
+In response to FERC Order No. 791, Requirement R2 requires entities to develop and implement
+cyber security plans to meet specific security control objectives for assets containing low impact
+BES Cyber System(s). The cyber security plan(s) covers five subject matter areas: (1) cyber
+security awareness; (2) physical security controls; (3) electronic access controls; (4) Cyber
+Security Incident response; and (5) Transient Cyber Asset and Removable Media Malicious Code
+Risk Mitigation. This plan(s), along with the cyber security policies required under Requirement
+R1, Part 1.2, provides a framework for operational, procedural, and technical safeguards for low
+impact BES Cyber Systems.
+Considering the varied types of low impact BES Cyber Systems across the BES, Attachment 1
+provides Responsible Entities flexibility on how to apply the security controls to meet the
+security objectives. Additionally, because many Responsible Entities have multiple-impact rated
+BES Cyber Systems, nothing in the requirement prohibits entities from using their high and
+medium impact BES Cyber System policies, procedures, and processes to implement security
+controls required for low impact BES Cyber Systems, as detailed in Requirement R2,
+Attachment 1.
+Responsible Entities will use their identified assets containing low impact BES Cyber System(s)
+(developed pursuant to CIP-002) to substantiate the sites or locations associated with low
+impact BES Cyber System(s). However, there is no requirement or compliance expectation for
+Responsible Entities to maintain a list(s) of individual low impact BES Cyber System(s) and their
+associated cyber assets or to maintain a list of authorized users.
+Rationale for Modifications to Sections 2 and 3 of Attachment 1 (Requirement R2):
+Requirement R2 mandates that entities develop and implement one or more cyber security
+plan(s) to meet specific security objectives for assets containing low impact BES Cyber
+System(s). In Paragraph 73 of FERC Order No. 822, the Commission directed NERC to modify
+“…the Low Impact External Routable Connectivity definition to reflect the commentary in the
+Guidelines and Technical Basis section of CIP-003-6…to provide needed clarity to the definition
+Page 57 of 59
+CIP-003-8 Supplemental Material
+and eliminate ambiguity surrounding the term ‘direct’ as it is used in the proposed
+definition…within one year of the effective date of this Final Rule.”
+The revisions to Section 3 incorporate select language from the LERC definition into Attachment
+1 and focus the requirement on implementing electronic access controls for asset(s) containing
+low impact BES Cyber System(s). This change requires the Responsible Entity to permit only
+necessary inbound and outbound electronic access when using a routable protocol entering or
+leaving the asset between low impact BES Cyber System(s) and a Cyber Asset(s) outside the
+asset containing low impact BES Cyber system(s). When this communication is present,
+Responsible Entities are required to implement electronic access controls unless that
+communication meets the following exclusion language (previously in the definition of LERC)
+contained in romanette (iii): “not used for time-sensitive protection or control functions
+between intelligent electronic devices (e.g. communications using protocol IEC TR-61850-90-5
+R-GOOSE)”.
+The revisions to Section 2 of Attachment 1 complement the revisions to Section 3;
+consequently, the requirement now mandates the Responsible Entity control physical access to
+“the Cyber Asset(s), as specified by the Responsible Entity, that provide electronic access
+control(s) implemented for Section 3.1, if any.” The focus on electronic access controls rather
+than on the Low Impact BES Cyber System Electronic Access Points (LEAPs) eliminates the need
+for LEAPs.
+Given these revisions to Sections 2 and 3, the NERC Glossary terms: Low Impact External
+Routable Connectivity (LERC) and Low Impact BES Cyber System Electronic Access Point (LEAP)
+will be retired.
+Rationale for Section 5 of Attachment 1 (Requirement R2):
+Requirement R2 mandates that entities develop and implement one or more cyber security
+plan(s) to meet specific security objectives for assets containing low impact BES Cyber
+System(s). In Paragraph 32 of FERC Order No. 822, the Commission directed NERC to “…provide
+mandatory protection for transient devices used at Low Impact BES Cyber Systems based on
+the risk posed to bulk electric system reliability.” Transient devices are potential vehicles for
+introducing malicious code into low impact BES Cyber Systems. Section 5 of Attachment 1 is
+intended to mitigate the risk of malware propagation to the BES through low impact BES Cyber
+Systems by requiring entities to develop and implement one or more plan(s) to address the risk.
+The cyber security plan(s) along with the cyber security policies required under Requirement
+R1, Part 1.2, provide a framework for operational, procedural, and technical safeguards for low
+impact BES Cyber Systems.
+Rationale for Requirement R3:
+The identification and documentation of the single CIP Senior Manager ensures that there is
+clear authority and ownership for the CIP program within an organization, as called for in
+Blackout Report Recommendation 43. The language that identifies CIP Senior Manager
+responsibilities is included in the Glossary of Terms used in NERC Reliability Standards so that it
+may be used across the body of CIP standards without an explicit cross-reference.
+Page 58 of 59
+CIP-003-8 Supplemental Material
+FERC Order No. 706, Paragraph 296, requests consideration of whether the single senior
+manager should be a corporate officer or equivalent. As implicated through the defined term,
+the senior manager has “the overall authority and responsibility for leading and managing
+implementation of the requirements within this set of standards” which ensures that the senior
+manager is of sufficient position in the Responsible Entity to ensure that cyber security receives
+the prominence that is necessary. In addition, given the range of business models for
+responsible entities, from municipal, cooperative, federal agencies, investor owned utilities,
+privately owned utilities, and everything in between, the SDT believes that requiring the CIP
+Senior Manager to be a “corporate officer or equivalent” would be extremely difficult to
+interpret and enforce on a consistent basis.
+Rationale for Requirement R4:
+The intent of the requirement is to ensure clear accountability within an organization for
+certain security matters. It also ensures that delegations are kept up-to-date and that
+individuals do not assume undocumented authority.
+In FERC Order No. 706, Paragraphs 379 and 381, the Commission notes that Recommendation
+43 of the 2003 Blackout Report calls for “clear lines of authority and ownership for security
+matters.” With this in mind, the Standard Drafting Team has sought to provide clarity in the
+requirement for delegations so that this line of authority is clear and apparent from the
+documented delegations.
+Page 59 of 59
+--- END DOCUMENT: cip-003-8.pdf ---
+

@@ -1,0 +1,314 @@
+--- START DOCUMENT: cip-011-4.pdf ---
+CIP-011-4 — Cyber Security — Information Protection
+A. Introduction
+1. Title: Cyber Security — Information Protection
+2. Number: CIP-011-4
+3. Purpose: To prevent unauthorized access to BES Cyber System Information (BCSI) by
+specifying information protection requirements in support of protecting BES Cyber Systems
+(BCS) against compromise that could lead to misoperation or instability in the Bulk Electric
+System (BES).
+4. Applicability:
+4.1. Functional Entities: For the purpose of the requirements contained herein, the
+following list of functional entities will be collectively referred to as “Responsible
+Entities.” For requirements in this standard where a specific functional entity or
+subset of functional entities are the applicable entity or entities, the functional entity
+or entities are specified explicitly.
+4.1.1 Balancing Authority
+4.1.2 Distribution Provider that owns one or more of the following Facilities,
+systems, and equipment for the protection or restoration of the BES:
+4.1.2.1 Each underfrequency Load shedding (UFLS) or undervoltage Load
+shedding (UVLS) system that:
+4.1.2.1.1 is part of a Load shedding program that is subject to one or
+more requirements in a NERC or Regional Reliability
+Standard; and
+4.1.2.1.2 performs automatic Load shedding under a common
+control system owned by the Responsible Entity, without
+human operator initiation, of 300 MW or more.
+4.1.2.2 Each Remedial Action Scheme (RAS) where the RAS is subject to one or
+more requirements in a NERC or Regional Reliability Standard.
+4.1.2.3 Each Protection System (excluding UFLS and UVLS) that applies to
+Transmission where the Protection System is subject to one or more
+requirements in a NERC or Regional Reliability Standard.
+4.1.2.4 Each Cranking Path and group of Elements meeting the initial
+switching requirements from a Blackstart Resource up to and including
+the first interconnection point of the starting station service of the
+next generation unit(s) to be started.
+4.1.3 Generator Operator
+4.1.4 Generator Owner
+4.1.5 Reliability Coordinator
+4.1.6 Transmission Operator
+Page 1 of 10
+CIP-011-4 — Cyber Security — Information Protection
+4.1.7 Transmission Owner
+4.2. Facilities: For the purpose of the requirements contained herein, the following
+Facilities, systems, and equipment owned by each Responsible Entity in 4.1 above are
+those to which these requirements are applicable. For requirements in this standard
+where a specific type of Facilities, system, or equipment or subset of Facilities,
+systems, and equipment are applicable, these are specified explicitly.
+4.2.1 Distribution Provider: One or more of the following Facilities, systems and
+equipment owned by the Distribution Provider for the protection or
+restoration of the BES:
+4.2.1.1 Each UFLS or UVLS System that:
+4.2.1.1.1 is part of a Load shedding program that is subject to one or
+more requirements in a NERC or Regional Reliability
+Standard; and
+4.2.1.1.2 performs automatic Load shedding under a common
+control system owned by the Responsible Entity, without
+human operator initiation, of 300 MW or more.
+4.2.1.2 Each RAS where the RAS is subject to one or more requirements in a
+NERC or Regional Reliability Standard.
+4.2.1.3 Each Protection System (excluding UFLS and UVLS) that applies to
+Transmission where the Protection System is subject to one or more
+requirements in a NERC or Regional Reliability Standard.
+4.2.1.4 Each Cranking Path and group of Elements meeting the initial
+switching requirements from a Blackstart Resource up to and including
+the first interconnection point of the starting station service of the
+next generation unit(s) to be started.
+4.2.2 Responsible Entities listed in 4.1 other than Distribution Providers:
+All BES Facilities.
+4.2.3 Exemptions: The following are exempt from Standard CIP-011-4:
+4.2.3.1 Cyber Systems at Facilities regulated by the Canadian Nuclear Safety
+Commission.
+4.2.3.2 Cyber Systems associated with communication networks and data
+communication links between discrete Electronic Security Perimeters
+(ESP).
+4.2.3.3 Cyber Systems, associated with communication networks and data
+communication links, between the Cyber Systems providing
+confidentiality and integrity of an ESP that extends to one or more
+geographic locations.
+Page 2 of 10
+CIP-011-4 — Cyber Security — Information Protection
+4.2.3.4 The systems, structures, and components that are regulated by the
+Nuclear Regulatory Commission under a cyber security plan pursuant
+to 10 C.F.R. Section 73.54.
+4.2.3.5 For Distribution Providers, the systems and equipment that are not
+included in section 4.2.1 above.
+4.2.3.6 Responsible Entities that identify that they have no BES Cyber Systems
+categorized as high impact or medium impact according to the CIP-002
+identification and categorization processes.
+4.3. “Applicable Systems”: Each table has an “Applicable Systems” column to define the
+scope of systems to which a specific requirement part applies.
+5. Effective Dates: See “Project 2016-02 Modifications to CIP Standards” Implementation Plan.
+Page 3 of 10
+CIP-011-4 — Cyber Security — Information Protection
+B. Requirements and Measures
+R1. Each Responsible Entity shall implement one or more documented information protection program(s) for BCSI pertaining to
+Applicable Systems identified in CIP-011-4 Table R1 – Information Protection Program that collectively includes each of the
+applicable requirement parts in CIP-011-4 Table R1 – Information Protection Program. [Violation Risk Factor: Medium]
+[Time Horizon: Operations Planning].
+M1. Evidence for the information protection program must include the applicable requirement parts in CIP-011-4 Table R1 –
+Information Protection Program and additional evidence to demonstrate implementation as described in the Measures
+column of the table.
+CIP-011-4 Table R1 – Information Protection Program
+Part Applicable Systems Requirements Measures
+1.1 High impact BCS and their associated: Method(s) to identify BCSI. Examples of evidence may include, but are
+not limited to, the following:
+1. Electronic Access Control and
+Monitoring Systems (EACMS); and • Documented method(s) to identify
+BCSI from the entity’s information
+2. Physical Access Control Systems
+protection program; or
+(PACS)
+• Indications on information (e.g., labels
+Medium impact BCS and their associated:
+or classification) that identify BCSI as
+1. EACMS; and
+designated in the entity’s information
+protection program; or
+2. PACS
+• Training materials that provide
+Shared Cyber Infrastructure (SCI)
+personnel with sufficient knowledge
+supporting an Applicable System in this
+to identify BCSI; or
+Part
+• Storage locations identified for
+housing BCSI in the entity’s
+information protection program.
+1.2 High impact BCS and their associated: Method(s) to protect and securely Examples of evidence for on-premise BCSI
+handle BCSI to mitigate risks of may include, but are not limited to, the
+1. EACMS; and
+compromising confidentiality. following:
+2. PACS
+• Procedures for protecting and
+Medium impact BCS and their associated:
+securely handling, which include
+Page 4 of 10
+CIP-011-4 — Cyber Security — Information Protection
+CIP-011-4 Table R1 – Information Protection Program
+Part Applicable Systems Requirements Measures
+topics such as storage, security
+1. EACMS; and
+during transit, and use of BCSI; or
+2. PACS • Records indicating that BCSI is
+handled in a manner consistent
+SCI supporting an Applicable System in
+with the entity’s documented
+this Part
+procedure(s).
+Examples of evidence for off-premise BCSI
+may include, but are not limited to, the
+following:
+• Implementation of electronic
+technical method(s) to protect
+electronic BCSI (e.g., data
+masking, encryption, hashing,
+tokenization, cipher, electronic
+key management); or
+• Implementation of physical
+technical method(s) to protect
+physical BCSI (e.g., physical lock
+and key management, physical
+badge management, biometrics,
+alarm system); or
+• Implementation of administrative
+method(s) to protect BCSI (e.g.,
+vendor service risk assessments,
+business agreements).
+Page 5 of 10
+CIP-011-4 — Cyber Security — Information Protection
+R2. Each Responsible Entity shall implement one or more documented process(es) that collectively include the applicable
+requirement parts in CIP-011-4 Table R2 –Reuse and Disposal. [Violation Risk Factor: Lower] [Time Horizon: Operations
+Planning].
+M2. Evidence must include each of the applicable documented processes that collectively include each of the applicable
+requirement parts in CIP-011-4 Table R2 –Reuse and Disposal and additional evidence to demonstrate implementation as
+described in the Measures column of the table.
+CIP-011-4 Table R2 –Reuse and Disposal
+Part Applicable Systems Requirements Measures
+Methods to prevent the unauthorized
+2.1 High impact BCS and their associated: Examples of evidence may include, but are
+retrieval of BCSI from Applicable Systems
+not limited to, the following:
+1. EACMS; containing BCSI, prior to their disposal or
+reuse (except for reuse within other • Records tracking sanitization actions
+2. PACS; and
+systems identified in the Applicable taken to prevent unauthorized retrieval
+3. PCA Systems column). of BCSI such as clearing, purging, or
+destroying; or
+Medium impact BCS and their
+associated: • Records tracking actions such as
+encrypting, retaining in the Physical
+1. EACMS;
+Security Perimeter (PSP) or other
+2. PACS; and
+methods used to prevent unauthorized
+3. PCA retrieval of BCSI.
+SCI supporting an Applicable System in
+this Part
+Page 6 of 10
+CIP-011-4 — Cyber Security — Information Protection
+B. Compliance
+1. Compliance Monitoring Process:
+1.1. Compliance Enforcement Authority: “Compliance Enforcement Authority” (CEA)
+means NERC or the Regional Entity, or any entity as otherwise designated by an
+Applicable Governmental Authority, in their respective roles of monitoring and/or
+enforcing compliance with mandatory and enforceable Reliability Standards in
+their respective jurisdictions.
+1.2. Evidence Retention: The following evidence retention period(s) identify the period
+of time an entity is required to retain specific evidence to demonstrate
+compliance. For instances where the evidence retention period specified below is
+shorter than the time since the last audit, the CEA may ask an entity to provide
+other evidence to show that it was compliant for the full time period since the last
+audit.
+The applicable entity shall keep data or evidence to show compliance as identified
+below unless directed by its CEA to retain specific evidence for a longer period of
+time as part of an investigation:
+• The applicable entity shall retain evidence of each requirement in this standard
+for three calendar years.
+• If an applicable entity is found non-compliant, it shall keep information related
+to the non-compliance until mitigation is complete and approved or for the
+time specified above, whichever is longer.
+• The CEA shall keep the last audit records and all requested and submitted
+subsequent audit records.
+1.3. Compliance Monitoring and Enforcement Program: As defined in the NERC Rules
+of Procedure, “Compliance Monitoring and Enforcement Program” refers to the
+identification of the processes that will be used to evaluate data or information for
+the purpose of assessing performance or outcomes with the associated Reliability
+Standard.
+Page 7 of 10
+CIP-011-4 — Cyber Security — Information Protection
+Violation Severity Levels
+R # Violation Severity Levels (CIP-011-4)
+Lower VSL Moderate VSL High VSL Severe VSL
+R1 N/A N/A The Responsible Entity did not The Responsible Entity neither
+implement one or more BCSI documented nor implemented one or
+protection program(s). more BCSI protection program(s).
+(Requirement R1) (Requirement R1)
+OR
+The Responsible Entity did not
+implement at least one method to
+identify BCSI. (Part 1.1)
+OR
+The Responsible Entity did not
+implement at least one method to
+protect and securely handle BCSI.
+(Part 1.2)
+R2 N/A The Responsible Entity The Responsible Entity did not The Responsible Entity neither
+did not include include disposal processes to documented nor implemented any
+processes for reuse to prevent the unauthorized retrieval processes for applicable requirement
+prevent the of BCSI from an Applicable System. parts in CIP-011-4 Table R2 –Reuse and
+unauthorized retrieval (Part 2.1) Disposal. (Requirement R2)
+of BCSI from an
+Applicable System.
+(Part 2.1)
+Page 8 of 10
+CIP-011-4 — Cyber Security — Information Protection
+C. Regional Variances
+None.
+D. Interpretations
+None.
+E. Associated Documents
+• Implementation Plan for Project 2016-02
+• CIP-011-4 Technical Rationale
+Page 9 of 10
+CIP-011-4 — Cyber Security — Information Protection
+Version History
+Version Date Action Change Tracking
+1 11/26/12 Adopted by the NERC Board of Developed to define the
+Trustees. information protection
+requirements in coordination
+with other CIP standards and to
+address the balance of the FERC
+directives in its Order 706.
+1 11/22/13 FERC Order issued approving CIP-
+011-1. (Order becomes effective on
+2/3/14.)
+2 11/13/14 Adopted by the NERC Board of Addressed two FERC directives
+Trustees. from Order No. 791 related to
+identify, assess, and correct
+language and communication
+networks.
+2 2/12/15 Adopted by the NERC Board of Replaces the version adopted by
+Trustees. the Board on 11/13/2014.
+Revised version addresses
+remaining directives from Order
+No. 791 related to transient
+devices and low impact BES
+Cyber Systems.
+2 1/21/16 FERC Order issued approving CIP-
+011-2. Docket No. RM15-14-000
+3 8/12/21 Adopted by the NERC Board of Revised to enhance BES
+Trustees reliability for entities to manage
+their BCSI.
+3 12/7/21 FERC Order issued approving CIP- “A Responsible Entity may elect
+011-3 Docket No. RD21-6-000 to comply with the requirements
+in CIP-004-7 and CIP-011-3
+following their approval by the
+applicable governmental
+authority, but prior to their
+Effective Date. In such a case,
+the Responsible Entity shall
+notify the applicable Regional
+Entities of the date of
+compliance with the CIP-004-7
+and CIP-011-3 Reliability
+Standards. Responsible Entities
+must comply with CIP-004-6 and
+CIP-011-2 until that date.”
+Virtualization Modifications
+4 5/9/2024 Approved by the NERC Board of
+under Project 2016-02
+Trustees.
+Page 10 of 10
+--- END DOCUMENT: cip-011-4.pdf ---
+

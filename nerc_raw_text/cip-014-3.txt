@@ -1,0 +1,1271 @@
+--- START DOCUMENT: cip-014-3.pdf ---
+CIP-014-3 — Physical Security
+A. Introduction
+1. Title: Physical Security
+2. Number: CIP-014-3
+3. Purpose: To identify and protect Transmission stations and Transmission
+substations, and their associated primary control centers, that if
+rendered inoperable or damaged as a result of a physical attack could
+result in instability, uncontrolled separation, or Cascading within an
+Interconnection.
+4. Applicability:
+4.1. Functional Entities:
+4.1.1 Transmission Owner that owns a Transmission station or Transmission
+substation that meets any of the following criteria:
+4.1.1.1 Transmission Facilities operated at 500 kV or higher. For the purpose
+of this criterion, the collector bus for a generation plant is not
+considered a Transmission Facility, but is part of the generation
+interconnection Facility.
+4.1.1.2 Transmission Facilities that are operating between 200 kV and 499 kV
+at a single station or substation, where the station or substation is
+connected at 200 kV or higher voltages to three or more other
+Transmission stations or substations and has an "aggregate weighted
+value" exceeding 3000 according to the table below. The "aggregate
+weighted value" for a single station or substation is determined by
+summing the "weight value per line" shown in the table below for
+each incoming and each outgoing BES Transmission Line that is
+connected to another Transmission station or substation. For the
+purpose of this criterion, the collector bus for a generation plant is
+not considered a Transmission Facility, but is part of the generation
+interconnection Facility.
+Voltage Value of a Line Weight Value per Line
+less than 200 kV (not (not applicable)
+applicable)
+200 kV to 299 kV 700
+300 kV to 499 kV 1300
+500 kV and above 0
+4.1.1.3 Transmission Facilities at a single station or substation location that
+are identified by its Reliability Coordinator, Planning Coordinator, or
+Page 1 of 36
+CIP-014-3 — Physical Security
+Transmission Planner as critical to the derivation of Interconnection
+Reliability Operating Limits (IROLs) and their associated
+contingencies.
+4.1.1.4 Transmission Facilities identified as essential to meeting Nuclear Plant
+Interface Requirements.
+4.1.2 Transmission Operator.
+Exemption: Facilities in a “protected area,” as defined in 10 C.F.R. § 73.2, within
+the scope of a security plan approved or accepted by the Nuclear Regulatory
+Commission are not subject to this Standard; or, Facilities within the scope of a
+security plan approved or accepted by the Canadian Nuclear Safety Commission
+are not subject to this Standard.
+5. Effective Dates:
+See Implementation Plan for CIP-014-2.
+6. Background:
+This Reliability Standard addresses the directives from the FERC order issued March 7,
+2014, Reliability Standards for Physical Security Measures, 146 FERC ¶ 61,166 (2014),
+which required NERC to develop a physical security reliability standard(s) to identify
+and protect facilities that if rendered inoperable or damaged could result in
+instability, uncontrolled separation, or Cascading within an Interconnection.
+Page 2 of 36
+CIP-014-3 — Physical Security
+B. Requirements and Measures
+R1. Each Transmission Owner shall perform an initial risk assessment and subsequent risk
+assessments of its Transmission stations and Transmission substations (existing and
+planned to be in service within 24 months) that meet the criteria specified in
+Applicability Section 4.1.1. The initial and subsequent risk assessments shall consist of
+a transmission analysis or transmission analyses designed to identify the Transmission
+station(s) and Transmission substation(s) that if rendered inoperable or damaged
+could result in instability, uncontrolled separation, or Cascading within an
+Interconnection. [VRF: High; Time-Horizon: Long-term Planning]
+1.1. Subsequent risk assessments shall be performed:
+• At least once every 30 calendar months for a Transmission Owner that has
+identified in its previous risk assessment (as verified according to
+Requirement R2) one or more Transmission stations or Transmission
+substations that if rendered inoperable or damaged could result in instability,
+uncontrolled separation, or Cascading within an Interconnection; or
+• At least once every 60 calendar months for a Transmission Owner that has not
+identified in its previous risk assessment (as verified according to
+Requirement R2) any Transmission stations or Transmission substations that if
+rendered inoperable or damaged could result in instability, uncontrolled
+separation, or Cascading within an Interconnection.
+1.2. The Transmission Owner shall identify the primary control center that
+operationally controls each Transmission station or Transmission substation
+identified in the Requirement R1 risk assessment.
+M1. Examples of acceptable evidence may include, but are not limited to, dated written or
+electronic documentation of the risk assessment of its Transmission stations and
+Transmission substations (existing and planned to be in service within 24 months) that
+meet the criteria in Applicability Section 4.1.1 as specified in Requirement R1.
+Additionally, examples of acceptable evidence may include, but are not limited to,
+dated written or electronic documentation of the identification of the primary control
+center that operationally controls each Transmission station or Transmission
+substation identified in the Requirement R1 risk assessment as specified in
+Requirement R1, Part 1.2.
+R2. Each Transmission Owner shall have an unaffiliated third party verify the risk
+assessment performed under Requirement R1. The verification may occur concurrent
+with or after the risk assessment performed under Requirement R1. [VRF: Medium;
+Time-Horizon: Long-term Planning]
+2.1. Each Transmission Owner shall select an unaffiliated verifying entity that is
+either:
+Page 3 of 36
+CIP-014-3 — Physical Security
+• A registered Planning Coordinator, Transmission Planner, or Reliability
+Coordinator; or
+• An entity that has transmission planning or analysis experience.
+2.2. The unaffiliated third party verification shall verify the Transmission Owner’s risk
+assessment performed under Requirement R1, which may include
+recommendations for the addition or deletion of a Transmission station(s) or
+Transmission substation(s). The Transmission Owner shall ensure the
+verification is completed within 90 calendar days following the completion of the
+Requirement R1 risk assessment.
+2.3. If the unaffiliated verifying entity recommends that the Transmission Owner add
+a Transmission station(s) or Transmission substation(s) to, or remove a
+Transmission station(s) or Transmission substation(s) from, its identification
+under Requirement R1, the Transmission Owner shall either, within 60 calendar
+days of completion of the verification, for each recommended addition or
+removal of a Transmission station or Transmission substation:
+• Modify its identification under Requirement R1 consistent with the
+recommendation; or
+• Document the technical basis for not modifying the identification in
+accordance with the recommendation.
+2.4. Each Transmission Owner shall implement procedures, such as the use of non-
+disclosure agreements, for protecting sensitive or confidential information made
+available to the unaffiliated third party verifier and to protect or exempt
+sensitive or confidential information developed pursuant to this Reliability
+Standard from public disclosure.
+M2. Examples of acceptable evidence may include, but are not limited to, dated written or
+electronic documentation that the Transmission Owner completed an unaffiliated
+third party verification of the Requirement R1 risk assessment and satisfied all of the
+applicable provisions of Requirement R2, including, if applicable, documenting the
+technical basis for not modifying the Requirement R1 identification as specified under
+Part 2.3. Additionally, examples of evidence may include, but are not limited to,
+written or electronic documentation of procedures to protect information under Part
+2.4.
+R3. For a primary control center(s) identified by the Transmission Owner according to
+Requirement R1, Part 1.2 that a) operationally controls an identified Transmission
+station or Transmission substation verified according to Requirement R2, and b) is not
+under the operational control of the Transmission Owner: the Transmission Owner
+shall, within seven calendar days following completion of Requirement R2, notify the
+Transmission Operator that has operational control of the primary control center of
+Page 4 of 36
+CIP-014-3 — Physical Security
+such identification and the date of completion of Requirement R2. [VRF: Lower; Time-
+Horizon: Long-term Planning]
+3.1. If a Transmission station or Transmission substation previously identified under
+Requirement R1 and verified according to Requirement R2 is removed from the
+identification during a subsequent risk assessment performed according to
+Requirement R1 or a verification according to Requirement R2, then the
+Transmission Owner shall, within seven calendar days following the verification
+or the subsequent risk assessment, notify the Transmission Operator that has
+operational control of the primary control center of the removal.
+M3. Examples of acceptable evidence may include, but are not limited to, dated written or
+electronic notifications or communications that the Transmission Owner notified each
+Transmission Operator, as applicable, according to Requirement R3.
+R4. Each Transmission Owner that identified a Transmission station, Transmission
+substation, or a primary control center in Requirement R1 and verified according to
+Requirement R2, and each Transmission Operator notified by a Transmission Owner
+according to Requirement R3, shall conduct an evaluation of the potential threats and
+vulnerabilities of a physical attack to each of their respective Transmission station(s),
+Transmission substation(s), and primary control center(s) identified in Requirement
+R1 and verified according to Requirement R2. The evaluation shall consider the
+following: [VRF: Medium; Time-Horizon: Operations Planning, Long-term Planning]
+4.1. Unique characteristics of the identified and verified Transmission station(s),
+Transmission substation(s), and primary control center(s);
+4.2. Prior history of attack on similar facilities taking into account the frequency,
+geographic proximity, and severity of past physical security related events; and
+4.3. Intelligence or threat warnings received from sources such as law enforcement,
+the Electric Reliability Organization (ERO), the Electricity Sector Information
+Sharing and Analysis Center (ES-ISAC), U.S. federal and/or Canadian
+governmental agencies, or their successors.
+M4. Examples of evidence may include, but are not limited to, dated written or electronic
+documentation that the Transmission Owner or Transmission Operator conducted an
+evaluation of the potential threats and vulnerabilities of a physical attack to their
+respective Transmission station(s), Transmission substation(s) and primary control
+center(s) as specified in Requirement R4.
+R5. Each Transmission Owner that identified a Transmission station, Transmission
+substation, or primary control center in Requirement R1 and verified according to
+Requirement R2, and each Transmission Operator notified by a Transmission Owner
+according to Requirement R3, shall develop and implement a documented physical
+security plan(s) that covers their respective Transmission station(s), Transmission
+substation(s), and primary control center(s). The physical security plan(s) shall be
+Page 5 of 36
+CIP-014-3 — Physical Security
+developed within 120 calendar days following the completion of Requirement R2 and
+executed according to the timeline specified in the physical security plan(s). The
+physical security plan(s) shall include the following attributes: [VRF: High; Time-
+Horizon: Long-term Planning]
+5.1. Resiliency or security measures designed collectively to deter, detect, delay,
+assess, communicate, and respond to potential physical threats and
+vulnerabilities identified during the evaluation conducted in Requirement R4.
+5.2. Law enforcement contact and coordination information.
+5.3. A timeline for executing the physical security enhancements and modifications
+specified in the physical security plan.
+5.4. Provisions to evaluate evolving physical threats, and their corresponding security
+measures, to the Transmission station(s), Transmission substation(s), or primary
+control center(s).
+M5. Examples of evidence may include, but are not limited to, dated written or electronic
+documentation of its physical security plan(s) that covers their respective identified
+and verified Transmission station(s), Transmission substation(s), and primary control
+center(s) as specified in Requirement R5, and additional evidence demonstrating
+execution of the physical security plan according to the timeline specified in the
+physical security plan.
+R6. Each Transmission Owner that identified a Transmission station, Transmission
+substation, or primary control center in Requirement R1 and verified according to
+Requirement R2, and each Transmission Operator notified by a Transmission Owner
+according to Requirement R3, shall have an unaffiliated third party review the
+evaluation performed under Requirement R4 and the security plan(s) developed
+under Requirement R5. The review may occur concurrently with or after completion
+of the evaluation performed under Requirement R4 and the security plan
+development under Requirement R5. [VRF: Medium; Time-Horizon: Long-term
+Planning]
+6.1. Each Transmission Owner and Transmission Operator shall select an unaffiliated
+third party reviewer from the following:
+• An entity or organization with electric industry physical security experience
+and whose review staff has at least one member who holds either a Certified
+Protection Professional (CPP) or Physical Security Professional (PSP)
+certification.
+• An entity or organization approved by the ERO.
+• A governmental agency with physical security expertise.
+Page 6 of 36
+CIP-014-3 — Physical Security
+• An entity or organization with demonstrated law enforcement, government,
+or military physical security expertise.
+6.2. The Transmission Owner or Transmission Operator, respectively, shall ensure
+that the unaffiliated third party review is completed within 90 calendar days of
+completing the security plan(s) developed in Requirement R5. The unaffiliated
+third party review may, but is not required to, include recommended changes to
+the evaluation performed under Requirement R4 or the security plan(s)
+developed under Requirement R5.
+6.3. If the unaffiliated third party reviewer recommends changes to the evaluation
+performed under Requirement R4 or security plan(s) developed under
+Requirement R5, the Transmission Owner or Transmission Operator shall, within
+60 calendar days of the completion of the unaffiliated third party review, for
+each recommendation:
+• Modify its evaluation or security plan(s) consistent with the recommendation;
+or
+• Document the reason(s) for not modifying the evaluation or security plan(s)
+consistent with the recommendation.
+6.4. Each Transmission Owner and Transmission Operator shall implement
+procedures, such as the use of non-disclosure agreements, for protecting
+sensitive or confidential information made available to the unaffiliated third
+party reviewer and to protect or exempt sensitive or confidential information
+developed pursuant to this Reliability Standard from public disclosure.
+M6. Examples of evidence may include, but are not limited to, written or electronic
+documentation that the Transmission Owner or Transmission Operator had an
+unaffiliated third party review the evaluation performed under Requirement R4 and
+the security plan(s) developed under Requirement R5 as specified in Requirement R6
+including, if applicable, documenting the reasons for not modifying the evaluation or
+security plan(s) in accordance with a recommendation under Part 6.3. Additionally,
+examples of evidence may include, but are not limited to, written or electronic
+documentation of procedures to protect information under Part 6.4.
+Page 7 of 36
+CIP-014-3 — Physical Security
+C. Compliance
+1. Compliance Monitoring Process
+1.1. Compliance Enforcement Authority
+As defined in the NERC Rules of Procedure, “Compliance Enforcement Authority” (CEA) means NERC or the Regional
+Entity in their respective roles of monitoring and enforcing compliance with the NERC Reliability Standards.
+1.2. Evidence Retention
+The following evidence retention periods identify the period of time an entity is required to retain specific evidence to
+demonstrate compliance. For instances where the evidence retention period specified below is shorter than the time
+since the last audit, the CEA may ask an entity to provide other evidence during an on-site visit to show that it was
+compliant for the full time period since the last audit.
+The Transmission Owner and Transmission Operator shall keep data or evidence to show compliance, as identified
+below, unless directed by its Compliance Enforcement Authority (CEA) to retain specific evidence for a longer period
+of time as part of an investigation.
+The responsible entities shall retain documentation as evidence for three years.
+If a Responsible Entity is found non-compliant, it shall keep information related to the non-compliance until
+mitigation is complete and approved, or for the time specified above, whichever is longer.
+The CEA shall keep the last audit records and all requested and submitted subsequent audit records, subject to the
+confidentiality provisions of Section 1500 of the Rules of Procedure and the provisions of Section 1.4 below.
+1.3. Compliance Monitoring and Assessment Processes:
+Compliance Audits
+Self-Certifications
+Spot Checking
+Compliance Violation Investigations
+Self-Reporting
+Complaints Text
+Page 8 of 36
+CIP-014-3 — Physical Security
+2. Table of Compliance Elements
+R # Time VRF Violation Severity Levels (CIP-014-3)
+Horizon
+Lower VSL Moderate VSL High VSL Severe VSL
+R1 Long-term High The Transmission The Transmission The Transmission The Transmission
+Planning Owner performed an Owner performed an Owner performed an Owner performed an
+initial risk initial risk assessment initial risk assessment initial risk
+assessment but did but did so more than but did so more than assessment but did
+so after the date two calendar months four calendar months so more than six
+specified in the after the date after the date calendar months
+implementation plan specified in the specified in the after the date
+for performing the implementation plan implementation plan specified in the
+initial risk for performing the for performing the implementation plan
+assessment but less initial risk assessment initial risk assessment for performing the
+than or equal to two but less than or equal but less than or equal initial risk
+calendar months to four calendar to six calendar months assessment;
+after that date; months after that after that date;
+OR
+date;
+OR OR
+The Transmission
+OR
+The Transmission The Transmission Owner failed to
+Owner that has The Transmission Owner that has perform an initial
+identified in its Owner that has identified in its risk assessment;
+previous risk identified in its previous risk
+OR
+assessment one or previous risk assessment one or
+The Transmission
+more Transmission assessment one or more Transmission
+Owner that has
+stations or more Transmission stations or
+identified in its
+Transmission stations or Transmission
+previous risk
+substations that if Transmission substations that if
+assessment one or
+rendered inoperable substations that if rendered inoperable
+more Transmission
+Page 9 of 36
+CIP-014-3 — Physical Security
+R # Time VRF Violation Severity Levels (CIP-014-3)
+Horizon
+Lower VSL Moderate VSL High VSL Severe VSL
+or damaged could rendered inoperable or damaged could stations or
+result in instability, or damaged could result in instability, Transmission
+uncontrolled result in instability, uncontrolled substations that if
+separation, or uncontrolled separation, or rendered inoperable
+Cascading within an separation, or Cascading within an or damaged could
+Interconnection Cascading within an Interconnection result in instability,
+performed a Interconnection performed a uncontrolled
+subsequent risk performed a subsequent risk separation, or
+assessment but did subsequent risk assessment but did so Cascading within an
+so after 30 calendar assessment but did so after 34 calendar Interconnection
+months but less than after 32 calendar months but less than performed a
+or equal to 32 months but less than or equal to 36 subsequent risk
+calendar months; or equal to 34 calendar months; assessment but did
+calendar months; so after more than
+OR OR
+36 calendar months;
+OR
+The Transmission The Transmission
+OR
+Owner that has not The Transmission Owner that has not
+identified in its Owner that has not identified in its The Transmission
+previous risk identified in its previous risk Owner that has
+assessment any previous risk assessment any identified in its
+Transmission assessment any Transmission stations previous risk
+stations or Transmission stations or Transmission assessment one or
+Transmission or Transmission substations that if more Transmission
+substations that if substations that if rendered inoperable stations or
+rendered inoperable rendered inoperable or damaged could Transmission
+or damaged could or damaged could result in instability, substations that if
+result in instability, result in instability, uncontrolled rendered inoperable
+uncontrolled uncontrolled separation, or or damaged could
+separation, or separation, or Cascading within an result in instability,
+Cascading within an Cascading within an Interconnection uncontrolled
+Page 10 of 36
+CIP-014-3 — Physical Security
+R # Time VRF Violation Severity Levels (CIP-014-3)
+Horizon
+Lower VSL Moderate VSL High VSL Severe VSL
+Interconnection Interconnection performed a separation, or
+performed a performed a subsequent risk Cascading within an
+subsequent risk subsequent risk assessment but did so Interconnection
+assessment but did assessment but did so after 64 calendar failed to perform a
+so after 60 calendar after 62 calendar months but less than risk assessment;
+months but less than months but less than or equal to 66
+OR
+or equal to 62 or equal to 64 calendar months;
+The Transmission
+calendar months. calendar months.
+OR
+Owner that has not
+The Transmission identified in its
+Owner performed a previous risk
+risk assessment but assessment any
+failed to include Part Transmission
+1.2. stations or
+Transmission
+substations that if
+rendered inoperable
+or damaged could
+result in instability,
+uncontrolled
+separation, or
+Cascading within an
+Interconnection
+performed a
+subsequent risk
+assessment but did
+so after more than
+66 calendar months;
+OR
+Page 11 of 36
+CIP-014-3 — Physical Security
+R # Time VRF Violation Severity Levels (CIP-014-3)
+Horizon
+Lower VSL Moderate VSL High VSL Severe VSL
+The Transmission
+Owner that has not
+identified in its
+previous risk
+assessment any
+Transmission station
+and Transmission
+substations that if
+rendered inoperable
+or damaged could
+result in instability,
+uncontrolled
+separation, or
+Cascading within an
+Interconnection
+failed to perform a
+subsequent risk
+assessment.
+R2 Long-term Medium The Transmission The Transmission The Transmission The Transmission
+Planning Owner had an Owner had an Owner had an Owner had an
+unaffiliated third unaffiliated third unaffiliated third party unaffiliated third
+party verify the risk party verify the risk verify the risk party verify the risk
+assessment assessment assessment performed assessment
+performed under performed under under Requirement R1 performed under
+Requirement R1 but Requirement R1 but but did so more than Requirement R1 but
+did so in more than did so more than 100 110 calendar days but did so more than
+90 calendar days but calendar days but less than or equal to 120 calendar days
+less than or equal to less than or equal to 120 calendar days following
+100 calendar days 110 calendar days
+Page 12 of 36
+CIP-014-3 — Physical Security
+R # Time VRF Violation Severity Levels (CIP-014-3)
+Horizon
+Lower VSL Moderate VSL High VSL Severe VSL
+following completion following completion following completion completion of
+of Requirement R1; of Requirement R1; of Requirement R1; Requirement R1;
+OR Or OR OR
+The Transmission The Transmission The Transmission The Transmission
+Owner had an Owner had an Owner had an Owner failed to have
+unaffiliated third unaffiliated third unaffiliated third party an unaffiliated third
+party verify the risk party verify the risk verify the risk party verify the risk
+assessment assessment assessment performed assessment
+performed under performed under under Requirement R1 performed under
+Requirement R1 and Requirement R1 and and modified or Requirement R1;
+modified or modified or documented the
+OR
+documented the documented the technical basis for not
+The Transmission
+technical basis for technical basis for modifying its
+Owner had an
+not modifying its not modifying its identification under
+unaffiliated third
+identification under identification under Requirement R1 as
+party verify the risk
+Requirement R1 as Requirement R1 as required by Part 2.3
+assessment
+required by Part 2.3 required by Part 2.3 but did so more than
+performed under
+but did so more than but did so more than 80 calendar days from
+Requirement R1 but
+60 calendar days and 70 calendar days and completion of the
+failed to implement
+less than or equal to less than or equal to third party
+procedures for
+70 calendar days 80 calendar days verification;
+protecting
+from completion of from completion of
+OR
+information per Part
+the third party the third party
+The Transmission 2.4.
+verification. verification.
+Owner had an
+unaffiliated third party
+verify the risk
+assessment performed
+under Requirement R1
+Page 13 of 36
+CIP-014-3 — Physical Security
+R # Time VRF Violation Severity Levels (CIP-014-3)
+Horizon
+Lower VSL Moderate VSL High VSL Severe VSL
+but failed to modify or
+document the
+technical basis for not
+modifying its
+identification under
+R1 as required by Part
+2.3.
+R3 Long-term Lower The Transmission The Transmission The Transmission The Transmission
+Planning Owner notified the Owner notified the Owner notified the Owner notified the
+Transmission Transmission Transmission Operator Transmission
+Operator that Operator that that operates the Operator that
+operates the primary operates the primary primary control center operates the primary
+control center as control center as as specified in control center as
+specified in specified in Requirement R3 but specified in
+Requirement R3 but Requirement R3 but did so more than 11 Requirement R3 but
+did so more than did so more than nine calendar days and less did so more than 13
+seven calendar days calendar days and than or equal to 13 calendar days
+and less than or equal less than or equal to calendar days following the
+to nine calendar days 11 calendar days following the completion of
+following the following the completion of Requirement R2;
+completion of completion of Requirement R2;
+OR
+Requirement R2; Requirement R2;
+OR
+The Transmission
+OR OR
+The Transmission Owner failed to
+The Transmission The Transmission Owner notified the notify the
+Owner notified the Owner notified the Transmission Operator Transmission
+Transmission Transmission that operates the Operator that it
+Operator that Operator that primary control center operates a control
+operates the primary operates the primary of the removal from
+Page 14 of 36
+CIP-014-3 — Physical Security
+R # Time VRF Violation Severity Levels (CIP-014-3)
+Horizon
+Lower VSL Moderate VSL High VSL Severe VSL
+control center of the control center of the the identification in center identified in
+removal from the removal from the Requirement R1 but Requirement R1;
+identification in identification in did so more than 11
+OR
+Requirement R1 but Requirement R1 but calendar days and less
+The Transmission
+did so more than did so more than nine than or equal to 13
+Owner notified the
+seven calendar days calendar days and calendar days
+Transmission
+and less than or equal less than or equal to following the
+Operator that
+to nine calendar days 11 calendar days verification or the
+operates the primary
+following the following the subsequent risk
+control center of the
+verification or the verification or the assessment.
+removal from the
+subsequent risk subsequent risk
+identification in
+assessment. assessment.
+Requirement R1 but
+did so more than 13
+calendar days
+following the
+verification or the
+subsequent risk
+assessment.
+OR
+The Transmission
+Owner failed to
+notify the
+Transmission
+Operator that
+operates the primary
+control center of the
+removal from the
+Page 15 of 36
+CIP-014-3 — Physical Security
+R # Time VRF Violation Severity Levels (CIP-014-3)
+Horizon
+Lower VSL Moderate VSL High VSL Severe VSL
+identification in
+Requirement R1.
+R4 Operations Medium N/A The Responsible The Responsible The Responsible
+Planning, Entity conducted an Entity conducted an Entity failed to
+Long-term evaluation of the evaluation of the conduct an
+Planning potential physical potential physical evaluation of the
+threats and threats and potential physical
+vulnerabilities to vulnerabilities to threats and
+each of its each of its vulnerabilities to
+Transmission Transmission each of its
+station(s), station(s), Transmission
+Transmission Transmission station(s),
+substation(s), and substation(s), and Transmission
+primary control primary control substation(s), and
+center(s) identified center(s) identified in primary control
+in Requirement R1 Requirement R1 but center(s) identified
+but failed to failed to consider two in Requirement R1;
+consider one of of Parts 4.1 through
+OR
+Parts 4.1 through 4.3 4.3 in the evaluation.
+The Responsible
+in the evaluation.
+Entity conducted an
+evaluation of the
+potential physical
+threats and
+vulnerabilities to
+each of its
+Transmission
+station(s),
+Transmission
+Page 16 of 36
+CIP-014-3 — Physical Security
+R # Time VRF Violation Severity Levels (CIP-014-3)
+Horizon
+Lower VSL Moderate VSL High VSL Severe VSL
+substation(s), and
+primary control
+center(s) identified
+in Requirement R1
+but failed to
+consider Parts 4.1
+through 4.3.
+R5 Long-term High The Responsible The Responsible The Responsible Entity The Responsible
+Planning Entity developed and Entity developed and developed and Entity developed and
+implemented a implemented a implemented a implemented a
+documented physical documented physical documented physical documented
+security plan(s) that security plan(s) that security plan(s) that physical security
+covers each of its covers each of its covers each of its plan(s) that covers
+Transmission Transmission Transmission each of its
+station(s), station(s), station(s), Transmission
+Transmission Transmission Transmission station(s),
+substation(s), and substation(s), and substation(s), and Transmission
+primary control primary control primary control substation(s), and
+center(s) identified in center(s) identified in center(s) identified in primary control
+Requirement R1 but Requirement R1 but Requirement R1 but center(s) identified
+did so more than 120 did so more than 130 did so more than 140 in Requirement R1
+calendar days but calendar days but calendar days but less but did so more than
+less than or equal to less than or equal to than or equal to 150 150 calendar days
+130 calendar days 140 calendar days calendar days after after completing the
+after completing after completing completing verification in
+Requirement R2; Requirement R2; Requirement R2; Requirement R2;
+OR OR OR OR
+Page 17 of 36
+CIP-014-3 — Physical Security
+R # Time VRF Violation Severity Levels (CIP-014-3)
+Horizon
+Lower VSL Moderate VSL High VSL Severe VSL
+The Responsible The Responsible The Responsible Entity The Responsible
+Entity developed and Entity developed and developed and Entity failed to
+implemented a implemented a implemented a develop and
+documented physical documented physical documented physical implement a
+security plan(s) that security plan(s) that security plan(s) that documented
+covers its covers its covers its physical security
+Transmission Transmission Transmission plan(s) that covers
+station(s), station(s), station(s), its Transmission
+Transmission Transmission Transmission station(s),
+substation(s), and substation(s), and substation(s), and Transmission
+primary control primary control primary control substation(s), and
+center(s) identified in center(s) identified in center(s) identified in primary control
+Requirement R1 and Requirement R1 and Requirement R1 and center(s) identified
+verified according to verified according to verified according to in Requirement R1
+Requirement R2 but Requirement R2 but Requirement R2 but and verified
+failed to include one failed to include two failed to include three according to
+of Parts 5.1 through of Parts 5.1 through of Parts 5.1 through Requirement R2.
+5.4 in the plan. 5.4 in the plan. 5.4 in the plan.
+OR
+The Responsible
+Entity developed and
+implemented a
+documented
+physical security
+plan(s) that covers
+its Transmission
+station(s),
+Transmission
+substation(s), and
+primary control
+Page 18 of 36
+CIP-014-3 — Physical Security
+R # Time VRF Violation Severity Levels (CIP-014-3)
+Horizon
+Lower VSL Moderate VSL High VSL Severe VSL
+center(s) identified
+in Requirement R1
+and verified
+according to
+Requirement 2 but
+failed to include
+Parts 5.1 through 5.4
+in the plan.
+R6 Long-term Medium The Responsible The Responsible The Responsible Entity The Responsible
+Planning Entity had an Entity had an had an unaffiliated Entity failed to have
+unaffiliated third unaffiliated third third party review the an unaffiliated third
+party review the party review the evaluation performed party review the
+evaluation performed evaluation performed under Requirement R4 evaluation
+under Requirement under Requirement and the security performed under
+R4 and the security R4 and the security plan(s) developed Requirement R4 and
+plan(s) developed plan(s) developed under Requirement R5 the security plan(s)
+under Requirement under Requirement but did so more than developed under
+R5 but did so in more R5 but did so in more 110 calendar days but Requirement R5 in
+than 90 calendar days than 100 calendar less than or equal to more than 120
+but less than or equal days but less than or 120 calendar days; calendar days;
+to 100 calendar days; equal to 110 calendar
+OR OR
+days;
+OR
+The Responsible Entity The Responsible
+OR
+The Responsible had an unaffiliated Entity failed to have
+Entity had an The Responsible third party review the an unaffiliated third
+unaffiliated third Entity had an evaluation performed party review the
+party review the unaffiliated third under Requirement R4 evaluation
+evaluation performed party review the and the security performed under
+under Requirement evaluation performed plan(s) developed Requirement R4 and
+Page 19 of 36
+CIP-014-3 — Physical Security
+R # Time VRF Violation Severity Levels (CIP-014-3)
+Horizon
+Lower VSL Moderate VSL High VSL Severe VSL
+R4 and the security under Requirement under Requirement R5 the security plan(s)
+plan(s) developed R4 and the security and modified or developed under
+under Requirement plan(s) developed documented the Requirement R5;
+R5 and modified or under Requirement reason for not
+OR
+documented the R5 and modified or modifying the security
+The Responsible
+reason for not documented the plan(s) as specified in
+Entity had an
+modifying the reason for not Part 6.3 but did so
+unaffiliated third
+security plan(s) as modifying the more than 80 calendar
+party review the
+specified in Part 6.3 security plan(s) as days following
+evaluation
+but did so more than specified in Part 6.3 completion of the
+performed under
+60 calendar days and but did so more than third party review;
+Requirement R4 and
+less than or equal to 70 calendar days and
+OR
+the security plan(s)
+70 calendar days less than or equal to
+The Responsible Entity developed under
+following completion 80 calendar days
+had an unaffiliated Requirement R5 but
+of the third party following completion
+third party review the failed to implement
+review. of the third party
+evaluation performed procedures for
+review.
+under Requirement R4 protecting
+and the security information per Part
+plan(s) developed 6.4.
+under Requirement R5
+but did not document
+the reason for not
+modifying the security
+plan(s) as specified in
+Part 6.3.
+Page 20 of 36
+Guidelines and Technical Basis
+D. Regional Variances
+None.
+E. Interpretations
+None.
+F. Associated Documents
+None.
+Version History
+Version Date Action Change Tracking
+1 October 1, Effective Date New
+2015
+2 April 16, 2015 Revised to meet FERC Order 802 Revision
+directive to remove “widespread”.
+2 May 7, 2015 Adopted by the NERC Board of Trustees
+2 July 14, 2015 FERC Letter Order in Docket No.
+RD15-4-000 approving CIP-014-2
+3 January 19, Revised to remove Compliance Section Revision
+2022 1.4
+3 June 16, 2022 FERC Letter Order in Docket No.RD22-3-
+000 approving Modifications to CIP-
+014-3
+Guidelines and Technical Basis
+Section 4 Applicability
+The purpose of Reliability Standard CIP-014 is to protect Transmission stations and
+Transmission substations, and their associated primary control centers that if rendered
+inoperable or damaged as a result of a physical attack could result in instability, uncontrolled
+separation, or Cascading within an Interconnection. To properly include those entities that own
+or operate such Facilities, the Reliability Standard CIP-014 first applies to Transmission Owners
+that own Transmission Facilities that meet the specific criteria in Applicability Section 4.1.1.1
+through 4.1.1.4. The Facilities described in Applicability Section 4.1.1.1 through 4.1.1.4 mirror
+those Transmission Facilities that meet the bright line criteria for “Medium Impact”
+Transmission Facilities under Attachment 1 of Reliability Standard CIP-002-5.1. Each
+Transmission Owner that owns Transmission Facilities that meet the criteria in Section 4.1.1.1
+Page 21 of 36
+Guidelines and Technical Basis
+through 4.1.1.4 is required to perform a risk assessment as specified in Requirement R1 to
+identify its Transmission stations and Transmission substations, and their associated primary
+control centers, that if rendered inoperable or damaged as a result of a physical attack could
+result in instability, uncontrolled separation, or Cascading within an Interconnection. The
+Standard Drafting Team (SDT) expects this population will be small and that many Transmission
+Owners that meet the applicability of this standard will not actually identify any such Facilities.
+Only those Transmission Owners with Transmission stations or Transmission substations
+identified in the risk assessment (and verified under Requirement R2) have performance
+obligations under Requirements R3 through R6.
+This standard also applies to Transmission Operators. A Transmission Operator’s obligations
+under the standard, however, are only triggered if the Transmission Operator is notified by an
+applicable Transmission Owner under Requirement R3 that the Transmission Operator operates
+a primary control center that operationally controls a Transmission station(s) or Transmission
+substation(s) identified in the Requirement R1 risk assessment. A primary control center
+operationally controls a Transmission station or Transmission substation when the control
+center’s electronic actions can cause direct physical action at the identified Transmission
+station or Transmission substation, such as opening a breaker, as opposed to a control center
+that only has information from the Transmission station or Transmission substation and must
+coordinate direct action through another entity. Only Transmission Operators who are notified
+that they have primary control centers under this standard have performance obligations under
+Requirements R4 through R6. In other words, primary control center for purposes of this
+Standard is the control center that the Transmission Owner or Transmission Operator,
+respectively, uses as its primary, permanently-manned site to physically operate a Transmission
+station or Transmission substation that is identified in Requirement R1 and verified in
+Requirement R2. Control centers that provide back-up capability are not applicable, as they
+are a form of resiliency and intentionally redundant.
+The SDT considered several options for bright line criteria that could be used to determine
+applicability and provide an initial threshold that defines the set of Transmission stations and
+Transmission substations that would meet the directives of the FERC order on physical security
+(i.e., those that could cause instability, uncontrolled separation, or Cascading within an
+Interconnection). The SDT determined that using the criteria for Medium Impact Transmission
+Facilities in Attachment 1 of CIP-002-5.1 would provide a conservative threshold for defining
+which Transmission stations and Transmission substations must be included in the risk
+assessment in Requirement R1 of CIP-014. Additionally, the SDT concluded that using the CIP-
+002-5.1 Medium Impact criteria was appropriate because it has been approved by
+stakeholders, NERC, and FERC, and its use provides a technically sound basis to determine
+which Transmission Owners should conduct the risk assessment. As described in CIP-002-5.1,
+the failure of a Transmission station or Transmission substation that meets the Medium Impact
+criteria could have the capability to result in exceeding one or more Interconnection Reliability
+Operating Limits (IROLs). The SDT understands that using this bright line criteria to determine
+applicability may require some Transmission Owners to perform risk assessments under
+Requirement R1 that will result in a finding that none of their Transmission stations or
+Transmission substations would pose a risk of instability, uncontrolled separation, or Cascading
+Page 22 of 36
+Guidelines and Technical Basis
+within an Interconnection. However, the SDT determined that higher bright lines could not be
+technically justified to ensure inclusion of all Transmission stations and Transmission
+substations, and their associated primary control centers that, if rendered inoperable or
+damaged as a result of a physical attack could result in instability, uncontrolled separation, or
+Cascading within an Interconnection. Further guidance and technical basis for the bright line
+criteria for Medium Impact Facilities can be found in the Guidelines and Technical Basis section
+of CIP-002-5.1.
+Additionally, the SDT determined that it was not necessary to include Generator Operators and
+Generator Owners in the Reliability Standard. First, Transmission stations or Transmission
+substations interconnecting generation facilities are considered when determining applicability.
+Transmission Owners will consider those Transmission stations and Transmission substations
+that include a Transmission station on the high side of the Generator Step-up transformer
+(GSU) using Applicability Section 4.1.1.1 and 4.1.1.2. As an example, a Transmission station or
+Transmission substation identified as a Transmission Owner facility that interconnects
+generation will be subject to the Requirement R1 risk assessment if it operates at 500kV or
+greater or if it is connected at 200 kV – 499kV to three or more other Transmission stations or
+Transmission substations and has an "aggregate weighted value" exceeding 3000 according to
+the table in Applicability Section 4.1.1.2. Second, the Transmission analysis or analyses
+conducted under Requirement R1 should take into account the impact of the loss of generation
+connected to applicable Transmission stations or Transmission substations. Additionally, the
+FERC order does not explicitly mention generation assets and is reasonably understood to focus
+on the most critical Transmission Facilities. The diagram below shows an example of a station.
+Page 23 of 36
+Guidelines and Technical Basis
+Also, the SDT uses the phrase “Transmission stations or Transmission substations” to recognize
+the existence of both stations and substations. Many entities in industry consider a substation
+to be a location with physical borders (i.e. fence, wall, etc.) that contains at least an
+autotransformer. Locations also exist that do not contain autotransformers, and many entities
+in industry refer to those locations as stations (switching stations or switchyards). Therefore,
+the SDT chose to use both “station” and “substation” to refer to the locations where groups of
+Transmission Facilities exist.
+On the issue of joint ownership, the SDT recognizes that this issue is not unique to CIP-014, and
+expects that the applicable Transmission Owners and Transmission Operators will develop
+memorandums of understanding, agreements, Coordinated Functional Registrations, or
+procedures, etc., to designate responsibilities under CIP-014 when joint ownership is at issue,
+which is similar to what many entities have completed for other Reliability Standards.
+The language contained in the applicability section regarding the collector bus is directly copied
+from CIP-002-5.1, Attachment 1, and has no additional meaning within the CIP-014 standard.
+Requirement R1
+The initial risk assessment required under Requirement R1 must be completed on or before the
+effective date of the standard. Subsequent risk assessments are to be performed at least once
+every 30 or 60 months depending on the results of the previous risk assessment per
+Requirement R1, Part 1.1. In performing the risk assessment under Requirement R1, the
+Transmission Owner should first identify their population of Transmission stations and
+Transmission substations that meet the criteria contained in Applicability Section 4.1.1.
+Requirement R1 then requires the Transmission Owner to perform a risk assessment, consisting
+of a transmission analysis, to determine which of those Transmission stations and Transmission
+Substations if rendered inoperable or damaged could result in instability, uncontrolled
+separation, or Cascading within an Interconnection. The requirement is not to require
+identification of, and thus, not intended to bring within the scope of the standard a
+Transmission station or Transmission substation unless the applicable Transmission Owner
+determines through technical studies and analyses based on objective analysis, technical
+expertise, operating experience and experienced judgment that the loss of such facility would
+have a critical impact on the operation of the Interconnection in the event the asset is rendered
+inoperable or damaged. In the November 20, 2014 Order, FERC reiterated that “only an
+instability that has a “critical impact on the operation of the interconnection” warrants finding
+that the facility causing the instability is critical under Requirement R1.” The Transmission
+Owner may determine the criteria for critical impact by considering, among other criteria, any
+of the following:
+• Criteria or methodology used by Transmission Planners or Planning Coordinators in TPL-
+001-4, Requirement R6
+• NERC EOP-004-2 reporting criteria
+Page 24 of 36
+Guidelines and Technical Basis
+• Area or magnitude of potential impact
+The standard does not mandate the specific analytical method for performing the risk
+assessment. The Transmission Owner has the discretion to choose the specific method that
+best suites its needs. As an example, an entity may perform a Power Flow analysis and stability
+analysis at a variety of load levels.
+Performing Risk Assessments
+The Transmission Owner has the discretion to select a transmission analysis method that fits its
+facts and system circumstances. To mandate a specific approach is not technically desirable
+and may lead to results that fail to adequately consider regional, topological, and system
+circumstances. The following guidance is only an example on how a Transmission Owner may
+perform a power flow and/or stability analysis to identify those Transmission stations and
+Transmission substations that if rendered inoperable or damaged as a result of a physical attack
+could result in instability, uncontrolled separation, or Cascading within an Interconnection. An
+entity could remove all lines, without regard to the voltage level, to a single Transmission
+station or Transmission substation and review the simulation results to assess system behavior
+to determine if Cascading of Transmission Facilities, uncontrolled separation, or voltage or
+frequency instability is likely to occur over a significant area of the Interconnection. Using
+engineering judgment, the Transmission Owner (possibly in consultation with regional planning
+or operation committees and/or ISO/RTO committee input) should develop criteria (e.g.
+imposing a fault near the removed Transmission station or Transmission substation) to identify
+a contingency or parameters that result in potential instability, uncontrolled separation, or
+Cascading within an Interconnection. Regional consultation on these matters is likely to be
+helpful and informative, given that the inputs for the risk assessment and the attributes of what
+constitutes instability, uncontrolled separation, or Cascading within an Interconnection will
+likely vary from region-to-region or from ISO-to-ISO based on topology, system characteristics,
+and system configurations. Criteria could also include post-contingency facilities loadings above
+a certain emergency rating or failure of a power flow case to converge. Available special
+protection systems (SPS), if any, could be applied to determine if the system experiences any
+additional instability which may result in uncontrolled separation. Example criteria may
+include:
+(a) Thermal overloads beyond facility emergency ratings;
+(b) Voltage deviation exceeding ± 10%; or
+(c) Cascading outage/voltage collapse; or
+(d) Frequency below under-frequency load shed points
+Periodicity
+A Transmission Owner who identifies one or more Transmission stations or Transmission
+substations (as verified under Requirement R2) that if rendered inoperable or damaged could
+Page 25 of 36
+Guidelines and Technical Basis
+result in instability, uncontrolled separation, or Cascading within an Interconnection is required
+to conduct a risk assessment at least once every 30 months. This period ensures that the risk
+assessment remains current with projected conditions and configurations in the planned
+system. This risk assessment, as the initial assessment, must consider applicable planned
+Transmission stations and Transmission substations to be in service within 24 months. The 30
+month timeframe aligns with the 24 month planned to be in service date because the
+Transmission Owner is provided the flexibility, depending on its planning cycle and the
+frequency in which it may plan to construct a new Transmission station or Transmission
+substation to more closely align these dates. The requirement is to conduct the risk assessment
+at least once every 30 months, so for a Transmission Owner that believes it is better to conduct
+a risk assessment once every 24 months, because of its planning cycle, it has the flexibility to do
+so.
+Transmission Owners that have not identified any Transmission stations or Transmission
+substations (as verified under Requirement R2) that if rendered inoperable or damaged could
+result in instability, uncontrolled separation, or Cascading within an Interconnection are
+unlikely to see changes to their risk assessment in the Near-Term Planning Horizon.
+Consequently, a 60 month periodicity for completing a subsequent risk assessment is specified.
+Identification of Primary Control Centers
+After completing the risk assessment specified in Requirement R1, it is important to additionally
+identify the primary control center that operationally controls each Transmission station or
+Transmission substation that if rendered inoperable or damaged could result in instability,
+uncontrolled separation, or Cascading within an Interconnection. A primary control center
+“operationally controls” a Transmission station or Transmission substation when the control
+center’s electronic actions can cause direct physical actions at the identified Transmission
+station and Transmission substation, such as opening a breaker.
+Requirement R2
+This requirement specifies verification of the risk assessment performed under Requirement R1
+by an entity other than the owner or operator of the Requirement R1 risk assessment.
+A verification of the risk assessment by an unaffiliated third party, as specified in Requirement
+R2, could consist of:
+1. Certifying that the Requirement R1 risk assessment considers the Transmission stations
+and Transmission substations identified in Applicability Section 4.1.1.
+2. Review of the model used to conduct the risk assessment to ensure it contains sufficient
+system topology to identify Transmission stations and Transmission substations that if
+rendered inoperable or damaged could cause instability, uncontrolled separation, or
+Cascading within an Interconnection.
+3. Review of the Requirement R1 risk assessment methodology.
+Page 26 of 36
+Guidelines and Technical Basis
+This requirement provides the flexibility for a Transmission Owner to select from unaffiliated
+registered and non-registered entities with transmission planning or analysis experience to
+perform the verification of the Requirement R1 risk assessment. The term unaffiliated means
+that the selected verifying entity cannot be a corporate affiliate (i.e., the verifying or third party
+reviewer cannot be an entity that corporately controls, is controlled by or is under common
+control with, the Transmission Owner). The verifying entity also cannot be a division of the
+Transmission Owner that operates as a functional unit.
+The prohibition on registered entities using a corporate affiliate to conduct the verification,
+however, does not prohibit a governmental entity (e.g., a city, a municipality, a U.S. federal
+power marketing agency, or any other political subdivision of U.S. or Canadian federal, state, or
+provincial governments) from selecting as the verifying entity another governmental entity
+within the same political subdivision. For instance, a U.S. federal power marketing agency may
+select as its verifier another U.S. federal agency to conduct its verification so long as the
+selected entity has transmission planning or analysis experience. Similarly, a Transmission
+Owner owned by a Canadian province can use a separate agency of that province to perform
+the verification. The verifying entity, however, must still be a third party and cannot be a
+division of the registered entity that operates as a functional unit.
+Requirement R2 also provides that the “verification may occur concurrent with or after the risk
+assessment performed under Requirement R1.” This provision is designed to provide the
+Transmission Owner the flexibility to work with the verifying entity throughout (i.e., concurrent
+with) the risk assessment, which for some Transmission Owners may be more efficient and
+effective. In other words, a Transmission Owner could collaborate with their unaffiliated
+verifying entity to perform the risk assessment under Requirement R1 such that both
+Requirement R1 and Requirement R2 are satisfied concurrently. The intent of Requirement R2
+is to have an entity other than the owner or operator of the facility to be involved in the risk
+assessment process and have an opportunity to provide input. Accordingly, Requirement R2 is
+designed to allow entities the discretion to have a two-step process, where the Transmission
+Owner performs the risk assessment and subsequently has a third party review that
+assessment, or a one-step process, where the entity collaborates with a third party to perform
+the risk assessment.
+Characteristics to consider in selecting a third party reviewer could include:
+• Registered Entity with applicable planning and reliability functions.
+• Experience in power system studies and planning.
+• The entity’s understanding of the MOD standards, TPL standards, and facility ratings as
+they pertain to planning studies.
+• The entity’s familiarity with the Interconnection within which the Transmission Owner is
+located.
+With respect to the requirement that Transmission owners develop and implement procedures
+for protecting confidential and sensitive information, the Transmission Owner could have a
+method for identifying documents that require confidential treatment. One mechanism for
+Page 27 of 36
+Guidelines and Technical Basis
+protecting confidential or sensitive information is to prohibit removal of sensitive or
+confidential information from the Transmission Owner’s site. Transmission Owners could
+include such a prohibition in a non-disclosure agreement with the verifying entity.
+A Technical feasibility study is not required in the Requirement R2 documentation of the
+technical basis for not modifying the identification in accordance with the recommendation.
+On the issue of the difference between a verifier in Requirement R2 and a reviewer in
+Requirement R6, the SDT indicates that the verifier will confirm that the risk assessment was
+completed in accordance with Requirement R1, including the number of Transmission stations
+and substations identified, while the reviewer in Requirement R6 is providing expertise on the
+manner in which the evaluation of threats was conducted in accordance with Requirement R4,
+and the physical security plan in accordance with Requirement R5. In the latter situation there
+is no verification of a technical analysis, rather an application of experience and expertise to
+provide guidance or recommendations, if needed.
+Parts 2.4 and 6.4 require the entities to have procedures to protect the confidentiality of
+sensitive or confidential information. Those procedures may include the following elements:
+1. Control and retention of information on site for third party verifiers/reviewers.
+2. Only “need to know” employees, etc., get the information.
+3. Marking documents as confidential
+4. Securely storing and destroying information when no longer needed.
+5. Not releasing information outside the entity without, for example, General
+Counsel sign-off.
+Requirement R3
+Some Transmission Operators will have obligations under this standard for certain primary
+control centers. Those obligations, however, are contingent upon a Transmission Owner first
+completing the risk assessment specified by Requirement R1 and the verification specified by
+Requirement R2. Requirement R3 is intended to ensure that a Transmission Operator that has
+operational control of a primary control center identified in Requirement R1 receive notice so
+that the Transmission Operator may fulfill the rest of the obligations required in Requirements
+R4 through R6. Since the timing obligations in Requirements R4 through R6 are based upon
+completion of Requirement R2, the Transmission Owner must also include within the notice the
+date of completion of Requirement R2. Similarly, the Transmission Owner must notify the
+Transmission Operator of any removals from identification that result from a subsequent risk
+assessment under Requirement R1 or as a result of the verification process under Requirement
+R2.
+Requirement R4
+Page 28 of 36
+Guidelines and Technical Basis
+This requirement requires owners and operators of facilities identified by the Requirement R1
+risk assessment and that are verified under Requirement R2 to conduct an assessment of
+potential threats and vulnerabilities to those Transmission stations, Transmission substations,
+and primary control centers using a tailored evaluation process. Threats and vulnerabilities may
+vary from facility to facility based on any number of factors that include, but are not limited to,
+location, size, function, existing physical security protections, and attractiveness as a target.
+In order to effectively conduct a threat and vulnerability assessment, the asset owner may be
+the best source to determine specific site vulnerabilities, but current and evolving threats may
+best be determined by others in the intelligence or law enforcement communities. A number of
+resources have been identified in the standard, but many others exist and asset owners are not
+limited to where they may turn for assistance. Additional resources may include state or local
+fusion centers, U.S. Department of Homeland Security, Federal Bureau of Investigations (FBI),
+Public Safety Canada, Royal Canadian Mounted Police, and InfraGard chapters coordinated by
+the FBI.
+The Responsible Entity is required to take a number of factors into account in Parts 4.1 to 4.3 in
+order to make a risk-based evaluation under Requirement R4.
+To assist in determining the current threat for a facility, the prior history of attacks on similarly
+protected facilities should be considered when assessing probability and likelihood of
+occurrence at the facility in question.
+Resources that may be useful in conducting threat and vulnerability assessments include:
+• NERC Security Guideline for the Electricity Sector: Physical Security.
+• NERC Security Guideline: Physical Security Response.
+• ASIS International General Risk Assessment Guidelines.
+• ASIS International Facilities Physical Security Measure Guideline.
+• ASIS International Security Management Standard: Physical Asset Protection.
+• Whole Building Design Guide - Threat/Vulnerability Assessments.
+Requirement R5
+This requirement specifies development and implementation of a security plan(s) designed to
+protect against attacks to the facilities identified in Requirement R1 based on the assessment
+performed under Requirement R4.
+Requirement R5 specifies the following attributes for the physical security plan:
+• Resiliency or security measures designed collectively to deter, detect, delay, assess,
+communicate, and respond to potential physical threats and vulnerabilities identified
+during the evaluation conducted in Requirement R4.
+Resiliency may include, among other things:
+Page 29 of 36
+Guidelines and Technical Basis
+a. System topology changes,
+b. Spare equipment,
+c. Construction of a new Transmission station or Transmission substation.
+While most security measures will work together to collectively harden the entire site,
+some may be allocated to protect specific critical components. For example, if
+protection from gunfire is considered necessary, the entity may only install ballistic
+protection for critical components, not the entire site.
+• Law enforcement contact and coordination information.
+Examples of such information may be posting 9-1-1 for emergency calls and providing
+substation safety and familiarization training for local and federal law enforcement, fire
+department, and Emergency Medical Services.
+• A timeline for executing the physical security enhancements and modifications specified
+in the physical security plan.
+Entities have the flexibility to prioritize the implementation of the various resiliency or
+security enhancements and modifications in their security plan according to risk,
+resources, or other factors. The requirement to include a timeline in the physical
+security plan for executing the actual physical security enhancements and modifications
+does not also require that the enhancements and modifications be completed within
+120 days. The actual timeline may extend beyond the 120 days, depending on the
+amount of work to be completed.
+• Provisions to evaluate evolving physical threats, and their corresponding security
+measures, to the Transmission station(s), Transmission substation(s), or primary control
+center(s).
+A registered entity's physical security plan should include processes and responsibilities
+for obtaining and handling alerts, intelligence, and threat warnings from various
+sources. Some of these sources could include the ERO, ES-ISAC, and US and/or Canadian
+federal agencies. This information should be used to reevaluate or consider changes in
+the security plan and corresponding security measures of the security plan found in R5.
+Incremental changes made to the physical security plan prior to the next required third
+party review do not require additional third party reviews.
+Requirement R6
+This requirement specifies review by an entity other than the Transmission Owner or
+Transmission Operator with appropriate expertise for the evaluation performed according to
+Requirement R4 and the security plan(s) developed according to Requirement R5. As with
+Requirement R2, the term unaffiliated means that the selected third party reviewer cannot be a
+corporate affiliate (i.e., the third party reviewer cannot be an entity that corporately controls, is
+controlled by or is under common control with, the Transmission Operator). A third party
+Page 30 of 36
+Guidelines and Technical Basis
+reviewer also cannot be a division of the Transmission Operator that operates as a functional
+unit.
+As noted in the guidance for Requirement R2, the prohibition on registered entities using a
+corporate affiliate to conduct the review, however, does not prohibit a governmental entity
+from selecting as the third party reviewer another governmental entity within the same
+political subdivision. For instance, a city or municipality may use its local enforcement agency,
+so long as the local law enforcement agency satisfies the criteria in Requirement R6. The third
+party reviewer, however, must still be a third party and cannot be a division of the registered
+entity that operates as a functional unit.
+The Responsible Entity can select from several possible entities to perform the review:
+• An entity or organization with electric industry physical security experience and whose
+review staff has at least one member who holds either a Certified Protection
+Professional (CPP) or Physical Security Professional (PSP) certification.
+In selecting CPP and PSP for use in this standard, the SDT believed it was important
+that if a private entity such as a consulting or security firm was engaged to conduct
+the third party review, they must tangibly demonstrate competence to conduct the
+review. This includes electric industry physical security experience and either of the
+premier security industry certifications sponsored by ASIS International. The ASIS
+certification program was initiated in 1977, and those that hold the CPP certification
+are board certified in security management. Those that hold the PSP certification are
+board certified in physical security.
+• An entity or organization approved by the ERO.
+• A governmental agency with physical security expertise.
+• An entity or organization with demonstrated law enforcement, government, or
+military physical security expertise.
+As with the verification under Requirement R2, Requirement R6 provides that the “review may
+occur concurrently with or after completion of the evaluation performed under Requirement
+R4 and the security plan development under Requirement R5.” This provision is designed to
+provide applicable Transmission Owners and Transmission Operators the flexibility to work with
+the third party reviewer throughout (i.e., concurrent with) the evaluation performed according
+to Requirement R4 and the security plan(s) developed according to Requirement R5, which for
+some Responsible Entities may be more efficient and effective. In other words, a Transmission
+Owner or Transmission Operator could collaborate with their unaffiliated third party reviewer
+to perform an evaluation of potential threats and vulnerabilities (Requirement R4) and develop
+a security plan (Requirement R5) to satisfy Requirements R4 through R6 simultaneously. The
+intent of Requirement R6 is to have an entity other than the owner or operator of the facility to
+be involved in the Requirement R4 evaluation and the development of the Requirement R5
+security plans and have an opportunity to provide input on the evaluation and the security plan.
+Accordingly, Requirement R6 is designed to allow entities the discretion to have a two-step
+Page 31 of 36
+Guidelines and Technical Basis
+process, where the Transmission Owner performs the evaluation and develops the security plan
+itself and then has a third party review that assessment, or a one-step process, where the entity
+collaborates with a third party to perform the evaluation and develop the security plan.
+Page 32 of 36
+Guidelines and Technical Basis
+Timeline
+Page 33 of 36
+Guidelines and Technical Basis
+Rationale
+During development of this standard, text boxes were embedded within the standard to explain
+the rationale for various parts of the standard. Upon BOT approval, the text from the rationale
+text boxes was moved to this section.
+Rationale for Requirement R1:
+This requirement meets the FERC directive from paragraph 6 of its March 7, 2014 order on
+physical security to perform a risk assessment to identify which facilities if rendered inoperable
+or damaged could impact an Interconnection through instability, uncontrolled separation, or
+cascading failures. The requirement is not intended to bring within the scope of the standard a
+Transmission station or Transmission substation unless the applicable Transmission Owner
+determines through technical studies and analyses based on objective analysis, technical
+expertise, operating experience and experienced judgment that the loss of such facility would
+have a critical impact on the operation of the Interconnection in the event the asset is rendered
+inoperable or damaged. In the November 20, 2014 Order, FERC reiterated that “only an
+instability that has a “critical impact on the operation of the interconnection” warrants finding
+that the facility causing the instability is critical under Requirement R1.” The Transmission
+Owner may determine the criteria for critical impact by considering, among other criteria, any
+of the following:
+• Criteria or methodology used by Transmission Planners or Planning Coordinators in TPL-
+001-4, Requirement R6
+• NERC EOP-004-2 reporting criteria
+• Area or magnitude of potential impact
+Requirement R1 also meets the FERC directive for periodic reevaluation of the risk assessment
+by requiring the risk assessment to be performed every 30 months (or 60 months for an entity
+that has not identified in a previous risk assessment any Transmission stations or Transmission
+substations that if rendered inoperable or damaged could result in instability, uncontrolled
+separation, or Cascading within an Interconnection).
+After identifying each Transmission station and Transmission substation that meets the criteria
+in Requirement R1, it is important to additionally identify the primary control center that
+operationally controls that Transmission station or Transmission substation (i.e., the control
+center whose electronic actions can cause direct physical actions at the identified Transmission
+station and Transmission substation, such as opening a breaker, compared to a control center
+that only has the ability to monitor the Transmission station and Transmission substation and,
+therefore, must coordinate direct physical action through another entity).
+Rationale for Requirement R2:
+This requirement meets the FERC directive from paragraph 11 in the order on physical security
+requiring verification by an entity other than the owner or operator of the risk assessment
+performed under Requirement R1.
+Page 34 of 36
+Guidelines and Technical Basis
+This requirement provides the flexibility for a Transmission Owner to select registered and non-
+registered entities with transmission planning or analysis experience to perform the verification
+of the Requirement R1 risk assessment. The term “unaffiliated” means that the selected
+verifying entity cannot be a corporate affiliate (i.e., the verifying entity cannot be an entity that
+controls, is controlled by, or is under common control with, the Transmission owner). The
+verifying entity also cannot be a division of the Transmission Owner that operates as a
+functional unit. The term “unaffiliated” is not intended to prohibit a governmental entity from
+using another government entity to be a verifier under Requirement R2.
+Requirement R2 also provides the Transmission Owner the flexibility to work with the verifying
+entity throughout the Requirement R1 risk assessment, which for some Transmission Owners
+may be more efficient and effective. In other words, a Transmission Owner could coordinate
+with their unaffiliated verifying entity to perform a Requirement R1 risk assessment to satisfy
+both Requirement R1 and Requirement R2 concurrently.
+Planning Coordinator is a functional entity listed in Part 2.1. The Planning Coordinator and
+Planning Authority are the same entity as shown in the NERC Glossary of Terms Used in NERC
+Reliability Standards.
+Rationale for Requirement R3:
+Some Transmission Operators will have obligations under this standard for certain primary
+control centers. Those obligations, however, are contingent upon a Transmission Owner first
+identifying which Transmission stations and Transmission substations meet the criteria
+specified by Requirement R1, as verified according to Requirement R2. This requirement is
+intended to ensure that a Transmission Operator that has operational control of a primary
+control center identified in Requirement R1, Part 1.2 of a Transmission station or Transmission
+substation verified according to Requirement R2 receives notice of such identification so that
+the Transmission Operator may timely fulfill its resulting obligations under Requirements R4
+through R6. Since the timing obligations in Requirements R4 through R6 are based upon
+completion of Requirement R2, the Transmission Owner must also include notice of the date of
+completion of Requirement R2. Similarly, the Transmission Owner must notify the Transmission
+Operator of any removals from identification that result from a subsequent risk assessment
+under Requirement R1 or the verification process under Requirement R2.
+Rationale for Requirement R4:
+This requirement meets the FERC directive from paragraph 8 in the order on physical security
+that the reliability standard must require tailored evaluation of potential threats and
+vulnerabilities to facilities identified in Requirement R1 and verified according to Requirement
+R2. Threats and vulnerabilities may vary from facility to facility based on factors such as the
+facility’s location, size, function, existing protections, and attractiveness of the target. As such,
+the requirement does not mandate a one-size-fits-all approach but requires entities to account
+for the unique characteristics of their facilities.
+Requirement R4 does not explicitly state when the evaluation of threats and vulnerabilities
+must occur or be completed. However, Requirement R5 requires that the entity’s security
+Page 35 of 36
+Guidelines and Technical Basis
+plan(s), which is dependent on the Requirement R4 evaluation, must be completed within 120
+calendar days following completion of Requirement R2. Thus, an entity has the flexibility when
+to complete the Requirement R4 evaluation, provided that it is completed in time to comply
+with the requirement in Requirement R5 to develop a physical security plan 120 calendar days
+following completion of Requirement R2.
+Rationale for Requirement R5:
+This requirement meets the FERC directive from paragraph 9 in the order on physical security
+requiring the development and implementation of a security plan(s) designed to protect against
+attacks to the facilities identified in Requirement R1 based on the assessment performed under
+Requirement R4.
+Rationale for Requirement R6:
+This requirement meets the FERC directive from paragraph 11 in the order on physical security
+requiring review by an entity other than the owner or operator with appropriate expertise of
+the evaluation performed according to Requirement R4 and the security plan(s) developed
+according to Requirement R5.
+As with the verification required by Requirement R2, Requirement R6 provides Transmission
+Owners and Transmission Operators the flexibility to work with the third party reviewer
+throughout the Requirement R4 evaluation and the development of the Requirement R5
+security plan(s). This would allow entities to satisfy their obligations under Requirement R6
+concurrent with the satisfaction of their obligations under Requirements R4 and R5.
+Page 36 of 36
+--- END DOCUMENT: cip-014-3.pdf ---
+

@@ -1,0 +1,828 @@
+--- START DOCUMENT: cip-007-7.pdf ---
+CIP-007-7 — Cyber Security – Systems Security Management
+A. Introduction
+1. Title: Cyber Security — System Security Management
+2. Number: CIP-007-7
+3. Purpose: To manage system security by specifying select technical, operational,
+and procedural requirements in support of protecting BES Cyber Systems (BCS) against
+compromise that could lead to misoperation or instability in the Bulk Electric System
+(BES).
+4. Applicability:
+4.1. Functional Entities: For the purpose of the requirements contained herein, the
+following list of functional entities will be collectively referred to as “Responsible
+Entities.” For requirements in this standard where a specific functional entity or
+subset of functional entities are the applicable entity or entities, the functional
+entity or entities are specified explicitly.
+4.1.1 Balancing Authority
+4.1.2 Distribution Provider that owns one or more of the following Facilities,
+systems, and equipment for the protection or restoration of the BES:
+4.1.2.1 Each underfrequency Load shedding (UFLS) or undervoltage
+Load shedding (UVLS) system that:
+4.1.2.1.1 is part of a Load shedding program that is subject to
+one or more requirements in a NERC or Regional
+Reliability Standard; and
+4.1.2.1.2 performs automatic Load shedding under a common
+control system owned by the Responsible Entity,
+without human operator initiation, of 300 MW or
+more.
+4.1.2.2 Each Remedial Action Scheme (RAS) where the RAS is subject to
+one or more requirements in a NERC or Regional Reliability
+Standard.
+4.1.2.3 Each Protection System (excluding UFLS and UVLS) that applies
+to Transmission where the Protection System is subject to one
+or more requirements in a NERC or Regional Reliability
+Standard.
+4.1.2.4 Each Cranking Path and group of Elements meeting the initial
+switching requirements from a Blackstart Resource up to and
+including the first interconnection point of the starting station
+service of the next generation unit(s) to be started.
+4.1.3 Generator Operator
+Page 1 of 22
+CIP-007-7 — Cyber Security – Systems Security Management
+4.1.4 Generator Owner
+4.1.5 Reliability Coordinator
+4.1.6 Transmission Operator
+4.1.7 Transmission Owner
+4.2. Facilities: For the purpose of the requirements contained herein, the following
+Facilities, systems, and equipment owned by each Responsible Entity in 4.1
+above are those to which these requirements are applicable. For requirements in
+this standard where a specific type of Facilities, system, or equipment or subset
+of Facilities, systems, and equipment are applicable, these are specified
+explicitly.
+4.2.1 Distribution Provider: One or more of the following Facilities, systems
+and equipment owned by the Distribution Provider for the protection or
+restoration of the BES:
+4.2.1.1 Each UFLS or UVLS System that:
+4.2.1.1.1 is part of a Load shedding program that is subject to
+one or more requirements in a NERC or Regional
+Reliability Standard; and
+4.2.1.1.2 performs automatic Load shedding under a common
+control system owned by the Responsible Entity,
+without human operator initiation, of 300 MW or
+more.
+4.2.1.2 Each RAS where the RAS is subject to one or more requirements
+in a NERC or Regional Reliability Standard.
+4.2.1.3 Each Protection System (excluding UFLS and UVLS) that applies
+to Transmission where the Protection System is subject to one
+or more requirements in a NERC or Regional Reliability
+Standard.
+4.2.1.4 Each Cranking Path and group of Elements meeting the initial
+switching requirements from a Blackstart Resource up to and
+including the first interconnection point of the starting station
+service of the next generation unit(s) to be started.
+4.2.2 Responsible Entities listed in 4.1 other than Distribution Providers:
+All BES Facilities.
+4.2.3 Exemptions: The following are exempt from Standard CIP-007-7:
+4.2.3.1 Cyber Systems at Facilities regulated by the Canadian Nuclear
+Safety Commission.
+Page 2 of 22
+CIP-007-7 — Cyber Security – Systems Security Management
+4.2.3.2 Cyber Systems associated with communication networks and
+data communication links between discrete Electronic Security
+Perimeters (ESP).
+4.2.3.3 Cyber Systems, associated with communication networks and
+data communication links, between the Cyber Systems
+providing confidentiality and integrity of an ESP that extends to
+one or more geographic locations.
+4.2.3.4 The systems, structures, and components that are regulated by
+the Nuclear Regulatory Commission under a cyber security plan
+pursuant to 10 C.F.R. Section 73.54.
+4.2.3.5 For Distribution Providers, the systems and equipment that are
+not included in section 4.2.1 above.
+4.2.3.6 Responsible Entities that identify that they have no BES Cyber
+Systems categorized as high impact or medium impact
+according to the CIP-002- identification and categorization
+processes.
+4.3. “Applicable Systems”: Each table has an “Applicable Systems” column to define
+the scope of systems to which a specific requirement part applies.
+5. Effective Dates: See Project 2016-02 Modifications to CIP Standards Implementation
+Plan.
+Page 3 of 22
+CIP-007-7 — Cyber Security – Systems Security Management
+B. Requirements and Measures
+R1. Each Responsible Entity shall implement one or more documented process(es) that collectively include each of the
+applicable requirement parts in CIP-007-7 Table R1 – System Hardening. [Violation Risk Factor: Medium] [Time Horizon:
+Same Day Operations.]
+M1. Evidence must include the documented processes that collectively include each of the applicable requirement parts in CIP-
+007-7 Table R1 – System Hardening and additional evidence to demonstrate implementation as described in the Measures
+column of the table.
+CIP-007-7 Table R1– System Hardening
+Part Applicable Systems Requirements Measures
+1.1 High impact BCS and their associated: Disable or prevent unneeded routable Examples of evidence may include, but are
+protocol network accessibility on each not limited to:
+1. Electronic Access Control and
+Applicable System, per system capability.
+Monitoring Systems (EACMS); • Documentation of the need for all
+enabled network accessible logical
+2. Physical Access Control Systems
+ports or network accessible logical
+(PACS); and
+services, individually or by group;
+3. Protected Cyber Asset (PCA)
+• Listings of the listening ports,
+Medium impact BCS with ERC and their
+individually or by group, from either
+associated:
+configuration files or settings,
+1. EACMS;
+command output (such as netstat),
+2. PACS; and or network scans of open ports;
+• Configuration or settings of host-
+3. PCA
+based firewalls or other device level
+SCI supporting an Applicable System in this
+mechanisms that disable or prevent
+Part.
+unneeded network accessible logical
+ports or network accessible logical
+services; or
+• Identity or process based access
+policy or workload configuration
+demonstrating needed network
+accessibility.
+Page 4 of 22
+CIP-007-7 — Cyber Security – Systems Security Management
+CIP-007-7 Table R1– System Hardening
+Part Applicable Systems Requirements Measures
+1.2 High impact BCS and their associated: Protect against the use of unnecessary Examples of evidence may include, but are
+physical input/output ports used for not limited to, documentation showing
+1. PCA; and
+network connectivity, console commands, types of protection of physical
+2. Nonprogrammable communication
+or Removable Media. input/output ports, either logically through
+components located inside both a
+system configuration or physically using a
+PSP and an ESP.
+port lock or signage.
+Medium impact BCS at Control Centers and
+their associated:
+1. PCA; and
+2. Nonprogrammable communication
+components located inside both a
+PSP and an ESP.
+SCI supporting an Applicable System in this
+Part.
+1.3 SCI supporting either: Mitigate the risk of CPU or memory Examples of evidence may include, but are
+vulnerabilities by preventing the sharing of not limited to, documentation of the
+High impact BCS or their associated PCA.
+CPU resources and memory resources, configuration or settings showing that the
+Medium impact BCS or their associated
+excluding storage resources, between CPU and memory cannot be shared, such
+PCA.
+VCAs that are, or are associated with, a as:
+medium or high impact BCS, and VCAs that
+• Virtualization affinity rules; or
+are not, or are not associated with, a
+• Hardware partitioning of physical
+medium or high impact BCS.
+Cyber Assets.
+Page 5 of 22
+CIP-007-7 — Cyber Security – Systems Security Management
+R2. Each Responsible Entity shall implement one or more documented process(es) that collectively include each of the
+applicable requirement parts in CIP-007-7 Table R2 – Cyber Security Patch Management. [Violation Risk Factor: Medium]
+[Time Horizon: Operations Planning].
+M2. Evidence must include each of the applicable documented processes that collectively include each of the applicable
+requirement parts in CIP-007-7 Table R2 – Cyber Security Patch Management and additional evidence to demonstrate
+implementation as described in the Measures column of the table.
+CIP-007-7 Table R2 – Cyber Security Patch Management
+Part Applicable Systems Requirements Measures
+2.1 High impact BCS and their associated: A patch management process for Examples of evidence may include, but
+tracking, evaluating, and installing cyber are not limited to, documentation of a
+1. EACMS;
+security patches. The tracking portion patch management process and
+2. PACS; and
+shall include the identification of a documentation or lists of sources that are
+3. PCA
+source or sources that the Responsible monitored.
+Medium impact BCS and their Entity tracks for the release of cyber
+associated: security patches for Applicable Systems
+1. EACMS; that are updateable and for which a
+patching source exists.
+2. PACS; and
+3. PCA
+SCI supporting an Applicable System in
+this Part.
+2.2 High impact BCS and their associated: At least once every 35 calendar days, Examples of evidence may include, but
+evaluate cyber security patches for are not limited to, an evaluation
+1. EACMS;
+applicability that have been released conducted by, referenced by, or on
+2. PACS; and
+since the last evaluation from the source behalf of a Responsible Entity of cyber
+3. PCA
+or sources identified in Part 2.1. security patches released by the
+Medium impact BCS and their documented sources at least once every
+associated: 35 calendar days.
+1. EACMS;
+2. PACS; and
+3. PCA
+SCI supporting an Applicable System in
+this Part.
+2.3 High impact BES Cyber Systems and their For applicable patches identified in Part Examples of evidence may include, but
+Page 6 of 22
+CIP-007-7 — Cyber Security – Systems Security Management
+CIP-007-7 Table R2 – Cyber Security Patch Management
+Part Applicable Systems Requirements Measures
+associated: 2.2, within 35 calendar days of the are not limited to:
+evaluation completion, take one of the
+1. EACMS; • Records of the installation of the
+following actions:
+cyber security patch (e.g., exports
+2. PACS; and
+• Apply the applicable patches; from automated patch
+3. PCA
+• Create a dated mitigation plan; or management tools that provide
+Medium impact BES Cyber Systems and
+• Revise an existing mitigation plan. installation date, verification of
+their associated:
+component software revision, or
+Mitigation plans shall include the
+1. EACMS; registry exports that show software
+Responsible Entity’s planned actions to
+2. PACS; and has been installed); or
+mitigate the vulnerabilities addressed by
+3. PCA each cyber security patch and a • A dated plan showing when and
+timeframe to complete these how the vulnerability will be
+SCI supporting an Applicable System in
+mitigations. addressed, to include
+this Part.
+documentation of the actions to be
+taken by the Responsible Entity to
+mitigate the vulnerabilities
+addressed by the cyber security
+patch and a timeframe for the
+completion of these mitigations.
+2.4 High impact BCS and their associated: For each mitigation plan created or Examples of evidence may include, but
+revised in Part 2.3, implement the plan are not limited to, records of
+1. EACMS;
+within the timeframe specified in the implementation of mitigations, and any
+2. PACS; and
+plan, unless a revision to the plan or an approval records for mitigation plan
+3. PCA
+extension to the timeframe specified in revisions or extensions.
+Medium impact BCS and their
+Part 2.3 is approved by the CIP Senior
+associated:
+Manager or delegate.
+1. EACMS;
+2. PACS; and
+3. PCA
+SCI supporting an Applicable System in
+this Part.
+Page 7 of 22
+CIP-007-7 — Cyber Security – Systems Security Management
+R3. Each Responsible Entity shall implement one or more documented process(es) that collectively include each of the
+applicable requirement parts in CIP-007-7 Table R3 – Malicious Code Prevention. [Violation Risk Factor: Medium] [Time
+Horizon: Same Day Operations].
+M3. Evidence must include each of the documented processes that collectively include each of the applicable requirement
+parts in CIP-007-7 Table R3 – Malicious Code Prevention and additional evidence to demonstrate implementation as
+described in the Measures column of the table.
+CIP-007-7 Table R3 – Malicious Code Prevention
+Part Applicable Systems Requirements Measures
+3.1 High impact BCS and their associated: Deploy method(s) to deter, detect, or Examples of evidence may include, but
+prevent malicious code. are not limited to, records of the
+1. EACMS;
+Responsible Entity’s performance of these
+2. PACS; and
+processes (e.g., through traditional
+3. PCA
+antivirus, system hardening, policies,
+Medium impact BCS and their etc.).
+associated:
+1. EACMS;
+2. PACS; and
+3. PCA
+SCI supporting an Applicable System in
+this Part.
+3.2 High impact BCS and their associated: Mitigate the threat of detected malicious Examples of evidence may include, but
+code. are not limited to:
+1. EACMS;
+• Records of response processes for
+2. PACS; and
+malicious code detection
+3. PCA
+• Records of the performance of
+Medium impact BCS and their
+these processes when malicious
+associated:
+code is detected.
+1. EACMS;
+2. PACS; and
+3. PCA
+SCI supporting an Applicable System in
+this Part.
+3.3 High impact BCS and their associated: For those methods identified in Part 3.1 Examples of evidence may include, but
+Page 8 of 22
+CIP-007-7 — Cyber Security – Systems Security Management
+CIP-007-7 Table R3 – Malicious Code Prevention
+Part Applicable Systems Requirements Measures
+1. EACMS; that use signatures or patterns, have a are not limited to, documentation
+process for the update of the signatures or showing the process used for the update
+2. PACS; and
+patterns. The process must address testing of signatures or patterns.
+3. PCA
+and installing the signatures or patterns.
+Medium impact BCS and their
+associated:
+1. EACMS;
+2. PACS; and
+3. PCA
+SCI supporting an Applicable System in
+this Part.
+Page 9 of 22
+CIP-007-7 — Cyber Security – Systems Security Management
+R4. Each Responsible Entity shall implement one or more documented process(es) that collectively include each of the
+applicable requirement parts in CIP-007-7 Table R4 – Security Event Monitoring. [Violation Risk Factor: Medium] [Time
+Horizon: Same Day Operations and Operations Assessment.]
+M4. Evidence must include each of the documented processes that collectively include each of the applicable requirement
+parts in CIP-007-7 Table R4 – Security Event Monitoring and additional evidence to demonstrate implementation as
+described in the Measures column of the table.
+CIP-007-7 Table R4 – Security Event Monitoring
+Part Applicable Systems Requirements Measures
+4.1 High impact BCS and their associated: Log security events, per system capability, Examples of evidence may include, but
+for identification of, and after-the-fact are not limited to, a paper or system
+1. EACMS;
+investigations of, Cyber Security Incidents generated listing of event types for which
+2. PACS; and
+that include, at a minimum, each of the the Applicable System is capable of
+3. PCA
+following types of events: detecting and, for generated events, is
+Medium impact BCS and their associated: configured to log. This listing must include
+4.1.1. Detected successful login
+1. EACMS; attempts; the required types of events.
+2. PACS; and 4.1.2. Detected failed access attempts
+3. PCA and failed login attempts; and
+SCI supporting an Applicable System in 4.1.3. Detected malicious code.
+this Part.
+4.2 High impact BCS and their associated: Generate alerts for security events that Examples of evidence may include, but
+the Responsible Entity determines are not limited to, paper or system-
+1. EACMS;
+necessitates an alert that includes, as a generated listing of security events that
+2. PACS; and
+minimum, each of the following types of the Responsible Entity determined
+3. PCA
+events, per system capability: necessitate alerts, including paper or
+Medium impact BCS with ERC and their system generated list showing how alerts
+4.2.1. Detected malicious code from
+associated: are configured.
+Part 4.1; and
+1. EACMS;
+4.2.2. Detected failure of Part 4.1 event
+2. PACS; and logging.
+3. PCA
+SCI supporting an Applicable System in
+this Part.
+Page 10 of 22
+CIP-007-7 — Cyber Security – Systems Security Management
+CIP-007-7 Table R4 – Security Event Monitoring
+Part Applicable Systems Requirements Measures
+4.3 High impact BCS and their associated: Retain applicable security event logs Examples of evidence may include, but
+identified in Part 4.1 for at least the last are not limited to, documentation of the
+1. EACMS;
+90 consecutive calendar days, per system event log retention process and paper or
+2. PACS; and
+capability, except under CIP Exceptional system generated reports showing log
+3. PCA
+Circumstances. retention configuration set at 90 calendar
+Medium impact BCS at Control Centers days or greater.
+and their associated:
+1. EACMS;
+2. PACS; and
+3. PCA
+SCI supporting an Applicable System in
+this Part.
+4.4 High impact BCS and their associated: Review a summarization or sampling of Examples of evidence may include, but
+logged security events as determined by are not limited to, documentation
+1. EACMS; and
+the Responsible Entity at intervals no describing the review, findings from the
+2. PCA
+greater than 15 calendar days to identify review (if any), and dated documentation
+SCI supporting an Applicable System in
+undetected Cyber Security Incidents. showing the review occurred.
+this Part.
+Page 11 of 22
+CIP-007-7 — Cyber Security – Systems Security Management
+R5. Each Responsible Entity shall implement one or more documented process(es) that collectively include each of the
+applicable requirement parts in CIP-007-7 Table R5 – System Access Controls. [Violation Risk Factor: Medium] [Time
+Horizon: Operations Planning].
+M5. Evidence must include each of the applicable documented processes that collectively include each of the applicable
+requirement parts in CIP-007-7 Table 5 – System Access Controls and additional evidence to demonstrate implementation
+as described in the Measures column of the table.
+CIP-007-7 Table R5 – System Access Control
+Part Applicable Systems Requirements Measures
+5.1 High impact BCS and their associated: Have a method(s) to enforce authentication An example of evidence may include, but
+of interactive user access, per system is not limited to, documentation
+1. EACMS;
+capability. describing how access is authenticated.
+2. PACS; and
+3. PCA
+Medium impact BCS at Control Centers
+and their associated:
+1. EACMS;
+2. PACS; and
+3. PCA
+Medium impact BCS with ERC and their
+associated:
+1. EACMS;
+2. PACS; and
+3. PCA
+SCI supporting an Applicable System in
+this Part.
+Page 12 of 22
+CIP-007-7 — Cyber Security – Systems Security Management
+CIP-007-7 Table R5 – System Access Control
+Part Applicable Systems Requirements Measures
+5.2 High impact BCS and their associated: Identify and inventory all known enabled Examples of evidence may include, but
+default or other generic account types, are not limited to, a listing of accounts by
+1. EACMS;
+either by system, by groups of systems, by account types showing the enabled
+2. PACS; and
+location, or by system type(s). default or generic account types in use.
+3. PCA
+Medium impact BCS and their
+associated:
+1. EACMS;
+2. PACS; and
+3. PCA
+SCI supporting an Applicable System in
+this Part.
+5.3 High impact BCS and their associated: Identify individuals who have authorized Examples of evidence may include, but
+access to shared accounts. are not limited to, listing of shared
+1. EACMS;
+accounts and the individuals who have
+2. PACS; and
+authorized access to each shared account.
+3. PCA
+Medium impact BCS with ERC and their
+associated:
+1. EACMS;
+2. PACS; and
+3. PCA
+SCI supporting an Applicable System in
+this Part.
+Page 13 of 22
+CIP-007-7 — Cyber Security – Systems Security Management
+CIP-007-7 Table R5 – System Access Control
+Part Applicable Systems Requirements Measures
+5.4 High impact BCS and their associated: Change known default passwords, per Examples of evidence may include, but
+system capability are not limited to:
+1. EACMS;
+• Records of a procedure that
+2. PACS; and
+passwords are changed when new
+3. PCA
+devices are in production; or
+Medium impact BCS and their
+• Documentation in system manuals or
+associated:
+other vendor documents showing
+1. EACMS;
+default vendor passwords were
+2. PACS; and generated pseudo-randomly and are
+thereby unique to the device.
+3. PCA
+SCI supporting an Applicable System in
+this Part.
+5.5 High impact BCS and their associated: For password-only authentication for Examples of evidence may include, but
+interactive user access, either technically or are not limited to:
+1. EACMS;
+procedurally enforce the following password
+• System-generated reports or
+2. PACS; and
+parameters:
+screenshots of the system-enforced
+3. PCA
+5.5.1. Password length that is, at least, the password parameters, including
+Medium impact BCS and their
+lesser of eight characters or the length and complexity; or
+associated:
+maximum length supported by the
+• Attestations that include a reference
+1. EACMS; Applicable Systems; and
+to the documented procedures that
+2. PACS; and 5.5.2. Minimum password complexity that were followed.
+is the lesser of three or more
+3. PCA
+different types of characters (e.g.,
+SCI supporting an Applicable System in
+uppercase alphabetic, lowercase
+this Part.
+alphabetic, numeric, non-
+alphanumeric) or the maximum
+complexity supported by the
+Applicable System.
+Page 14 of 22
+CIP-007-7 — Cyber Security – Systems Security Management
+CIP-007-7 Table R5 – System Access Control
+Part Applicable Systems Requirements Measures
+5.6 High impact BCS and their associated: For password-only authentication for Examples of evidence may include, but
+interactive user access, either technically or are not limited to:
+1. EACMS;
+procedurally enforce password changes or
+• System-generated reports or
+2. PACS; and
+an obligation to change the password at
+screenshots of the system-enforced
+3. PCA
+least once every 15 calendar months, per
+periodicity of changing passwords; or
+Medium impact BCS with ERC and their system capability.
+• Attestations that include a reference
+associated:
+to the documented procedures that
+1. EACMS;
+were followed.
+2. PACS; and
+3. PCA
+SCI supporting an Applicable System in
+this Part.
+5.7 High impact BCS and their associated: Limit the number of unsuccessful Examples of evidence may include, but
+authentication attempts or generate alerts are not limited to:
+1. EACMS;
+after a threshold of unsuccessful
+• Documentation of the account-
+2. PACS; and
+authentication attempts, per system
+lockout parameters; or
+3. PCA
+capability.
+• Rules in the alerting configuration or
+Medium impact BCS at Control Centers
+settings showing how the system
+and their associated:
+notified individuals after a
+1. EACMS;
+determined number of unsuccessful
+2. PACS; and login attempts.
+3. PCA
+SCI supporting an Applicable System in
+this Part.
+Page 15 of 22
+CIP-007-7 — Cyber Security – Systems Security Management
+C. Compliance
+1. Compliance Monitoring Process:
+1.1. Compliance Enforcement Authority:
+As defined in the NERC Rules of Procedure, “Compliance Enforcement Authority”
+(CEA) means NERC or the Regional Entity in their respective roles of monitoring
+and enforcing compliance with the NERC Reliability Standards.
+1.2. Evidence Retention:
+The following evidence retention periods identify the period of time an entity is
+required to retain specific evidence to demonstrate compliance. For instances
+where the evidence retention period specified below is shorter than the time
+since the last audit, the CEA may ask an entity to provide other evidence to show
+that it was compliant for the full time period since the last audit.
+The Responsible Entity shall keep data or evidence to show compliance as
+identified below unless directed by its CEA to retain specific evidence for a longer
+period of time as part of an investigation:
+• Each Responsible Entity shall retain evidence of each requirement in this
+standard for three calendar years.
+• If a Responsible Entity is found non-compliant, it shall keep information
+related to the non-compliance until mitigation is complete and approved or
+for the time specified above, whichever is longer.
+• The CEA shall keep the last audit records and all requested and submitted
+subsequent audit records.
+1.3. Compliance Monitoring and Assessment Processes:
+As defined in the NERC Rules of Procedure, “Compliance Monitoring and
+Enforcement Program” refers to the identification of the processes that will be
+used to evaluate data or information for the purpose of assessing performance or
+outcomes with the associated Reliability Standard.
+1.4. Additional Compliance Information:
+None
+Page 16 of 22
+CIP-007-7 — Cyber Security – Systems Security Management
+Violation Severity Levels
+Violation Severity Levels (CIP-007-7)
+R #
+Lower VSL Moderate VSL High VSL Severe VSL
+R1 The Responsible Entity did not The Responsible Entity had no The Responsible Entity had one The Responsible Entity neither
+document one or more methods to protect against or more unneeded logical implemented nor documented
+process(es) that included the unnecessary physical network accessible ports or one or more process(es) that
+applicable items in CIP-007-7 input/output ports used for network accessible services included the applicable items in
+Table R1. (Requirement R1) network connectivity, console enabled. (Part 1.1) CIP-007-6 Table R1.
+commands, or Removable OR (Requirement R1)
+Media. (Part 1.2)
+The Responsible Entity has not
+prevented the sharing of the
+CPU and memory resources
+between VCAs that are, or are
+associated with, a Medium or
+High Impact BCS, and VCAs that
+are not, or are not associated
+with a Medium or High Impact
+BCS. (Part 1.3)
+R2 The Responsible Entity did not The Responsible Entity did not The Responsible Entity did not The Responsible Entity did not
+evaluate the cyber security include any processes, include any processes for implement or document one or
+patches for applicability within including the identification of installing cyber security patches more process(es) that included
+35 calendar days but less than sources, for tracking or for Applicable Systems. (Part the applicable items in CIP-007-
+50 calendar days of the last evaluating cyber security 2.1) 7 Table R2. (Requirement R2)
+evaluation for the source or patches for Applicable Systems.
+OR OR
+sources identified. (Part 2.2) (Part 2.1)
+The Responsible Entity did not The Responsible Entity did not
+OR OR evaluate the cyber security include any processes for
+The Responsible Entity did not The Responsible Entity did not patches for applicability within tracking, evaluating, or
+apply the applicable cyber evaluate the cyber security 65 calendar days of the last installing cyber security patches
+security patches, create a patches for applicability within evaluation for the source or for applicable Cyber Assets.
+dated mitigation plan, or revise 50 calendar days but less than sources identified. (Part 2.2) (Part 2.1)
+an existing mitigation plan 65 calendar days of the last
+OR OR
+within 35 calendar days but less evaluation for the source or
+The Responsible Entity did not The Responsible Entity did not
+than 50 calendar days of the sources identified. (Part 2.2)
+apply the applicable cyber obtain approval by the CIP
+evaluation completion. (Part OR
+security patches, create a Senior Manager or delegate.
+2.3)
+dated mitigation plan, or revise (Part 2.4)
+Page 17 of 22
+CIP-007-7 — Cyber Security – Systems Security Management
+Violation Severity Levels (CIP-007-7)
+R #
+Lower VSL Moderate VSL High VSL Severe VSL
+The Responsible Entity did not an existing mitigation plan OR
+apply the applicable cyber within 65 calendar days of the
+The Responsible Entity did not
+security patches, create a evaluation completion. (Part
+implement the plan as created
+dated mitigation plan, or revise 2.3) or revised within the timeframe
+an existing mitigation plan specified in the plan. (Part 2.4)
+within 50 calendar days but less
+than 65 calendar days of the
+evaluation completion. (Part
+2.3)
+R3 N/A The Responsible Entity, where The Responsible Entity did not The Responsible Entity did not
+signatures or patterns are used, mitigate the threat of detected implement or document one or
+the Responsible Entity did not malicious code. (Part 3.2) more process(es) that included
+address testing the signatures the applicable items in CIP-007-
+OR
+or patterns. (Part 3.3) 6 Table R3. (Requirement R3).
+The Responsible Entity, where
+signatures or patterns are used, OR
+the Responsible Entity did not The Responsible Entity did not
+update malicious code deploy method(s) to deter,
+protections. (Part 3.3). detect, or prevent malicious
+code. (Part 3.1)
+R4 The Responsible Entity missed The Responsible Entity missed The Responsible Entity did not The Responsible Entity did not
+one of 15 calendar day interval one 15 calendar day interval generate alerts for all of the implement or document one or
+and completed the review and completed the review required types of security more process(es) that included
+within 22 calendar days of the within 30 calendar days of the events described in 4.2.1 the applicable items in CIP-007-
+prior review. (Part 4.4) prior review. (Part 4.4) through 4.2.2. (Part 4.2) 6 Table R4. (Requirement R4)
+OR OR
+The Responsible Entity did not The Responsible Entity, per
+retain applicable security event system capability, did not
+logs for at least the last 90 detect and log all of the
+consecutive days. (Part 4.3) required types of events
+described in 4.1.1 through
+OR
+4.1.3. (Part 4.1)
+The Responsible Entity missed
+two or more 15 calendar day
+intervals. (Part 4.4)
+Page 18 of 22
+CIP-007-7 — Cyber Security – Systems Security Management
+Violation Severity Levels (CIP-007-7)
+R #
+Lower VSL Moderate VSL High VSL Severe VSL
+R5 The Responsible Entity did not The Responsible Entity did not The Responsible Entity did not The Responsible Entity did not
+technically or procedurally technically or procedurally include the identification or implement or document one or
+enforce password changes or enforce password changes or inventory of all known enabled more process(es) that included
+an obligation to change the an obligation to change the default or other generic the applicable items in CIP-007-
+password within 15 calendar password within 16 calendar account types, either by 6 Table R5. (Requirement R5)
+months but less than or equal months but less than or equal system, by groups of systems,
+OR
+to 16 calendar months of the to 17 calendar months of the by location, or by system
+The Responsible Entity does
+last password change. (Part last password change. (Part type(s). (Part 5.2)
+not have a method(s) to
+5.6) 5.6) OR enforce authentication of
+The Responsible Entity did not interactive user access. (Part
+include the identification of the 5.1)
+individuals with authorized
+OR
+access to shared accounts.
+The Responsible Entity does
+(Part 5.3)
+not have a method(s) to
+OR enforce authentication of
+The Responsible Entity did not interactive user access. (Part
+technically or procedurally 5.1)
+enforce one of the two OR
+password parameters as
+The Responsible Entity did not,
+described in 5.5.1 and 5.5.2.
+per device capability, change
+(Part 5.5)
+known default passwords. (Part
+OR 5.4)
+The Responsible Entity OR
+process(es) for password-only
+The Responsible Entity did not
+authentication for interactive
+technically or procedurally
+user access did not technically
+enforce all of the password
+or procedurally enforce one of
+parameters described in 5.5.1
+the two password parameters
+and 5.5.2. (Part 5.5)
+as described in 5.5.1 and 5.5.2.
+OR
+(Part 5.5)
+The Responsible Entity did not
+OR
+technically or procedurally
+The Responsible Entity did not
+enforce password changes or
+technically or procedurally
+an obligation to change the
+Page 19 of 22
+CIP-007-7 — Cyber Security – Systems Security Management
+Violation Severity Levels (CIP-007-7)
+R #
+Lower VSL Moderate VSL High VSL Severe VSL
+enforce password changes or password within 18 calendar
+an obligation to change the months of the last password
+password within 17 calendar change. (Part 5.6)
+months but less than or equal
+OR
+to 18 calendar months of the
+The Responsible Entity neither
+last password change. (Part
+limited the number of
+5.6)
+unsuccessful authentication
+attempts nor generated alerts
+after a threshold of
+unsuccessful authentication
+attempts. (Part 5.7)
+D. Regional Variances
+None.
+E. Interpretations
+None.
+F. Associated Documents
+• Implementation Plan for Project 2016-02
+• CIP-007-7 Technical Rationale
+Page 20 of 22
+CIP-007-7 — Cyber Security – Systems Security Management
+Version History
+Change
+Version Date Action
+Tracking
+1 1/16/06 R3.2 — Change “Control Center” to “control center.” 3/24/06
+2 9/30/09 Modifications to clarify the requirements and to bring the
+compliance elements into conformance with the latest
+guidelines for developing compliance elements of standards.
+Removal of reasonable business judgment.
+Replaced the RRO with the RE as a responsible entity.
+Rewording of Effective Date.
+Changed compliance monitor to Compliance Enforcement
+Authority.
+3 12/16/09 Updated Version Number from -2 to -3
+In Requirement 1.6, deleted the sentence pertaining to
+removing component or system from service in order to perform
+testing, in response to FERC order issued September 30, 2009.
+3 12/16/09 Approved by the NERC Board of Trustees.
+3 3/31/10 Approved by FERC.
+4 1/24/11 Approved by the NERC Board of Trustees.
+5 11/26/12 Adopted by the NERC Board of Trustees. Modified to
+coordinate with
+other CIP
+standards and to
+revise format to
+use RBS Template.
+5 11/22/13 FERC Order issued approving CIP-007-5.
+6 11/13/14 Adopted by the NERC Board of Trustees. Addressed two
+FERC directives
+from Order No.
+791 related to
+identify, assess,
+and correct
+language and
+communication
+networks.
+6 2/15/15 Adopted by the NERC Board of Trustees. Replaces the
+version adopted
+by the Board on
+11/13/2014.
+Revised version
+addresses
+Page 21 of 22
+CIP-007-7 — Cyber Security – Systems Security Management
+Change
+Version Date Action
+Tracking
+remaining
+directives from
+Order No. 791
+related to
+transient devices
+and low impact
+BES Cyber
+Systems.
+6 1/21/16 FERC order issued approving CIP-007-6. Docket No. RM15-14-
+000
+7 5/9/2024 Adopted by the NERC Board of Trustees. Virtualization
+Modifications by
+Project 2016-02
+Page 22 of 22
+--- END DOCUMENT: cip-007-7.pdf ---
+
