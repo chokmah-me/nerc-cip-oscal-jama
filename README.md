@@ -2,7 +2,7 @@
 
 Transform unstructured NERC-CIP regulatory text into structured OSCAL JSON with automatic NIST SP 800-53 control mapping.
 
-**Status:** ✅ Production Ready (v1.1.2) | **Tests:** 27/27 passing | **Requirements:** 49 NERC-CIP across 14 standards
+**Status:** ✅ Production Ready (v1.1.3) | **Tests:** 27/27 passing | **NIST Mappings:** 49/49 (100%) | **Requirements:** 49 NERC-CIP across 14 standards
 
 ---
 
@@ -49,6 +49,7 @@ python oscal_to_jama_csv.py nerc-oscal.json --validate
 ### 📚 Documentation
 | Document | Purpose |
 |----------|---------|
+| [RELEASE-v1.1.3.md](RELEASE-v1.1.3.md) | v1.1.3 release notes (NIST mappings) |
 | [GETTING-STARTED.md](docs/GETTING-STARTED.md) | Installation & first use |
 | [OSCAL-DATASET-GUIDE.md](docs/OSCAL-DATASET-GUIDE.md) | Complete dataset reference |
 | [ARCHITECTURE.md](docs/ARCHITECTURE.md) | Technical architecture |
@@ -62,15 +63,21 @@ python oscal_to_jama_csv.py nerc-oscal.json --validate
 
 ✅ **49 NERC-CIP Requirements** across 14 standards (CIP-002 through CIP-015)
 
+✅ **Complete NIST Mappings** - All 49 requirements mapped to NIST SP 800-53 R5 controls
+  - Primary controls (1 per requirement): CM-3, SC-7, PL-2, AC-2, etc.
+  - Secondary controls (2-4 per requirement): Supporting controls for context
+
+✅ **Active NIST Validation** - Test 23 validates all 147 control IDs against official R5 catalog
+  - Invalid codes trigger immediate build failure
+  - 100% coverage: all 49 primary + 98 secondary controls verified
+
 ✅ **Production-Ready** - 27/27 tests passing, zero known issues
 
-✅ **GRC Integration** - CSV export for JAMA, ServiceNow, Tableau, Splunk
+✅ **GRC Integration** - CSV export with NIST columns for JAMA, ServiceNow, Tableau, Splunk
 
-✅ **NIST Mapped** - All 900+ NIST SP 800-53 R5 controls in catalog
+✅ **Quality Assured** - No OCR artifacts, clean regulatory prose, verified NIST mappings
 
-✅ **Quality Assured** - No OCR artifacts, clean regulatory prose, smart deduplication
-
-✅ **Fully Documented** - 1,658+ lines of technical documentation
+✅ **Fully Documented** - 1,658+ lines of technical documentation + comprehensive release notes
 
 ---
 
@@ -151,18 +158,20 @@ pytest verify_oscal_compliance.py -v
 
 ---
 
-## Verification
+## Verification (v1.1.3)
 
 All claims in this release have been verified:
 
 - ✅ **49 requirements** - Confirmed in nerc-oscal.json
+- ✅ **49 NIST mappings** - All requirements mapped to NIST SP 800-53 R5 controls
+- ✅ **147 control IDs validated** - 49 primary + 98 secondary controls verified in official R5 catalog
 - ✅ **14 standards** - CIP-002 through CIP-015 all present
-- ✅ **27/27 tests passing** - 100% test success rate
-- ✅ **CSV export working** - nerc-oscal.csv generated successfully
+- ✅ **27/27 tests passing** - 100% test success rate (Test 23 actively validates NIST controls)
+- ✅ **CSV export working** - nerc-oscal.csv with NIST control columns generated successfully
+- ✅ **JAMA-ready** - CSV verified for direct import into JAMA/GRC systems
 - ✅ **Zero known issues** - All production-ready
-- ✅ **GRC integration ready** - JAMA import file generated
 
-See [VERIFICATION-COMPLETE.md](docs/VERIFICATION-COMPLETE.md) for full verification report.
+See [RELEASE-v1.1.3.md](RELEASE-v1.1.3.md) for complete v1.1.3 release notes and [VERIFICATION-COMPLETE.md](docs/VERIFICATION-COMPLETE.md) for full verification report.
 
 ---
 
@@ -179,6 +188,10 @@ See [VERIFICATION-COMPLETE.md](docs/VERIFICATION-COMPLETE.md) for full verificat
 
 ## Version History
 
+- **v1.1.3** (Jan 25, 2026) - Complete NIST mappings, active validation, JAMA-ready CSV ✅
+  - All 49 requirements mapped to NIST SP 800-53 R5 controls
+  - Test 23 validates all 147 control IDs against official catalog
+  - CSV includes NIST control columns for GRC import
 - **v1.1.2** (Jan 25, 2026) - Schema fix, all tests passing, production-ready ✅
 - **v1.1.1** (Jan 25, 2026) - Schema fix version
 - **v1.1.0** (Jan 25, 2026) - Complete OSCAL dataset (49 requirements)
@@ -189,7 +202,8 @@ See [VERIFICATION-COMPLETE.md](docs/VERIFICATION-COMPLETE.md) for full verificat
 ## Repository
 
 - **GitHub:** https://github.com/chokmah-me/nerc-cip-oscal-jama
-- **Latest Release:** https://github.com/chokmah-me/nerc-cip-oscal-jama/releases/tag/v1.1.2
+- **Latest Release:** https://github.com/chokmah-me/nerc-cip-oscal-jama/releases/tag/v1.1.3
+- **Release Notes:** [RELEASE-v1.1.3.md](RELEASE-v1.1.3.md)
 
 ---
 
@@ -199,4 +213,27 @@ See repository for license information.
 
 ---
 
-**Ready for production deployment. All 27 tests passing. Zero known issues.**
+**Ready for production deployment. All 27 tests passing. All 49 NERC requirements mapped to NIST controls. Zero known issues.**
+
+---
+
+## What's New in v1.1.3
+
+### NIST Control Mappings
+Every NERC requirement is now mapped to NIST SP 800-53 R5 controls:
+- **Primary controls** (1 per requirement) - Direct mapping to security objective
+- **Secondary controls** (2-4 per requirement) - Supporting and related controls
+
+### Active NIST Validation
+- Test 23 validates all 147 control IDs (49 primary + 98 secondary)
+- Checks existence in official NIST R5 catalog
+- Invalid codes trigger build failure immediately
+- 100% coverage: 0 invalid control IDs found
+
+### JAMA-Ready CSV
+- CSV export now includes NIST control columns
+- NIST-Primary-Control column (populated for all 49 rows)
+- NIST-Secondary-Controls column (populated for all 49 rows)
+- Ready for direct import into JAMA, ServiceNow, or other GRC tools
+
+See [RELEASE-v1.1.3.md](RELEASE-v1.1.3.md) for complete details.
