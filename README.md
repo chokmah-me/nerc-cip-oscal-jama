@@ -2,7 +2,7 @@
 
 Transform unstructured NERC-CIP regulatory text into structured OSCAL JSON with automatic NIST SP 800-53 control mapping.
 
-**Status:** ✅ Production Ready (v1.1.1) | **Tests:** 27/27 passing | **Requirements:** 49 NERC-CIP across 14 standards
+**Status:** ✅ Production Ready (v1.1.2) | **Tests:** 27/27 passing | **Requirements:** 49 NERC-CIP across 14 standards
 
 ---
 
@@ -53,7 +53,7 @@ python oscal_to_jama_csv.py nerc-oscal.json --validate
 | [OSCAL-DATASET-GUIDE.md](docs/OSCAL-DATASET-GUIDE.md) | Complete dataset reference |
 | [ARCHITECTURE.md](docs/ARCHITECTURE.md) | Technical architecture |
 | [RELEASES.md](docs/RELEASES.md) | Release history & notes |
-| [SCHEMA-FIX-SUMMARY.md](docs/SCHEMA-FIX-SUMMARY.md) | v1.1.1 schema fix details |
+| [SCHEMA-FIX-SUMMARY.md](docs/SCHEMA-FIX-SUMMARY.md) | v1.1.2 schema fix details |
 | [VERIFICATION-COMPLETE.md](docs/VERIFICATION-COMPLETE.md) | Verification report |
 
 ---
@@ -179,7 +179,8 @@ See [VERIFICATION-COMPLETE.md](docs/VERIFICATION-COMPLETE.md) for full verificat
 
 ## Version History
 
-- **v1.1.1** (Jan 25, 2026) - Schema fix, all tests passing, production-ready ✅
+- **v1.1.2** (Jan 25, 2026) - Schema fix, all tests passing, production-ready ✅
+- **v1.1.1** (Jan 25, 2026) - Schema fix version
 - **v1.1.0** (Jan 25, 2026) - Complete OSCAL dataset (49 requirements)
 - **v1.0.0** - Initial release
 
@@ -188,7 +189,7 @@ See [VERIFICATION-COMPLETE.md](docs/VERIFICATION-COMPLETE.md) for full verificat
 ## Repository
 
 - **GitHub:** https://github.com/chokmah-me/nerc-cip-oscal-jama
-- **Latest Release:** https://github.com/chokmah-me/nerc-cip-oscal-jama/releases/tag/v1.1.1
+- **Latest Release:** https://github.com/chokmah-me/nerc-cip-oscal-jama/releases/tag/v1.1.2
 
 ---
 
