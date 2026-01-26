@@ -151,6 +151,7 @@ class TestOSCALCompliance:
 
         # NIST 800-53 control format: Family-Number (e.g., SC-7, AC-2)
         nist_pattern = re.compile(r'^[A-Z]{2}-\d{1,2}(\s*\([0-9]+\))?$')
+        formats_validated = 0
 
         for i, component in enumerate(components):
             props = component.get('properties', [])
@@ -165,10 +166,15 @@ class TestOSCALCompliance:
                             assert nist_pattern.match(ctrl), \
                                 f"Component {i} has invalid NIST control format: '{ctrl}'. " \
                                 f"Use format like 'SC-7', 'AC-2', 'CA-3', etc."
+                            formats_validated += 1
                     else:
                         assert nist_pattern.match(value), \
                             f"Component {i} has invalid NIST control format: '{value}'. " \
                             f"Use format like 'SC-7', 'AC-2', 'CA-3', etc."
+                        formats_validated += 1
+
+        assert formats_validated > 0, \
+            "No NIST control formats found to validate! Ensure components include NIST control properties."
 
     def test_minimum_nist_controls_per_component(self, oscal_data):
         """Test 8: Each component is properly formatted."""
@@ -195,6 +201,7 @@ class TestOSCALCompliance:
         """Test 10: JAMA-Requirement-ID values follow naming convention."""
         components = self.get_components_from_oscal(oscal_data)
         jama_pattern = re.compile(r'^CIP-\d{3}-R\d+(-[a-z])?$')
+        jama_validated = 0
 
         for i, component in enumerate(components):
             props = component.get('properties', [])
@@ -206,10 +213,15 @@ class TestOSCALCompliance:
                         f"Component {i} has empty JAMA-Requirement-ID value"
                     assert jama_pattern.match(value), \
                         f"Component {i} has invalid JAMA placeholder: '{value}'"
+                    jama_validated += 1
+
+        assert jama_validated > 0, \
+            "No JAMA-Requirement-ID properties found to validate! Ensure components include JAMA IDs."
 
     def test_jama_placeholders_not_empty(self, oscal_data):
         """Test 11: No empty JAMA placeholder values."""
         components = self.get_components_from_oscal(oscal_data)
+        jama_empty_validated = 0
 
         for i, component in enumerate(components):
             props = component.get('properties', [])
@@ -219,6 +231,10 @@ class TestOSCALCompliance:
                     value = prop.get('value', '').strip()
                     assert value and value != 'TBD', \
                         f"Component {i}, property {j} has empty or placeholder JAMA-Requirement-ID"
+                    jama_empty_validated += 1
+
+        assert jama_empty_validated > 0, \
+            "No JAMA-Requirement-ID properties found to validate! Ensure components include JAMA IDs."
 
     # ========================================================================
     # NERC REQUIREMENT MAPPING TESTS
@@ -238,6 +254,7 @@ class TestOSCALCompliance:
         """Test 13: NERC-Requirement-ID values follow proper format."""
         components = self.get_components_from_oscal(oscal_data)
         nerc_pattern = re.compile(r'^CIP-\d{3}(?:-\d+)? R\d+[a-z]?$')
+        nerc_format_validated = 0
 
         for i, component in enumerate(components):
             props = component.get('properties', [])
@@ -249,6 +266,10 @@ class TestOSCALCompliance:
                         f"Component {i} has empty NERC-Requirement-ID"
                     assert nerc_pattern.match(value), \
                         f"Component {i} has invalid NERC ID format: '{value}'"
+                    nerc_format_validated += 1
+
+        assert nerc_format_validated > 0, \
+            "No NERC-Requirement-ID properties found to validate! Ensure components include NERC IDs."
 
     # ========================================================================
     # OSCAL STRUCTURE TESTS
@@ -309,6 +330,7 @@ class TestOSCALCompliance:
     def test_implemented_requirements_have_control_id(self, oscal_data):
         """Test 18: Implemented requirements specify control-id (component-definition format)."""
         components = self.get_components_from_oscal(oscal_data)
+        control_ids_validated = 0
 
         for i, component in enumerate(components):
             impls = component.get('control-implementations', [])
@@ -318,6 +340,10 @@ class TestOSCALCompliance:
                     assert 'control-id' in req, \
                         f"Component {i}, control-impl {impl_idx}, requirement {req_idx} " \
                         f"missing 'control-id'. Should specify NIST control like 'sc-7'"
+                    control_ids_validated += 1
+
+        assert control_ids_validated > 0, \
+            "No implemented requirements found to validate! Ensure components include control-implementations with requirements."
 
     # ========================================================================
     # QUALITY VALIDATION TESTS
@@ -328,6 +354,7 @@ class TestOSCALCompliance:
         components = self.get_components_from_oscal(oscal_data)
 
         vague_words = ['ensure', 'verify', 'check', 'implement', 'manage', 'handle']
+        descriptions_validated = 0
 
         for i, component in enumerate(components):
             # Get description from either description field or title
@@ -341,6 +368,10 @@ class TestOSCALCompliance:
                 # Be lenient with catalog format which may not have separate descriptions
                 assert vague_ratio < 0.5 or desc_length < 5, \
                     f"Component {i} description very vague"
+                descriptions_validated += 1
+
+        assert descriptions_validated > 0, \
+            "No component descriptions found to validate! Ensure components have descriptions."
 
     def test_minimum_properties_per_component(self, oscal_data):
         """Test 20: Each component has at least 2 identifying properties."""
@@ -374,6 +405,7 @@ class TestOSCALCompliance:
     def test_nist_controls_exist_in_catalog(self, oscal_data):
         """Test 23: All mapped NIST controls exist in NIST SP 800-53 R5 catalog."""
         components = self.get_components_from_oscal(oscal_data)
+        controls_validated = 0
 
         for i, component in enumerate(components):
             props = component.get('properties', [])
@@ -394,10 +426,15 @@ class TestOSCALCompliance:
                             f"Component {i} maps to non-existent NIST control: '{ctrl}'. " \
                             f"Verify control ID exists in NIST SP 800-53 R5 catalog. " \
                             f"Valid format: Family-Number (e.g., 'SC-7', 'AC-2', 'CA-3')"
+                        controls_validated += 1
+
+        assert controls_validated > 0, \
+            "No NIST controls found to validate! Ensure components include NIST control mappings."
 
     def test_nist_controls_have_descriptions(self, oscal_data):
         """Test 24: All mapped NIST controls have valid descriptions in catalog."""
         components = self.get_components_from_oscal(oscal_data)
+        descriptions_validated = 0
 
         for i, component in enumerate(components):
             props = component.get('properties', [])
@@ -414,6 +451,10 @@ class TestOSCALCompliance:
                     assert description, \
                         f"Component {i} NIST control '{value}' not found in NIST SP 800-53 R5 catalog. " \
                         f"Verify the control ID is correct and exists in the official NIST catalog."
+                    descriptions_validated += 1
+
+        assert descriptions_validated > 0, \
+            "No NIST control descriptions found to validate! Ensure components include Primary NIST controls."
 
     # ========================================================================
     # JAMA CSV EXPORT VALIDATION TESTS
