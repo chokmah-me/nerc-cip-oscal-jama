@@ -282,6 +282,44 @@ python oscal_to_jama_csv.py nerc-oscal.json --validate
 
 ---
 
+## Programmatic NIST Generation (v1.1.4+)
+
+### Overview
+`generate_oscal.py` now supports programmatic generation of NIST mappings without manual prompting.
+
+### Usage
+
+**Generate OSCAL with NIST mappings:**
+```bash
+python generate_oscal.py input_nerc_requirements.txt -o nerc-oscal.json
+```
+
+**With gap analysis:**
+```bash
+python generate_oscal.py input_nerc_requirements.txt --gap-analysis -o nerc-oscal.json
+```
+
+### How It Works
+
+1. **Parse Requirements** - Extracts NERC requirement IDs and descriptions from input
+2. **Generate NIST Mappings** - Uses Claude API to intelligently map to NIST SP 800-53 R5
+3. **Validate Controls** - Verifies all mapped controls exist in nist_controls.py
+4. **Build OSCAL JSON** - Constructs OSCAL-compliant component definitions
+5. **Detect Gaps** - (Optional) Identifies unmapped NERC requirements
+
+### Integration with Validation Suite
+
+Generated OSCAL files are immediately testable:
+```bash
+# After generation, validate the output
+pytest verify_oscal_compliance.py -v
+
+# Export to JAMA for requirements management
+python oscal_to_jama_csv.py nerc-oscal.json --validate
+```
+
+---
+
 ## Common Development Tasks
 
 ### Adding a New NIST Control
@@ -372,7 +410,7 @@ pytest verify_oscal_compliance.py::TestOSCALCompliance::test_nist_controls_exist
 
 ## Testing Strategy
 
-**Test Coverage by Category:**
+### Test Coverage by Category
 1. **Structural Validation** (Tests 1-5): Ensures JSON is well-formed and has required top-level structure
 2. **NIST Mapping** (Tests 6-8): Validates control existence and format against NIST R5 catalog
 3. **JAMA Readiness** (Tests 9-11, 22): Ensures all fields needed for JAMA import are present and correctly formatted
@@ -380,6 +418,28 @@ pytest verify_oscal_compliance.py::TestOSCALCompliance::test_nist_controls_exist
 5. **Quality Metrics** (Tests 19-21): Checks descriptions are specific (not vague), minimum metadata present
 6. **CSV Export** (Tests 25-27): Validates that OSCAL can be exported to JAMA-compatible CSV
 7. **Integration** (Test 22): Overall "JAMA-ready" assessment
+
+### Validation Counter Pattern (v1.1.4+)
+All conditional assertion tests now use validation counters to prevent silent pass bugs:
+
+```python
+# Pattern: Counter-based validation
+validation_count = 0
+for item in items:
+    if condition_matches:
+        assert validation_check(item)
+        validation_count += 1
+
+# Guarantee minimum validations occurred
+assert validation_count > 0, "No items validated - check test data!"
+```
+
+This ensures tests fail if:
+- Conditional blocks never execute
+- Data is missing required fields
+- Loops iterate over empty collections
+
+**Result:** Tests accurately reflect data quality instead of passing silently.
 
 **Running Specific Test Categories:**
 ```bash
