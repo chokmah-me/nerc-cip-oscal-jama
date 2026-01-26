@@ -219,6 +219,9 @@ def generate_oscal_catalog(standards):
         }
     }
 
+    gap_count = 0
+    unmapped_requirements = []
+
     for family in sorted(standards.keys()):
         std = standards[family]
         group = {
@@ -256,6 +259,14 @@ def generate_oscal_catalog(standards):
                         "name": "NIST-800-53-Secondary-Controls",
                         "value": mapping['secondary']
                     })
+            else:
+                # Gap detected: requirement has no NIST mapping
+                gap_count += 1
+                unmapped_requirements.append({
+                    "requirement_key": lookup_key,
+                    "description": req['text'][:80]  # First 80 chars for context
+                })
+                print(f"[!] GAP: {lookup_key} has no NIST mapping in NERC_NIST_MAP")
 
             group['controls'].append({
                 "id": f"{std['id'].lower()}-{req['id'].lower()}",
@@ -266,6 +277,12 @@ def generate_oscal_catalog(standards):
             })
 
         catalog['catalog']['groups'].append(group)
+
+    # Print gap analysis summary
+    if gap_count > 0:
+        print(f"\n[!] GAP ANALYSIS: {gap_count} unmapped requirement(s) found:")
+        for item in unmapped_requirements:
+            print(f"    - {item['requirement_key']}: {item['description']}...")
 
     return catalog
 

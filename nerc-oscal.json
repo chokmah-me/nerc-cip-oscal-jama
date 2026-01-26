@@ -1,9 +1,9 @@
 {
   "catalog": {
-    "uuid": "70bdad91-6496-451b-976f-30969f9117e7",
+    "uuid": "ffce0253-b012-427d-b6ed-015dca89e4a1",
     "metadata": {
       "title": "NERC CIP OSCAL Catalog",
-      "last-modified": "2026-01-25T19:19:11.774651",
+      "last-modified": "2026-01-25T19:24:37.443543",
       "version": "1.1.0",
       "oscal-version": "1.0.0",
       "notes": "Generated with NovaKit v3 State Machine Logic."
