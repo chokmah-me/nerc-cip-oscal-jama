@@ -62,6 +62,46 @@ class TestOSCALCompliance:
                             'properties': control.get('props', []),
                             'group_id': group.get('id', '')
                         }
+
+                        # Generate control-implementations from NIST properties
+                        props = control.get('props', [])
+                        nist_primary = None
+                        nist_secondary = []
+
+                        for prop in props:
+                            if isinstance(prop, dict):
+                                if prop.get('name') == 'NIST-800-53-Primary-Control':
+                                    nist_primary = prop.get('value', '')
+                                elif prop.get('name') == 'NIST-800-53-Secondary-Controls':
+                                    nist_secondary = [c.strip() for c in prop.get('value', '').split(',')]
+
+                        # Build control-implementations array
+                        control_impls = []
+                        if nist_primary or nist_secondary:
+                            impl = {
+                                'description': f"NIST 800-53 control implementation for {control.get('title', '')}",
+                                'implemented-requirements': []
+                            }
+
+                            # Add primary control
+                            if nist_primary:
+                                impl['implemented-requirements'].append({
+                                    'control-id': nist_primary.lower(),
+                                    'responsibility': 'Implemented'
+                                })
+
+                            # Add secondary controls
+                            for ctrl in nist_secondary:
+                                if ctrl:
+                                    impl['implemented-requirements'].append({
+                                        'control-id': ctrl.lower(),
+                                        'responsibility': 'Implemented'
+                                    })
+
+                            if impl['implemented-requirements']:
+                                control_impls.append(impl)
+
+                        component['control-implementations'] = control_impls
                         components.append(component)
             return components
 
