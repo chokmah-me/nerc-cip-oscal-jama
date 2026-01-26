@@ -2,7 +2,7 @@
 
 Transform unstructured NERC-CIP regulatory text into structured OSCAL JSON with automatic NIST SP 800-53 control mapping.
 
-**Status:** ✅ Production Ready (v1.1.4) | **Tests:** 23/27 core passing | **NIST Mappings:** 49/49 (100%) | **Requirements:** 49 NERC-CIP across 14 standards
+**Status:** ✅ Production Ready (v1.1.5) | **Tests:** 27/27 passing ✅ | **NIST Mappings:** 49/49 (100%) | **Requirements:** 49 NERC-CIP across 14 standards
 
 ---
 
@@ -75,13 +75,29 @@ python oscal_to_jama_csv.py nerc-oscal.json --validate
   - Maps to NIST SP 800-53 R5 controls intelligently
   - Produces OSCAL-compliant JSON output
 
-✅ **Production-Ready** - 23/27 core tests passing, robust test validation with counters
+✅ **Production-Ready** - All 27/27 tests passing, robust validation with JAMA/NERC properties and control-implementations
 
 ✅ **GRC Integration** - CSV export with NIST columns for JAMA, ServiceNow, Tableau, Splunk
 
 ✅ **Quality Assured** - No OCR artifacts, clean regulatory prose, verified NIST mappings
 
 ✅ **Fully Documented** - 1,658+ lines of technical documentation + comprehensive release notes
+
+---
+
+## Recent Improvements (v1.1.5)
+
+### Catalog Format Completeness
+- **JAMA/NERC Properties** - Added missing requirement identification properties to all 49 catalog requirements
+  - NERC-Requirement-ID: Standard format (e.g., `CIP-002-8 R1`)
+  - JAMA-Requirement-ID: Parseable format for requirements management systems (e.g., `CIP-002-R1`)
+- **Control-Implementations Generation** - Catalog format now generates control-implementations dynamically
+  - Parses NIST properties from catalog and creates structured control mappings
+  - Maps both primary and secondary controls to control-implementations array
+  - Enables full test compatibility between catalog and component-definition schemas
+- **Test Coverage** - All 27/27 tests now passing
+  - Fixed 4 previously failing tests by implementing catalog format enhancements
+  - Tests: `test_jama_placeholders_follow_format`, `test_jama_placeholders_not_empty`, `test_nerc_requirement_format`, `test_implemented_requirements_have_control_id`
 
 ---
 
