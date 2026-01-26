@@ -53,6 +53,14 @@
               {
                 "name": "NIST-800-53-Secondary-Controls",
                 "value": "CM-2, RA-3, CA-7"
+              },
+              {
+                "name": "NERC-Requirement-ID",
+                "value": "CIP-002-8 R1"
+              },
+              {
+                "name": "JAMA-Requirement-ID",
+                "value": "CIP-002-R1"
               }
             ]
           },
@@ -83,6 +91,14 @@
               {
                 "name": "NIST-800-53-Secondary-Controls",
                 "value": "CM-2, RA-3, CA-7"
+              },
+              {
+                "name": "NERC-Requirement-ID",
+                "value": "CIP-002-8 R2"
+              },
+              {
+                "name": "JAMA-Requirement-ID",
+                "value": "CIP-002-R2"
               }
             ]
           }
@@ -132,6 +148,14 @@
               {
                 "name": "NIST-800-53-Secondary-Controls",
                 "value": "CA-6, PM-1, AC-2"
+              },
+              {
+                "name": "NERC-Requirement-ID",
+                "value": "CIP-003-11 R1"
+              },
+              {
+                "name": "JAMA-Requirement-ID",
+                "value": "CIP-003-R1"
               }
             ]
           },
@@ -162,6 +186,14 @@
               {
                 "name": "NIST-800-53-Secondary-Controls",
                 "value": "CA-6, PM-1, AC-2"
+              },
+              {
+                "name": "NERC-Requirement-ID",
+                "value": "CIP-003-11 R2"
+              },
+              {
+                "name": "JAMA-Requirement-ID",
+                "value": "CIP-003-R2"
               }
             ]
           },
@@ -192,6 +224,14 @@
               {
                 "name": "NIST-800-53-Secondary-Controls",
                 "value": "CA-6, PM-1, AC-2"
+              },
+              {
+                "name": "NERC-Requirement-ID",
+                "value": "CIP-003-11 R3"
+              },
+              {
+                "name": "JAMA-Requirement-ID",
+                "value": "CIP-003-R3"
               }
             ]
           },
@@ -222,6 +262,14 @@
               {
                 "name": "NIST-800-53-Secondary-Controls",
                 "value": "CA-6, PM-1, AC-2"
+              },
+              {
+                "name": "NERC-Requirement-ID",
+                "value": "CIP-003-11 R4"
+              },
+              {
+                "name": "JAMA-Requirement-ID",
+                "value": "CIP-003-R4"
               }
             ]
           }
@@ -271,6 +319,14 @@
               {
                 "name": "NIST-800-53-Secondary-Controls",
                 "value": "AC-6, IA-4, AC-5"
+              },
+              {
+                "name": "NERC-Requirement-ID",
+                "value": "CIP-004-8 R1"
+              },
+              {
+                "name": "JAMA-Requirement-ID",
+                "value": "CIP-004-R1"
               }
             ]
           },
@@ -301,6 +357,14 @@
               {
                 "name": "NIST-800-53-Secondary-Controls",
                 "value": "AC-6, IA-4, AC-5"
+              },
+              {
+                "name": "NERC-Requirement-ID",
+                "value": "CIP-004-8 R2"
+              },
+              {
+                "name": "JAMA-Requirement-ID",
+                "value": "CIP-004-R2"
               }
             ]
           },
@@ -331,6 +395,14 @@
               {
                 "name": "NIST-800-53-Secondary-Controls",
                 "value": "AC-6, IA-4, AC-5"
+              },
+              {
+                "name": "NERC-Requirement-ID",
+                "value": "CIP-004-8 R3"
+              },
+              {
+                "name": "JAMA-Requirement-ID",
+                "value": "CIP-004-R3"
               }
             ]
           },
@@ -361,6 +433,14 @@
               {
                 "name": "NIST-800-53-Secondary-Controls",
                 "value": "AC-6, IA-4, AC-5"
+              },
+              {
+                "name": "NERC-Requirement-ID",
+                "value": "CIP-004-8 R4"
+              },
+              {
+                "name": "JAMA-Requirement-ID",
+                "value": "CIP-004-R4"
               }
             ]
           },
@@ -391,6 +471,14 @@
               {
                 "name": "NIST-800-53-Secondary-Controls",
                 "value": "AC-6, IA-4, AC-5"
+              },
+              {
+                "name": "NERC-Requirement-ID",
+                "value": "CIP-004-8 R5"
+              },
+              {
+                "name": "JAMA-Requirement-ID",
+                "value": "CIP-004-R5"
               }
             ]
           },
@@ -421,6 +509,14 @@
               {
                 "name": "NIST-800-53-Secondary-Controls",
                 "value": "AC-6, IA-4, AC-5"
+              },
+              {
+                "name": "NERC-Requirement-ID",
+                "value": "CIP-004-8 R6"
+              },
+              {
+                "name": "JAMA-Requirement-ID",
+                "value": "CIP-004-R6"
               }
             ]
           }
@@ -470,6 +566,14 @@
               {
                 "name": "NIST-800-53-Secondary-Controls",
                 "value": "CA-3, AC-17, SC-8"
+              },
+              {
+                "name": "NERC-Requirement-ID",
+                "value": "CIP-005-8 R1"
+              },
+              {
+                "name": "JAMA-Requirement-ID",
+                "value": "CIP-005-R1"
               }
             ]
           },
@@ -500,6 +604,14 @@
               {
                 "name": "NIST-800-53-Secondary-Controls",
                 "value": "CA-3, AC-17, SC-8"
+              },
+              {
+                "name": "NERC-Requirement-ID",
+                "value": "CIP-005-8 R2"
+              },
+              {
+                "name": "JAMA-Requirement-ID",
+                "value": "CIP-005-R2"
               }
             ]
           },
@@ -530,6 +642,14 @@
               {
                 "name": "NIST-800-53-Secondary-Controls",
                 "value": "CA-3, AC-17, SC-8"
+              },
+              {
+                "name": "NERC-Requirement-ID",
+                "value": "CIP-005-8 R3"
+              },
+              {
+                "name": "JAMA-Requirement-ID",
+                "value": "CIP-005-R3"
               }
             ]
           }
@@ -579,6 +699,14 @@
               {
                 "name": "NIST-800-53-Secondary-Controls",
                 "value": "AC-3, AC-6, AC-17"
+              },
+              {
+                "name": "NERC-Requirement-ID",
+                "value": "CIP-006-7 R1"
+              },
+              {
+                "name": "JAMA-Requirement-ID",
+                "value": "CIP-006-R1"
               }
             ]
           },
@@ -609,6 +737,14 @@
               {
                 "name": "NIST-800-53-Secondary-Controls",
                 "value": "AC-3, AC-6, AC-17"
+              },
+              {
+                "name": "NERC-Requirement-ID",
+                "value": "CIP-006-7 R2"
+              },
+              {
+                "name": "JAMA-Requirement-ID",
+                "value": "CIP-006-R2"
               }
             ]
           },
@@ -639,6 +775,14 @@
               {
                 "name": "NIST-800-53-Secondary-Controls",
                 "value": "AC-3, AC-6, AC-17"
+              },
+              {
+                "name": "NERC-Requirement-ID",
+                "value": "CIP-006-7 R3"
+              },
+              {
+                "name": "JAMA-Requirement-ID",
+                "value": "CIP-006-R3"
               }
             ]
           }
@@ -688,6 +832,14 @@
               {
                 "name": "NIST-800-53-Secondary-Controls",
                 "value": "SC-3, SI-2, CM-7"
+              },
+              {
+                "name": "NERC-Requirement-ID",
+                "value": "CIP-007-7 R1"
+              },
+              {
+                "name": "JAMA-Requirement-ID",
+                "value": "CIP-007-R1"
               }
             ]
           },
@@ -718,6 +870,14 @@
               {
                 "name": "NIST-800-53-Secondary-Controls",
                 "value": "SC-3, SI-2, CM-7"
+              },
+              {
+                "name": "NERC-Requirement-ID",
+                "value": "CIP-007-7 R2"
+              },
+              {
+                "name": "JAMA-Requirement-ID",
+                "value": "CIP-007-R2"
               }
             ]
           },
@@ -748,6 +908,14 @@
               {
                 "name": "NIST-800-53-Secondary-Controls",
                 "value": "SC-3, SI-2, CM-7"
+              },
+              {
+                "name": "NERC-Requirement-ID",
+                "value": "CIP-007-7 R3"
+              },
+              {
+                "name": "JAMA-Requirement-ID",
+                "value": "CIP-007-R3"
               }
             ]
           },
@@ -778,6 +946,14 @@
               {
                 "name": "NIST-800-53-Secondary-Controls",
                 "value": "SC-3, SI-2, CM-7"
+              },
+              {
+                "name": "NERC-Requirement-ID",
+                "value": "CIP-007-7 R4"
+              },
+              {
+                "name": "JAMA-Requirement-ID",
+                "value": "CIP-007-R4"
               }
             ]
           },
@@ -808,6 +984,14 @@
               {
                 "name": "NIST-800-53-Secondary-Controls",
                 "value": "SC-3, SI-2, CM-7"
+              },
+              {
+                "name": "NERC-Requirement-ID",
+                "value": "CIP-007-7 R5"
+              },
+              {
+                "name": "JAMA-Requirement-ID",
+                "value": "CIP-007-R5"
               }
             ]
           }
@@ -857,6 +1041,14 @@
               {
                 "name": "NIST-800-53-Secondary-Controls",
                 "value": "IR-5, IR-6, IR-8"
+              },
+              {
+                "name": "NERC-Requirement-ID",
+                "value": "CIP-008-7 R1"
+              },
+              {
+                "name": "JAMA-Requirement-ID",
+                "value": "CIP-008-R1"
               }
             ]
           },
@@ -887,6 +1079,14 @@
               {
                 "name": "NIST-800-53-Secondary-Controls",
                 "value": "IR-5, IR-6, IR-8"
+              },
+              {
+                "name": "NERC-Requirement-ID",
+                "value": "CIP-008-7 R2"
+              },
+              {
+                "name": "JAMA-Requirement-ID",
+                "value": "CIP-008-R2"
               }
             ]
           },
@@ -917,6 +1117,14 @@
               {
                 "name": "NIST-800-53-Secondary-Controls",
                 "value": "IR-5, IR-6, IR-8"
+              },
+              {
+                "name": "NERC-Requirement-ID",
+                "value": "CIP-008-7 R3"
+              },
+              {
+                "name": "JAMA-Requirement-ID",
+                "value": "CIP-008-R3"
               }
             ]
           },
@@ -947,6 +1155,14 @@
               {
                 "name": "NIST-800-53-Secondary-Controls",
                 "value": "IR-5, IR-6, IR-8"
+              },
+              {
+                "name": "NERC-Requirement-ID",
+                "value": "CIP-008-7 R4"
+              },
+              {
+                "name": "JAMA-Requirement-ID",
+                "value": "CIP-008-R4"
               }
             ]
           }
@@ -996,6 +1212,14 @@
               {
                 "name": "NIST-800-53-Secondary-Controls",
                 "value": "CP-10, CP-2, IR-4"
+              },
+              {
+                "name": "NERC-Requirement-ID",
+                "value": "CIP-009-7 R1"
+              },
+              {
+                "name": "JAMA-Requirement-ID",
+                "value": "CIP-009-R1"
               }
             ]
           },
@@ -1026,6 +1250,14 @@
               {
                 "name": "NIST-800-53-Secondary-Controls",
                 "value": "CP-10, CP-2, IR-4"
+              },
+              {
+                "name": "NERC-Requirement-ID",
+                "value": "CIP-009-7 R2"
+              },
+              {
+                "name": "JAMA-Requirement-ID",
+                "value": "CIP-009-R2"
               }
             ]
           },
@@ -1056,6 +1288,14 @@
               {
                 "name": "NIST-800-53-Secondary-Controls",
                 "value": "CP-10, CP-2, IR-4"
+              },
+              {
+                "name": "NERC-Requirement-ID",
+                "value": "CIP-009-7 R3"
+              },
+              {
+                "name": "JAMA-Requirement-ID",
+                "value": "CIP-009-R3"
               }
             ]
           }
@@ -1105,6 +1345,14 @@
               {
                 "name": "NIST-800-53-Secondary-Controls",
                 "value": "RA-5, SI-2, CM-3"
+              },
+              {
+                "name": "NERC-Requirement-ID",
+                "value": "CIP-010-5 R1"
+              },
+              {
+                "name": "JAMA-Requirement-ID",
+                "value": "CIP-010-R1"
               }
             ]
           },
@@ -1135,6 +1383,14 @@
               {
                 "name": "NIST-800-53-Secondary-Controls",
                 "value": "RA-5, SI-2, CM-3"
+              },
+              {
+                "name": "NERC-Requirement-ID",
+                "value": "CIP-010-5 R2"
+              },
+              {
+                "name": "JAMA-Requirement-ID",
+                "value": "CIP-010-R2"
               }
             ]
           },
@@ -1165,6 +1421,14 @@
               {
                 "name": "NIST-800-53-Secondary-Controls",
                 "value": "RA-5, SI-2, CM-3"
+              },
+              {
+                "name": "NERC-Requirement-ID",
+                "value": "CIP-010-5 R3"
+              },
+              {
+                "name": "JAMA-Requirement-ID",
+                "value": "CIP-010-R3"
               }
             ]
           },
@@ -1195,6 +1459,14 @@
               {
                 "name": "NIST-800-53-Secondary-Controls",
                 "value": "RA-5, SI-2, CM-3"
+              },
+              {
+                "name": "NERC-Requirement-ID",
+                "value": "CIP-010-5 R4"
+              },
+              {
+                "name": "JAMA-Requirement-ID",
+                "value": "CIP-010-R4"
               }
             ]
           }
@@ -1244,6 +1516,14 @@
               {
                 "name": "NIST-800-53-Secondary-Controls",
                 "value": "SC-7, CA-3, SI-7"
+              },
+              {
+                "name": "NERC-Requirement-ID",
+                "value": "CIP-011-4 R1"
+              },
+              {
+                "name": "JAMA-Requirement-ID",
+                "value": "CIP-011-R1"
               }
             ]
           },
@@ -1274,6 +1554,14 @@
               {
                 "name": "NIST-800-53-Secondary-Controls",
                 "value": "SC-7, CA-3, SI-7"
+              },
+              {
+                "name": "NERC-Requirement-ID",
+                "value": "CIP-011-4 R2"
+              },
+              {
+                "name": "JAMA-Requirement-ID",
+                "value": "CIP-011-R2"
               }
             ]
           }
@@ -1323,6 +1611,14 @@
               {
                 "name": "NIST-800-53-Secondary-Controls",
                 "value": "SC-7, CA-3, IA-2"
+              },
+              {
+                "name": "NERC-Requirement-ID",
+                "value": "CIP-012-2 R1"
+              },
+              {
+                "name": "JAMA-Requirement-ID",
+                "value": "CIP-012-R1"
               }
             ]
           }
@@ -1372,6 +1668,14 @@
               {
                 "name": "NIST-800-53-Secondary-Controls",
                 "value": "SR-5, CA-6, PM-13"
+              },
+              {
+                "name": "NERC-Requirement-ID",
+                "value": "CIP-013-3 R1"
+              },
+              {
+                "name": "JAMA-Requirement-ID",
+                "value": "CIP-013-R1"
               }
             ]
           },
@@ -1402,6 +1706,14 @@
               {
                 "name": "NIST-800-53-Secondary-Controls",
                 "value": "SR-5, CA-6, PM-13"
+              },
+              {
+                "name": "NERC-Requirement-ID",
+                "value": "CIP-013-3 R2"
+              },
+              {
+                "name": "JAMA-Requirement-ID",
+                "value": "CIP-013-R2"
               }
             ]
           },
@@ -1432,6 +1744,14 @@
               {
                 "name": "NIST-800-53-Secondary-Controls",
                 "value": "SR-5, CA-6, PM-13"
+              },
+              {
+                "name": "NERC-Requirement-ID",
+                "value": "CIP-013-3 R3"
+              },
+              {
+                "name": "JAMA-Requirement-ID",
+                "value": "CIP-013-R3"
               }
             ]
           }
@@ -1481,6 +1801,14 @@
               {
                 "name": "NIST-800-53-Secondary-Controls",
                 "value": "CP-13, RA-3, RA-5"
+              },
+              {
+                "name": "NERC-Requirement-ID",
+                "value": "CIP-014-3 R1"
+              },
+              {
+                "name": "JAMA-Requirement-ID",
+                "value": "CIP-014-R1"
               }
             ]
           },
@@ -1511,6 +1839,14 @@
               {
                 "name": "NIST-800-53-Secondary-Controls",
                 "value": "CP-13, RA-3, RA-5"
+              },
+              {
+                "name": "NERC-Requirement-ID",
+                "value": "CIP-014-3 R2"
+              },
+              {
+                "name": "JAMA-Requirement-ID",
+                "value": "CIP-014-R2"
               }
             ]
           },
@@ -1541,6 +1877,14 @@
               {
                 "name": "NIST-800-53-Secondary-Controls",
                 "value": "CP-13, RA-3, RA-5"
+              },
+              {
+                "name": "NERC-Requirement-ID",
+                "value": "CIP-014-3 R3"
+              },
+              {
+                "name": "JAMA-Requirement-ID",
+                "value": "CIP-014-R3"
               }
             ]
           },
@@ -1571,6 +1915,14 @@
               {
                 "name": "NIST-800-53-Secondary-Controls",
                 "value": "CP-13, RA-3, RA-5"
+              },
+              {
+                "name": "NERC-Requirement-ID",
+                "value": "CIP-014-3 R4"
+              },
+              {
+                "name": "JAMA-Requirement-ID",
+                "value": "CIP-014-R4"
               }
             ]
           },
@@ -1601,6 +1953,14 @@
               {
                 "name": "NIST-800-53-Secondary-Controls",
                 "value": "CP-13, RA-3, RA-5"
+              },
+              {
+                "name": "NERC-Requirement-ID",
+                "value": "CIP-014-3 R5"
+              },
+              {
+                "name": "JAMA-Requirement-ID",
+                "value": "CIP-014-R5"
               }
             ]
           },
@@ -1631,6 +1991,14 @@
               {
                 "name": "NIST-800-53-Secondary-Controls",
                 "value": "CP-13, RA-3, RA-5"
+              },
+              {
+                "name": "NERC-Requirement-ID",
+                "value": "CIP-014-3 R6"
+              },
+              {
+                "name": "JAMA-Requirement-ID",
+                "value": "CIP-014-R6"
               }
             ]
           }
@@ -1680,6 +2048,14 @@
               {
                 "name": "NIST-800-53-Secondary-Controls",
                 "value": "IR-4, AU-6, SI-5"
+              },
+              {
+                "name": "NERC-Requirement-ID",
+                "value": "CIP-015-1 R1"
+              },
+              {
+                "name": "JAMA-Requirement-ID",
+                "value": "CIP-015-R1"
               }
             ]
           },
@@ -1710,6 +2086,14 @@
               {
                 "name": "NIST-800-53-Secondary-Controls",
                 "value": "IR-4, AU-6, SI-5"
+              },
+              {
+                "name": "NERC-Requirement-ID",
+                "value": "CIP-015-1 R2"
+              },
+              {
+                "name": "JAMA-Requirement-ID",
+                "value": "CIP-015-R2"
               }
             ]
           },
@@ -1740,6 +2124,14 @@
               {
                 "name": "NIST-800-53-Secondary-Controls",
                 "value": "IR-4, AU-6, SI-5"
+              },
+              {
+                "name": "NERC-Requirement-ID",
+                "value": "CIP-015-1 R3"
+              },
+              {
+                "name": "JAMA-Requirement-ID",
+                "value": "CIP-015-R3"
               }
             ]
           }
