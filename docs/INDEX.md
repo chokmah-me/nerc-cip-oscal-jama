@@ -18,7 +18,8 @@ Complete guide to all documentation in the NERC-CIP to OSCAL Toolkit.
 - **Release History:** [RELEASES.md](RELEASES.md)
 
 ### Additional Resources
-- **Schema Fix Details:** [SCHEMA-FIX-SUMMARY.md](SCHEMA-FIX-SUMMARY.md)
+- **v1.1.4 Release Notes:** [../RELEASE-v1.1.4.md](../RELEASE-v1.1.4.md)
+- **Testing Improvements:** [../TESTING-IMPROVEMENTS.md](../TESTING-IMPROVEMENTS.md)
 - **Verification Report:** [VERIFICATION-COMPLETE.md](VERIFICATION-COMPLETE.md)
 
 ---
@@ -298,9 +299,9 @@ Repository Root
 ## Keeping Documentation Current
 
 Last Updated: January 25, 2026
-Version: v1.1.1
+Version: v1.1.4
 
-All documentation has been verified and updated for v1.1.1 release.
+All documentation has been verified and updated for v1.1.4 release.
 
 ---
 

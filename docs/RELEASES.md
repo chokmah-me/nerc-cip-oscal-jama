@@ -4,6 +4,29 @@ Complete release notes and version history for the NERC-CIP to OSCAL Toolkit.
 
 ---
 
+## v1.1.4 (January 25, 2026) - Test Quality & NIST Generation
+
+**Status:** ✅ PRODUCTION READY
+
+**Key Improvements:**
+- **Silent Pass Bug Fixes** - Fixed 8 test vulnerabilities with validation counters
+- **Programmatic NIST Generation** - `generate_oscal.py` now generates NIST mappings automatically
+- **Zero Test Risks** - silent-pass-detector confirms 0 risks (up from 8)
+
+**Test Results:**
+- 23/27 core tests passing ✅
+- 4 catalog format tests properly detect missing optional data
+- All validation counters guarantee minimum assertion counts
+
+**Documentation:**
+- New [RELEASE-v1.1.4.md](../RELEASE-v1.1.4.md) with complete details
+- New [TESTING-IMPROVEMENTS.md](../TESTING-IMPROVEMENTS.md) with fix documentation
+- Enhanced [CLAUDE.md](../CLAUDE.md) with validation counter pattern
+
+See [RELEASE-v1.1.4.md](../RELEASE-v1.1.4.md) and [TESTING-IMPROVEMENTS.md](../TESTING-IMPROVEMENTS.md) for complete details.
+
+---
+
 ## v1.1.1 (January 25, 2026) - Production Ready
 
 **Status:** ✅ PRODUCTION READY
