@@ -3,10 +3,9 @@
     "uuid": "ffce0253-b012-427d-b6ed-015dca89e4a1",
     "metadata": {
       "title": "NERC CIP OSCAL Catalog",
-      "last-modified": "2026-01-25T19:24:37.443543",
+      "last-modified": "2026-01-25T19:24:37+00:00",
       "version": "1.1.0",
-      "oscal-version": "1.0.0",
-      "notes": "Generated with NovaKit v3 State Machine Logic."
+      "oscal-version": "1.0.0"
     },
     "groups": [
       {

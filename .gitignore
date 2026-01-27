@@ -71,3 +71,6 @@ test-output/
 
 # Internal reports and analysis (not for client release)
 TRAVIS_HASSLOCH_EXTENSIVE_REPORT.md
+
+# Claude Code session snapshots
+.session-snapshot.md

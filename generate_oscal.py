@@ -1,7 +1,7 @@
 import re
 import json
 import uuid
-from datetime import datetime
+from datetime import datetime, timezone
 
 # CONFIGURATION
 INPUT_FILE = "nerc_all_combined.txt"
@@ -210,10 +210,9 @@ def generate_oscal_catalog(standards):
             "uuid": str(uuid.uuid4()),
             "metadata": {
                 "title": "NERC CIP OSCAL Catalog",
-                "last-modified": datetime.now().isoformat(),
+                "last-modified": datetime.now(timezone.utc).isoformat(),
                 "version": "1.1.0",
-                "oscal-version": "1.0.0",
-                "notes": "Generated with NovaKit v3 State Machine Logic."
+                "oscal-version": "1.0.0"
             },
             "groups": []
         }
